@@ -1,0 +1,13 @@
+1a2,5
+> # GTC copy of the course docker/sim/entrypoint.sh without the runtime `pip install -e`, which
+> # downloads build dependencies from PyPI at every container start (an outage would fail every
+> # sweep cell). The course package is imported from the mounted source via PYTHONPATH instead.
+> # Everything else is the same as the course entrypoint.
+10c14
+< source /root/env 2>/dev/null
+---
+> source /root/env 2>/dev/null || true
+18c22
+< python -m pip install -e /workspace/Sim-to-Real-SO-101-Workshop/source/sim_to_real_so101/
+---
+> export PYTHONPATH=/workspace/Sim-to-Real-SO-101-Workshop/source${PYTHONPATH:+:$PYTHONPATH}

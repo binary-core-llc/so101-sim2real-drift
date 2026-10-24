@@ -1,0 +1,61 @@
+{
+ "lightbox-simple.usd": {
+  "wrapper": "assets/local/lightbox-simple.local.usda",
+  "changes": [
+   {
+    "attr": "/World/LightBox/Looks/Paper/Shader.info:mdl:sourceAsset",
+    "from": "https://omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Wall_Board/Paper.mdl",
+    "to": "/workspace/assets_mirror/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Wall_Board/Paper.mdl"
+   },
+   {
+    "attr": "/World/LightBox/Looks/Rubber_Smooth/Shader.info:mdl:sourceAsset",
+    "from": "https://omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Plastics/Rubber_Smooth.mdl",
+    "to": "/workspace/assets_mirror/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Plastics/Rubber_Smooth.mdl"
+   },
+   {
+    "payloadList": "/World/LightBox/camera_mount/rsd455",
+    "from": [
+     "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Sensors/Intel/RealSense/rsd455.usd"
+    ],
+    "to": [
+     "/workspace/assets_mirror/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Sensors/Intel/RealSense/rsd455.usd"
+    ]
+   }
+  ]
+ },
+ "mat.usda": {
+  "wrapper": "assets/local/mat.local.usda",
+  "changes": [
+   {
+    "attr": "/World/Mat/Looks/Paper/Shader.info:mdl:sourceAsset",
+    "from": "https://omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Wall_Board/Paper.mdl",
+    "to": "/workspace/assets_mirror/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Wall_Board/Paper.mdl"
+   },
+   {
+    "attr": "/World/Mat/Looks/Rubber_Smooth/Shader.info:mdl:sourceAsset",
+    "from": "https://omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Plastics/Rubber_Smooth.mdl",
+    "to": "/workspace/assets_mirror/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Plastics/Rubber_Smooth.mdl"
+   }
+  ]
+ },
+ "SO-ARM101-USD.usd": {
+  "wrapper": "assets/local/SO-ARM101-USD.local.usda",
+  "changes": [
+   {
+    "attr": "/so101_new_calib/Looks/Aluminum_Anodized_Black/Shader.info:mdl:sourceAsset",
+    "from": "https://omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Metals/Aluminum_Anodized_Black.mdl",
+    "to": "/workspace/assets_mirror/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Metals/Aluminum_Anodized_Black.mdl"
+   }
+  ]
+ },
+ "Vial_opaque.usda": {
+  "wrapper": "assets/local/Vial_opaque.local.usda",
+  "changes": [
+   {
+    "attr": "/Vial/Looks/Vial_plastic/Shader.info:mdl:sourceAsset",
+    "from": "https://omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Plastic/Plastic_Thick_Translucent.mdl",
+    "to": "/workspace/assets_mirror/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Plastic/Plastic_Thick_Translucent.mdl"
+   }
+  ]
+ }
+}

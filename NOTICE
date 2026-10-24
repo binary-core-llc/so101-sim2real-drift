@@ -1,0 +1,14 @@
+so101-sim2real-drift
+Copyright 2026 Binary Core LLC (Arturo Morales Rangel)
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This repository contains files derived from NVIDIA's "Sim-to-Real-SO-101-Workshop"
+(https://github.com/isaac-sim/Sim-to-Real-SO-101-Workshop, commit ce807d9),
+Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES, licensed under the Apache License 2.0:
+  - sim/sweep_eval.py           derived from source/sim_to_real_so101/scripts/lerobot_eval.py
+  - docker/sim/Dockerfile       the course's docker/sim/Dockerfile with two pinned dependencies (see Dockerfile.diff)
+  - docker/sim/entrypoint_offline.sh  the course's docker/sim/entrypoint.sh without the runtime pip install
+                                      (see entrypoint_offline.diff)
+  - assets/local/*.local.usda   wrapper layers that sublayer the course's unmodified USD files
+The derived files keep NVIDIA's copyright and licence headers where the originals had them.

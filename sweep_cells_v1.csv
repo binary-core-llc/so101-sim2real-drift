@@ -1,0 +1,55 @@
+priority,cell_id,factor,direction,level,unit,level_x_dr_half_range,episodes,seeds,note
+1,S0_nominal,nominal,all randomization at centre (light -1 EV),,,,200,0-39 x 5 repeats,Denominator for 'half of nominal'; the repeats measure the policy's own run-to-run variability
+1,S1_tilt_down_1p43,tilt_down_deg,camera tilted further down,1.43,deg,0.5,40,0-39,1.5 and 6.0 are the real-trial levels R5 and R4
+1,S1_tilt_down_1p5,tilt_down_deg,camera tilted further down,1.5,deg,0.52,40,0-39,1.5 and 6.0 are the real-trial levels R5 and R4
+1,S1_tilt_down_2p87,tilt_down_deg,camera tilted further down,2.87,deg,1.0,40,0-39,1.5 and 6.0 are the real-trial levels R5 and R4
+1,S1_tilt_down_3p58,tilt_down_deg,camera tilted further down,3.58,deg,1.25,40,0-39,1.5 and 6.0 are the real-trial levels R5 and R4
+1,S1_tilt_down_4p3,tilt_down_deg,camera tilted further down,4.3,deg,1.5,40,0-39,1.5 and 6.0 are the real-trial levels R5 and R4
+1,S1_tilt_down_5p73,tilt_down_deg,camera tilted further down,5.73,deg,2.0,40,0-39,1.5 and 6.0 are the real-trial levels R5 and R4
+1,S1_tilt_down_6p0,tilt_down_deg,camera tilted further down,6.0,deg,2.09,40,0-39,1.5 and 6.0 are the real-trial levels R5 and R4
+1,S1_tilt_down_8p6,tilt_down_deg,camera tilted further down,8.6,deg,3.0,40,0-39,1.5 and 6.0 are the real-trial levels R5 and R4
+1,S2_rack_y_0p5,rack_y_cm,rack toward the camera wall (code y +),0.5,cm,0.5,40,0-39,3.0 is the real-trial level R2 (M1); 4.0 is the far level for photos
+1,S2_rack_y_1p0,rack_y_cm,rack toward the camera wall (code y +),1.0,cm,1.0,40,0-39,3.0 is the real-trial level R2 (M1); 4.0 is the far level for photos
+1,S2_rack_y_1p25,rack_y_cm,rack toward the camera wall (code y +),1.25,cm,1.25,40,0-39,3.0 is the real-trial level R2 (M1); 4.0 is the far level for photos
+1,S2_rack_y_1p5,rack_y_cm,rack toward the camera wall (code y +),1.5,cm,1.5,40,0-39,3.0 is the real-trial level R2 (M1); 4.0 is the far level for photos
+1,S2_rack_y_2p0,rack_y_cm,rack toward the camera wall (code y +),2.0,cm,2.0,40,0-39,3.0 is the real-trial level R2 (M1); 4.0 is the far level for photos
+1,S2_rack_y_3p0,rack_y_cm,rack toward the camera wall (code y +),3.0,cm,3.0,40,0-39,3.0 is the real-trial level R2 (M1); 4.0 is the far level for photos
+1,S2_rack_y_4p0,rack_y_cm,rack toward the camera wall (code y +),4.0,cm,4.0,40,0-39,3.0 is the real-trial level R2 (M1); 4.0 is the far level for photos
+1,S3_rack_x_2p0,rack_x_cm,rack toward the back wall (code x +),2.0,cm,0.5,40,0-39,3.0 is the real-trial level R3; check that 8.0 is reachable and flag the ~8 mm overhang past the mat's back edge
+1,S3_rack_x_3p0,rack_x_cm,rack toward the back wall (code x +),3.0,cm,0.75,40,0-39,3.0 is the real-trial level R3; check that 8.0 is reachable and flag the ~8 mm overhang past the mat's back edge
+1,S3_rack_x_4p0,rack_x_cm,rack toward the back wall (code x +),4.0,cm,1.0,40,0-39,3.0 is the real-trial level R3; check that 8.0 is reachable and flag the ~8 mm overhang past the mat's back edge
+1,S3_rack_x_5p0,rack_x_cm,rack toward the back wall (code x +),5.0,cm,1.25,40,0-39,3.0 is the real-trial level R3; check that 8.0 is reachable and flag the ~8 mm overhang past the mat's back edge
+1,S3_rack_x_6p0,rack_x_cm,rack toward the back wall (code x +),6.0,cm,1.5,40,0-39,3.0 is the real-trial level R3; check that 8.0 is reachable and flag the ~8 mm overhang past the mat's back edge
+1,S3_rack_x_8p0,rack_x_cm,rack toward the back wall (code x +),8.0,cm,2.0,40,0-39,3.0 is the real-trial level R3; check that 8.0 is reachable and flag the ~8 mm overhang past the mat's back edge
+2,S_course,course_eval_as_shipped,Lerobot-So101-Teleop-Vials-To-Rack-Eval exactly as shipped,,,,100,0-99,Reproduces the course's 50-70% claim; sanity anchor
+2,S4_light_darker_m2p0,light_ev,lightbox exposure darker than -1 EV,-2.0,EV (absolute),,40,0-39,"Offsets of 0.5, 1, 1.25, 1.5, 2, 3 x the 2 EV half-range"
+2,S4_light_darker_m3p0,light_ev,lightbox exposure darker than -1 EV,-3.0,EV (absolute),,40,0-39,"Offsets of 0.5, 1, 1.25, 1.5, 2, 3 x the 2 EV half-range"
+2,S4_light_darker_m3p5,light_ev,lightbox exposure darker than -1 EV,-3.5,EV (absolute),,40,0-39,"Offsets of 0.5, 1, 1.25, 1.5, 2, 3 x the 2 EV half-range"
+2,S4_light_darker_m4p0,light_ev,lightbox exposure darker than -1 EV,-4.0,EV (absolute),,40,0-39,"Offsets of 0.5, 1, 1.25, 1.5, 2, 3 x the 2 EV half-range"
+2,S4_light_darker_m5p0,light_ev,lightbox exposure darker than -1 EV,-5.0,EV (absolute),,40,0-39,"Offsets of 0.5, 1, 1.25, 1.5, 2, 3 x the 2 EV half-range"
+2,S4_light_darker_m7p0,light_ev,lightbox exposure darker than -1 EV,-7.0,EV (absolute),,40,0-39,"Offsets of 0.5, 1, 1.25, 1.5, 2, 3 x the 2 EV half-range"
+2,S5_light_brighter_1p0,light_ev,lightbox exposure brighter than -1 EV,1.0,EV (absolute),,40,0-39,"Offsets of 1, 1.5, 2 x the 2 EV half-range"
+2,S5_light_brighter_2p0,light_ev,lightbox exposure brighter than -1 EV,2.0,EV (absolute),,40,0-39,"Offsets of 1, 1.5, 2 x the 2 EV half-range"
+2,S5_light_brighter_3p0,light_ev,lightbox exposure brighter than -1 EV,3.0,EV (absolute),,40,0-39,"Offsets of 1, 1.5, 2 x the 2 EV half-range"
+2,S6_ext_hfov_55p8,ext_hfov_deg,external camera field of view at the D455 pose (nominal 63.7),55.8,deg,,40,0-39,C920 bracket before Monday's calibration
+2,S6_ext_hfov_60p0,ext_hfov_deg,external camera field of view at the D455 pose (nominal 63.7),60.0,deg,,40,0-39,C920 bracket before Monday's calibration
+2,S6_ext_hfov_65p9,ext_hfov_deg,external camera field of view at the D455 pose (nominal 63.7),65.9,deg,,40,0-39,C920 bracket before Monday's calibration
+2,S6_ext_hfov_70p4,ext_hfov_deg,external camera field of view at the D455 pose (nominal 63.7),70.4,deg,,40,0-39,C920 bracket before Monday's calibration
+3,S7_cam_yaw_1p43,cam_yaw_code_deg,camera code yaw + (record the physical pan: +10 code = 16.7 deg pan),1.43,deg (code),0.5,40,0-39,
+3,S7_cam_yaw_2p87,cam_yaw_code_deg,camera code yaw + (record the physical pan: +10 code = 16.7 deg pan),2.87,deg (code),1.0,40,0-39,
+3,S7_cam_yaw_3p58,cam_yaw_code_deg,camera code yaw + (record the physical pan: +10 code = 16.7 deg pan),3.58,deg (code),1.25,40,0-39,
+3,S7_cam_yaw_4p3,cam_yaw_code_deg,camera code yaw + (record the physical pan: +10 code = 16.7 deg pan),4.3,deg (code),1.5,40,0-39,
+3,S7_cam_yaw_5p73,cam_yaw_code_deg,camera code yaw + (record the physical pan: +10 code = 16.7 deg pan),5.73,deg (code),2.0,40,0-39,
+3,S7_cam_yaw_8p6,cam_yaw_code_deg,camera code yaw + (record the physical pan: +10 code = 16.7 deg pan),8.6,deg (code),3.0,40,0-39,
+3,S8_cam_up_0p5,cam_up_cm,camera raised (code z +; wall limit +4.1 cm),0.5,cm,0.5,40,0-39,
+3,S8_cam_up_1p0,cam_up_cm,camera raised (code z +; wall limit +4.1 cm),1.0,cm,1.0,40,0-39,
+3,S8_cam_up_1p25,cam_up_cm,camera raised (code z +; wall limit +4.1 cm),1.25,cm,1.25,40,0-39,
+3,S8_cam_up_1p5,cam_up_cm,camera raised (code z +; wall limit +4.1 cm),1.5,cm,1.5,40,0-39,
+3,S8_cam_up_2p0,cam_up_cm,camera raised (code z +; wall limit +4.1 cm),2.0,cm,2.0,40,0-39,
+3,S8_cam_up_3p0,cam_up_cm,camera raised (code z +; wall limit +4.1 cm),3.0,cm,3.0,40,0-39,
+3,S9_tilt_up_m2p87,tilt_down_deg,camera tilted up (negative tilt_down),-2.87,deg,1.0,40,0-39,Descriptive
+3,S9_tilt_up_m5p73,tilt_down_deg,camera tilted up (negative tilt_down),-5.73,deg,2.0,40,0-39,Descriptive
+4,H4_c920_measured,ext_intrinsics,measured C920 intrinsics at the D455 pose,,,,200,0-39 x 5 repeats,After the Oct 26 calibration
+4,H4_c920_image_matched,ext_intrinsics+pose,measured C920 intrinsics at the image-matched pose,,,,200,0-39 x 5 repeats,After the Oct 26 calibration; pose from mask matching
+4,G3_joint_scale,joint_scale,real arm joint scale factors from orange_robot.json,,,,80,0-39 x 2,After the Oct 26 arm calibration; diagnostic
+4,R_replay_oct26,camera_pose,the camera pose measured by the sled on Oct 26,,,,80,0-39 x 2,After Oct 26

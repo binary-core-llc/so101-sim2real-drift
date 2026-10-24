@@ -1,0 +1,28 @@
+--- ../Sim-to-Real-SO-101-Workshop/docker/sim/Dockerfile	2026-10-23 15:07:15.551920945 -0700
++++ docker/sim/Dockerfile	2026-10-23 16:56:36.880412217 -0700
+@@ -22,7 +22,11 @@
+     "torch==2.7.0" \
+     "torchvision==0.22.0" \
+     "imageio==2.37.0" \
++    "pyarrow==25.0.0" \
+     > /tmp/constraints.txt
++# GTC patch: pyarrow (pulled in by datasets) is unpinned upstream; pyarrow 26.0.0 (2026-10-09)
++# refuses NumPy < 2 and breaks `import lerobot` (ImportError: pyarrow requires NumPy 2.0 or newer).
++# 25.0.0 is the newest release before the course commit ce807d9 (2026-07-20) and works with numpy 1.26.0.
+ 
+ # Install only the deps not already in the base image
+ RUN $PYTHON -m pip install -c /tmp/constraints.txt \
+@@ -41,8 +45,12 @@
+     "deepdiff>=7.0.1,<9.0.0" \
+     "feetech-servo-sdk>=1.0.0,<2.0.0"
+ 
++# GTC patch: the course URL (BtbN "latest" release, n7.1 asset) returns 404 since BtbN
++# dropped n7.1 from "latest". Pin the same FFmpeg 7.1 LGPL shared build from the last
++# dated monthly release before the course commit ce807d9 (2026-07-20), with sha256 check.
+ RUN curl --proto "=https" --tlsv1.2 -sSf -L -o /tmp/ffmpeg.tar.xz \
+-    https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-n7.1-latest-linux64-lgpl-shared-7.1.tar.xz && \
++    https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-06-30-13-34/ffmpeg-n7.1.5-1-g7d0e842004-linux64-lgpl-shared-7.1.tar.xz && \
++    echo "657a6cbb5b73b46eacac3bddff6e4a106808a70b9dac23459fbc73c40a97ef51  /tmp/ffmpeg.tar.xz" | sha256sum -c - && \
+     tar -xf /tmp/ffmpeg.tar.xz -C /usr/local --strip-components=1 && \
+     ldconfig && \
+     rm /tmp/ffmpeg.tar.xz

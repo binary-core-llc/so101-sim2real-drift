@@ -1,0 +1,24 @@
+#usda 1.0
+(
+    defaultPrim = "Vial"
+    metersPerUnit = 1
+    subLayers = [
+        @/workspace/Sim-to-Real-SO-101-Workshop/source/sim_to_real_so101/assets/usd/Vial_opaque.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "Vial"
+{
+    over "Looks"
+    {
+        over "Vial_plastic"
+        {
+            over "Shader"
+            {
+                uniform asset info:mdl:sourceAsset = @/workspace/assets_mirror/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Plastic/Plastic_Thick_Translucent.mdl@
+            }
+        }
+    }
+}
+

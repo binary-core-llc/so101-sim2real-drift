@@ -1,0 +1,1126 @@
+{
+ "source": "results/sim/t06_probe.jsonl",
+ "T05_readback_all_pass": true,
+ "T05": [
+  {
+   "set": "nominal",
+   "pass": true,
+   "camera_mount_err_m": 0.0,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "cam_roll_p10deg",
+   "pass": true,
+   "camera_mount_err_m": 0.0,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "cam_roll_m10deg",
+   "pass": true,
+   "camera_mount_err_m": 0.0,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "cam_pitch_p10deg",
+   "pass": true,
+   "camera_mount_err_m": 0.0,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "cam_pitch_m10deg",
+   "pass": true,
+   "camera_mount_err_m": 0.0,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "cam_yaw_p10deg",
+   "pass": true,
+   "camera_mount_err_m": 0.0,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "cam_yaw_m10deg",
+   "pass": true,
+   "camera_mount_err_m": 0.0,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "cam_x_p6cm",
+   "pass": true,
+   "camera_mount_err_m": 1.341104505225843e-09,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "cam_x_m6cm",
+   "pass": true,
+   "camera_mount_err_m": 1.341104505225843e-09,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "cam_y_p6cm",
+   "pass": true,
+   "camera_mount_err_m": 1.341104505225843e-09,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "cam_y_m6cm",
+   "pass": true,
+   "camera_mount_err_m": 1.341104505225843e-09,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "cam_z_p6cm",
+   "pass": true,
+   "camera_mount_err_m": 1.3411045607369942e-09,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "cam_z_m6cm",
+   "pass": true,
+   "camera_mount_err_m": 1.341104505225843e-09,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "rack_x_p4cm",
+   "pass": true,
+   "camera_mount_err_m": 0.0,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 1.7881393449270533e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "rack_x_m4cm",
+   "pass": true,
+   "camera_mount_err_m": 0.0,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 1.5497207656034462e-08,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "rack_y_p4cm",
+   "pass": true,
+   "camera_mount_err_m": 0.0,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "rack_y_m4cm",
+   "pass": true,
+   "camera_mount_err_m": 0.0,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "rack_yaw_p0.5rad",
+   "pass": true,
+   "camera_mount_err_m": 0.0,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 1.1151140738574483e-07,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "rack_yaw_m0.5rad",
+   "pass": true,
+   "camera_mount_err_m": 0.0,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 1.813158234664769e-08,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "exposure_m4ev",
+   "pass": true,
+   "camera_mount_err_m": 0.0,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -4.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "exposure_p2ev",
+   "pass": true,
+   "camera_mount_err_m": 0.0,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": 2.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "mat_yaw_p0.1rad",
+   "pass": true,
+   "camera_mount_err_m": 0.0,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 0.10000013104738459,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "wrist_focal_12mm",
+   "pass": true,
+   "camera_mount_err_m": 0.0,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 12.0,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "ext_focal_1.697mm_hfov70.4",
+   "pass": true,
+   "camera_mount_err_m": 0.0,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.6970000267028809,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  },
+  {
+   "set": "nominal_again",
+   "pass": true,
+   "camera_mount_err_m": 0.0,
+   "camera_mount_err_rad": 0.0,
+   "rack_err_m": 7.152557379708213e-09,
+   "rack_err_yaw_rad": 0.0,
+   "exposure": -1.0,
+   "ext_focal_mm": 1.9299999475479126,
+   "wrist_focal_mm": 13.5,
+   "mat_yaw_rad": 1.343588498237125e-07,
+   "vials_on_mat_z_ok": true
+  }
+ ],
+ "nominal_repeat": {
+  "camera_pos_diff_m": 0.0,
+  "vial_after_reset_diff_m": 0.0
+ },
+ "T06": [
+  {
+   "set": "cam_roll_p10deg",
+   "code_overrides": {
+    "camera": {
+     "roll": 0.17453292519943295
+    }
+   },
+   "camera_dpos_cm": [
+    -0.01,
+    0.67,
+    -0.48
+   ],
+   "camera_pos_env": [
+    0.1375,
+    0.3365,
+    0.4838
+   ],
+   "camera_dtilt_down_deg": -0.0,
+   "camera_dpan_deg": 0.0,
+   "camera_image_roll_deg": 10.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    0.0,
+    0.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": [
+    16.4,
+    3.9
+   ],
+   "rack_mask_area_ratio": 0.999,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 1.023,
+   "physical": "camera image rolls CCW 10.00 deg"
+  },
+  {
+   "set": "cam_roll_m10deg",
+   "code_overrides": {
+    "camera": {
+     "roll": -0.17453292519943295
+    }
+   },
+   "camera_dpos_cm": [
+    0.15,
+    -0.66,
+    0.48
+   ],
+   "camera_pos_env": [
+    0.1391,
+    0.3232,
+    0.4934
+   ],
+   "camera_dtilt_down_deg": -0.0,
+   "camera_dpan_deg": -0.0,
+   "camera_image_roll_deg": -10.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    0.0,
+    0.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": [
+    -15.4,
+    -6.8
+   ],
+   "rack_mask_area_ratio": 0.999,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 1.001,
+   "physical": "camera image rolls CW 10.00 deg"
+  },
+  {
+   "set": "cam_pitch_p10deg",
+   "code_overrides": {
+    "camera": {
+     "pitch": 0.17453292519943295
+    }
+   },
+   "camera_dpos_cm": [
+    -0.0,
+    0.0,
+    -0.0
+   ],
+   "camera_pos_env": [
+    0.1376,
+    0.3297,
+    0.4886
+   ],
+   "camera_dtilt_down_deg": 9.995,
+   "camera_dpan_deg": 0.633,
+   "camera_image_roll_deg": 0.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    0.0,
+    0.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": [
+    1.4,
+    -93.4
+   ],
+   "rack_mask_area_ratio": 0.955,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 1.043,
+   "physical": "camera tilts down 9.99 deg"
+  },
+  {
+   "set": "cam_pitch_m10deg",
+   "code_overrides": {
+    "camera": {
+     "pitch": -0.17453292519943295
+    }
+   },
+   "camera_dpos_cm": [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   "camera_pos_env": [
+    0.1376,
+    0.3297,
+    0.4886
+   ],
+   "camera_dtilt_down_deg": -9.997,
+   "camera_dpan_deg": -0.384,
+   "camera_image_roll_deg": -0.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    0.0,
+    0.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": [
+    -4.3,
+    82.0
+   ],
+   "rack_mask_area_ratio": 0.912,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 1.126,
+   "physical": "camera tilts up 10.00 deg"
+  },
+  {
+   "set": "cam_yaw_p10deg",
+   "code_overrides": {
+    "camera": {
+     "yaw": 0.17453292519943295
+    }
+   },
+   "camera_dpos_cm": [
+    0.15,
+    -0.47,
+    -0.67
+   ],
+   "camera_pos_env": [
+    0.139,
+    0.3251,
+    0.4819
+   ],
+   "camera_dtilt_down_deg": -1.459,
+   "camera_dpan_deg": 16.687,
+   "camera_image_roll_deg": -0.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    0.0,
+    0.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": [
+    92.4,
+    0.4
+   ],
+   "rack_mask_area_ratio": 0.998,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 1.129,
+   "physical": "camera tilts up 1.46 deg, pans left (CCW from above) 16.69 deg"
+  },
+  {
+   "set": "cam_yaw_m10deg",
+   "code_overrides": {
+    "camera": {
+     "yaw": -0.17453292519943295
+    }
+   },
+   "camera_dpos_cm": [
+    -0.0,
+    0.49,
+    0.67
+   ],
+   "camera_pos_env": [
+    0.1375,
+    0.3346,
+    0.4953
+   ],
+   "camera_dtilt_down_deg": -0.925,
+   "camera_dpan_deg": -16.902,
+   "camera_image_roll_deg": 0.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    0.0,
+    0.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": [
+    -96.3,
+    2.6
+   ],
+   "rack_mask_area_ratio": 1.1,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 0.738,
+   "physical": "camera pans right (CW from above) 16.90 deg"
+  },
+  {
+   "set": "cam_x_p6cm",
+   "code_overrides": {
+    "camera": {
+     "x": 0.06
+    }
+   },
+   "camera_dpos_cm": [
+    0.0,
+    6.0,
+    0.0
+   ],
+   "camera_pos_env": [
+    0.1376,
+    0.3897,
+    0.4886
+   ],
+   "camera_dtilt_down_deg": 0.0,
+   "camera_dpan_deg": 0.0,
+   "camera_image_roll_deg": 0.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    0.0,
+    0.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": null,
+   "rack_mask_area_ratio": 0.0,
+   "camera_inside_box": false,
+   "front_mean_brightness_ratio": 0.443,
+   "physical": "camera moves toward the camera wall (+6.0 cm env y) -- LENS OUTSIDE THE BOX (behind a wall/ceiling): not a valid level"
+  },
+  {
+   "set": "cam_x_m6cm",
+   "code_overrides": {
+    "camera": {
+     "x": -0.06
+    }
+   },
+   "camera_dpos_cm": [
+    -0.0,
+    -6.0,
+    0.0
+   ],
+   "camera_pos_env": [
+    0.1376,
+    0.2697,
+    0.4886
+   ],
+   "camera_dtilt_down_deg": 0.0,
+   "camera_dpan_deg": 0.0,
+   "camera_image_roll_deg": 0.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    0.0,
+    0.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": [
+    -18.3,
+    64.5
+   ],
+   "rack_mask_area_ratio": 1.154,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 1.064,
+   "physical": "camera moves toward the right wall (-6.0 cm env y)"
+  },
+  {
+   "set": "cam_y_p6cm",
+   "code_overrides": {
+    "camera": {
+     "y": 0.06
+    }
+   },
+   "camera_dpos_cm": [
+    -6.0,
+    0.0,
+    0.0
+   ],
+   "camera_pos_env": [
+    0.0776,
+    0.3297,
+    0.4886
+   ],
+   "camera_dtilt_down_deg": 0.0,
+   "camera_dpan_deg": 0.0,
+   "camera_image_roll_deg": 0.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    0.0,
+    0.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": [
+    -66.2,
+    -7.6
+   ],
+   "rack_mask_area_ratio": 1.029,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 0.864,
+   "physical": "camera moves toward the open front (-6.0 cm env x)"
+  },
+  {
+   "set": "cam_y_m6cm",
+   "code_overrides": {
+    "camera": {
+     "y": -0.06
+    }
+   },
+   "camera_dpos_cm": [
+    6.0,
+    0.0,
+    0.0
+   ],
+   "camera_pos_env": [
+    0.1976,
+    0.3297,
+    0.4886
+   ],
+   "camera_dtilt_down_deg": 0.0,
+   "camera_dpan_deg": 0.0,
+   "camera_image_roll_deg": 0.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    0.0,
+    0.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": [
+    69.3,
+    8.0
+   ],
+   "rack_mask_area_ratio": 0.989,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 1.09,
+   "physical": "camera moves toward the back wall (+6.0 cm env x)"
+  },
+  {
+   "set": "cam_z_p6cm",
+   "code_overrides": {
+    "camera": {
+     "z": 0.06
+    }
+   },
+   "camera_dpos_cm": [
+    0.0,
+    0.0,
+    6.0
+   ],
+   "camera_pos_env": [
+    0.1376,
+    0.3297,
+    0.5486
+   ],
+   "camera_dtilt_down_deg": 0.0,
+   "camera_dpan_deg": 0.0,
+   "camera_image_roll_deg": 0.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    0.0,
+    0.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": null,
+   "rack_mask_area_ratio": 0.0,
+   "camera_inside_box": false,
+   "front_mean_brightness_ratio": 1.273,
+   "physical": "camera moves up (+6.0 cm env z) -- LENS OUTSIDE THE BOX (behind a wall/ceiling): not a valid level"
+  },
+  {
+   "set": "cam_z_m6cm",
+   "code_overrides": {
+    "camera": {
+     "z": -0.06
+    }
+   },
+   "camera_dpos_cm": [
+    0.0,
+    0.0,
+    -6.0
+   ],
+   "camera_pos_env": [
+    0.1376,
+    0.3297,
+    0.4286
+   ],
+   "camera_dtilt_down_deg": 0.0,
+   "camera_dpan_deg": 0.0,
+   "camera_image_roll_deg": 0.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    0.0,
+    0.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": [
+    -12.4,
+    -33.3
+   ],
+   "rack_mask_area_ratio": 1.268,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 0.975,
+   "physical": "camera moves down (-6.0 cm env z)"
+  },
+  {
+   "set": "rack_x_p4cm",
+   "code_overrides": {
+    "rack": {
+     "x": 0.04
+    }
+   },
+   "camera_dpos_cm": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "camera_pos_env": [
+    0.1376,
+    0.3297,
+    0.4886
+   ],
+   "camera_dtilt_down_deg": 0.0,
+   "camera_dpan_deg": 0.0,
+   "camera_image_roll_deg": 0.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    4.0,
+    0.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": [
+    -44.3,
+    -5.1
+   ],
+   "rack_mask_area_ratio": 1.02,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 1.006,
+   "physical": "rack moves toward the back wall (+4.0 cm env x)"
+  },
+  {
+   "set": "rack_x_m4cm",
+   "code_overrides": {
+    "rack": {
+     "x": -0.04
+    }
+   },
+   "camera_dpos_cm": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "camera_pos_env": [
+    0.1376,
+    0.3297,
+    0.4886
+   ],
+   "camera_dtilt_down_deg": 0.0,
+   "camera_dpan_deg": 0.0,
+   "camera_image_roll_deg": 0.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    -4.0,
+    0.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": [
+    45.0,
+    5.2
+   ],
+   "rack_mask_area_ratio": 0.979,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 1.01,
+   "physical": "rack moves toward the open front (-4.0 cm env x)"
+  },
+  {
+   "set": "rack_y_p4cm",
+   "code_overrides": {
+    "rack": {
+     "y": 0.04
+    }
+   },
+   "camera_dpos_cm": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "camera_pos_env": [
+    0.1376,
+    0.3297,
+    0.4886
+   ],
+   "camera_dtilt_down_deg": 0.0,
+   "camera_dpan_deg": 0.0,
+   "camera_image_roll_deg": 0.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    0.0,
+    4.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": [
+    -11.1,
+    43.4
+   ],
+   "rack_mask_area_ratio": 1.12,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 1.006,
+   "physical": "rack moves toward the camera wall (+4.0 cm env y)"
+  },
+  {
+   "set": "rack_y_m4cm",
+   "code_overrides": {
+    "rack": {
+     "y": -0.04
+    }
+   },
+   "camera_dpos_cm": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "camera_pos_env": [
+    0.1376,
+    0.3297,
+    0.4886
+   ],
+   "camera_dtilt_down_deg": 0.0,
+   "camera_dpan_deg": 0.0,
+   "camera_image_roll_deg": 0.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    0.0,
+    -4.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": [
+    10.0,
+    -39.3
+   ],
+   "rack_mask_area_ratio": 0.898,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 1.009,
+   "physical": "rack moves toward the right wall (-4.0 cm env y)"
+  },
+  {
+   "set": "rack_yaw_p0.5rad",
+   "code_overrides": {
+    "rack": {
+     "yaw": 0.5
+    }
+   },
+   "camera_dpos_cm": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "camera_pos_env": [
+    0.1376,
+    0.3297,
+    0.4886
+   ],
+   "camera_dtilt_down_deg": 0.0,
+   "camera_dpan_deg": 0.0,
+   "camera_image_roll_deg": 0.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    0.0,
+    0.0
+   ],
+   "rack_dyaw_deg": 28.648,
+   "rack_mask_shift_px": [
+    41.6,
+    27.8
+   ],
+   "rack_mask_area_ratio": 1.048,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 1.017,
+   "physical": "rack turns CCW (from above) 28.6 deg about its corner origin"
+  },
+  {
+   "set": "rack_yaw_m0.5rad",
+   "code_overrides": {
+    "rack": {
+     "yaw": -0.5
+    }
+   },
+   "camera_dpos_cm": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "camera_pos_env": [
+    0.1376,
+    0.3297,
+    0.4886
+   ],
+   "camera_dtilt_down_deg": 0.0,
+   "camera_dpan_deg": 0.0,
+   "camera_image_roll_deg": 0.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    0.0,
+    0.0
+   ],
+   "rack_dyaw_deg": -28.648,
+   "rack_mask_shift_px": [
+    -10.4,
+    -40.0
+   ],
+   "rack_mask_area_ratio": 0.92,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 1.012,
+   "physical": "rack turns CW (from above) 28.6 deg about its corner origin"
+  },
+  {
+   "set": "exposure_m4ev",
+   "code_overrides": {
+    "exposure_ev": -4.0
+   },
+   "camera_dpos_cm": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "camera_pos_env": [
+    0.1376,
+    0.3297,
+    0.4886
+   ],
+   "camera_dtilt_down_deg": 0.0,
+   "camera_dpan_deg": 0.0,
+   "camera_image_roll_deg": 0.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    0.0,
+    0.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": [
+    0.0,
+    0.0
+   ],
+   "rack_mask_area_ratio": 1.0,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 0.811,
+   "physical": "box light -4 EV (centre -1): image brightness x0.811"
+  },
+  {
+   "set": "exposure_p2ev",
+   "code_overrides": {
+    "exposure_ev": 2.0
+   },
+   "camera_dpos_cm": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "camera_pos_env": [
+    0.1376,
+    0.3297,
+    0.4886
+   ],
+   "camera_dtilt_down_deg": 0.0,
+   "camera_dpan_deg": 0.0,
+   "camera_image_roll_deg": 0.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    0.0,
+    0.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": [
+    0.0,
+    0.0
+   ],
+   "rack_mask_area_ratio": 1.0,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 1.548,
+   "physical": "box light +2 EV (centre -1): image brightness x1.548"
+  },
+  {
+   "set": "mat_yaw_p0.1rad",
+   "code_overrides": {
+    "mat_yaw_rad": 0.1
+   },
+   "camera_dpos_cm": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "camera_pos_env": [
+    0.1376,
+    0.3297,
+    0.4886
+   ],
+   "camera_dtilt_down_deg": 0.0,
+   "camera_dpan_deg": 0.0,
+   "camera_image_roll_deg": 0.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    0.0,
+    0.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": [
+    0.0,
+    0.0
+   ],
+   "rack_mask_area_ratio": 1.0,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 1.043,
+   "physical": "mat yaw +5.7 deg"
+  },
+  {
+   "set": "wrist_focal_12mm",
+   "code_overrides": {
+    "wrist_focal_mm": 12.0
+   },
+   "camera_dpos_cm": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "camera_pos_env": [
+    0.1376,
+    0.3297,
+    0.4886
+   ],
+   "camera_dtilt_down_deg": 0.0,
+   "camera_dpan_deg": 0.0,
+   "camera_image_roll_deg": 0.0,
+   "hfov_deg": 63.74,
+   "rack_dpos_cm": [
+    0.0,
+    0.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": [
+    0.0,
+    0.0
+   ],
+   "rack_mask_area_ratio": 1.0,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 1.041,
+   "physical": "wrist focal 12.0 mm (centre 13.5)"
+  },
+  {
+   "set": "ext_focal_1.697mm_hfov70.4",
+   "code_overrides": {
+    "camera_focal_mm": 1.697
+   },
+   "camera_dpos_cm": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "camera_pos_env": [
+    0.1376,
+    0.3297,
+    0.4886
+   ],
+   "camera_dtilt_down_deg": 0.0,
+   "camera_dpan_deg": 0.0,
+   "camera_image_roll_deg": 0.0,
+   "hfov_deg": 70.53,
+   "rack_dpos_cm": [
+    0.0,
+    0.0
+   ],
+   "rack_dyaw_deg": 0.0,
+   "rack_mask_shift_px": [
+    10.2,
+    -11.1
+   ],
+   "rack_mask_area_ratio": 0.773,
+   "camera_inside_box": true,
+   "front_mean_brightness_ratio": 1.072,
+   "physical": "external camera HFOV 70.53 deg (nominal 63.74): rack area x0.773"
+  }
+ ]
+}

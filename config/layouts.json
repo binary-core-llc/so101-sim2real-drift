@@ -1,0 +1,1425 @@
+{
+ "schema": "gtc layouts v0",
+ "source": "results/sim/v05_t07_a.jsonl",
+ "frames": "/home/arturo/gtc2027/gtc/results/c1/frames_sim.json",
+ "poses": "after the course's 10 warm-up steps (lerobot_eval.py:183), every randomization at its centre, vial poses drawn per seed by the course reset (seed convention v0: RNGs seeded right before env.reset)",
+ "mat_env": {
+  "front_x": 0.0675999988079071,
+  "back_x": 0.3723999988079071,
+  "right_y": -0.2286,
+  "left_y": 0.2286,
+  "depth_m": 0.3048,
+  "width_m": 0.4572
+ },
+ "frame_uv": "u = mm from the mat's front edge (toward the back wall); v = mm from the mat's right edge (toward the camera wall)",
+ "filter": {
+  "clearance_mm": 3.0,
+  "vial_model": {
+   "tip_m": 0.017,
+   "cap_m": 0.0995,
+   "radius_m": 0.017
+  },
+  "rack_cases_required": [
+   "nominal",
+   "x+3",
+   "y+3"
+  ],
+  "rack_footprint_m": 0.12,
+  "source": "E_premortem row 16; B 5.4; C App. A"
+ },
+ "layouts": [
+  {
+   "seed": 0,
+   "min_gap_mm": 23.6,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 63.6,
+    "x+3": 59.5,
+    "y+3": 93.4,
+    "x-3": 67.8
+   },
+   "rack_clear_ok": true,
+   "vials": {
+    "vial_1": {
+     "pos_env": [
+      0.22675,
+      -0.07347,
+      0.05035
+     ],
+     "quat_wxyz": [
+      0.712321,
+      -0.096387,
+      0.694686,
+      0.026825
+     ],
+     "heading_deg": 10.06,
+     "axis_tilt_deg": 0.93,
+     "tip_uv_mm": [
+      142.4,
+      152.2
+     ],
+     "mid_uv_mm": [
+      199.8,
+      162.3
+     ],
+     "cap_uv_mm": [
+      257.1,
+      172.5
+     ],
+     "settle_from_reset_mm": 0.87
+    },
+    "vial_2": {
+     "pos_env": [
+      0.24633,
+      -0.00898,
+      0.05051
+     ],
+     "quat_wxyz": [
+      0.710038,
+      -0.036975,
+      0.700473,
+      0.061781
+     ],
+     "heading_deg": 7.99,
+     "axis_tilt_deg": 0.91,
+     "tip_uv_mm": [
+      161.9,
+      217.3
+     ],
+     "mid_uv_mm": [
+      219.6,
+      225.4
+     ],
+     "cap_uv_mm": [
+      277.3,
+      233.5
+     ],
+     "settle_from_reset_mm": 0.92
+    },
+    "vial_3": {
+     "pos_env": [
+      0.24169,
+      -0.16789,
+      0.05051
+     ],
+     "quat_wxyz": [
+      0.705221,
+      -0.089252,
+      0.695578,
+      0.104251
+     ],
+     "heading_deg": 15.72,
+     "axis_tilt_deg": 0.94,
+     "tip_uv_mm": [
+      157.7,
+      56.1
+     ],
+     "mid_uv_mm": [
+      213.8,
+      71.9
+     ],
+     "cap_uv_mm": [
+      269.9,
+      87.7
+     ],
+     "settle_from_reset_mm": 1.23
+    }
+   },
+   "layout_id": "L00"
+  },
+  {
+   "seed": 1,
+   "min_gap_mm": 18.4,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 55.5,
+    "x+3": 55.5,
+    "y+3": 85.5,
+    "x-3": 55.5
+   },
+   "rack_clear_ok": true,
+   "vials": {
+    "vial_1": {
+     "pos_env": [
+      0.20253,
+      -0.08755,
+      0.05054
+     ],
+     "quat_wxyz": [
+      0.709243,
+      0.082905,
+      0.696494,
+      -0.070691
+     ],
+     "heading_deg": -12.48,
+     "axis_tilt_deg": 0.92,
+     "tip_uv_mm": [
+      118.3,
+      144.7
+     ],
+     "mid_uv_mm": [
+      175.2,
+      132.1
+     ],
+     "cap_uv_mm": [
+      232.1,
+      119.5
+     ],
+     "settle_from_reset_mm": 0.66
+    },
+    "vial_2": {
+     "pos_env": [
+      0.22641,
+      0.00335,
+      0.05041
+     ],
+     "quat_wxyz": [
+      0.709239,
+      0.098051,
+      0.69415,
+      -0.074302
+     ],
+     "heading_deg": -14.02,
+     "axis_tilt_deg": 0.98,
+     "tip_uv_mm": [
+      142.3,
+      236.1
+     ],
+     "mid_uv_mm": [
+      198.8,
+      222.0
+     ],
+     "cap_uv_mm": [
+      255.3,
+      207.8
+     ],
+     "settle_from_reset_mm": 0.99
+    },
+    "vial_3": {
+     "pos_env": [
+      0.22942,
+      -0.16998,
+      0.05051
+     ],
+     "quat_wxyz": [
+      0.711491,
+      -0.036542,
+      0.700306,
+      0.04491
+     ],
+     "heading_deg": 6.6,
+     "axis_tilt_deg": 0.94,
+     "tip_uv_mm": [
+      144.9,
+      56.7
+     ],
+     "mid_uv_mm": [
+      202.8,
+      63.4
+     ],
+     "cap_uv_mm": [
+      260.7,
+      70.1
+     ],
+     "settle_from_reset_mm": 1.1
+    }
+   },
+   "layout_id": "L01"
+  },
+  {
+   "seed": 2,
+   "min_gap_mm": 29.0,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 59.8,
+    "x+3": 64.6,
+    "y+3": 89.8,
+    "x-3": 59.6
+   },
+   "rack_clear_ok": true,
+   "vials": {
+    "vial_1": {
+     "pos_env": [
+      0.26503,
+      -0.08075,
+      0.05053
+     ],
+     "quat_wxyz": [
+      0.712767,
+      -0.010801,
+      0.701221,
+      0.011646
+     ],
+     "heading_deg": 1.82,
+     "axis_tilt_deg": 0.94,
+     "tip_uv_mm": [
+      180.4,
+      147.3
+     ],
+     "mid_uv_mm": [
+      238.7,
+      149.2
+     ],
+     "cap_uv_mm": [
+      296.9,
+      151.0
+     ],
+     "settle_from_reset_mm": 1.05
+    },
+    "vial_2": {
+     "pos_env": [
+      0.19159,
+      0.00041,
+      0.05047
+     ],
+     "quat_wxyz": [
+      0.711077,
+      0.074472,
+      0.697437,
+      -0.049046
+     ],
+     "heading_deg": -10.04,
+     "axis_tilt_deg": 0.92,
+     "tip_uv_mm": [
+      107.3,
+      232.0
+     ],
+     "mid_uv_mm": [
+      164.6,
+      221.8
+     ],
+     "cap_uv_mm": [
+      222.0,
+      211.7
+     ],
+     "settle_from_reset_mm": 1.04
+    },
+    "vial_3": {
+     "pos_env": [
+      0.21575,
+      -0.15372,
+      0.05042
+     ],
+     "quat_wxyz": [
+      0.713017,
+      -0.014646,
+      0.700877,
+      -0.012818
+     ],
+     "heading_deg": 0.17,
+     "axis_tilt_deg": 0.98,
+     "tip_uv_mm": [
+      131.2,
+      74.8
+     ],
+     "mid_uv_mm": [
+      189.4,
+      75.0
+     ],
+     "cap_uv_mm": [
+      247.7,
+      75.2
+     ],
+     "settle_from_reset_mm": 1.02
+    }
+   },
+   "layout_id": "L02"
+  },
+  {
+   "seed": 3,
+   "min_gap_mm": 15.3,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 65.9,
+    "x+3": 65.0,
+    "y+3": 95.9,
+    "x-3": 66.8
+   },
+   "rack_clear_ok": true,
+   "vials": {
+    "vial_1": {
+     "pos_env": [
+      0.2341,
+      -0.07363,
+      0.05028
+     ],
+     "quat_wxyz": [
+      0.712091,
+      -0.117584,
+      0.690956,
+      0.040987
+     ],
+     "heading_deg": 12.95,
+     "axis_tilt_deg": 1.0,
+     "tip_uv_mm": [
+      149.9,
+      151.2
+     ],
+     "mid_uv_mm": [
+      206.7,
+      164.2
+     ],
+     "cap_uv_mm": [
+      263.5,
+      177.3
+     ],
+     "settle_from_reset_mm": 1.23
+    },
+    "vial_2": {
+     "pos_env": [
+      0.25727,
+      -0.0042,
+      0.05054
+     ],
+     "quat_wxyz": [
+      0.71279,
+      -0.012268,
+      0.70122,
+      0.008412
+     ],
+     "heading_deg": 1.68,
+     "axis_tilt_deg": 0.93,
+     "tip_uv_mm": [
+      172.7,
+      223.9
+     ],
+     "mid_uv_mm": [
+      230.9,
+      225.6
+     ],
+     "cap_uv_mm": [
+      289.1,
+      227.3
+     ],
+     "settle_from_reset_mm": 0.86
+    },
+    "vial_3": {
+     "pos_env": [
+      0.26354,
+      -0.15192,
+      0.05052
+     ],
+     "quat_wxyz": [
+      0.712778,
+      0.004965,
+      0.701211,
+      -0.015064
+     ],
+     "heading_deg": -1.62,
+     "axis_tilt_deg": 0.95,
+     "tip_uv_mm": [
+      178.9,
+      77.2
+     ],
+     "mid_uv_mm": [
+      237.2,
+      75.5
+     ],
+     "cap_uv_mm": [
+      295.4,
+      73.9
+     ],
+     "settle_from_reset_mm": 0.73
+    }
+   },
+   "layout_id": "L03"
+  },
+  {
+   "seed": 4,
+   "min_gap_mm": 32.3,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 37.7,
+    "x+3": 31.7,
+    "y+3": 67.0,
+    "x-3": 44.4
+   },
+   "rack_clear_ok": true,
+   "vials": {
+    "vial_1": {
+     "pos_env": [
+      0.21029,
+      -0.08174,
+      0.05052
+     ],
+     "quat_wxyz": [
+      0.711364,
+      -0.057123,
+      0.698913,
+      0.047104
+     ],
+     "heading_deg": 8.46,
+     "axis_tilt_deg": 0.95,
+     "tip_uv_mm": [
+      125.9,
+      144.4
+     ],
+     "mid_uv_mm": [
+      183.5,
+      152.9
+     ],
+     "cap_uv_mm": [
+      241.1,
+      161.5
+     ],
+     "settle_from_reset_mm": 0.62
+    },
+    "vial_2": {
+     "pos_env": [
+      0.23629,
+      0.00943,
+      0.05039
+     ],
+     "quat_wxyz": [
+      0.711375,
+      -0.10865,
+      0.692689,
+      0.04819
+     ],
+     "heading_deg": 12.79,
+     "axis_tilt_deg": 0.96,
+     "tip_uv_mm": [
+      152.1,
+      234.3
+     ],
+     "mid_uv_mm": [
+      208.9,
+      247.2
+     ],
+     "cap_uv_mm": [
+      265.7,
+      260.1
+     ],
+     "settle_from_reset_mm": 0.93
+    },
+    "vial_3": {
+     "pos_env": [
+      0.20489,
+      -0.15267,
+      0.05045
+     ],
+     "quat_wxyz": [
+      0.71199,
+      0.058524,
+      0.69867,
+      -0.038788
+     ],
+     "heading_deg": -7.91,
+     "axis_tilt_deg": 0.97,
+     "tip_uv_mm": [
+      120.5,
+      78.3
+     ],
+     "mid_uv_mm": [
+      178.2,
+      70.3
+     ],
+     "cap_uv_mm": [
+      235.8,
+      62.2
+     ],
+     "settle_from_reset_mm": 1.01
+    }
+   },
+   "layout_id": "L04"
+  },
+  {
+   "seed": 5,
+   "min_gap_mm": 9.7,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 60.4,
+    "x+3": 52.9,
+    "y+3": 89.4,
+    "x-3": 67.8
+   },
+   "rack_clear_ok": true,
+   "vials": {
+    "vial_1": {
+     "pos_env": [
+      0.23032,
+      -0.07137,
+      0.05047
+     ],
+     "quat_wxyz": [
+      0.71049,
+      0.034394,
+      0.70048,
+      -0.057866
+     ],
+     "heading_deg": -7.47,
+     "axis_tilt_deg": 0.93,
+     "tip_uv_mm": [
+      145.9,
+      159.4
+     ],
+     "mid_uv_mm": [
+      203.6,
+      151.9
+     ],
+     "cap_uv_mm": [
+      261.4,
+      144.3
+     ],
+     "settle_from_reset_mm": 1.09
+    },
+    "vial_2": {
+     "pos_env": [
+      0.26936,
+      -0.00772,
+      0.05053
+     ],
+     "quat_wxyz": [
+      0.707285,
+      -0.087572,
+      0.695794,
+      0.089156
+     ],
+     "heading_deg": 14.36,
+     "axis_tilt_deg": 0.94,
+     "tip_uv_mm": [
+      185.3,
+      216.7
+     ],
+     "mid_uv_mm": [
+      241.7,
+      231.1
+     ],
+     "cap_uv_mm": [
+      298.2,
+      245.6
+     ],
+     "settle_from_reset_mm": 0.58
+    },
+    "vial_3": {
+     "pos_env": [
+      0.24019,
+      -0.15201,
+      0.05049
+     ],
+     "quat_wxyz": [
+      0.706104,
+      -0.077537,
+      0.696836,
+      0.099115
+     ],
+     "heading_deg": 14.34,
+     "axis_tilt_deg": 0.96,
+     "tip_uv_mm": [
+      156.1,
+      72.4
+     ],
+     "mid_uv_mm": [
+      212.6,
+      86.8
+     ],
+     "cap_uv_mm": [
+      269.0,
+      101.2
+     ],
+     "settle_from_reset_mm": 0.94
+    }
+   },
+   "layout_id": "L05"
+  },
+  {
+   "seed": 6,
+   "min_gap_mm": 3.8,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 60.1,
+    "x+3": 60.2,
+    "y+3": 90.1,
+    "x-3": 60.1
+   },
+   "rack_clear_ok": true,
+   "vials": {
+    "vial_1": {
+     "pos_env": [
+      0.23284,
+      -0.07648,
+      0.05027
+     ],
+     "quat_wxyz": [
+      0.711051,
+      0.136582,
+      0.687463,
+      -0.056095
+     ],
+     "heading_deg": -15.75,
+     "axis_tilt_deg": 1.0,
+     "tip_uv_mm": [
+      148.9,
+      156.7
+     ],
+     "mid_uv_mm": [
+      204.9,
+      140.9
+     ],
+     "cap_uv_mm": [
+      261.0,
+      125.1
+     ],
+     "settle_from_reset_mm": 1.64
+    },
+    "vial_2": {
+     "pos_env": [
+      0.22236,
+      0.00198,
+      0.05048
+     ],
+     "quat_wxyz": [
+      0.712897,
+      0.029159,
+      0.700602,
+      -0.009231
+     ],
+     "heading_deg": -3.13,
+     "axis_tilt_deg": 0.95,
+     "tip_uv_mm": [
+      137.8,
+      231.5
+     ],
+     "mid_uv_mm": [
+      196.0,
+      228.3
+     ],
+     "cap_uv_mm": [
+      254.1,
+      225.2
+     ],
+     "settle_from_reset_mm": 1.08
+    },
+    "vial_3": {
+     "pos_env": [
+      0.24724,
+      -0.15558,
+      0.05039
+     ],
+     "quat_wxyz": [
+      0.708577,
+      -0.039272,
+      0.700095,
+      0.079021
+     ],
+     "heading_deg": 9.57,
+     "axis_tilt_deg": 0.95,
+     "tip_uv_mm": [
+      162.9,
+      70.2
+     ],
+     "mid_uv_mm": [
+      220.3,
+      79.9
+     ],
+     "cap_uv_mm": [
+      277.7,
+      89.6
+     ],
+     "settle_from_reset_mm": 0.89
+    }
+   },
+   "layout_id": "L06"
+  },
+  {
+   "seed": 7,
+   "min_gap_mm": 46.1,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 57.6,
+    "x+3": 54.7,
+    "y+3": 87.5,
+    "x-3": 60.6
+   },
+   "rack_clear_ok": true,
+   "vials": {
+    "vial_1": {
+     "pos_env": [
+      0.21687,
+      -0.07896,
+      0.0505
+     ],
+     "quat_wxyz": [
+      0.709423,
+      0.065373,
+      0.698349,
+      -0.068952
+     ],
+     "heading_deg": -10.9,
+     "axis_tilt_deg": 0.92,
+     "tip_uv_mm": [
+      132.6,
+      152.9
+     ],
+     "mid_uv_mm": [
+      189.8,
+      141.8
+     ],
+     "cap_uv_mm": [
+      247.0,
+      130.8
+     ],
+     "settle_from_reset_mm": 0.55
+    },
+    "vial_2": {
+     "pos_env": [
+      0.25358,
+      0.00043,
+      0.05048
+     ],
+     "quat_wxyz": [
+      0.711914,
+      -0.029627,
+      0.700507,
+      0.039877
+     ],
+     "heading_deg": 5.63,
+     "axis_tilt_deg": 0.96,
+     "tip_uv_mm": [
+      169.1,
+      227.4
+     ],
+     "mid_uv_mm": [
+      227.0,
+      233.1
+     ],
+     "cap_uv_mm": [
+      285.0,
+      238.8
+     ],
+     "settle_from_reset_mm": 0.8
+    },
+    "vial_3": {
+     "pos_env": [
+      0.21142,
+      -0.16349,
+      0.05053
+     ],
+     "quat_wxyz": [
+      0.706839,
+      0.091166,
+      0.695293,
+      -0.09292
+     ],
+     "heading_deg": -14.96,
+     "axis_tilt_deg": 0.95,
+     "tip_uv_mm": [
+      127.4,
+      69.5
+     ],
+     "mid_uv_mm": [
+      183.7,
+      54.5
+     ],
+     "cap_uv_mm": [
+      239.9,
+      39.4
+     ],
+     "settle_from_reset_mm": 0.58
+    }
+   },
+   "layout_id": "L07"
+  },
+  {
+   "seed": 8,
+   "min_gap_mm": 18.5,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 45.1,
+    "x+3": 39.3,
+    "y+3": 74.6,
+    "x-3": 50.9
+   },
+   "rack_clear_ok": true,
+   "vials": {
+    "vial_1": {
+     "pos_env": [
+      0.20243,
+      -0.07942,
+      0.05045
+     ],
+     "quat_wxyz": [
+      0.709387,
+      0.087565,
+      0.695764,
+      -0.070823
+     ],
+     "heading_deg": -12.87,
+     "axis_tilt_deg": 0.94,
+     "tip_uv_mm": [
+      118.3,
+      153.0
+     ],
+     "mid_uv_mm": [
+      175.0,
+      140.0
+     ],
+     "cap_uv_mm": [
+      231.8,
+      127.0
+     ],
+     "settle_from_reset_mm": 1.12
+    },
+    "vial_2": {
+     "pos_env": [
+      0.24782,
+      0.00638,
+      0.05039
+     ],
+     "quat_wxyz": [
+      0.711412,
+      -0.094135,
+      0.695124,
+      0.042824
+     ],
+     "heading_deg": 11.16,
+     "axis_tilt_deg": 0.91,
+     "tip_uv_mm": [
+      163.5,
+      231.7
+     ],
+     "mid_uv_mm": [
+      220.7,
+      243.0
+     ],
+     "cap_uv_mm": [
+      277.8,
+      254.2
+     ],
+     "settle_from_reset_mm": 0.95
+    },
+    "vial_3": {
+     "pos_env": [
+      0.23189,
+      -0.16236,
+      0.05049
+     ],
+     "quat_wxyz": [
+      0.712436,
+      -0.050744,
+      0.699199,
+      0.031333
+     ],
+     "heading_deg": 6.67,
+     "axis_tilt_deg": 0.98,
+     "tip_uv_mm": [
+      147.4,
+      64.3
+     ],
+     "mid_uv_mm": [
+      205.3,
+      71.0
+     ],
+     "cap_uv_mm": [
+      263.1,
+      77.8
+     ],
+     "settle_from_reset_mm": 0.99
+    }
+   },
+   "layout_id": "L08"
+  },
+  {
+   "seed": 9,
+   "min_gap_mm": 31.6,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 55.5,
+    "x+3": 48.2,
+    "y+3": 84.6,
+    "x-3": 62.8
+   },
+   "rack_clear_ok": true,
+   "vials": {
+    "vial_1": {
+     "pos_env": [
+      0.20327,
+      -0.07919,
+      0.05041
+     ],
+     "quat_wxyz": [
+      0.712894,
+      -0.052176,
+      0.699137,
+      0.016338
+     ],
+     "heading_deg": 5.58,
+     "axis_tilt_deg": 0.97,
+     "tip_uv_mm": [
+      118.7,
+      147.8
+     ],
+     "mid_uv_mm": [
+      176.7,
+      153.4
+     ],
+     "cap_uv_mm": [
+      234.7,
+      159.1
+     ],
+     "settle_from_reset_mm": 1.32
+    },
+    "vial_2": {
+     "pos_env": [
+      0.25669,
+      -0.00552,
+      0.05052
+     ],
+     "quat_wxyz": [
+      0.707712,
+      -0.086925,
+      0.695907,
+      0.085445
+     ],
+     "heading_deg": 14.0,
+     "axis_tilt_deg": 0.93,
+     "tip_uv_mm": [
+      172.6,
+      219.0
+     ],
+     "mid_uv_mm": [
+      229.1,
+      233.1
+     ],
+     "cap_uv_mm": [
+      285.6,
+      247.2
+     ],
+     "settle_from_reset_mm": 0.58
+    },
+    "vial_3": {
+     "pos_env": [
+      0.26887,
+      -0.15238,
+      0.05051
+     ],
+     "quat_wxyz": [
+      0.707303,
+      -0.06855,
+      0.69809,
+      0.087716
+     ],
+     "heading_deg": 12.68,
+     "axis_tilt_deg": 0.91,
+     "tip_uv_mm": [
+      184.7,
+      72.5
+     ],
+     "mid_uv_mm": [
+      241.5,
+      85.3
+     ],
+     "cap_uv_mm": [
+      298.3,
+      98.1
+     ],
+     "settle_from_reset_mm": 0.78
+    }
+   },
+   "layout_id": "L09"
+  }
+ ],
+ "skipped": [],
+ "all_seeds": [
+  {
+   "seed": 0,
+   "min_gap_mm": 23.6,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 63.6,
+    "x+3": 59.5,
+    "y+3": 93.4,
+    "x-3": 67.8
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 1,
+   "min_gap_mm": 18.4,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 55.5,
+    "x+3": 55.5,
+    "y+3": 85.5,
+    "x-3": 55.5
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 2,
+   "min_gap_mm": 29.0,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 59.8,
+    "x+3": 64.6,
+    "y+3": 89.8,
+    "x-3": 59.6
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 3,
+   "min_gap_mm": 15.3,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 65.9,
+    "x+3": 65.0,
+    "y+3": 95.9,
+    "x-3": 66.8
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 4,
+   "min_gap_mm": 32.3,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 37.7,
+    "x+3": 31.7,
+    "y+3": 67.0,
+    "x-3": 44.4
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 5,
+   "min_gap_mm": 9.7,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 60.4,
+    "x+3": 52.9,
+    "y+3": 89.4,
+    "x-3": 67.8
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 6,
+   "min_gap_mm": 3.8,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 60.1,
+    "x+3": 60.2,
+    "y+3": 90.1,
+    "x-3": 60.1
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 7,
+   "min_gap_mm": 46.1,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 57.6,
+    "x+3": 54.7,
+    "y+3": 87.5,
+    "x-3": 60.6
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 8,
+   "min_gap_mm": 18.5,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 45.1,
+    "x+3": 39.3,
+    "y+3": 74.6,
+    "x-3": 50.9
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 9,
+   "min_gap_mm": 31.6,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 55.5,
+    "x+3": 48.2,
+    "y+3": 84.6,
+    "x-3": 62.8
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 10,
+   "min_gap_mm": 50.8,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 31.4,
+    "x+3": 31.4,
+    "y+3": 61.4,
+    "x-3": 34.3
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 11,
+   "min_gap_mm": 35.9,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 28.9,
+    "x+3": 28.9,
+    "y+3": 58.9,
+    "x-3": 34.2
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 12,
+   "min_gap_mm": 17.6,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 58.4,
+    "x+3": 58.4,
+    "y+3": 88.4,
+    "x-3": 58.4
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 13,
+   "min_gap_mm": 39.4,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 55.8,
+    "x+3": 57.4,
+    "y+3": 85.8,
+    "x-3": 55.8
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 14,
+   "min_gap_mm": 33.8,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 66.9,
+    "x+3": 66.9,
+    "y+3": 96.9,
+    "x-3": 66.9
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 15,
+   "min_gap_mm": 27.2,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 57.2,
+    "x+3": 56.8,
+    "y+3": 87.2,
+    "x-3": 58.3
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 16,
+   "min_gap_mm": 35.5,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 65.9,
+    "x+3": 65.9,
+    "y+3": 95.9,
+    "x-3": 65.9
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 17,
+   "min_gap_mm": 36.2,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 44.5,
+    "x+3": 40.9,
+    "y+3": 73.8,
+    "x-3": 51.1
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 18,
+   "min_gap_mm": 29.2,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 48.1,
+    "x+3": 40.9,
+    "y+3": 77.2,
+    "x-3": 55.2
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 19,
+   "min_gap_mm": 11.4,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 56.4,
+    "x+3": 56.4,
+    "y+3": 86.4,
+    "x-3": 56.4
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 20,
+   "min_gap_mm": 27.3,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 45.7,
+    "x+3": 44.0,
+    "y+3": 75.1,
+    "x-3": 53.8
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 21,
+   "min_gap_mm": 43.9,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 41.6,
+    "x+3": 41.6,
+    "y+3": 71.6,
+    "x-3": 44.5
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 22,
+   "min_gap_mm": 27.3,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 67.6,
+    "x+3": 67.5,
+    "y+3": 97.6,
+    "x-3": 69.1
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 23,
+   "min_gap_mm": 12.1,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 54.4,
+    "x+3": 57.4,
+    "y+3": 84.4,
+    "x-3": 54.4
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 24,
+   "min_gap_mm": 26.1,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 57.9,
+    "x+3": 57.8,
+    "y+3": 87.9,
+    "x-3": 58.0
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 25,
+   "min_gap_mm": 20.9,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 51.5,
+    "x+3": 52.1,
+    "y+3": 81.5,
+    "x-3": 51.5
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 26,
+   "min_gap_mm": 28.1,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 44.1,
+    "x+3": 41.3,
+    "y+3": 73.3,
+    "x-3": 50.8
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 27,
+   "min_gap_mm": 38.0,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 44.2,
+    "x+3": 44.2,
+    "y+3": 74.2,
+    "x-3": 47.1
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 28,
+   "min_gap_mm": 33.3,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 69.5,
+    "x+3": 69.5,
+    "y+3": 99.5,
+    "x-3": 69.5
+   },
+   "rack_clear_ok": true
+  },
+  {
+   "seed": 29,
+   "min_gap_mm": 21.1,
+   "clearance_ok": true,
+   "on_mat": true,
+   "rack_clearance_mm": {
+    "nominal": 63.7,
+    "x+3": 63.7,
+    "y+3": 93.7,
+    "x-3": 63.7
+   },
+   "rack_clear_ok": true
+  }
+ ]
+}

@@ -1,0 +1,44 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = 1
+    subLayers = [
+        @/workspace/Sim-to-Real-SO-101-Workshop/source/sim_to_real_so101/assets/usd/lightbox-simple.usd@
+    ]
+    upAxis = "Z"
+)
+
+over "World"
+{
+    over "LightBox"
+    {
+        over "Looks"
+        {
+            over "Paper"
+            {
+                over "Shader"
+                {
+                    uniform asset info:mdl:sourceAsset = @/workspace/assets_mirror/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Wall_Board/Paper.mdl@
+                }
+            }
+
+            over "Rubber_Smooth"
+            {
+                over "Shader"
+                {
+                    uniform asset info:mdl:sourceAsset = @/workspace/assets_mirror/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Plastics/Rubber_Smooth.mdl@
+                }
+            }
+        }
+
+        over "camera_mount"
+        {
+            over "rsd455" (
+                payload = @/workspace/assets_mirror/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Sensors/Intel/RealSense/rsd455.usd@
+            )
+            {
+            }
+        }
+    }
+}
+

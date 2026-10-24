@@ -1,0 +1,35 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = 1
+    subLayers = [
+        @/workspace/Sim-to-Real-SO-101-Workshop/source/sim_to_real_so101/assets/usd/mat.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "World"
+{
+    over "Mat"
+    {
+        over "Looks"
+        {
+            over "Paper"
+            {
+                over "Shader"
+                {
+                    uniform asset info:mdl:sourceAsset = @/workspace/assets_mirror/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Wall_Board/Paper.mdl@
+                }
+            }
+
+            over "Rubber_Smooth"
+            {
+                over "Shader"
+                {
+                    uniform asset info:mdl:sourceAsset = @/workspace/assets_mirror/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Plastics/Rubber_Smooth.mdl@
+                }
+            }
+        }
+    }
+}
+

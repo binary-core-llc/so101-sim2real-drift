@@ -1,0 +1,919 @@
+{
+ "source": "sweep_cells_v1.csv",
+ "source_md5": "c8d81d681277c9119c4c3f2e96b075ae",
+ "priorities": [
+  1,
+  2,
+  3
+ ],
+ "cells": 50,
+ "episodes": 2220,
+ "rows": [
+  {
+   "cell_id": "S0_nominal",
+   "priority": 1,
+   "factor": "nominal",
+   "level": "",
+   "unit": "",
+   "episodes": 200,
+   "seeds": "0-39 x 5 repeats",
+   "overrides": {},
+   "code": "all at centre",
+   "seed_base": 0,
+   "seed_mod": 40,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S1_tilt_down_1p43",
+   "priority": 1,
+   "factor": "tilt_down_deg",
+   "level": "1.43",
+   "unit": "deg",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "pitch": 0.02495820830351891
+    }
+   },
+   "code": "camera code pitch +0.024958 rad",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S1_tilt_down_1p5",
+   "priority": 1,
+   "factor": "tilt_down_deg",
+   "level": "1.5",
+   "unit": "deg",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "pitch": 0.026179938779914945
+    }
+   },
+   "code": "camera code pitch +0.026180 rad",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S1_tilt_down_2p87",
+   "priority": 1,
+   "factor": "tilt_down_deg",
+   "level": "2.87",
+   "unit": "deg",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "pitch": 0.05009094953223726
+    }
+   },
+   "code": "camera code pitch +0.050091 rad",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S1_tilt_down_3p58",
+   "priority": 1,
+   "factor": "tilt_down_deg",
+   "level": "3.58",
+   "unit": "deg",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "pitch": 0.062482787221396996
+    }
+   },
+   "code": "camera code pitch +0.062483 rad",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S1_tilt_down_4p3",
+   "priority": 1,
+   "factor": "tilt_down_deg",
+   "level": "4.3",
+   "unit": "deg",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "pitch": 0.07504915783575616
+    }
+   },
+   "code": "camera code pitch +0.075049 rad",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S1_tilt_down_5p73",
+   "priority": 1,
+   "factor": "tilt_down_deg",
+   "level": "5.73",
+   "unit": "deg",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "pitch": 0.10000736613927509
+    }
+   },
+   "code": "camera code pitch +0.100007 rad",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S1_tilt_down_6p0",
+   "priority": 1,
+   "factor": "tilt_down_deg",
+   "level": "6.0",
+   "unit": "deg",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "pitch": 0.10471975511965978
+    }
+   },
+   "code": "camera code pitch +0.104720 rad",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S1_tilt_down_8p6",
+   "priority": 1,
+   "factor": "tilt_down_deg",
+   "level": "8.6",
+   "unit": "deg",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "pitch": 0.15009831567151233
+    }
+   },
+   "code": "camera code pitch +0.150098 rad",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S2_rack_y_0p5",
+   "priority": 1,
+   "factor": "rack_y_cm",
+   "level": "0.5",
+   "unit": "cm",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "rack": {
+     "y": 0.005
+    }
+   },
+   "code": "rack code y +0.0050 m",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S2_rack_y_1p0",
+   "priority": 1,
+   "factor": "rack_y_cm",
+   "level": "1.0",
+   "unit": "cm",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "rack": {
+     "y": 0.01
+    }
+   },
+   "code": "rack code y +0.0100 m",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S2_rack_y_1p25",
+   "priority": 1,
+   "factor": "rack_y_cm",
+   "level": "1.25",
+   "unit": "cm",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "rack": {
+     "y": 0.0125
+    }
+   },
+   "code": "rack code y +0.0125 m",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S2_rack_y_1p5",
+   "priority": 1,
+   "factor": "rack_y_cm",
+   "level": "1.5",
+   "unit": "cm",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "rack": {
+     "y": 0.015
+    }
+   },
+   "code": "rack code y +0.0150 m",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S2_rack_y_2p0",
+   "priority": 1,
+   "factor": "rack_y_cm",
+   "level": "2.0",
+   "unit": "cm",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "rack": {
+     "y": 0.02
+    }
+   },
+   "code": "rack code y +0.0200 m",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S2_rack_y_3p0",
+   "priority": 1,
+   "factor": "rack_y_cm",
+   "level": "3.0",
+   "unit": "cm",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "rack": {
+     "y": 0.03
+    }
+   },
+   "code": "rack code y +0.0300 m",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S2_rack_y_4p0",
+   "priority": 1,
+   "factor": "rack_y_cm",
+   "level": "4.0",
+   "unit": "cm",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "rack": {
+     "y": 0.04
+    }
+   },
+   "code": "rack code y +0.0400 m",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S3_rack_x_2p0",
+   "priority": 1,
+   "factor": "rack_x_cm",
+   "level": "2.0",
+   "unit": "cm",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "rack": {
+     "x": 0.02
+    }
+   },
+   "code": "rack code x +0.0200 m",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S3_rack_x_3p0",
+   "priority": 1,
+   "factor": "rack_x_cm",
+   "level": "3.0",
+   "unit": "cm",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "rack": {
+     "x": 0.03
+    }
+   },
+   "code": "rack code x +0.0300 m",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S3_rack_x_4p0",
+   "priority": 1,
+   "factor": "rack_x_cm",
+   "level": "4.0",
+   "unit": "cm",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "rack": {
+     "x": 0.04
+    }
+   },
+   "code": "rack code x +0.0400 m",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S3_rack_x_5p0",
+   "priority": 1,
+   "factor": "rack_x_cm",
+   "level": "5.0",
+   "unit": "cm",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "rack": {
+     "x": 0.05
+    }
+   },
+   "code": "rack code x +0.0500 m",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S3_rack_x_6p0",
+   "priority": 1,
+   "factor": "rack_x_cm",
+   "level": "6.0",
+   "unit": "cm",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "rack": {
+     "x": 0.06
+    }
+   },
+   "code": "rack code x +0.0600 m",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S3_rack_x_8p0",
+   "priority": 1,
+   "factor": "rack_x_cm",
+   "level": "8.0",
+   "unit": "cm",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "rack": {
+     "x": 0.08
+    }
+   },
+   "code": "rack code x +0.0800 m",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S_course",
+   "priority": 2,
+   "factor": "course_eval_as_shipped",
+   "level": "",
+   "unit": "",
+   "episodes": 100,
+   "seeds": "0-99",
+   "overrides": {},
+   "code": "as shipped (no overrides)",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": true
+  },
+  {
+   "cell_id": "S4_light_darker_m2p0",
+   "priority": 2,
+   "factor": "light_ev",
+   "level": "-2.0",
+   "unit": "EV (absolute)",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "exposure_ev": -2.0
+   },
+   "code": "exposure -2.00 EV (absolute)",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S4_light_darker_m3p0",
+   "priority": 2,
+   "factor": "light_ev",
+   "level": "-3.0",
+   "unit": "EV (absolute)",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "exposure_ev": -3.0
+   },
+   "code": "exposure -3.00 EV (absolute)",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S4_light_darker_m3p5",
+   "priority": 2,
+   "factor": "light_ev",
+   "level": "-3.5",
+   "unit": "EV (absolute)",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "exposure_ev": -3.5
+   },
+   "code": "exposure -3.50 EV (absolute)",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S4_light_darker_m4p0",
+   "priority": 2,
+   "factor": "light_ev",
+   "level": "-4.0",
+   "unit": "EV (absolute)",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "exposure_ev": -4.0
+   },
+   "code": "exposure -4.00 EV (absolute)",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S4_light_darker_m5p0",
+   "priority": 2,
+   "factor": "light_ev",
+   "level": "-5.0",
+   "unit": "EV (absolute)",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "exposure_ev": -5.0
+   },
+   "code": "exposure -5.00 EV (absolute)",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S4_light_darker_m7p0",
+   "priority": 2,
+   "factor": "light_ev",
+   "level": "-7.0",
+   "unit": "EV (absolute)",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "exposure_ev": -7.0
+   },
+   "code": "exposure -7.00 EV (absolute)",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S5_light_brighter_1p0",
+   "priority": 2,
+   "factor": "light_ev",
+   "level": "1.0",
+   "unit": "EV (absolute)",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "exposure_ev": 1.0
+   },
+   "code": "exposure +1.00 EV (absolute)",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S5_light_brighter_2p0",
+   "priority": 2,
+   "factor": "light_ev",
+   "level": "2.0",
+   "unit": "EV (absolute)",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "exposure_ev": 2.0
+   },
+   "code": "exposure +2.00 EV (absolute)",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S5_light_brighter_3p0",
+   "priority": 2,
+   "factor": "light_ev",
+   "level": "3.0",
+   "unit": "EV (absolute)",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "exposure_ev": 3.0
+   },
+   "code": "exposure +3.00 EV (absolute)",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S6_ext_hfov_55p8",
+   "priority": 2,
+   "factor": "ext_hfov_deg",
+   "level": "55.8",
+   "unit": "deg",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera_focal_mm": 2.266406
+   },
+   "code": "external focal 2.266406 mm (hAp 2.4 mm)",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S6_ext_hfov_60p0",
+   "priority": 2,
+   "factor": "ext_hfov_deg",
+   "level": "60.0",
+   "unit": "deg",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera_focal_mm": 2.078461
+   },
+   "code": "external focal 2.078461 mm (hAp 2.4 mm)",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S6_ext_hfov_65p9",
+   "priority": 2,
+   "factor": "ext_hfov_deg",
+   "level": "65.9",
+   "unit": "deg",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera_focal_mm": 1.851373
+   },
+   "code": "external focal 1.851373 mm (hAp 2.4 mm)",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S6_ext_hfov_70p4",
+   "priority": 2,
+   "factor": "ext_hfov_deg",
+   "level": "70.4",
+   "unit": "deg",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera_focal_mm": 1.701108
+   },
+   "code": "external focal 1.701108 mm (hAp 2.4 mm)",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S7_cam_yaw_1p43",
+   "priority": 3,
+   "factor": "cam_yaw_code_deg",
+   "level": "1.43",
+   "unit": "deg (code)",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "yaw": 0.02495820830351891
+    }
+   },
+   "code": "camera code yaw +0.024958 rad",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S7_cam_yaw_2p87",
+   "priority": 3,
+   "factor": "cam_yaw_code_deg",
+   "level": "2.87",
+   "unit": "deg (code)",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "yaw": 0.05009094953223726
+    }
+   },
+   "code": "camera code yaw +0.050091 rad",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S7_cam_yaw_3p58",
+   "priority": 3,
+   "factor": "cam_yaw_code_deg",
+   "level": "3.58",
+   "unit": "deg (code)",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "yaw": 0.062482787221396996
+    }
+   },
+   "code": "camera code yaw +0.062483 rad",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S7_cam_yaw_4p3",
+   "priority": 3,
+   "factor": "cam_yaw_code_deg",
+   "level": "4.3",
+   "unit": "deg (code)",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "yaw": 0.07504915783575616
+    }
+   },
+   "code": "camera code yaw +0.075049 rad",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S7_cam_yaw_5p73",
+   "priority": 3,
+   "factor": "cam_yaw_code_deg",
+   "level": "5.73",
+   "unit": "deg (code)",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "yaw": 0.10000736613927509
+    }
+   },
+   "code": "camera code yaw +0.100007 rad",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S7_cam_yaw_8p6",
+   "priority": 3,
+   "factor": "cam_yaw_code_deg",
+   "level": "8.6",
+   "unit": "deg (code)",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "yaw": 0.15009831567151233
+    }
+   },
+   "code": "camera code yaw +0.150098 rad",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S8_cam_up_0p5",
+   "priority": 3,
+   "factor": "cam_up_cm",
+   "level": "0.5",
+   "unit": "cm",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "z": 0.005
+    }
+   },
+   "code": "camera code z +0.0050 m",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S8_cam_up_1p0",
+   "priority": 3,
+   "factor": "cam_up_cm",
+   "level": "1.0",
+   "unit": "cm",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "z": 0.01
+    }
+   },
+   "code": "camera code z +0.0100 m",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S8_cam_up_1p25",
+   "priority": 3,
+   "factor": "cam_up_cm",
+   "level": "1.25",
+   "unit": "cm",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "z": 0.0125
+    }
+   },
+   "code": "camera code z +0.0125 m",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S8_cam_up_1p5",
+   "priority": 3,
+   "factor": "cam_up_cm",
+   "level": "1.5",
+   "unit": "cm",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "z": 0.015
+    }
+   },
+   "code": "camera code z +0.0150 m",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S8_cam_up_2p0",
+   "priority": 3,
+   "factor": "cam_up_cm",
+   "level": "2.0",
+   "unit": "cm",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "z": 0.02
+    }
+   },
+   "code": "camera code z +0.0200 m",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S8_cam_up_3p0",
+   "priority": 3,
+   "factor": "cam_up_cm",
+   "level": "3.0",
+   "unit": "cm",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "z": 0.03
+    }
+   },
+   "code": "camera code z +0.0300 m",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S9_tilt_up_m2p87",
+   "priority": 3,
+   "factor": "tilt_down_deg",
+   "level": "-2.87",
+   "unit": "deg",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "pitch": -0.05009094953223726
+    }
+   },
+   "code": "camera code pitch -0.050091 rad",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "S9_tilt_up_m5p73",
+   "priority": 3,
+   "factor": "tilt_down_deg",
+   "level": "-5.73",
+   "unit": "deg",
+   "episodes": 40,
+   "seeds": "0-39",
+   "overrides": {
+    "camera": {
+     "pitch": -0.10000736613927509
+    }
+   },
+   "code": "camera code pitch -0.100007 rad",
+   "seed_base": 0,
+   "seed_mod": 0,
+   "as_shipped": false
+  },
+  {
+   "cell_id": "H4_c920_measured",
+   "priority": 4,
+   "factor": "ext_intrinsics",
+   "level": "",
+   "unit": "",
+   "episodes": 200,
+   "seeds": "0-39 x 5 repeats",
+   "mapped": "not mapped yet (priority 4 waits for the Oct 26 measurements)"
+  },
+  {
+   "cell_id": "H4_c920_image_matched",
+   "priority": 4,
+   "factor": "ext_intrinsics+pose",
+   "level": "",
+   "unit": "",
+   "episodes": 200,
+   "seeds": "0-39 x 5 repeats",
+   "mapped": "not mapped yet (priority 4 waits for the Oct 26 measurements)"
+  },
+  {
+   "cell_id": "G3_joint_scale",
+   "priority": 4,
+   "factor": "joint_scale",
+   "level": "",
+   "unit": "",
+   "episodes": 80,
+   "seeds": "0-39 x 2",
+   "mapped": "not mapped yet (priority 4 waits for the Oct 26 measurements)"
+  },
+  {
+   "cell_id": "R_replay_oct26",
+   "priority": 4,
+   "factor": "camera_pose",
+   "level": "",
+   "unit": "",
+   "episodes": 80,
+   "seeds": "0-39 x 2",
+   "mapped": "not mapped yet (priority 4 waits for the Oct 26 measurements)"
+  }
+ ]
+}
