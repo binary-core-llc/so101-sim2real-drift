@@ -1,9 +1,10 @@
-# How far can a real setup drift before a sim-trained robot fails? (pre-registration)
+# SO-101 sim-to-real drift tolerance: pre-registration and simulation sweep
 
-Pre-registration and simulation-sweep code for a GTC 2027 poster study by Arturo Morales Rangel (Binary Core LLC).
-The study measures how far a real SO-101 workspace can drift from the simulation of NVIDIA's course
-"Train an SO-101 Robot From Sim-to-Real With NVIDIA Isaac" before the course's GR00T N1.6 policy fails,
-and whether one photo is enough to correct the setup.
+Pre-registration and simulation-sweep code for a study by Arturo Morales Rangel (Binary Core LLC), prepared for a GTC 2027 poster submission.
+
+The study measures how much a real SO-101 workspace can differ from the simulation in NVIDIA’s course “Train an SO-101 Robot From Sim-to-Real With NVIDIA Isaac” while the course’s sim-trained GR00T N1.6 policy still succeeds. Examples of such differences: the camera tilted a few degrees, the rack moved a few centimeters, or brighter or darker lighting. It also tests whether one photo of the real setup is enough to correct it.
+
+Status (October 2026): the simulation sweep is complete (2,220 episodes). Its analysis will be published with pre-registration v2, before the first scored real-robot trial. The sweep ran from a working copy whose code and configuration files are byte-identical to prereg-v1 (verified by git blob hash).
 
 **The date of record is the GitHub release `prereg-v1`.** That release pins:
 
@@ -11,7 +12,7 @@ and whether one photo is enough to correct the setup.
 |---|---|
 | `PREREGISTRATION_v1.md` | hypotheses, designs, analysis plan |
 | `sweep_cells_v1.csv` | the simulation sweep cells (md5 `c8d81d681277c9119c4c3f2e96b075ae`; `.gitattributes` keeps it byte-exact) |
-| `sim/overrides.py` | how a cell's factor level is applied while every other randomization stays at its centre |
+| `sim/overrides.py` | how a cell's factor level is applied while every other randomization stays at its center |
 | `sim/sweep_eval.py` | the evaluation loop, derived from the course's `scripts/lerobot_eval.py` |
 | `config/sign_table.json`, `notes/sign_table_V07.md` | the measured mapping from code axes to physical directions |
 | `tools/map_sweep_cells.py`, `config/cells_sweep_v1.csv`, `config/cells_sweep_v1_mapping.json` | how each row of `sweep_cells_v1.csv` becomes a run: the exact overrides, seeds and episode counts |
@@ -29,5 +30,5 @@ and whether one photo is enough to correct the setup.
 
 Deviations from the course setup are listed in section 7 of the pre-registration.
 
-## Licence
-Files derived from the course (`sim/sweep_eval.py`, `docker/sim/*`) keep NVIDIA's Apache-2.0 header; see `NOTICE`.
+## License
+Apache-2.0 (see LICENSE), Copyright 2026 Binary Core LLC. Files derived from the course (sim/sweep_eval.py, docker/sim/*) keep NVIDIA’s Apache-2.0 header; see NOTICE.
