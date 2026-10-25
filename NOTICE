@@ -1,5 +1,5 @@
 so101-sim2real-drift
-Copyright 2026 Binary Core LLC (Arturo Morales Rangel)
+Copyright 2026 Binary Core LLC
 
 Licensed under the Apache License, Version 2.0 (see LICENSE).
 
@@ -11,4 +11,4 @@ Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES, licensed under the Apache Li
   - docker/sim/entrypoint_offline.sh  the course's docker/sim/entrypoint.sh without the runtime pip install
                                       (see entrypoint_offline.diff)
   - assets/local/*.local.usda   wrapper layers that sublayer the course's unmodified USD files
-The derived files keep NVIDIA's copyright and licence headers where the originals had them.
+The derived files keep NVIDIA's copyright and license headers where the originals had them.

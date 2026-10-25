@@ -1,0 +1,6 @@
+queue/
+logs/
+results/
+media/
+.venv/
+assets_mirror/
