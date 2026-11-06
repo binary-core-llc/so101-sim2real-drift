@@ -1,0 +1,386 @@
+{
+ "p0": {
+  "k": 124,
+  "n": 200,
+  "rate": 0.62,
+  "half": 0.31
+ },
+ "bootstrap": {
+  "B": 2000,
+  "rng": "numpy default_rng(20261103)",
+  "unit": "vial seed (40), shared across factors"
+ },
+ "stamp": "gtc@0f2b1f7",
+ "source_sha256": {
+  "S1_tilt_down_1p43": "306cbea9c26d6bdf3db84f6df29fe32f75823e11a5ca4a35859faa6c0bf52c71",
+  "S1_tilt_down_1p5": "6b0e460a13976b9401637c5beaeb519f887a1070ac2ca46ead22a8a254ef53ec",
+  "S1_tilt_down_2p87": "25d68557bdbc13432a2f9c6ae767b9f5a0d80fa140f733b22af93b8f7297ffeb",
+  "S1_tilt_down_3p58": "71ebb6e10e134daf8e02bd166a718f4e143c04176c8aa5aa2eeefa13b1896821",
+  "S1_tilt_down_4p3": "0a8b3118e734b9544651cc84d4cbfe42818d91f0481b509d1a4fbd2a8d7ffd5e",
+  "S1_tilt_down_5p73": "900d3cd3d2da189b3f34ae9b06e7ddec0e053ba0e8aba46947e287f20f07d3f4",
+  "S1_tilt_down_6p0": "845b6bcf671d82d4fe6e26e0118191fb11234646dc62ea34a841c5996c48533d",
+  "S1_tilt_down_8p6": "e5b3f084c943a6fcf658fd35b9367bdac2f89daa2316d579ade1216b20a931fb",
+  "S2_rack_y_0p5": "b9f81383453d2a86c8ae81f2af4e75c1a7b969469b345a6ee89e78aff743c558",
+  "S2_rack_y_1p0": "99665b7e355151bd236f0c5c0caf6b3134f282bc7578afe41aab457f1bfeff6f",
+  "S2_rack_y_1p25": "2d18379bd1371f2270e218421f099aed2a96dcc814b5613e808c1f69a448c20a",
+  "S2_rack_y_1p5": "cfab3fd6f676f16790db3ffd6877e39081da5538c66d98926647462f4db687d0",
+  "S2_rack_y_2p0": "e01d37a6057b9089ac5e5bc970f63bf11ddb17c0481271d79a58cc5de3e649f5",
+  "S2_rack_y_3p0": "10e3f356f4d97c56c04e4f0a723006ef4df4540e74234b42f3f7ce7ca521b43b",
+  "S2_rack_y_4p0": "db2a871f6d8a298e84932b9415327d062a733b490d3b3494a62cb203726b3849",
+  "S3_rack_x_2p0": "af9d3958f913c2deac5b00527cb910e4cc529753969e958c699d71e8e6970abf",
+  "S3_rack_x_3p0": "bb59a4badff46a57b122410ce0129394ce95226080b73547a31a4c1fb73ce802",
+  "S3_rack_x_4p0": "abf36a4015477d187524f34a226771b2e2eae47f7e8da078cdddc8471e7ace0a",
+  "S3_rack_x_5p0": "89af85e7ce3694acf6fc23a46c785321d09c11822322b6022ac811bfb1fc4381",
+  "S3_rack_x_6p0": "9aa52ec8f99e03dcd1df2d3d3b523e8fe92375ddc28a503a0fd2213c7abc8976",
+  "S3_rack_x_8p0": "a0592562a7d725f0ce20e9683f924981f583dbb751821176d166f4141fe25518",
+  "S7_cam_yaw_1p43": "eaac966b0365f228f8738cd15366b21dc7489c990850aa23046241e5b189a192",
+  "S7_cam_yaw_2p87": "6439f2b837cced402d484476ec85af4670feef9c496d0cce2aeb6f3c765934a6",
+  "S7_cam_yaw_3p58": "5315246a36384ca1611bc868c976684e0c22f5f5c2d0b5d38997ce8db343c05e",
+  "S7_cam_yaw_4p3": "f8ebc409f461dce3db70c660cebaccfac8058ff89a8b467b4633dafebc68efd7",
+  "S7_cam_yaw_5p73": "e70943489d38c0ffdb7a70df1c4194044d3a0370b95c42e2076e8e383fa236d0",
+  "S7_cam_yaw_8p6": "b659118d5b411828132f0029cedcdea7d4d110d74682e491fb2de4b0da81f362",
+  "S8_cam_up_0p5": "c552116f1ee49c07b54d07eb3da41cd11d72e07c7693d2368ec95106b9e285e6",
+  "S8_cam_up_1p0": "dfb14157e0a86dc50237e4dbb5ebb22c5b8b263b7a406a35a9aac17edc05e852",
+  "S8_cam_up_1p25": "8b51b621f184f0f13e0fb155c55c34606e2400d2b48d18608c7ae7e4fe3ddc6d",
+  "S8_cam_up_1p5": "f6279c3446bd273897bf7d50b009fd2fdaf163a2a89c4369e828f166cb44fd21",
+  "S8_cam_up_2p0": "3a89b3ccd5fe23cd50a42896a1c7d403fca46aa81a442a70112c7452fb270292",
+  "S8_cam_up_3p0": "a8091a604244482fa95600a2fa07cb3e2296475227ebfc6d062ffd420b443a23"
+ },
+ "code_sha256": "f686b996c4a95cd101dfd4e53f60eb455335c1e1c38483bb49ee92c8b8cf4d4b",
+ "factors": {
+  "S1": {
+   "factor": "camera tilt down",
+   "unit": "deg",
+   "half_range": 2.8647889756541165,
+   "prediction_interval": [
+    2.8647889756541165,
+    5.729577951308233
+   ],
+   "levels": [
+    {
+     "cell": "S1_tilt_down_1p43",
+     "x": 1.43,
+     "k": 26,
+     "n": 40
+    },
+    {
+     "cell": "S1_tilt_down_1p5",
+     "x": 1.5000000000000002,
+     "k": 25,
+     "n": 40
+    },
+    {
+     "cell": "S1_tilt_down_2p87",
+     "x": 2.87,
+     "k": 28,
+     "n": 40
+    },
+    {
+     "cell": "S1_tilt_down_3p58",
+     "x": 3.58,
+     "k": 28,
+     "n": 40
+    },
+    {
+     "cell": "S1_tilt_down_4p3",
+     "x": 4.3,
+     "k": 20,
+     "n": 40
+    },
+    {
+     "cell": "S1_tilt_down_5p73",
+     "x": 5.73,
+     "k": 23,
+     "n": 40
+    },
+    {
+     "cell": "S1_tilt_down_6p0",
+     "x": 6.000000000000001,
+     "k": 21,
+     "n": 40
+    },
+    {
+     "cell": "S1_tilt_down_8p6",
+     "x": 8.6,
+     "k": 22,
+     "n": 40
+    }
+   ],
+   "threshold": null,
+   "censored": true,
+   "fit": {
+    "t": null,
+    "censored": true,
+    "t_grid": 13.316668302901883,
+    "k": 1.1253355826007645,
+    "loglik": -214.2173986683422
+   },
+   "ci95": [
+    null,
+    null
+   ],
+   "ci95_note": "None = censored (above the largest level)",
+   "bootstrap_censored_share": 0.9935,
+   "prediction_met": false
+  },
+  "S2": {
+   "factor": "rack toward the camera wall",
+   "unit": "cm",
+   "half_range": 1.0,
+   "prediction_interval": [
+    1.0,
+    2.0
+   ],
+   "levels": [
+    {
+     "cell": "S2_rack_y_0p5",
+     "x": 0.5,
+     "k": 28,
+     "n": 40
+    },
+    {
+     "cell": "S2_rack_y_1p0",
+     "x": 1.0,
+     "k": 25,
+     "n": 40
+    },
+    {
+     "cell": "S2_rack_y_1p25",
+     "x": 1.25,
+     "k": 25,
+     "n": 40
+    },
+    {
+     "cell": "S2_rack_y_1p5",
+     "x": 1.5,
+     "k": 21,
+     "n": 40
+    },
+    {
+     "cell": "S2_rack_y_2p0",
+     "x": 2.0,
+     "k": 26,
+     "n": 40
+    },
+    {
+     "cell": "S2_rack_y_3p0",
+     "x": 3.0,
+     "k": 21,
+     "n": 40
+    },
+    {
+     "cell": "S2_rack_y_4p0",
+     "x": 4.0,
+     "k": 24,
+     "n": 40
+    }
+   ],
+   "threshold": null,
+   "censored": true,
+   "fit": {
+    "t": null,
+    "censored": true,
+    "t_grid": 8.181289522401851,
+    "k": 0.6235507341273913,
+    "loglik": -187.40751933263854
+   },
+   "ci95": [
+    null,
+    null
+   ],
+   "ci95_note": "None = censored (above the largest level)",
+   "bootstrap_censored_share": 1.0,
+   "prediction_met": false
+  },
+  "S3": {
+   "factor": "rack toward the back wall",
+   "unit": "cm",
+   "half_range": 4.0,
+   "prediction_interval": [
+    4.0,
+    8.0
+   ],
+   "levels": [
+    {
+     "cell": "S3_rack_x_2p0",
+     "x": 2.0,
+     "k": 22,
+     "n": 40
+    },
+    {
+     "cell": "S3_rack_x_3p0",
+     "x": 3.0,
+     "k": 24,
+     "n": 40
+    },
+    {
+     "cell": "S3_rack_x_4p0",
+     "x": 4.0,
+     "k": 26,
+     "n": 40
+    },
+    {
+     "cell": "S3_rack_x_5p0",
+     "x": 5.0,
+     "k": 24,
+     "n": 40
+    },
+    {
+     "cell": "S3_rack_x_6p0",
+     "x": 6.0,
+     "k": 28,
+     "n": 40
+    },
+    {
+     "cell": "S3_rack_x_8p0",
+     "x": 8.0,
+     "k": 25,
+     "n": 40
+    }
+   ],
+   "threshold": null,
+   "censored": true,
+   "fit": {
+    "t": null,
+    "censored": true,
+    "t_grid": 75.61488133686908,
+    "k": 2.030917620904735,
+    "loglik": -159.27748073032217
+   },
+   "ci95": [
+    null,
+    null
+   ],
+   "ci95_note": "None = censored (above the largest level)",
+   "bootstrap_censored_share": 1.0,
+   "prediction_met": false
+  },
+  "S7": {
+   "factor": "camera yaw",
+   "unit": "deg code",
+   "half_range": 2.8647889756541165,
+   "prediction_interval": [
+    2.8647889756541165,
+    5.729577951308233
+   ],
+   "levels": [
+    {
+     "cell": "S7_cam_yaw_1p43",
+     "x": 1.43,
+     "k": 29,
+     "n": 40
+    },
+    {
+     "cell": "S7_cam_yaw_2p87",
+     "x": 2.87,
+     "k": 24,
+     "n": 40
+    },
+    {
+     "cell": "S7_cam_yaw_3p58",
+     "x": 3.58,
+     "k": 25,
+     "n": 40
+    },
+    {
+     "cell": "S7_cam_yaw_4p3",
+     "x": 4.3,
+     "k": 28,
+     "n": 40
+    },
+    {
+     "cell": "S7_cam_yaw_5p73",
+     "x": 5.73,
+     "k": 28,
+     "n": 40
+    },
+    {
+     "cell": "S7_cam_yaw_8p6",
+     "x": 8.6,
+     "k": 25,
+     "n": 40
+    }
+   ],
+   "threshold": null,
+   "censored": true,
+   "fit": {
+    "t": null,
+    "censored": true,
+    "t_grid": 8.772,
+    "k": 554.102033000948,
+    "loglik": -154.38199847713514
+   },
+   "ci95": [
+    null,
+    null
+   ],
+   "ci95_note": "None = censored (above the largest level)",
+   "bootstrap_censored_share": 1.0,
+   "prediction_met": false,
+   "physical_pan_per_code": 1.67
+  },
+  "S8": {
+   "factor": "camera raised",
+   "unit": "cm",
+   "half_range": 1.0,
+   "prediction_interval": [
+    1.0,
+    2.0
+   ],
+   "levels": [
+    {
+     "cell": "S8_cam_up_0p5",
+     "x": 0.5,
+     "k": 27,
+     "n": 40
+    },
+    {
+     "cell": "S8_cam_up_1p0",
+     "x": 1.0,
+     "k": 22,
+     "n": 40
+    },
+    {
+     "cell": "S8_cam_up_1p25",
+     "x": 1.25,
+     "k": 24,
+     "n": 40
+    },
+    {
+     "cell": "S8_cam_up_1p5",
+     "x": 1.5,
+     "k": 24,
+     "n": 40
+    },
+    {
+     "cell": "S8_cam_up_2p0",
+     "x": 2.0,
+     "k": 26,
+     "n": 40
+    },
+    {
+     "cell": "S8_cam_up_3p0",
+     "x": 3.0,
+     "k": 22,
+     "n": 40
+    }
+   ],
+   "threshold": null,
+   "censored": true,
+   "fit": {
+    "t": null,
+    "censored": true,
+    "t_grid": 3.280481450371548,
+    "k": 6.614740641230146,
+    "loglik": -160.8440290226424
+   },
+   "ci95": [
+    null,
+    null
+   ],
+   "ci95_note": "None = censored (above the largest level)",
+   "bootstrap_censored_share": 0.9995,
+   "prediction_met": false
+  }
+ }
+}

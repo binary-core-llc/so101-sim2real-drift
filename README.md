@@ -4,9 +4,17 @@ Pre-registration and simulation-sweep code for a study by Arturo Morales Rangel 
 
 The study measures how much a real SO-101 workspace can differ from the simulation in NVIDIA's course "Train an SO-101 Robot From Sim-to-Real With NVIDIA Isaac" while the course's sim-trained GR00T N1.6 policy still succeeds. Examples of such differences: the camera tilted a few degrees, the rack moved a few centimeters, or brighter or darker lighting. It also tests whether one photo of the real setup is enough to correct it.
 
-Status (October 2026): the first part of the simulation sweep is complete (50 cells, 2,220 episodes); 4 more registered cells (560 episodes) follow after the October 26 calibration. The analysis will be published with pre-registration v2, before the first scored real-robot trial. The sweep ran from a working copy whose code and configuration files are byte-identical to prereg-v1 (verified by git blob hash).
+Status (November 6, 2026): sweep priorities 1-3 are complete (50 cells, 2,220 episodes); the 4 priority-4 cells (560 episodes) have not been run yet. Pre-registration v2 is released before the first scored real-robot trial and adds the analysis code and the simulated thresholds. Items fixed after v2 are published in `PREREGISTRATION_v2_addendum.md`, each as a new timestamped commit before the step that uses it. The sweep ran from a working copy whose code and configuration files are byte-identical to prereg-v1 (verified by git blob hash).
 
-**The date of record is the GitHub release `prereg-v1`.** That release pins:
+**The dates of record are the GitHub releases `prereg-v1` and `prereg-v2`.** `prereg-v2` adds:
+
+| File | What |
+|---|---|
+| `PREREGISTRATION_v2.md` | the items v1 section 8 leaves to v2, the analysis details, the schedule and every deviation so far |
+| `analysis/stats.py`, `analysis/thresholds.py`, `analysis/real.py` | the pre-registered analysis (numpy and the standard library only) |
+| `results/analysis/thresholds_v1.json`, `.md` | the simulated thresholds from sweep v1 |
+
+`prereg-v1` pins:
 
 | File | What |
 |---|---|
@@ -31,7 +39,7 @@ Status (October 2026): the first part of the simulation sweep is complete (50 ce
 - Checkpoint `aravindhs-NV/grootn16-finetune_sreetz-so101_teleop_vials_rack_left`, `checkpoint-10000`, Hugging Face revision `7efab50d`.
 - NVIDIA RTX A4500, driver 580.65.06.
 
-Deviations from the course setup are listed in section 7 of the pre-registration.
+Deviations from the course setup are listed in section 7 of v1 and section 6 of v2.
 
 ## License
 Apache-2.0 (see LICENSE), Copyright 2026 Binary Core LLC. Files derived from the course are listed in NOTICE; sim/sweep_eval.py keeps NVIDIA's Apache-2.0 header.
