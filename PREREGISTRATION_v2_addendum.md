@@ -322,3 +322,151 @@ Registered now, before any blind scoring has started.
 |---|---|
 | 11. E3 archive SHA-256 (entry 3) | the first scored photo |
 | Further cuts (K6 onward), by the slip rule | the trials they remove |
+
+## Entry 3: before the rack block and the first E3 cycle (November 9, 2026)
+
+### G1 and D1
+
+- **G1** (N04-G1, R1 at S1, 10 trials, November 8 23:36 to November 9 01:45 PST): 4 of 10 successes by the live score
+  (N04-012, N04-017, N04-018, N04-019). **D1 (3 or fewer) does not apply.** Blind scores follow with the rest.
+- Every G1 trial that started is in the record: 10 started, 10 records, each attempt 1; none was repeated or dropped.
+  The 19 prestart aborts (I0, not trials; `results/real/prestart.jsonl`) all stopped before launch, among them the
+  re-try before N04-017 (tube check: vial_2 8.6 mm across).
+
+### 5 and 8. Slip rule, November 9 00:10 PST: K6, K7 and K8
+
+- **Window:** blind scoring needs at least 12 h after each trial of the last trial day (v2 item 10). For the analysis
+  and the poster to be submitted before Tuesday November 10, 17:00 PT, blind scoring starts Tuesday 07:00, so the
+  trials end Monday 20:30 PST. Robot window from the check: about 830 min, 770 after C's 60 min daily margin. It
+  assumed November 9, 00:10-01:30 PST (80 min, G1) and 07:00-20:30 PST less 60 min for meals (750 min).
+- **Time per trial at S1:** 7 min nominal (5.0 min measured in N04B-R0, plus about 2 min to place the tubes and the rack
+  with the live checks below), 10 min pessimistic (N04-012).
+- **Remaining robot minutes** (87 rows, rack moves, camera setups, E3 cycles, the E3 freeze): about 1,320 nominal in
+  entry 2's order; 1,144 with no returns to S1 and the set P photos after the last trial (below); 1,031 with K6;
+  968 with K6 and K7; **756 with K6, K7 and K8** (fits). Pessimistic, 1,123 with K6-K8: over the window, so the stop
+  rule below applies.
+- **Cuts applied, in C's registered order: K6, K7, K8.** The cuts follow C's registered order and use no trial
+  outcome; K6's row choice uses layouts only. K9 does not apply (R0 has run).
+  - **K6 (R6/R7 3 × 4 → 2 × 5):** each method's cycle 3 is removed and two of its rows become the 5th trial of
+    cycles 1 and 2. Rule: for cycle 1, then cycle 2, the first remaining cycle-3 row in uid order whose layout that
+    cycle does not have yet (taking the first two rows as they are would repeat L08 in M2-C1). M1: N07-018 (L04) → C1,
+    N07-019 (L02) → C2; N07-020 and N07-021 removed. M2: N07-005 (L00) → C1, N07-004 (L08) → C2; N07-006 and N07-007
+    removed. H3a has 2 clusters per mis-setup.
+  - **K7 (R1 25 → 20; R2 and R4 12 → 10):** the last rows in uid order, as for K5: R1 N07-001, -002, -003, -012, -013
+    (the N07 controls); R2 N05-026, N05-027; R4 N06-024, N06-025.
+  - **K8 (R3 and R5 → 0):** R3 N05-005, -006, -008, -009, -014, -017, -019, -020; R5 N06-008 to N06-015 (camera
+    blocks CAM2 and CAM3). H1 reduces to "nominal vs outside".
+- **Result:** C's minimum viable result: R1 20, R2 10, R4 10, R6 10, R7 10 (plus R0 and N04B-R0, 20).
+- **Final schedule:** `config/schedule.csv`, 80 rows, SHA-256
+  2cf3bebc5b0bca11f4921fa506e0aed57e8588dd8a298dfb023df6cf01f1e65a (gtc d71cb0f: K6-K8 in cd7649b, then the block
+  move below; rows unchanged).
+
+### Block order (replaces entry 2's block-order line)
+
+- **Run order** = the order of `schedule.csv`: N05-C, N05-RACK, N05-M1C1-E3, N05-M1C2-E3, N06-C, N06-C2, N06-CAM1,
+  N06-CAM4, N06-CAM5, N06-M2C1-E3, N06-M2C2-E3. N06-C2 (R1 × 2 at S1) moves as a whole block from between CAM1 and CAM4
+  to right after N06-C, so the camera does not return to S1 between camera blocks.
+- **Consequence:** the M1 cycles run before the camera blocks, so E3 is frozen (below) before its camera mode has been
+  checked on the camera blocks' real photos. That check, against the board-measured camera change, is then made after
+  the freeze and is reported as such.
+- Entry 2 stated the M1 cycles after the camera blocks; the registered `schedule.csv` (f927ef48…) listed them right
+  after N05-RACK. This entry sets the order.
+- **Protecting the camera blocks** (decided November 9, 09:05 PST, before N05-001, on time only; no trial outcome is
+  used). Checkpoint right after the last N05-RACK trial: from today's measured pace (launch to launch from N05-001,
+  block times included), project whether every row of N06-CAM1, N06-CAM4 and N06-CAM5 would start by 20:30 in the
+  current order. If yes, the order stays. If not, N05-M1C1-E3 and N05-M1C2-E3 move as whole blocks to the end, after
+  N06-M2C2-E3, and the camera is returned to S1 before them if they are reached. `schedule.csv` is not changed before
+  the checkpoint; the projection, and the new SHA-256 if the move applies, are recorded then.
+  - Projection: pace = (the last N05-RACK launch − N05-001's launch) / (launches − 1), so the references and rack
+    moves between them are included. Each later row is launched one pace after the one before it; each M1 cycle and
+    each camera setup before a row adds the slip check's pessimistic time (40 and 45 min), since neither has been
+    measured today; the meal time not yet taken is left out of the window.
+
+### Stop rule
+
+- **Monday's robot work started at 08:39 PST** (the follower health check,
+  `results/robot/health_follower_2026-11-09T163930+0000.json`), not at 07:00.
+- **Recomputed from 08:39** (G1 done; the E3 freeze done off the robot): window 08:39-20:30 less 60 min for meals,
+  650 min; 590 after the margin. Remaining: 50 rows, 6 rack moves, 5 block references, 3 camera setups, 2 M1 and 2 M2
+  cycles, and 30 min of morning checks, with the check's block times (nominal / pessimistic: rack move 5 / 8,
+  reference 5 / 8, camera setup 25 / 45, M1 cycle 30 / 40, M2 cycle 55 / 90 min). **680 min at 7 min per trial;
+  1,223 min at the pessimistic pace,** for which G1's measured pace is used, as it is slower than 10 min: 14.2 min per
+  trial (N04-011's launch to N04-020's, 127.7 min over 9 intervals). Both are over the window; no further registered
+  cut applies (K9 needs R0 not to have run), so the stop rule below decides.
+- Trials not started by Monday November 9, 20:30 PST are not run. They are reported as not run, by row. By the
+  recompute above, a row runs only if its trial starts (is launched) by 20:30. Launches are one cycle apart, a block's
+  first launch comes one cycle after the block's setup, and the 60 min for meals are taken before. Rows that would not
+  run:
+  - order above, at 7 min per trial, 5 rows: N06-M2C2-E3 (N06-042 to N06-045, N07-004);
+  - order above, at 14.2 min per trial, 20 rows: N06-CAM1 (N06-004 to N06-007), N06-CAM4 (N06-018 to N06-021),
+    N06-CAM5 (N06-022, N06-023), N06-M2C1-E3 (N06-034 to N06-037, N07-005) and N06-M2C2-E3 (N06-042 to N06-045,
+    N07-004);
+  - moved order (the M1 cycles at the end, after a return to S1 counted as one camera setup: 705 and 1,268 min), at
+    7 min per trial, 5 rows: N05-M1C2-E3 (N05-042 to N05-045, N07-019);
+  - moved order, at 14.2 min per trial, 22 rows: N06-CAM5 (N06-022, N06-023), N06-M2C1-E3 (N06-034 to N06-037,
+    N07-005), N06-M2C2-E3 (N06-042 to N06-045, N07-004), N05-M1C1-E3 (N05-030 to N05-033, N07-018) and N05-M1C2-E3
+    (N05-042 to N05-045, N07-019).
+
+### Blind scoring in two batches
+
+- Batch A: the trials that ended before Monday 19:00 PST; batch B: the rest. Each batch gets its own shuffled blind
+  codes and is scored at least 12 h after its last trial (A from Tuesday 07:00, B after A). Because the blocks run in
+  a fixed order, a clip's batch also hints at its block: batch B holds the last blocks. As entry 2 states, the robot
+  frames already show the condition for the trials scored from them.
+
+### Set P photos
+
+- The 34 set P photos (15 rack, 19 camera; H3b) are taken after the last trial. No policy runs then, so no blind delay
+  applies (as for the photo set in v2).
+
+### 11. E3 freeze
+
+- **E3 frozen at** e3 commit 399025f998ea0114dd00c21f45e7ec937ed12589, archive
+  `git archive --format=tar --prefix=e3/ 399025f998ea0114dd00c21f45e7ec937ed12589` (git 2.34.1), **SHA-256
+  17fed03e9c82f4c9b05a70da541e23c3e0c4d536c1773de0857fa08395312291**, before the first M1 cycle photo. No E3 change
+  after this point.
+- **Light check before the freeze** (November 9, about 02:00 PST): the G1 reference taken at 13:25 PST in daytime light
+  and re-taken at 23:12 PST in the night trial lighting show the same rack (scene_check: +0.3 / -0.7 mm between them,
+  from the tubes lifted out next to it). E3 rack mode, rendered from the measured S1 pose (`results/poses/s1.json`),
+  against the rack's nominal pose in the simulation (rack_delta: x, y in E and yaw about the rack's corner O):
+  +3.27 / -1.36 mm, 1.63° (day) and +3.59 / -2.23 mm, 1.84° (night), a difference of +0.3 / -0.9 mm and +0.21°. E3
+  camera mode, night photo against the day photo as reference: tilt 0.06°, pan 0.10°, roll 0.02°, positions within
+  0.7 mm. No E3 change was made after the check.
+
+### S1_measured_c920, run as registered in entry 2
+
+- Run November 9, 01:49 to 03:07 PST, after the last G1 trial, 200/200 episodes (seeds 0-39 × 5, as S0), from gtc
+  4aa8f69 with no local changes; `results/h4/cells_s1.csv` as registered (f7b45987…). Result: **99/200** (0.495;
+  Wilson 0.426-0.564). Against H4_c920_measured (148/200, same focal at the sim render point), Fisher two-sided
+  p 6.7e-7; against S0_nominal (124/200), p 0.016. All 101 failures ran to the 450-step limit; 99 of them had grasped
+  the vial. `results/h4/s1_result.json`. It is the simulated comparator for R1, as registered; nothing else changes.
+
+### Trial runner and placement since entry 2
+
+Listed in `results/real/deviations.md` with numbers; all before the trials they affect.
+- **Mat check (8b):** an edge whose search window lies wholly inside the reference's ignore zones is not used. At S1
+  the far edge's window lies inside the arm zone and finds the wrist camera's cable, not the mat; the back and front
+  edges are used, each within 1.5 px as registered. R0 references keep all three edges. From N04-011.
+- **G1 reference** re-taken in the night trial lighting before the first G1 trial (the 13:25 copy, taken in daylight,
+  failed the light and clean-view checks; the camera and rack had not moved). The top-right image corner (the door edge
+  and a t-shirt outside the box, which change at every door re-seat) was added to the G1 reference's ignore zone from
+  N04-012.
+- **Placement aids** (not checks): `calib/vial_view.py` shows the runner's tube check live, per tube in mm with the
+  slide that removes the offset; `calib/rack_ref_view.py` shows the runner's checks live, with the rack's outline
+  against the block reference. The stencil sits on the mat. At S1 the camera reads the mat's front edge 6.7 mm off
+  its simulated position at the front-right corner and turned 1.44° against E (`tools/scene_check.py --pose s1`, live
+  front camera, November 8 23:09 PST: the edge fitted in the image and lifted to the mat's top plane with the measured
+  S1 pose; `results/rig/scene_check_20261109T070945Z.json`). Entry 2 gives the ruler reading of the mat and its
+  difference from the camera's. So stencil placement alone left the far tube up to about 8 mm off. The runner's
+  checks, with the door on, decide as before.
+- **Record edits:** listed in `deviations.md` (N04-018: flags added at the operator's request; the record as first
+  written is kept).
+
+## Still to come
+
+| Item | Needed before |
+|---|---|
+| Blind scoring (batches A, B), kappa live vs blind, `tube_contact` | the analysis |
+| Trials not run under the stop rule, if any | the analysis |
+| E3 camera-mode check on the camera blocks' photos (after the freeze) | the analysis |
+| Set P photos (H3b) | the analysis |
