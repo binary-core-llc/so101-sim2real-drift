@@ -470,3 +470,126 @@ Listed in `results/real/deviations.md` with numbers; all before the trials they 
 | Trials not run under the stop rule, if any | the analysis |
 | E3 camera-mode check on the camera blocks' photos (after the freeze) | the analysis |
 | Set P photos (H3b) | the analysis |
+
+## Entry 4: after the last trial, before blind scoring (November 9-10, 2026)
+
+Written after the last trial (N06-023, launched November 9, 20:23 PST) and before any blind scoring. Details and
+numbers for each item are in `results/real/deviations.md` (gtc), under the headings named below.
+
+### What ran
+
+- **Trials that ran** (live scores; blind scores follow): R0 10 (N04B-R0, the R0 result; entry 2), plus N04-R0's 10
+  valid, kept on record as "R0 with the scene offset" and not pooled (N04-001 attempt 1 I4 and re-run), R1 20 (N04-G1 10, N05-C 3, N05-RACK 2, N06-C 3, N06-C2 2), R2 10 (N05-RACK), R4 10 run, 6 valid
+  (N06-CAM4 4, N06-CAM5 2; N06-CAM1's 4 re-labelled I4, below).
+- **Stop rule (entry 3):** every trial that ran was launched before 20:30 PST; the last, N06-023, at 20:23:28. The 20
+  rows not run are reported as not run, by row:
+  - N06-M2C1-E3 (R7): N06-034, N06-035, N06-036, N06-037, N07-005;
+  - N06-M2C2-E3 (R7): N06-042, N06-043, N06-044, N06-045, N07-004;
+  - N05-M1C1-E3 (R6): N05-030, N05-031, N05-032, N05-033, N07-018;
+  - N05-M1C2-E3 (R6): N05-042, N05-043, N05-044, N05-045, N07-019.
+- So no E3-corrected trial ran (no row of R6 or R7 ran; 0 of 10 rows each). The M1 cycles were not reached, so the camera was not
+  returned to S1 for them.
+
+### Checkpoint before the camera blocks (entry 3 rule)
+
+- Applied as registered right after the last N05-RACK trial (N05-024, launched 15:16:45 PST). Pace from the runner's
+  launches: (15:16:45 − 09:30:34) / 14 intervals = 24.73 min. The span includes the base incident below and was used
+  as written.
+- In the order then current, none of the 10 camera-block rows would start by 20:30 (the first, N06-004, at 23:57), so
+  N05-M1C1-E3 and N05-M1C2-E3 moved as whole blocks to the end, after N06-M2C2-E3. `config/schedule.csv`, 80 rows
+  unchanged, SHA-256 **cd776ae4b5e0ddb16bee1005e15c573a1870f8461298424cb277c806699f4397** (was 2cf3bebc…; gtc
+  cb83c80).
+- For information only: without the base-incident interval the pace was 12.27 min, and the move would have applied
+  at that pace too.
+
+### Robot base turned in N05-012
+
+- In N05-012 (R2), after the tube was scored seated live, the arm knocked off one of the two clamps that hold the robot
+  base, and the base turned about 2.6° counter-clockwise seen from above (sled checks against S1). Saved frames date the
+  turn to 24-29 s after the policy start, about 12 s after the tube's release; no earlier trial is affected.
+- The base was turned back with the sled seated and checked by two sled seatings against S1, within limits set before
+  the check (each position 1.5 mm; pan 0.3°; tilt and roll 0.2°). No trial ran between the turn and the check.
+  N05-012's record and live score are unchanged. N05-RACK continued from N05-013 with its block references kept.
+
+### Camera blocks (R4: camera tilted 6.0° down from S1)
+
+- **Setting and checks.** Each block was set with the HUD against S1 plus the level, measured by the sled (PnP in),
+  given a new reference, and measured again before the next camera change (PnP out). Limits: tilt within ±0.3° of the
+  level (v2 item 5); invalid (I4) above 1.0° or 5 mm off target (C D4, v2 item 5), each position read per axis, as
+  v2 item 5 states the 3 mm limit for S1.
+- **CAM1.** A first setting was 5.9 mm low and was re-set before any reference or trial. Opening reading: tilt +5.74°,
+  largest position 4.2 mm (passes). Closing reading (one seating): depth +6.3 mm against S1 (angles pass), over the
+  5 mm line. The trial frames show the camera did not move during the block; the change is in the frame of the sled
+  and base, and the frames cannot tell a small base move from sled seating.
+- **CAM1 decision** (Arturo, November 9, 19:38 PST; made after N06-018's live F, which it does not depend on): C D4
+  applied as written. N06-004 to N06-007 are re-labelled I4 and not re-run; their live scores stay in the records
+  (`relabel`) and in an audit copy. R4 is reported without them (primary, as invalid trials) and with them.
+- **Closing checks of CAM4 and CAM5 by two seatings** (decided before each block's closing readings were taken): the
+  mean of two sled seatings against the same limits, both readings reported. CAM4 closing mean: tilt +5.77°, pan
+  +0.35°, roll +0.62°, largest position 3.3 mm (passes). CAM5 closing mean: tilt +5.85°, pan +0.08°, roll +0.22°,
+  largest position 3.3 mm (passes).
+- **The 19:13 sled seating.** With the camera unchanged each time, the sled seating used for CAM1's closing reading
+  (19:13 PST) read about 2 mm deeper than the seatings just before it (18:31) and just after it (20:00), which agree
+  with each other. So the over-limit closing reading may come from that one seating rather than from a move of the
+  camera or the base; this does not change the CAM1 decision and is reported with the analysis that includes N06-004
+  to N06-007.
+- **Fresh re-setup** (C: "each level gets 3 independent setups"). Each block was re-set with the HUD, PnP in and out
+  and a new reference. CAM4 was adjusted from the state it was in, with the HUD, without first tilting it away; its
+  tilt moved 0.01° (CAM4's tilt is CAM1's; pan, roll and the lens position were re-set). CAM5 was not tilted away
+  either, for time; its tilt moved 0.14°.
+- **Operator stop:** from N06-018 on, the operator pressed f at the arm's first wall contact, to protect the base after
+  CAM1's closing reading (decided Nov 9, about 19:28 PST, before N06-018 launched); before that, f was pressed when the
+  arm pushed against the wall, at the operator's judgment. In the 40 trial records from N04-011 to N06-023 (live notes
+  and flags), no tube was seated after the arm's first wall contact: 31 trials had a wall contact, and in the 4 of them
+  with a seated tube (N05-003, N05-012, N05-018, N06-001) the tube was seated before it.
+
+### Set P photos (H3b)
+
+- **Not taken** (Arturo, November 9, 22:30 PST, before any blind scoring), for time: blind scoring starts Tuesday 07:00
+  PST and the poster is due Tuesday 17:00 PT. Entry 3 had placed them after the last trial; no registered cut covers
+  them. They are reported as not taken.
+
+### Consequences for the registered tests
+
+- **H3a** (E3-corrected R6/R7 against R2/R4): not tested; no R6 or R7 trial ran.
+- **H1a and H1b** need the inside levels (R3, R5), removed by K8 (entry 3: "H1 reduces to nominal vs outside"): not
+  tested.
+- **H1c** (p_outside − 0.5 × p_nominal < 0; R2 and R4 pooled against R1) and the first falsification check (pooled
+  outside at or above half of nominal) are computed as registered, on blind scores. R4 enters without N06-004 to
+  N06-007 (primary) and with them.
+- **H3b** (E3 against E1 on the set P photos): not tested; the photos were not taken. E3's camera-mode check on the
+  camera blocks' references (after the freeze) is reported descriptively, as entry 3 lists it.
+- **H4** (simulation): unchanged (entry 3).
+- Everything else is descriptive, as registered.
+
+### Blind scoring in two batches (entry 3)
+
+- **Batch A:** the 53 trial records that ended before Monday 19:00 PST (from N04-R0 through N06-005; the last ended at
+  18:57:49 PST). Scored from **Tuesday November 10, 07:00 PST**, at least 12 h after its last trial.
+- **Batch B:** the 8 records that ended after 19:00: N06-006, N06-007, N06-018 to N06-021, N06-022 and N06-023. Scored
+  from **Tuesday 08:25 PST**, 12 h after N06-023 ended (20:24:37 PST), and after batch A.
+- Each batch has its own shuffled blind codes, folder, scoring sheet and sealed key (`tools/blind_rename.py --batch`),
+  made November 9, 22:40 PST. Key SHA-256: batch A (53 clips)
+  009edaf7bcbc2edbe12f27f9a46d94dd2d2ca1c0e23489d622dc7f4ad31e7547; batch B (8 clips)
+  2d62a9bcd9b762736e2e454aeb70998a690eba29ef425308b998469a1ff3f683. The keys stay sealed until both batches are scored.
+  As entry 3 states, the batch and the robot frames hint at the block and condition.
+- **Every clip is blind-scored**, valid or invalid (N04-001 attempt 1 and N06-004 to N06-007 included), so the scorer
+  cannot tell valid from invalid clips (Arturo, November 9, 22:30 PST). The invalid code decides whether a trial enters
+  the analysis, as registered; N06-004 to N06-007 also enter the analysis that includes them.
+- **Judge video.** One phone recording per trial for N05-C, N05-RACK, N06-C and N06-C2 (20 of 20; IMG_7473 to
+  IMG_7494), and for N06-CAM1, N06-CAM4 and N06-CAM5 except N06-004 (9 of 10; IMG_7495 to IMG_7503). No recording is
+  left over and none spans two trials. N06-004 has no phone video (recording not started); as entry 2 set for the R0
+  trials without one, it is scored from the runner's saved front and wrist frames under its blind code, marked
+  "scored from robot frames".
+  - Earlier days: one phone recording per trial for G1 (10 of 10; IMG_7462 to IMG_7471) and for N04B-004 to N04B-010
+    (IMG_7452 to IMG_7458); N04-R0 and N04B-001 to N04B-003 have none and are scored from robot frames (entry 2).
+    IMG_7481 and IMG_7486 are not on the PC; no trial is missing a video because of them.
+- **No p-value on real data** is shown or used before the blind scores are in; until then the poster draft shows live
+  counts only, marked "live, pending blind scoring".
+
+### Still to come
+
+| Item | Needed before |
+|---|---|
+| Blind scoring (batches A, B), kappa live vs blind, `tube_contact` | the analysis |
+| E3 camera-mode check on the camera blocks' references (after the freeze) | the analysis |
