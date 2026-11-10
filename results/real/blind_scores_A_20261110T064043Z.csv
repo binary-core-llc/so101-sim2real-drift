@@ -1,0 +1,54 @@
+blind_code,judge,scored_utc,outcome,t_release_s,hold_2s,hold_05s,grasp,fail_code,tilt_borderline,confidence,tube_contact,note
+bb7ca5,AMR,2026-11-10 15:38,F,,0,0,1,F3,0,3,closed,"lifted two tubes, both released on the rack but not in a hole; pushed the third away; then turned right"
+372646,AMR,2026-11-10 15:45,S,8,1,1,1,,0,3,closed,seated the first tube; lifted the second and third but neither went into a hole; then turned right
+88effe,AMR,2026-11-10 15:52,S,17,1,1,1,,0,3,closed,seated the first tube; reaching for the next it pushed another tube away and could not reach the one it went for; then turned right
+d32bc2,AMR,2026-11-10 16:00,S,19,1,1,1,,0,3,closed,seated the first tube; reaching for the next it pushed both remaining tubes away; then turned right
+9e1e5c,AMR,2026-11-10 16:05,F,,0,0,0,F1,0,3,closed,jaws closed on a tube but it rotated in the gripper and was not lifted; then turned right
+7ac4a6,AMR,2026-11-10 16:08,F,,0,0,0,F1,0,3,touched,"reached for a tube and pushed two tubes away without closing on one; then stopped making progress, then turned right"
+eb608d,AMR,2026-11-10 16:13,F,,0,0,0,F1,0,3,touched,tried to grasp a tube and failed; then turned right
+d559dd,AMR,2026-11-10 16:16,F,,0,0,0,F1,0,3,touched,reached for a tube and pushed it away with the gripper; then turned right
+26d9fe,AMR,2026-11-10 16:18,F,,0,0,0,F1,0,3,none,moved toward a tube but never touched any tube; then turned right
+098c25,AMR,2026-11-10 16:21,F,,0,0,0,F1,0,3,none,"moved toward a tube and lowered, but never touched any tube; then turned right"
+84a673,AMR,2026-11-10 16:24,F,,0,0,0,F1,0,3,touched,touched the first tube without grasping or lifting it; then turned right
+f3423b,AMR,2026-11-10 16:28,F,,0,0,0,F1,0,3,closed,closed the jaws on a tube several times at the same spot without lifting it; then turned right
+fbf176,AMR,2026-11-10 16:33,F,,0,0,0,F1,0,3,touched,reached for a tube and pushed it away without grasping; then turned right
+7db7e0,AMR,2026-11-10 16:42,F,,0,0,0,F1,0,3,touched,"pressed on a tube, which was pushed into the other tubes; no grasp; then turned right"
+f0ba2e,AMR,2026-11-10 16:44,F,,0,0,0,F1,0,3,touched,reached for a tube and pushed it away without grasping; then turned right
+2fbe63,AMR,2026-11-10 16:48,F,,0,0,0,F1,0,3,closed,kept trying to grasp the first tube in the same place without lifting it until the time limit; returned home
+8703a0,AMR,2026-11-10 16:57,F,,0,0,0,F1,0,3,none,moved toward a tube but never touched any tube; then turned right
+c38269,AMR,2026-11-10 17:00,F,,0,0,0,F5,0,3,touched,touched a tube without grasping it; then turned right into the black wall; the video ends with the arm at the wall
+9147b9,AMR,2026-11-10 17:03,F,,0,0,0,F1,0,3,none,"moved toward a tube but never reached or touched it; turned right, touched the wall, then returned home by itself"
+977299,AMR,2026-11-10 17:08,F,,0,0,0,F1,0,3,touched,"touched a tube without grasping or lifting it; turned right, touched the wall, then returned home by itself"
+fb3dff,AMR,2026-11-10 17:13,F,,0,0,0,F1,0,3,touched,"tried several times to grasp a tube, touching it without lifting it, and moved the other tubes; turned right, touched the wall, then returned home by itself"
+4b0f31,AMR,2026-11-10 17:18,S,19,1,1,1,,0,3,closed,"seated the first tube, which stayed in place; lifted the second and tried the same hole, not placed; did not try the third; then turned right"
+d36ab2,AMR,2026-11-10 17:21,S,8,1,1,1,,0,3,closed,"seated the first tube, which stayed in place; lifted the second but it did not go into a hole; did not reach the third; then turned right"
+f1522a,AMR,2026-11-10 17:24,F,,0,0,0,F5,0,3,touched,touched a tube without grasping or lifting it; then turned right into the wall; the video ends with the arm at the wall
+cbaf49,AMR,2026-11-10 17:25,F,,0,0,0,F1,0,3,touched,"touched a tube without grasping it; turned right, touched the wall, then returned home by itself"
+682647,AMR,2026-11-10 17:28,F,,0,0,0,F1,0,3,touched,"touched a tube and pushed it away without grasping; turned right, touched the wall, then returned home by itself"
+d03fb7,AMR,2026-11-10 17:30,F,,0,0,0,F1,0,3,touched,"kept trying to grasp a tube, touching it without grasping, until the time limit; returned home by itself"
+4d03f5,AMR,2026-11-10 17:34,F,,0,0,0,F1,0,3,none,"moved toward a tube but never touched it; turned to its right; the video ends with the arm on its right side; wall contact not visible from this view, so no collision is scored"
+72598b,AMR,2026-11-10 17:43,F,,0,0,0,F1,0,3,none,"moved toward a tube but never touched it; turned to its right; the video ends with the arm on its right side; wall contact not visible from this view, so no collision is scored"
+1a85f0,AMR,2026-11-10 17:46,F,,0,0,0,F1,0,3,touched,"reached for a tube and the gripper pushed the tubes away without grasping; turned right, then returned home by itself"
+68e552,AMR,2026-11-10 17:50,S,35,1,1,1,,0,3,closed,lifted all three tubes; two seated in rack holes (releases at 35 s and 48 s in the main video); the third was not placed
+4ebab5,AMR,2026-11-10 17:54,F,,0,0,0,F1,0,3,none,"moved toward a tube but never touched it; turned right, then returned home by itself"
+b55922,AMR,2026-11-10 17:56,F,,0,0,0,F1,0,3,none,"moved toward a tube but never touched it; turned to its right; the video ends with the arm on its right side; no wall contact visible, so no collision is scored"
+49065c,AMR,2026-11-10 17:58,F,,0,0,0,F1,0,3,touched,"reached for a tube and only pushed it, no grasp; turned right, then returned home by itself"
+20a6e3,AMR,2026-11-10 18:01,F,,0,0,0,F1,0,3,touched,"touched and pushed a tube without grasping; moved away, then returned home by itself"
+565897,AMR,2026-11-10 18:05,S,20,1,1,1,,0,3,closed,"seated the first tube; grasped the second but it did not go into a hole; pushed the third away; turned right, then returned home by itself"
+34596b,AMR,2026-11-10 18:08,F,,0,0,0,F1,0,3,touched,"reached for a tube and pushed it away without grasping; turned right, then returned home by itself"
+870d90,AMR,2026-11-10 18:10,F,,0,0,0,F1,0,3,none,"moved toward a tube but did not reach or touch it; turned right, then returned home by itself"
+8230b8,AMR,2026-11-10 18:13,F,,0,0,0,F1,0,3,touched,"reached for a tube and pushed it away without grasping; turned right, then returned home by itself"
+8726af,AMR,2026-11-10 18:16,F,,0,0,0,F1,0,1,none,NO TUBES VISIBLE in either video (rack and mat present); the arm went directly to its right; scored from what is visible; clip to be checked against its trial record after unblinding
+df338d,AMR,2026-11-10 18:19,F,,0,0,0,F1,0,3,none,"moved toward a tube but never reached or touched any; turned right, then returned home by itself"
+02d329,AMR,2026-11-10 18:23,S,18,1,1,1,,0,3,closed,seated the first tube; lifted the second and third cleanly but neither went into a hole
+4ed61c,AMR,2026-11-10 18:29,F,,0,0,0,F1,0,3,none,"moved toward a tube and kept opening and closing the gripper on air, never touching any tube; turned right, then returned home by itself"
+3fa595,AMR,2026-11-10 18:35,S,19,1,1,1,,0,3,closed,"seated the first tube; lifted the second but it did not go into a hole; did not touch the third; turned right, then returned home by itself"
+d257cb,AMR,2026-11-10 18:38,F,,0,0,0,F1,0,3,none,"moved toward a tube but never touched it; turned right, then returned home by itself"
+a193d4,AMR,2026-11-10 18:46,S,24,1,1,1,,0,3,closed,"started on one tube, switched to another, lifted it and seated it in a rack hole; reached for a third and pushed it away; turned right, then returned home by itself"
+818ff4,AMR,2026-11-10 19:01,F,,0,0,1,F3,0,3,closed,"lifted the first tube but dropped it on the way to the rack; lifted the second and third and brought them to the rack, but neither went into a hole; turned right, then returned home by itself"
+951e39,AMR,2026-11-10 19:04,F,,0,0,0,F1,0,3,none,"moved toward a tube but never reached or touched it; turned right, then returned home by itself"
+ce9c87,AMR,2026-11-10 19:06,F,,0,0,0,F1,0,3,none,"moved to a spot well away from the tubes, never touching any; turned right, then returned home by itself"
+175a87,AMR,2026-11-10 19:07,F,,0,0,0,F1,0,3,touched,"reached for a tube and pushed it away without grasping; turned right; the video ends while it is turned right; no wall contact seen, so no collision is scored"
+858330,AMR,2026-11-10 19:10,F,,0,0,0,F1,0,3,closed,closed on a tube without lifting it; the tube was pushed into the other tubes; turned right; the video ends while it is turned right; no wall contact seen
+40238d,AMR,2026-11-10 19:11,F,,0,0,0,F1,0,3,touched,"reached for a tube and only pushed it a little, no grasp; turned right, then returned home by itself"
+c54d7c,AMR,2026-11-10 19:14,F,,0,0,1,F3,0,3,closed,"lifted two tubes in turn and brought each to the rack, but neither went into a hole; pushed the third away while reaching for it; turned right, then returned home by itself"

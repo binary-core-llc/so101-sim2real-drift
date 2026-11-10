@@ -1,0 +1,11 @@
+{
+ "sim_intrinsics": [
+  124,
+  200
+ ],
+ "c920_measured": [
+  148,
+  200
+ ],
+ "fx_measured_px": 630.62
+}

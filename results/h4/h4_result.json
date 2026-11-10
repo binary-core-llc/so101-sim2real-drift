@@ -1,0 +1,55 @@
+{
+ "written_utc": "2026-11-08T01:00Z",
+ "test": "Fisher two-sided, sim intrinsics vs measured C920 intrinsics at the simulated pose (release/prereg_v2/analysis/real.py h4)",
+ "sim_intrinsics": {
+  "cell": "S0_nominal (sweep v1)",
+  "k": 124,
+  "n": 200,
+  "rate": 0.62,
+  "wilson95": [
+   0.5511,
+   0.6844
+  ],
+  "focal_mm": 1.93,
+  "fx_px": 514.7
+ },
+ "c920_measured": {
+  "cell": "H4_c920_measured",
+  "k": 148,
+  "n": 200,
+  "rate": 0.74,
+  "wilson95": [
+   0.6751,
+   0.7959
+  ],
+  "focal_mm": 2.364812,
+  "fx_px": 630.62,
+  "run_utc": [
+   "2026-11-07T16:45:53Z",
+   "2026-11-07T17:57:51Z"
+  ],
+  "status": "200/200 ok",
+  "seeds": "0-39 x 5, as S0"
+ },
+ "fisher_two_sided_p": 0.01353074250228234,
+ "alpha": 0.05,
+ "H4_result": "difference at alpha 0.05 (higher success with the C920 intrinsics)",
+ "fx_gap": 0.22521857392655906,
+ "released_code_placement_output": "undecided: fx gap > 5 %, the image-matched cell is needed",
+ "image_matched_cell": {
+  "run": false,
+  "pose_file": "results/h4/image_matched_pose.json",
+  "lens_inside_box": false,
+  "reason": "the image-matched lens is 7.4 mm past the camera wall's inner face and 6.0 mm above the roof's inner face (margin -0.74 cm); sim/make_h4_cells.py refuses it as not a valid level; the real camera cannot be placed there"
+ },
+ "real_nominal_placement": "pose-matched",
+ "decision": "Arturo, 2026-11-07 ~16:55 PST, option (a): the image-matched pose is recorded as unreachable (lens outside the box) and its cell is not run; the real nominal placement stays pose-matched by v1 section 6. For addendum entry 2, item 3.",
+ "sha256": {
+  "results/sim/S0_nominal.jsonl": "209ef52e7b2e8d7de7fbac5471624ae01c7daf817c1305ea0e04d0786cd3ddbc",
+  "results/sim/H4_c920_measured.jsonl": "00b1d493a073163c81027a607d66daf11799fc3f2a6c01ae6462c5ca1482c86c",
+  "results/h4/cells_h4_measured.csv": "76b1cb4d5d08a27e60e10d4fbb621e2be258079b4c872873b6dc0d702c4f0f12",
+  "results/h4/image_matched_pose.json": "510bc5d42ac5ecaf555195490a52aaa07c5d2462f40ba031b738178cae84cc3d",
+  "config/c920_intrinsics.json": "2e441eeec7142131bd240d84fbcba2da8393d1a129917defa86bcc0529d55e11",
+  "results/analysis/h4_inputs.json": "3d13a2291603f1dc44ab3b2c5afed24e8d06125ba0cda7dd71f753826e3ee322"
+ }
+}

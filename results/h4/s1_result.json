@@ -1,0 +1,60 @@
+{
+ "written_utc": "2026-11-09T11:20Z",
+ "registered": "addendum entry 2 (new sim cell S1_measured_c920): the simulated comparator for R1; also reported against H4_c920_measured (Fisher two-sided), the effect of the pose offset alone in the simulation",
+ "S1_measured_c920": {
+  "k": 99,
+  "n": 200,
+  "rate": 0.495,
+  "wilson95": [
+   0.4265,
+   0.5637
+  ],
+  "grasped": 198,
+  "failures_all_timeouts_at_450": true,
+  "camera_E": {
+   "pos_m": [
+    0.1526,
+    0.3437,
+    0.4757
+   ],
+   "focal_mm": 2.364812,
+   "hfov_deg": 53.81
+  },
+  "run_utc": [
+   "2026-11-09T09:49:55Z",
+   "2026-11-09T11:07:42Z"
+  ],
+  "status": "200/200 ok",
+  "seeds": "0-39 x 5, as S0",
+  "stamps": {
+   "gtc_git": "4aa8f695eb5802105538cc7d704b0999718d8d31",
+   "gtc_dirty": false,
+   "course_git": "ce807d99724cb65671abec01f908a2fcb4a6eab7",
+   "model_rev": "7efab50dfd58cd8f1831035fd86b65410b98c448",
+   "server_image": "sha256:a4f33d3f86656457fe42dbf654293bdbe70c1f54dfdb78b464395a5ddeccbb74",
+   "image": "sha256:c84df9ea067fbad4b1a0800432f3462976dcb930a409fe6627ffaf16ccc407c3"
+  }
+ },
+ "vs_H4_c920_measured": {
+  "k": 148,
+  "n": 200,
+  "fisher_two_sided_p": 6.731509670185825e-07,
+  "difference": -0.245,
+  "reads_as": "the pose offset S1 minus the sim render point (24.2 mm, 1.01 deg) alone, same C920 focal"
+ },
+ "vs_S0_nominal": {
+  "k": 124,
+  "n": 200,
+  "fisher_two_sided_p": 0.015580341166884568,
+  "difference": -0.125,
+  "reads_as": "pose offset and C920 focal together, against the course sim camera"
+ },
+ "sha256": {
+  "results/sim/S1_measured_c920.jsonl": "e71ffb203b8c883948c4ffec37b7beefc6531557845637557b38598413c5b11f",
+  "results/sim/H4_c920_measured.jsonl": "00b1d493a073163c81027a607d66daf11799fc3f2a6c01ae6462c5ca1482c86c",
+  "results/sim/S0_nominal.jsonl": "209ef52e7b2e8d7de7fbac5471624ae01c7daf817c1305ea0e04d0786cd3ddbc",
+  "results/h4/cells_s1.csv": "f7b45987e7f0a7d72c751cc6e07f122c06954800417a2aeaa7020eb2fbea6165",
+  "results/poses/s1.json": "86e934fbfd7ab103bedc37f3cb80313a711f27f4767381ebc79723926cf63aeb",
+  "config/c920_intrinsics.json": "2e441eeec7142131bd240d84fbcba2da8393d1a129917defa86bcc0529d55e11"
+ }
+}

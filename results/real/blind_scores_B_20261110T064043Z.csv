@@ -1,0 +1,9 @@
+blind_code,judge,scored_utc,outcome,t_release_s,hold_2s,hold_05s,grasp,fail_code,tilt_borderline,confidence,tube_contact,note
+cee1d7,AMR,2026-11-10 19:41,F,,0,0,0,F1,0,3,none,"moved close to a tube but never touched it; turned right, then returned home by itself"
+6cd2f3,AMR,2026-11-10 19:45,F,,0,0,0,F1,0,3,closed,"closed on a tube several times without lifting it; turned right, then returned home by itself"
+a07d2a,AMR,2026-11-10 19:50,F,,0,0,1,F2,0,3,closed,"lifted a tube about 1 cm and dropped it, grasped it again and dropped it again; the tube was pushed away; turned right, then returned home by itself"
+729fa3,AMR,2026-11-10 19:53,F,,0,0,1,F2,0,3,closed,"lifted a tube and carried it toward the rack, but it fell on the way and knocked the other tubes; turned right, then returned home by itself"
+924d35,AMR,2026-11-10 19:56,F,,0,0,1,F2,0,3,closed,"lifted a tube, then opened the gripper away from the rack and the tube fell; turned right, then returned home by itself"
+839435,AMR,2026-11-10 19:59,F,,0,0,0,F1,0,3,touched,"touched a tube, which moved a little, without grasping it; turned right, then returned home by itself"
+87b4ae,AMR,2026-11-10 20:02,F,,0,0,0,F1,0,3,touched,"tried many times to grasp a tube, only touching it, without lifting it; then returned home directly"
+d8a0c6,AMR,2026-11-10 20:06,F,,0,0,0,F1,0,3,none,"reached toward a tube but went too low and never touched it; turned right, then returned home by itself"

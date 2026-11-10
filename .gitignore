@@ -2,6 +2,8 @@ queue/
 logs/
 results/*
 !results/analysis/
+!results/real/
+!results/h4/
 media/
 .venv/
 assets_mirror/
