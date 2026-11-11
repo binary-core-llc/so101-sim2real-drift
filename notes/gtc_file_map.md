@@ -1,8 +1,8 @@
 # Files copied from the private working repository
 
 The study's working repository (`gtc`) is private, and its history is not published. The files below were copied from
-it on November 10, 2026, after the poster was submitted, with gtc at commit `6f835c0`. Each file is byte-identical to the
-file at the gtc commit named (the commit that last changed it); none was edited for this copy.
+it on November 10, 2026, after the poster was submitted, with gtc at commit `1a753d7`. Each file is byte-identical to the
+file at the gtc commit named (the commit that last changed it); none was edited for this copy, except the files listed under *Edited for this copy*.
 
 | This repository | gtc path | gtc commit | Bytes | SHA-256 | What |
 |---|---|---|---:|---|---|
@@ -149,8 +149,7 @@ their hashes; each SHA-256 below was computed from the file here.
 
 ## E1 and E3 results on simulated scenes (`results/e1/`, `results/e3/`, `e1/`, `e3/`)
 
-5 files, 32,016 bytes: result files only, and the E1 selection script. The E3 code is not published here
-yet. `e3/validation_synthetic_cem.json` comes from the private E3 repository at the frozen commit `399025f` (archive
+5 files, 32,016 bytes: result files only, and the E1 selection script. The E3 code is in its own section below. `e3/validation_synthetic_cem.json` comes from the private E3 repository at the frozen commit `399025f` (archive
 SHA-256 `17fed03e9c82f4c9b05a70da541e23c3e0c4d536c1773de0857fa08395312291`, addendum entry 3); its source column gives
 the e3 commit that last changed it. numbers.json marks the E3 numbers on the simulated selection scenes "final sim (E3
 development set, not held out)".
@@ -234,6 +233,264 @@ unchanged on November 10 for this copy.
 | `results/real/steps/N06-022_a1.jsonl` | 6f835c0 | 195,703 | `7d672d224fb069e2fbcb249fc06c790a775251dbc82cc34d9d45360a5e6d7adf` |
 | `results/real/steps/N06-023_a1.jsonl` | 6f835c0 | 389,128 | `d4e9858c15a21cdb52c09888dad340be84a40dea30c416a042f5639f585ae3ed` |
 
+## Code from gtc (snapshot of November 10, 2026)
+
+165 files, 1,881,914 bytes, from gtc at commit `1a753d7`, at the same paths. The folders: the calibration kit
+(`calib/`, `stencils/`, `config/`), the trial runner and robot tools (`real/`), the pose and scene tools (`tools/`), the
+simulation scripts (`sim/`, `docker/sim/`, `assets/local/`), the analysis (`analysis/`), E1 (`e1/`), the exploratory
+runs (`explore/`) and the tests (`tests/`). gtc commit `1a753d7` holds the clean-ups made for this copy (wording, unused imports, imports at the top of the modules, input files found inside the repository); the code files here are byte-identical to it. 16 files replace their prereg-v1 versions on `main` (the tags keep the registered ones); 14 were
+already here byte-identical. The SHA-256 and size are those of the gtc file; 4 files were edited for this copy
+(*Edited for this copy*, below).
+
+| File | gtc commit | Bytes | SHA-256 (gtc) | Note |
+|---|---|---:|---|---|
+| `analysis/blind_results.py` | 6f79f5e | 9,712 | `8a3b83a3c5b123b1306c4514bdd23d05261c299f78ec7292372ee38773a197f3` |  |
+| `analysis/real.py` | 9deff18 | 16,396 | `25554ae90b10a91041d98eb872e59409ef9a346a4e682d41119ef015dcc26f7b` | already here, unchanged |
+| `analysis/stats.py` | 9deff18 | 12,868 | `52029aacf72c7360ddc828be7d520dbe92ed45a2f0e5c5c30869069e9074cf8a` | already here, unchanged |
+| `analysis/thresholds.py` | 9deff18 | 11,758 | `f686b996c4a95cd101dfd4e53f60eb455335c1e1c38483bb49ee92c8b8cf4d4b` | already here, unchanged |
+| `assets/local/SO-ARM101-USD.local.usda` | 81cf5ec | 776 | `14a38f1c7423e117fdfc1cb354110fc070706d65bf2707ac5af0229527b4f64d` | replaces the prereg-v1 version |
+| `assets/local/Vial_opaque.local.usda` | 81cf5ec | 752 | `3780cda1bfa4aef9a6ba20e9a3fc23c5c857371ce60920312f976313900ab623` | replaces the prereg-v1 version |
+| `assets/local/lightbox-simple.local.usda` | 81cf5ec | 1,403 | `6d46a7703bf7d4553880dace1e717a7f22da46d054cdf7b46b64261da768f4e6` | replaces the prereg-v1 version |
+| `assets/local/mat.local.usda` | 81cf5ec | 1,090 | `5e01f67994719eb755654b52a76d149124d226c53604f784f48fb6e2cf2d6158` | replaces the prereg-v1 version |
+| `assets/local/wrappers.json` | be85ea4 | 2,931 | `2a505d093a72a06414d9795cf6e360746d9c0649677ac6ffade4427665624e54` | already here, unchanged |
+| `calib/aim_view.py` | 2bd7d90 | 5,120 | `33671a0130be1afebbbf48d4f8212a99ba8aba46174578079810f44ee4d37871` |  |
+| `calib/base_view.py` | 1a753d7 | 8,750 | `3d71a19085c7f8d0403936f4b85ab55a3c38773532d5bf7eca40e7d4517a066e` |  |
+| `calib/camera_lock.py` | 1a753d7 | 14,647 | `0b1ab5f5ed3d2b65e01af1e0b4e9b6c4b4be6632f4ccac626466edc8e6068e3e` |  |
+| `calib/capture.py` | 1a753d7 | 6,527 | `fc044218256d552c06faef557c6b886dbc8abeb1e088029da98aaafab0034840` |  |
+| `calib/charuco.py` | 1a753d7 | 10,906 | `3d61526842e63eddad554723921b9a844ba8213ceb7a7b9d039708631922807b` |  |
+| `calib/dev_photos.py` | 1a753d7 | 7,041 | `965d50c484b9a2326c78409e4b945620404a649cd7ae41526961f1df84064172` |  |
+| `calib/drift_check.py` | 1a753d7 | 10,264 | `55e3a8a5357f7debd41de6789d7f2711966eeb39191ffc192b3443f62e13c8b3` |  |
+| `calib/intrinsics_capture.py` | 1a753d7 | 16,272 | `c3912bea4d4f81768f11cb74d6796a63e39fc4bb0344ce0a98698a277ac599b9` |  |
+| `calib/intrinsics_solve.py` | 1a753d7 | 16,043 | `84b37004c42146fa1f2465491d3947fc7ceba75f0d389db1c17218a0858d6337` |  |
+| `calib/kcheck.py` | 1a753d7 | 32,930 | `b40359a734b7b9a3a31ff8c58337864b38256b26f86bd306e9dcc8d87566bb22` |  |
+| `calib/light_log.py` | 1a753d7 | 6,716 | `4575c287709f81db5472e260136aa2d576ac3c78e48764a446fe4b3c063c1dbe` |  |
+| `calib/light_view.py` | bd77a67 | 3,565 | `0324ed2c346b04471825997495afa1268e6437567b24f8e3d085f49428786f3c` |  |
+| `calib/live.py` | 1a753d7 | 3,945 | `a76819cd2cb52b795e292d52749cca6da923df8323cf8c6c4579a4e42f34ca34` |  |
+| `calib/mat_view.py` | 536d8c0 | 5,449 | `ff8945cb740df0dd6443266ae148297c97cda74e41aa0c2757417afb67d0f2b0` |  |
+| `calib/overlay.py` | 1a753d7 | 6,693 | `3b5a7887b884b5199e4442a10f9b7bc7c00631b3f5f554e1217c37c2f38bc571` |  |
+| `calib/pose.py` | 1a753d7 | 29,845 | `5f677058f9359ada4fa9ffffd345ba2cf8cda0ab8f26c40a382255e756d2264c` |  |
+| `calib/preflight.py` | 1a753d7 | 6,034 | `52d915f455cd6e2e0b587b21c3fa43d3f0197e0234fbd591d4a4331e674bd079` |  |
+| `calib/rack_ref_view.py` | 1a753d7 | 8,411 | `9c4f2d74b46be46d5467ee8a6eee5ba67aed1d29beed76bd282e3e8ab06c1240` |  |
+| `calib/rack_view.py` | 08539b6 | 17,586 | `6a7048aea70dd419876fdb742777ceeb839899720270b89acb238b06034ba42b` |  |
+| `calib/record.py` | b4e8d84 | 1,271 | `016369e9391090307cca7b72c5aea0b514d5867bc5882e6633aee68bce2fff44` |  |
+| `calib/still_check.py` | 1a753d7 | 6,848 | `238fe2d231900a4cceea513826517294330378905f6c94b08dc9ee55d0bdd085` |  |
+| `calib/sweep_record.py` | 53a253f | 2,978 | `7de9b35fbbe0e0058532487e9ed4675a83e74aea6b7841628507c09c848c5b99` |  |
+| `calib/usbcam.py` | 1a753d7 | 7,174 | `d229075349cec480aca131bac9e8a2be293495b31177b8f82084a4ba757dc7e5` |  |
+| `calib/v4l2.py` | 6c3069c | 5,369 | `5f589d86058b0523bb7c734d8764aeaf0732472646c3e282bed889e8510640c4` |  |
+| `calib/vial_view.py` | 1a753d7 | 5,532 | `e6cc85e334518c1804df950cf2313a1703bbafbdf6f34f79814d3a515bde258f` |  |
+| `config/board_in_E.json` | 622d273 | 2,140 | `efc6c3cc3c11175b97d1f148170b377be475bc0f176bbbf7bfa5b3956da16f83` | edited (below) |
+| `config/board_in_E.template.json` | 6c3069c | 1,055 | `c7f0b9d42ebe19abe6e16d20c99132fa9d3eba501412f55da63e619f19111540` |  |
+| `config/c920_intrinsics.json` | 23ac113 | 9,655 | `2e441eeec7142131bd240d84fbcba2da8393d1a129917defa86bcc0529d55e11` |  |
+| `config/camera_lock.json` | 1a6f566 | 13,094 | `70a8d5d89bd41c02240786b73907f5c7cc4886c193aed6eaf9792bcee5ad877d` |  |
+| `config/cells_active.csv` | 0f2b1f7 | 18 | `d0f97c9e98f4537e343fdd3326f231a8dd20d0468f7086b77cce31c929827288` |  |
+| `config/cells_dryrun_v1.csv` | d46e985 | 3,062 | `f2fa01b287e8019317885a6483fbdba4701b7440367e1e4899389b55066cbdd0` |  |
+| `config/cells_pilot.csv` | 3354c6f | 1,833 | `473f6f82f8f09b06c993073b70a63458f6b319cca207b7f6320821efa0566b72` |  |
+| `config/cells_stoptest.csv` | 58477c6 | 237 | `f4e062f92c2d8cf56ea1d854eeb591f298e63dfaa27ac1c1586856e2e2dbe535` |  |
+| `config/cells_sweep_v1.csv` | d46e985 | 12,084 | `263e6f8c865a1d3120607f56560746eac4622d3dee83d81372400b41f122830a` | already here, unchanged |
+| `config/cells_sweep_v1_mapping.json` | d46e985 | 17,707 | `3ece94a3d3a0b3544a997e161bb30ff6ace980e47e859e3ae5c03d10db6ceceb` | already here, unchanged |
+| `config/checkpoint_source.json` | b3f354c | 4,015 | `b95883a908bd8ceb30e72f0a0cd573b829f02e06d7b7762e1655b393243449ce` |  |
+| `config/explore_v1_cells.csv` | 469435b | 2,754 | `c49c5ebfabf6deb34e9419042daf85bffa9aa0434c50df963c59cc7f0ce2ca62` |  |
+| `config/explore_v2_cells.csv` | a0b0db3 | 1,760 | `e292161ba68c0e7622783645cb4c3faf26572faa70f5607d0c513d0c34f80719` |  |
+| `config/explore_v3_cells.csv` | 6e7dea5 | 1,107 | `f4a4000f3a3037a1539cd7b13fc3fe6ae14a56499f566a0a8d89d9e3dbab40e8` |  |
+| `config/kcheck_poses.json` | a700d9a | 11,053 | `747c9244047e9c7d03e07f6dc8493b47874a3e0b039f66776adf4ad001cde7f7` |  |
+| `config/layouts.json` | bd8cbaf | 23,055 | `3a10a65f34f4c851001e0833945e114763c2dd399410e759dd42a1b8a24a14a7` | replaces the prereg-v1 version |
+| `config/prereg.json` | 26be070 | 878 | `bacdd1625b2d34d6f44a2942de2a5a456201a83dc6f6a2d10376767bb4706b5a` | edited (below) |
+| `config/probes/explore_v1_sets.json` | 469435b | 1,037 | `140742d6ba4ced1dd9340b9d6029e85382ad6a70851a796a769cb2c0a10f9c1f` |  |
+| `config/probes/explore_v1_tilt15.json` | 469435b | 110 | `20dc92091d3e2647dea7f64fc24eb569b39f4ed1c1cf602b6f1a12554b215007` |  |
+| `config/probes/explore_v2_sets.json` | a0b0db3 | 543 | `59592221885405a6bc8077e8e7f5e4799a9754d033851765906671fa705fa91b` |  |
+| `config/probes/sweep_v1_top_levels.json` | 469435b | 644 | `02e0fe840b3ae1f4ce165f43162da3b02ff758e271c638a9502a0b3d7200ad89` |  |
+| `config/probes/t05_t06_sets.json` | 32d3055 | 2,215 | `c808ee01b9e4a837294a0f6c80dbdb6902c03b9b2e1cf205714a831ee2194246` |  |
+| `config/probes/t07_b.json` | 46d5d86 | 185 | `8bca1b4ae02e9ae75b91871034b4b90f0ebd909d9eaeb4c5337ac3a0176fda27` |  |
+| `config/probes/v05_t07_a.json` | 46d5d86 | 48 | `d08899b27f5783a899631bcdcbbd53524005db1c1fa475b649e31f3173e6f0e7` |  |
+| `config/r0_pose.json` | a0b0db3 | 1,046 | `ef6768342fdd8805ab9390d43b1d587baed70540b125f4b7e325ada3ed81c497` | edited (below) |
+| `config/schedule.csv` | cb83c80 | 10,210 | `cd776ae4b5e0ddb16bee1005e15c573a1870f8461298424cb277c806699f4397` |  |
+| `config/sign_table.json` | 32d3055 | 23,383 | `ef704dff9dddfe08d2ee05ba173aa3adab430d2c60a48098e374b1d17a8ba1d8` | already here, unchanged |
+| `config/versions.json` | c6e9ac6 | 17,085 | `3c9d7303bb831b54d9e223318725276653504b787b3c1423beaafeb8f34694e6` | edited (below) |
+| `docker/sim/Dockerfile` | 81cf5ec | 3,505 | `0a842bf3bf385afb8e02442d07bb8fed45db20080f28185728d7f308d01787ef` | replaces the prereg-v1 version |
+| `docker/sim/Dockerfile.diff` | 81cf5ec | 1,959 | `1669924b03382a39791e9eda88a6efbc894ab4d906a3b76282faa19586a61530` | replaces the prereg-v1 version |
+| `docker/sim/entrypoint_offline.diff` | 81cf5ec | 863 | `3290f975eef21f36edebda6a65df7f72df14fd01690c9266db7328c830f01a37` | replaces the prereg-v1 version |
+| `docker/sim/entrypoint_offline.sh` | 81cf5ec | 1,051 | `d2432e24dd1dc6761ca7214a1b9fc9004c5b0dfd22674eb743ab3105e87eb3f2` | replaces the prereg-v1 version |
+| `e1/e1_estimate.py` | ca77e84 | 12,639 | `69c64462d150c1061949bfbce36ba3842fe3230450cd716f595dbd43af713a34` |  |
+| `e1/eval_selection.py` | ca77e84 | 4,112 | `a8651dce5f3fadc8ea4a7d7a71d54fdb038a23a943adc1c077816c790fbd3071` | already here, unchanged |
+| `e1/make_selection_set.py` | a294ec3 | 5,474 | `5cfb8283f9d44ea866451e68618a4bf8bbde9462f6dc9c8e62339dc465467b05` |  |
+| `e1/t22_gpu_test.py` | 1a753d7 | 5,999 | `d7b293fc91981b29a9746666b3edcbfd5bb48ad93fc35c7efb1d41d4f6f54fe9` |  |
+| `e1/t23_api_identity.py` | 1a753d7 | 3,797 | `2571c66193e9b0281ca4c74b466eb9f57585a6a743307591a554848f4f1017f2` |  |
+| `explore/run_cell_long.py` | 6e7dea5 | 2,505 | `634a72f3efcc83aa27da08165d7f2a59eec5578dda864d303a5a9c019230cebb` |  |
+| `explore/sweep_eval_long.py` | 6e7dea5 | 22,441 | `203d6ebf704b3fba245eed429c09d7b7db818b86999c670cd3a26dc8559629bb` |  |
+| `real/calib_report.py` | 56462ae | 3,617 | `00e2fdbeacc908ef70e04497159282fcb6df4131eb6a8545858c467e38d97667` |  |
+| `real/calibrate_arm.sh` | b4e8d84 | 2,012 | `0bc1d112e48bf676d5da510d6495a82993101634cde4449dc37fa542faa6a0a9` |  |
+| `real/gripper_check.py` | f4fddbc | 4,047 | `2f90cc05d8564eeb179e761699794111f82f95bcd21e69774141af5d62f89ff0` |  |
+| `real/hold_home.py` | 468f945 | 2,146 | `614bb55d9447770256e0db3beef64b41646dc3a80b9843694822a79086a561c0` |  |
+| `real/hold_home.sh` | 468f945 | 672 | `2acd55a71e47f09d5a8a505c59606934fcf08d1691b3ebcb40b4b41cd8f1a136` |  |
+| `real/kcheck.sh` | a700d9a | 799 | `435ba23f3b86e098c4af9d0ef40de55d20561ad6e3153b40d38dbf22f5775c39` |  |
+| `real/mock_policy_server.py` | 56462ae | 1,791 | `c797d559b62026ed63091cb856869d831d3567c87649981ac1ac9c8f045de3b7` |  |
+| `real/pilot.py` | b4e8d84 | 12,178 | `96b1c9c0fdedbded739e9c2251c719b9a5401d3eb0c5570e85b3880b480513dd` |  |
+| `real/pose_check.py` | 1a753d7 | 6,192 | `762f199210fce7fbc1cc43a4300d80b6874117289c5ac9b3c161f39345701849` |  |
+| `real/robot_health.py` | 56462ae | 5,405 | `a612f6b36b17390313f81ed878c97197961e2ca552764e5c85f35c5c6d825e96` |  |
+| `real/run_real.sh` | 56462ae | 1,575 | `37c062ed2270d359cc57bfb0eb87af76be31e71da400f2dc7492e9806606d4d8` |  |
+| `real/run_teleop.sh` | 56462ae | 1,380 | `a84e1cedbf779af7533868cc8d3feb17ec6e9241d6ada9b3a9c876d7d83e2894` |  |
+| `real/start_pose.sh` | b4e8d84 | 1,024 | `8b402083bc14d913b677469f1750ecc17a402a6cee6ad5928fb227db09f9954f` |  |
+| `real/teleop.sh` | b4e8d84 | 1,023 | `792fb15d9c0038c3ec35764e9960507a20ceaa4873d167b06b395cc86727b1a4` |  |
+| `real/trial_runner.py` | d1f86f6 | 67,440 | `18aa8af2a3cced692ad91e0a5610ba9b324fd17454a76ba7f2c93bbb6fed8301` |  |
+| `real/vial_check.py` | 59ccb6e | 17,793 | `0d9bee8c3951feebc9d5ba5dd5564c85186ff04ad5f95fcd0577a02d03dbeaca` |  |
+| `real/xcheck_first_chunk.py` | e0fd505 | 5,889 | `56e5896d45c39255c3f1376901043bfef9b4e3fa20b8d4effc8176b52a6dbdd3` |  |
+| `sim/analyze_c1.py` | 1a753d7 | 13,311 | `cac374d6ec9588f6d736b43b989e772f13f86d203a4c7f7ff729c485c2a54d87` |  |
+| `sim/app_smoke.py` | 6b30cc4 | 485 | `1fc64b97f8a6ffd23dfc86c54f7b1819f0d16ba3daa28ecbf094a46fd64f4fee` |  |
+| `sim/dump_scene.py` | be85ea4 | 21,525 | `4d3e463e876cf4e707a454ddd1c596c4b36a47b628ace748c5364508d131cf29` |  |
+| `sim/gpu_log.sh` | b3f354c | 789 | `6f2da3765c61a6eb80712d4796ee0b597c0b41ab69fba036d20c17d07b2f74a9` |  |
+| `sim/image_matched_pose.py` | 1a753d7 | 31,386 | `949a7f584a395016617e1644305357d7812ced9945712970857fc30e6d11bd00` |  |
+| `sim/jaw_tips.py` | 1a753d7 | 10,095 | `bc5afe0f1c777ce2ba0bfce5a5bdac1ba1ebd66556b927006074e22db00610b2` |  |
+| `sim/layouts.py` | bd8cbaf | 7,295 | `30ea7b688ae297ad9243bf0fc6d2e883f0717b3869a0eaeb34756b1341de05ca` | replaces the prereg-v1 version |
+| `sim/local_assets.py` | be85ea4 | 1,521 | `cba717f1ae293083956d18275db1114a9ff459f1ffabd7ea1e2f8f44c940d44c` | already here, unchanged |
+| `sim/make_h4_cells.py` | 58ffd9f | 7,121 | `3dbaa9e96421e507528f6638f0120238974d6758dae5d782f032e242684bcb1e` |  |
+| `sim/make_s1_cell.py` | 44f1b81 | 4,120 | `337bfc57baa42632fe380577798d956ce5f9a3ee8c25c1fcfd1a87c64fb22cd8` |  |
+| `sim/overrides.py` | be85ea4 | 4,207 | `45fe28bcd0de7170ec39d0e589acf908b80ceb33fb5217ca3be8345c8bb19ad9` | already here, unchanged |
+| `sim/pilot_report.py` | eab4b75 | 4,561 | `154f5bf0d8d7a4ebacaf10be4c4f0c8151e6c079996bba3ad41a65917eca3253` |  |
+| `sim/provenance.py` | 63f724d | 3,033 | `82654c080c1e3ea156ecc4f468ed5ac5faed3ffbb077d02656bd468d4b9d8497` |  |
+| `sim/render_poses.py` | 1a753d7 | 6,424 | `4880738ffddd5441d6a01a20d53055a524ee3315cc844f5df2be5a06de58cdda` |  |
+| `sim/run_queue.py` | a0b0db3 | 15,440 | `add0a012ca5301e1c89f7dd041b26f67eaabbc3603b00dbb43f466cc17dac144` | replaces the prereg-v1 version |
+| `sim/run_server.sh` | 63f724d | 1,844 | `871210880a43677a0855dd733f5139595dc83efc61bd5b1f720d29a01eeb9839` | replaces the prereg-v1 version |
+| `sim/run_sim.sh` | 63f724d | 3,547 | `63a3524e5bf4e8384b3833e05855ad9a763999274fb59908d891c6414ca0dfb2` | replaces the prereg-v1 version |
+| `sim/run_t03.sh` | 1a753d7 | 2,744 | `64f10ddbdb6fbaebec115dca614c0db46800bcd353be70140933055fbfac6b0d` |  |
+| `sim/server_ping.py` | b3f354c | 3,031 | `2c7168d444b143723c9e004d3cbc544552f46fd80697893ec97946a298b9704b` | already here, unchanged |
+| `sim/sign_table.py` | 32d3055 | 9,896 | `22d0f7d223e14956ec82932d5da630250277a55dc2f31c87ae3d7a98644a9005` | already here, unchanged |
+| `sim/stamp.py` | b3f354c | 657 | `a8e661bc73633220dd58af2beea2428ec9b8d60745e68d926adc2e325b856a5c` | already here, unchanged |
+| `sim/summarize_t03.py` | b915482 | 4,819 | `720d04c34e0483d40c048a4fabd7fa775dbbcec06c2370c438818ced83bb6e92` |  |
+| `sim/sweep_eval.py` | 63f724d | 21,581 | `1632205371558107758b18569c90fac3bb692a746294442494a6e5eb4d6a59e5` | replaces the prereg-v1 version |
+| `sim/trace_episode.py` | 1a753d7 | 12,180 | `0cc2ba3be448bb595d6cfe06c4120109018e992fd852c8c0abeb8e63cc209268` |  |
+| `stencils/stencils_letter_both_sets.pdf` | d46e985 | 172,461 | `d49a6e5b43d230bc068531961086971d95cba86c8b869317c028ac381687af3f` |  |
+| `stencils/stencils_letter_setA.pdf` | d46e985 | 86,782 | `a4f7377170908021507ce7c40c1608689ff1ed50c7b5c7ba7e07da05baa2b897` |  |
+| `stencils/stencils_letter_setB.pdf` | d46e985 | 86,788 | `ac4257e8055d22d1e18135494fad38ad6d18feaed0b2b85a29bd3c9fbac24052` |  |
+| `stencils/stencils_report.json` | d46e985 | 6,193 | `b8325cfb4d9b2bfb3503959665831aa4b0770c792e88dd8ba5715d089949368c` |  |
+| `stencils/stencils_tabloid_both_sets.pdf` | d46e985 | 167,616 | `6352e3c4efedf28127a7e4757cf42f2de9c027859e8bdf1c9269870dee6cc157` |  |
+| `stencils/stencils_tabloid_setA.pdf` | d46e985 | 84,368 | `74e21094f9e1186f3915bf3ee7f565a856be1cde48bc6cd227da12a4222f673a` |  |
+| `stencils/stencils_tabloid_setB.pdf` | d46e985 | 84,357 | `800e040798445052619d913a2c78a1eff3859972fd9f6b4915e83af0da18b8be` |  |
+| `tests/fake_cell.sh` | 469435b | 1,059 | `dd3b91c2270d297eefa9a03aa812166a3b75e702ad533dee05eb6575ceb575e7` |  |
+| `tests/make_r0_board_frames.py` | 7ee365b | 1,366 | `34eb92c26bc8fcf78a4244eed8d1ac688e4102481a395678fb2732cea177d294` |  |
+| `tests/make_synthetic_calib.py` | 7ee365b | 3,970 | `0ccea42d60cf744481620d9030c222f6b50840eaed75751db11df4f68788fe9a` |  |
+| `tests/run_monday_dryrun.sh` | b4e8d84 | 4,855 | `7742f2fe098d5fac47f905c7da4d0ff252afcf57de473ab4aff01a6faca5cf45` |  |
+| `tests/run_trial_dryrun.sh` | 9a67cb5 | 7,246 | `8404310b8b959248922dc3b9325e66b53356032c764cac56c7058a23b87d8dab` |  |
+| `tests/test_aim_view.py` | bceabbb | 3,574 | `3b9a9b07f2e1d05105be1e22f3ba7508a01e9b3fae22b38bb11dceaae59ce95a` |  |
+| `tests/test_analysis.py` | 9deff18 | 10,853 | `16a91eb1fab0afdad38c988501a39a234df2600e4c1f10aa2d0fe9318f72089d` |  |
+| `tests/test_analysis_scipy.py` | 9deff18 | 4,334 | `adda5a2549c6eaa94b22f7df49ab561b60499ba4b47a7364e68ea5049c4a5f4f` |  |
+| `tests/test_drift_synthetic.py` | 1a753d7 | 2,865 | `aef53090c715a8180f57c5c857c24a88e7bf576e531beac44e36b39126d39fee` |  |
+| `tests/test_h4_prep.py` | 1a753d7 | 7,848 | `32f4c664cb0e357cfb13366a8a93d0801ba7b9aeac65926ae618b4bd1c15e3aa` |  |
+| `tests/test_light_log.py` | b4e8d84 | 2,191 | `da8f34323d70cc544c0c73497f7c28dc22a2aebc3b3acb7c6ff66b2fe4cc4907` |  |
+| `tests/test_monday_units.py` | 1a753d7 | 11,175 | `5ade141259c389a2014d88bd294af741813210b2b78dfb5b2ec0bee3802e5901` |  |
+| `tests/test_overlay_synthetic.py` | 7ee365b | 4,031 | `bbb769c97cfdd6608d3ba929e40905d7463dc899ef6e89ebf674e3ff7451952f` |  |
+| `tests/test_pose_hud.py` | 1a753d7 | 12,803 | `bb89ec90486ac5960b6c86c4ea44db6f56d003ee08166b27807c69d78464c187` |  |
+| `tests/test_pose_synthetic.py` | 7ee365b | 3,994 | `2d2b9a6e5a5646055482c4b838765ddb56bedb2ce59f9442606dc5d3c8186b5d` |  |
+| `tests/test_still_check.py` | bec5949 | 3,432 | `6296f7a1b5fd47164c900c173f9235055aac8c607a3fb83d9dbff1d7fbcfaacb` |  |
+| `tests/test_trial_runner.py` | 1a753d7 | 25,769 | `d924df58dafd3dc6e21aa7a9ff4cec803619cd084270ecf9d7c222e5b8ec756e` |  |
+| `tests/test_v4l2_abi.py` | 1a753d7 | 3,541 | `5bf78604c4902c92586c2de8aa25c6972ae52388b276fb01d509ac96cdac2083` |  |
+| `tools/arm_fk.py` | 7b5a800 | 4,820 | `20fa399c22dade331e93565c5d6883c6b74eff28749b470a76e265c7315cc856` |  |
+| `tools/base_shift_frames.py` | 1a753d7 | 20,584 | `26aa496f1d5f3e7be05e90a64d30c5d84ca73246b27164b2ba5de887721c3137` |  |
+| `tools/base_topview.py` | bff1054 | 9,229 | `2fcddae628fe0b40635a68d70261f0f55014497f895311647cf4cf1e42373b37` |  |
+| `tools/blind_rename.py` | 459293f | 4,389 | `695558b95a90701789f49179af8b2b85a45907919e8750a27f1fbd94d4849a82` |  |
+| `tools/capture_versions.py` | 1a753d7 | 6,134 | `6469123de7f3a1be4aabfdad2fab0aac0fb16e4ef6e432fff1558519ffa490f6` |  |
+| `tools/contact_sheet_explore_v1.py` | 1a753d7 | 6,236 | `f46275ef671f5f782bfc26a9ed585d0633a38752f8e8fd9cea6fa5bdd95db9f4` |  |
+| `tools/contact_sheet_explore_v2.py` | 1a753d7 | 5,483 | `fde01a891e833f18524b22422f61e6b8ed28d62b50e9c6cbaeb588afde87c2bf` |  |
+| `tools/cut_judge_clips.py` | f36014b | 9,725 | `b7ee9671da1104a74552edad9e723d64dcc701fff8134afabca68733697971df` |  |
+| `tools/cycle.py` | 1a753d7 | 9,998 | `4e0d3a06100424cd4951bc15f6214943e9ddf3819e37959479c80e3f3f80bbc7` |  |
+| `tools/explore_v1_report.py` | 966e83f | 5,551 | `446e15bc7fe0b722c0f04a3943373b18b3e3c4b9967898f92c163624f4e23a8e` |  |
+| `tools/explore_v3_report.py` | 1a753d7 | 6,101 | `a7215237d666a82809110476b93e5efb0ccc19423d014890d9082a6c2cc3cf83` |  |
+| `tools/framing_check.py` | 1a753d7 | 4,523 | `d73b8498c2624619093bf9e1c7c5f920194fe79e519c2f81cdd366896c37bcd8` |  |
+| `tools/ignore_zone_check.py` | ab631ce | 9,241 | `4dd1a1262ce594fc721f1f928843e6806747dfe7fd47716bc76c0915c426a300` |  |
+| `tools/jig_fit.py` | 426d18a | 11,443 | `275bcacb15c13b8c97c423b3da43c65cc569169cda57c9490959d987f2865884` |  |
+| `tools/make_local_wrappers.py` | 1a753d7 | 4,145 | `a2d5803b09ddb1a7f1e64f8c6f89a1ef67cfc148461233b295000864a243b8b3` | replaces the prereg-v1 version |
+| `tools/make_stencils.py` | 1a753d7 | 15,732 | `eb32abe40b20c3f1498d7fe828d3168e062cfbe3cdef3c38ebaf3ab21a2cf747` |  |
+| `tools/map_sweep_cells.py` | 1a753d7 | 5,723 | `fef5d004d4cc6d3d85dcf9f6d9e7f117e3695ae2522491e50eb6a623e5aabde8` | replaces the prereg-v1 version |
+| `tools/mirror_remote_assets.py` | be85ea4 | 5,644 | `6a812701cff304b40389c42cbf9f03bb35f9de160eaa9bbfea526323df2ff56a` | already here, unchanged |
+| `tools/posecheck_compare.py` | 2e4495a | 6,927 | `55ecf81abd2aecf75f53b624d9e10b958dc67ec59b464e898dc64dc5628cdfee` |  |
+| `tools/r0_pose.py` | 1a753d7 | 10,350 | `1b996d57bb9879c974c981e317ee57209d6c6141b2677f10bbadf96583270eff` |  |
+| `tools/rebase_poses.py` | 34c8a77 | 3,518 | `a925d0aa5b7b72fe2c888a627f4ccded012541c6ddbbf98dc5c0e05ef08a977a` |  |
+| `tools/recover_trial_record.py` | 1a753d7 | 11,789 | `5633ac4adf8c67dc3085b0f6929f5a13689f32ae0f15931efcb98d39dfcc5ac0` |  |
+| `tools/scene_check.py` | 1a753d7 | 12,759 | `2635f1d46eb25df0350bde2a4c546ec6469a713a6456909a663584f9d6a6bacc` |  |
+| `tools/sled_from_views.py` | 34c8a77 | 19,321 | `8798fb001498d6020500708ce72f8a4afdd05cb6b44287b62feb9c7d71a51e91` |  |
+| `tools/tilt_failure_modes.py` | 28be591 | 4,462 | `b5284d13eddc5e50274e5e16896720897b9680ddce8cfc707156673e035242b9` |  |
+| `tools/vial_check_validate.py` | 1a753d7 | 8,061 | `3166537a29541f61f5f30acc737240efefef17294d1099d168d36106df61cee6` |  |
+
+## E3 code (`e3/`, frozen commit `399025f`)
+
+15 files, 146,835 bytes, from the private E3 repository at the frozen commit
+`399025f998ea0114dd00c21f45e7ec937ed12589` (archive SHA-256 `17fed03e9c82f4c9b05a70da541e23c3e0c4d536c1773de0857fa08395312291`, addendum entry 3);
+each file's commit is the e3 commit that last changed it. The SHA-256 and size are those of the file at the frozen
+commit. `e3/README.md` was edited for this copy (below); the other files are byte-identical to the frozen commit.
+Because of that edit, the archive's SHA-256 cannot be recomputed from these files alone. `e3/README.md` was written on November 8, before the freeze; its status lines were updated for this copy. `results/e3/simset_e3.json` records `version_hash` `d826f4e7...`, the hash of the E3 code just before the freeze: the frozen commit only added 15 lines to `validate_real.py`. `e3/cache/scene.npz` is derived from the course's USD files (see
+NOTICE).
+
+| File | e3 commit | Bytes | SHA-256 (e3) | Note |
+|---|---|---:|---|---|
+| `e3/.gitignore` | 60808ca | 19 | `862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793` |  |
+| `e3/README.md` | 578f043 | 4,371 | `6fe4dfbc10b63ddbe3412824a022790027619e6ea626b20c8a55d24b3ca3108f` | edited (below) |
+| `e3/bench.py` | ebe3d11 | 2,791 | `e351dacf8f4d6678b940dfe553231aee01a09e204fa2b962e638a8ac42ebd44a` |  |
+| `e3/bench_render.json` | ebe3d11 | 624 | `f883a906c29200c268bdc99eea5f86cab6879f815b36700b057ea3706021d16d` |  |
+| `e3/cache/scene.npz` | ebe3d11 | 57,431 | `d94500dddfd3f72d98be96f9d6b4f24f7a72879e50b47145f3ff17bd73b8e316` |  |
+| `e3/estimate.py` | ebe3d11 | 16,821 | `999a7a090e9c7a178856fd9b920eafabcb0bb80574843fc6432e159861365d7b` |  |
+| `e3/eval_simset.py` | fc8b5fb | 3,385 | `1edc6c7a36706e6e9ee828dfb7f0b86f05f5891ecfe1acb20874b774c1192e6f` |  |
+| `e3/render.py` | ebe3d11 | 17,958 | `d4bb39a407ff7cf013ed13973db28991c4678fc735c068d526811897f7990e6d` |  |
+| `e3/render_gpu.py` | ebe3d11 | 6,791 | `4a6fc7fb0948034f08f07a387ccf7c8e0a1cd2e2b4f135fa2351bf0527ec4549` |  |
+| `e3/segment.py` | fc8b5fb | 5,228 | `02102894ee0b13456635ea8c3c0ca36be31d965a743c7dcaad812ac8760dff5d` |  |
+| `e3/smoke_tiled.py` | 60808ca | 10,740 | `ec5ae923d56cefd28cfbb07e0846b7403035ff3c9d6f0dc694e2d9b9cf2969f1` |  |
+| `e3/validate.py` | 6eea643 | 3,326 | `d070bb55321bb24b2aafc2d0582c528e0590bd1f475e3a888f61ee364d6860be` |  |
+| `e3/validate_real.py` | 399025f | 6,470 | `261f92d1d9e3afd8c7c21225c3c43f09e4bd30421b693b9c109cff9ab887a42b` |  |
+| `e3/validation_synthetic.json` | d682878 | 5,437 | `e7a8e1dd1f7b86affb9a664f900b43b5e4ff1e689e003f57725b8dbc1925ac64` |  |
+| `e3/validation_synthetic_cem.json` | 6eea643 | 5,443 | `743ec4cd1269813cca4973777cb878bf84861665a44a7f6478e261a738933365` | already here, unchanged |
+
+## Edited for this copy
+
+| File | SHA-256 of the source | SHA-256 here | Change |
+|---|---|---|---|
+| `config/board_in_E.json` | `efc6c3cc3c11175b97d1f148170b377be475bc0f176bbbf7bfa5b3956da16f83` | `9e2b77712966ba955ea2833b91ca30ec0397ce041c7498104a63f90a0d6aa13f` | names and times removed from four explanatory text fields; every measured value unchanged |
+| `config/prereg.json` | `bacdd1625b2d34d6f44a2942de2a5a456201a83dc6f6a2d10376767bb4706b5a` | `a23ad213309506773a77bdd5879684a558415958787f11b56463d8639a608358` | the superseded commit hash of the prereg-v1 tag removed (the tag points to `015789a`) |
+| `config/r0_pose.json` | `ef6768342fdd8805ab9390d43b1d587baed70540b125f4b7e325ada3ed81c497` | `e760ccf3a80c743c8edde394bdc7d3204210d52917c5171f9d0e7475aad0fc88` | `definition` names the protocol label instead of a private file path |
+| `config/versions.json` | `3c9d7303bb831b54d9e223318725276653504b787b3c1423beaafeb8f34694e6` | `8f99ba44978a53dc17de8a96f2b9099bdc940c6c8e8fb9f71e69c4107042dfa8` | a line about software not used by the project, the driver-switch detail beyond the two driver versions and the reason, two superseded hashes of the October history fix and 8 words of its `reason` text, approval wording, and private staging paths removed; the model's local path written with `~` |
+| `e3/README.md` | `6fe4dfbc10b63ddbe3412824a022790027619e6ea626b20c8a55d24b3ca3108f` | `461a7e26a8e67f91cb209d5917fa14c4897a45e735d2fb88759438ac9218db18` | the title's note on the local repository, the November 8 status and the plan to freeze replaced by the freeze record; a reference to a private project file removed |
+
+## Inputs the code reads (`results/c1/`, `results/overlay_refs/`, `results/real/`)
+
+13 files, 534,522 bytes, from gtc at the same paths, byte-identical: the simulation renders, masks and
+scene dump that the camera tools, E3, the tests and the trial runner's dry run read, and the list of trials judged from
+robot frames that the blind-score analysis reads. `results/c1/nominal_front_rgb.png` is listed above.
+
+| File | gtc commit | Bytes | SHA-256 | What |
+|---|---|---:|---|---|
+| `results/c1/frames_sim.json` | b915482 | 90,102 | `9ffc7656d47805ff99dd0b3fc0f70b54e52b5d2c60e3bddc3252da5ebf38a02c` | the C1 scene dump: object, robot and camera poses and the camera intrinsics, every randomization at its centre (sim/dump_scene.py) |
+| `results/c1/c1_checks.json` | b915482 | 7,806 | `7b14b1ab7e6b05f1e1a31d6d5a9822b2b36de53fa939d47e4d193b62c90d77e0` | the C1 checks: expected values, colour patches and the straight-edge check (sim/analyze_c1.py); calib/light_log.py reads its floor patch |
+| `results/c1/nominal_front_instance_ids.png` | b915482 | 8,745 | `951c1f2cabd8675e37c877737725aacc8c601e170fc5057f71843a3d09e6b415` | instance ids of the nominal front render |
+| `results/c1/nominal_front_instance_labels.json` | b915482 | 9,895 | `7aaa7e8b9b9ddcca45b7ea3ee2dfe35a1006a86ada69301365d0317449a06ba1` | instance labels of the nominal front render |
+| `results/c1/nominal_front_instance_rgba.png` | b915482 | 11,269 | `f54a0b8eb8cbc9d77d5a6077f79718c2275af135b2d0ba5c7ddc98180fdc2d7d` | instance colours of the nominal front render |
+| `results/c1/nominal_wrist_rgb.png` | b915482 | 163,775 | `ca6c6c58b6c007738445e2dd26050b9d6bf2df8ffff9c1c4e82893f941b764fb` | the nominal wrist-camera render |
+| `results/c1/nominal_wrist_instance_ids.png` | b915482 | 4,562 | `0c8f2c4155714e477df915225fae612f1f290ff8f4e3d22957f8db37edfec99f` | instance ids of the nominal wrist render |
+| `results/c1/nominal_wrist_instance_labels.json` | b915482 | 5,906 | `093fb17a81232b6fd3f6eedbb4bc4f8c6810049eef46f17096070e36e5bb0788` | instance labels of the nominal wrist render |
+| `results/c1/nominal_wrist_instance_rgba.png` | b915482 | 5,511 | `7061754d89a63aa66ce8ac70ba3e298e8cca5ee007385bf764bbb4c945c9fc37` | instance colours of the nominal wrist render |
+| `results/overlay_refs/sim_r0_front_rgb.png` | 6c3069c | 209,206 | `6aa58bf0d719ffaa934c13d1d4e8aa7d8e810b7fd2d7665fa093d7e94b248488` | the front render at the R0 camera pose (calib/overlay.py --ref sim_r0) |
+| `results/overlay_refs/sim_r0_front_instance_labels.json` | 6c3069c | 4,401 | `740f765834b9356abbde3ab192cc2dd28f9e1e0f8054ca3c4e029f1d2552a5b0` | its instance labels |
+| `results/overlay_refs/sim_r0_front_instance_rgba.png` | 6c3069c | 10,148 | `61de711def5e2ca43c04ad2413bb23d2c2e31c397925155dc3036858b4c5038c` | its instance colours |
+| `results/real/judge_clips_robot_frames.json` | 459293f | 3,196 | `358a6afa9b82ae307b7b627d2d366677d02a475899bdcc17a9d9370326ee107f` | the trials without a phone recording, whose judge clip is the runner's front keyframe video (read by analysis/blind_results.py) |
+
+## ChArUco board (`docs/`)
+
+2 files, 795,833 bytes, from the study's protocol sources (`docs/` beside gtc, not a git repository),
+byte-identical. The PDF's metadata was checked: made by the Pillow PDF driver, with a title
+(`ChArUco_GTC_SO101_letter`) and creation and modification dates only; no author, no XMP metadata; its one image is a
+JPEG with a JFIF header only (no EXIF, no comment). Nothing personal was found, so nothing was stripped.
+
+| File | Bytes | SHA-256 | What |
+|---|---:|---|---|
+| `docs/charuco_board.json` | 159 | `07a887cc4401fc2de899f5d808945e1f0f96c6ad7b3aca17e443ad00b3083f70` | the board definition that calib/charuco.py reads |
+| `docs/ChArUco_GTC_SO101_letter.pdf` | 795,674 | `d25d5604da35890b0c1fe1b7aa40ff1ad055242ffa549c4c735651cb34ce3bb7` | the board to print, US Letter landscape at 100 % |
+
+## Package lists (`requirements.txt`, `requirements-e1.txt`)
+
+New files, not copies: the installed packages of the study's two host environments, read on November 10, 2026 with
+`importlib.metadata`, one `name==version` per line.
+
+| File | Bytes | SHA-256 | What |
+|---|---:|---|---|
+| `requirements.txt` | 220 | `0a68668067206804eecd2a4738093a84f4d1934c104a972e0e0952d02fb4bb9e` | the host environment (`.venv`) |
+| `requirements-e1.txt` | 1,092 | `eb53321f3fb30c7e950835d9179f8ad5cd57da360f356710bd5f809361c157d7` | the E1 environment (`.venv-e1`), with the PyTorch cu128 index line |
+
 ## Notes
 
 - **Blind keys.** Written November 9, 2026, 22:40 PST, with the clips and the blank sheets
@@ -247,10 +504,12 @@ unchanged on November 10 for this copy.
   214 entries are unchanged. Each entry's `status` field gives its status (26 entries are "blind-scored (final)"). Its
   `source` paths are relative to the working folder: `prereg_repo/...` is this repository, and `gtc/...` is the private
   repository. A `gtc/` source copied here is at the same path without the `gtc/` prefix, except numbers.json and the
-  two keys (table above). An `e3/` source is the private E3 repository; `e3/validation_synthetic_cem.json` is copied here at that path.
+  two keys (table above). An `e3/` source is the private E3 repository; its files are copied here under `e3/`.
 - **Edits to trial records.** Changes made after a record was written are logged in the record itself (`relabel`,
   `flag_edits`, `note_edits`, `record_recovery`), with the time, the reason and any earlier value. The trial-level
   deviations are in deviations.md.
-- **Not copied:** the phone recordings, judge clips and trial frames (the trial frames include the photos of the real room); the clip-cutting logs (their video metadata
-  includes the phone's location); the audit copies of trials.jsonl made
-  before each edit; the E3 code and its README (`e3/README.md`).
+- **Not copied:** everything else in gtc, including the phone recordings, judge clips and trial frames (the trial frames
+  include the photos of the real room); the clip-cutting logs (their video metadata includes the phone's location);
+  the audit copies of trials.jsonl made before each edit; the run logs, working notes, machine setup scripts, queue
+  state and release staging copies; and gtc's own README and .gitignore. From `results/c1/`: the depth array and the
+  check image, which the code does not read.
