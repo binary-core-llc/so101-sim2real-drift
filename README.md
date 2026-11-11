@@ -6,6 +6,8 @@ The study measures how much a real SO-101 workspace can differ from the simulati
 
 Status (November 10, 2026): sweep priorities 1-3 are complete (50 cells, 2,220 episodes). Of the 4 priority-4 cells, `H4_c920_measured` ran (200 episodes, November 7); `H4_c920_image_matched` was not run (addendum entry 2), and `G3_joint_scale` and `R_replay_oct26` have not been run. The cell `S1_measured_c920`, registered in addendum entry 2, ran on November 9 (200 episodes). Pre-registration v2 was released before the first scored real-robot trial and added the analysis code and the simulated thresholds. Items fixed after v2 are published in `PREREGISTRATION_v2_addendum.md` (entries 1-4), each as a new timestamped commit before the step that uses it. The real-robot trials ran November 6-9 (61 trial records, 56 valid) and were blind-scored on November 10. The trial records, the blind score sheets and keys, the analysis outputs, the deviations log, the simulation episode files and every number on the poster (`poster/numbers.json`) were added after the poster was submitted; `notes/gtc_file_map.md` lists each file with its source. The sweep ran from a working copy whose code and configuration files are byte-identical to prereg-v1 (verified by git blob hash).
 
+Sources: `poster/numbers.json` marks each number's sources, and `notes/gtc_file_map.md` maps them to the files here. Two remain private: the E3 code and its README, to be released later, and the photos of the real room, for privacy.
+
 **The dates of record are the GitHub releases `prereg-v1` and `prereg-v2`.** `prereg-v2` adds:
 
 | File | What |
