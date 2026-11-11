@@ -1,7 +1,7 @@
 # Files copied from the private working repository
 
 The study's working repository (`gtc`) is private, and its history is not published. The files below were copied from
-it on November 10, 2026, after the poster was submitted, with gtc at commit `3a78356`. Each file is byte-identical to the
+it on November 10, 2026, after the poster was submitted, with gtc at commit `6f835c0`. Each file is byte-identical to the
 file at the gtc commit named (the commit that last changed it); none was edited for this copy.
 
 | This repository | gtc path | gtc commit | Bytes | SHA-256 | What |
@@ -22,6 +22,9 @@ file at the gtc commit named (the commit that last changed it); none was edited 
 | `results/h4/h4_result.json` | `results/h4/h4_result.json` | 9cc8872 | 2,230 | `e3f769902e3574e8e7cca86003f0efb7c6ad9aa7542e6404997fbfbf7d85b0bb` | H4 test result |
 | `results/h4/s1_result.json` | `results/h4/s1_result.json` | 60a4bb2 | 2,130 | `21cb929e336ed382e6081875e8fceac66796a68e12ba1674b4de379aeacf8e88` | S1_measured_c920 result against H4_c920_measured and S0 |
 | `results/real/deviations.md` | `results/real/deviations.md` | 45e3fde | 75,639 | `025b8637aeed93480b23f3d63653f3e068a1271739f1239945bd36724b4a8e63` | the deviations log of the real trials |
+| `notes/sweep_v1_summary.md` | `notes/sweep_v1_summary.md` | eab4b75 | 5,675 | `25be53727c597bb10b23c403c6da5c0ce469d4c357bd1b2899078933b8b23aa9` | sweep v1 results per cell (k/n, Wilson interval, Fisher test against S0) |
+| `results/poses/r0.json` | `results/poses/r0.json` | 622d273 | 1,090 | `f5dacfb9912e3e6edfe870c9d8d9fef48298806f37614de5a5c514f69e400212` | R0 camera pose from the ChArUco board (PnP), mean of 5 photos |
+| `results/c1/nominal_front_rgb.png` | `results/c1/nominal_front_rgb.png` | b915482 | 210,355 | `e02d499eb05978337e82a79eb0a49b2f92b6def44b49d0a5a0b5c8cec12a64c2` | nominal front-camera image of the simulation (640 x 480 render) |
 
 ## Simulation episode files (`results/sim/`)
 
@@ -99,9 +102,9 @@ in `results/analysis/thresholds_v1.json` (`source_sha256`, published with prereg
 | `results/sim/v05_t07_a.jsonl` | pilot or test run (no analysis) | 46d5d86 | 108,964 | `4fe3e77743f130e12e8f14e806d026c1dbe047335bce5d391d4072ae61f9f7a0` | - |
 | `results/sim/v10_test.jsonl` | pilot or test run (no analysis) | 58477c6 | 7,874 | `31a0aedc35c7831efefd398a6590fb71eca2d81474d5c4d629905462f87df272` | - |
 
-## Exploratory simulation runs (`results/explore_v1/` to `results/explore_v3/`, `notes/explore_v*_summary.md`)
+## Exploratory simulation runs (`results/explore_v1/` to `results/explore_v3/`, `notes/explore_v*_summary.md` and the explore-v3 plan)
 
-33 files, 11,603,855 bytes; same paths in gtc. All are exploratory, not pre-registered. The cells were added
+34 files, 11,606,678 bytes; same paths in gtc. All are exploratory, not pre-registered. The cells were added
 after sweep v1 finished: explore-v1 and explore-v2 ran on October 24-25, 2026, and explore-v3 (1775-step episodes) on
 October 25 (Pacific time). Every simulation result numbers.json takes from them is marked "final sim (exploratory, not
 pre-registered)"; the protocol value `real.cap_chunks` also cites `notes/explore_v3_summary.md`. No earlier file records
@@ -142,6 +145,7 @@ their hashes; each SHA-256 below was computed from the file here.
 | `notes/explore_v1_summary.md` | summary table of the cells (k/n, intervals, tests) | exploratory, not pre-registered | eb2ccaa | 1,486 | `ee5188479f4fc77f3b8af312e0c0cdd2a260e2622ff9a6e7b7a6d323313a1b1a` |
 | `notes/explore_v2_summary.md` | summary table of the cells (k/n, intervals, tests) | exploratory, not pre-registered | 966e83f | 989 | `6460e1beb892c0849e06734ff2d47062251c5199ef1e4de8b7a2972ad2c09670` |
 | `notes/explore_v3_summary.md` | summary table of the cells (k/n, intervals, tests) | exploratory, not pre-registered | 42722dd | 1,596 | `46a6ae365ec4f197566c4070505f2133eb550287a2a5360fd056a5bfb8df4a0f` |
+| `notes/explore_v3_plan.md` | explore-v3 plan: episode length, cutoffs and rule, committed before the first episode | exploratory, not pre-registered | 6e7dea5 | 2,823 | `eeea08365a727bffd6fe3d1335c6afc411f76693df25d33586c94d3d936bc4db` |
 
 ## Notes
 
@@ -162,4 +166,4 @@ their hashes; each SHA-256 below was computed from the file here.
   deviations are in deviations.md.
 - **Not copied:** the phone recordings, judge clips and trial frames; the clip-cutting logs (their video metadata
   includes the phone's location); the per-step logs (`results/real/steps/`); the audit copies of trials.jsonl made
-  before each edit; the explore-v3 plan (`notes/explore_v3_plan.md`); the E3 code.
+  before each edit; the E3 code.
