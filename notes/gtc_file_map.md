@@ -1,12 +1,12 @@
 # Files copied from the private working repository
 
 The study's working repository (`gtc`) is private, and its history is not published. The files below were copied from
-it on November 10, 2026, after the poster was submitted, with gtc at commit `9f1b78a`. Each file is byte-identical to the
+it on November 10, 2026, after the poster was submitted, with gtc at commit `3a78356`. Each file is byte-identical to the
 file at the gtc commit named (the commit that last changed it); none was edited for this copy.
 
 | This repository | gtc path | gtc commit | Bytes | SHA-256 | What |
 |---|---|---|---:|---|---|
-| `poster/numbers.json` | `poster/draft/numbers.json` | f3b515c | 60,684 | `cbe3018db3aa020309bd18d5ec7e0d60cfc92eb76a0ff718105d68c9bb1242df` | every number on the poster: value, k/n, interval, method, source, status |
+| `poster/numbers.json` | `poster/draft/numbers.json` | 3a78356 | 60,834 | `2d1d779c63c902881b04d4761ee32a100b478526958fd3d293480ed874687278` | every number on the poster: value, k/n, interval, method, source, status |
 | `results/real/trials.jsonl` | `results/real/trials.jsonl` | dfa96fe | 439,916 | `3416a93abfd9d36c1416f685a93149ceb7d03f21f2b69061b8829deb22ce6e7a` | the 61 real trial records (live scores, checks, edits) |
 | `results/real/trials.csv` | `results/real/trials.csv` | dfa96fe | 165,104 | `9ade70c1921820698dc61e3a0a12ab45452a65e5034bd3a6c6dbcfaa68857e08` | the same records as a table, generated from trials.jsonl |
 | `results/real/blind_scores_A_20261110T064043Z.csv` | `results/real/blind_scores_A_20261110T064043Z.csv` | 725ab03 | 8,908 | `58698183b486cb815bdced7b7ba0952dfbece02e22f95e00c24e784fb1fd7311` | blind score sheet, batch A (53 clips) |
@@ -30,12 +30,13 @@ file at the gtc commit named (the commit that last changed it); none was edited 
   batches were scored on November 10. Their SHA-256 were committed in gtc `459293f` and published in addendum entry 4
   (commit `74a7833`) before scoring started. Each `.sha256` file names the key's gtc path; to check a key here, run
   `sha256sum results/real/blind_key_A_20261110T064043Z.json` and compare it with the value in its `.sha256` file.
-- **numbers.json.** Written by the same build as the submitted poster PDF (SHA-256
-  `e0d3f6747c919f8b390647467e44a83b7b0ec9f489f96928716c7316673cd50b`, November 10, 13:16 PST). Its `_about` header
-  dates from the review rounds ("DRAFT for review", "poster_draft.html") and is left as written; each entry's `status`
-  field gives its final status (26 entries are "blind-scored (final)"). Its `source` paths are relative to the working
-  folder: `prereg_repo/...` is this repository, and `gtc/...` is the private repository. A `gtc/` source copied here is
-  at the same path without the `gtc/` prefix, except numbers.json and the two keys (table above).
+- **numbers.json.** The numbers are those of the build that made the submitted poster PDF (SHA-256
+  `e0d3f6747c919f8b390647467e44a83b7b0ec9f489f96928716c7316673cd50b`, November 10, 13:16 PST). After submission its
+  header was marked final in gtc `3a78356` (the `draft` field, "DRAFT for review", became `version`, "final"); all
+  214 entries are unchanged. Each entry's `status` field gives its status (26 entries are "blind-scored (final)"). Its
+  `source` paths are relative to the working folder: `prereg_repo/...` is this repository, and `gtc/...` is the private
+  repository. A `gtc/` source copied here is at the same path without the `gtc/` prefix, except numbers.json and the
+  two keys (table above).
 - **Edits to trial records.** Changes made after a record was written are logged in the record itself (`relabel`,
   `flag_edits`, `note_edits`, `record_recovery`), with the time, the reason and any earlier value. The trial-level
   deviations are in deviations.md.

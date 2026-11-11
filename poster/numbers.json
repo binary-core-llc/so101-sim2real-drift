@@ -11,7 +11,7 @@
    "real photo check (no policy run)"
   ],
   "wilson": "z = 1.959964, computed with numpy; checked against gtc/analysis/stats.py wilson()",
-  "draft": "DRAFT for review; real-trial outcomes are blind scores (analysis/blind_results.py)",
+  "version": "final: the numbers on the submitted poster (poster/final/MoralesRangel_GTC2027_poster.pdf, SHA-256 e0d3f6747c919f8b390647467e44a83b7b0ec9f489f96928716c7316673cd50b); real-trial outcomes are blind scores (analysis/blind_results.py)",
   "keys_not_on_poster": [
    "sim.thresholds_censored",
    "sim.S0_grasped",
