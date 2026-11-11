@@ -1,0 +1,12 @@
+{
+ "_how": "Copy to config/board_in_E.json and fill in measured values (mm, deg). Delete the block you do not use. Grid origin = the printed top-left corner of the ChArUco grid (column line 0 / row line 0); title text toward the camera wall; long side along the box depth.",
+ "method": "sled",
+ "d_x_mm": null, "_d_x": "sled tongue end face (touching both robot lobes) to grid column line 0 (CAD intent 101.1), mean of both grid ends",
+ "d_y_mm": null, "_d_y": "key centre line to grid row line 0, toward the camera wall (CAD intent 89.2)",
+ "h_K_mm": null, "_h_K": "board top above the surface the robot base stands on (3 points)",
+ "yaw_deg": 0.0, "_yaw": "(d_x at one grid end - d_x at the other) / 180 mm, in degrees",
+ "_or_method_mat": {"method": "mat", "a_mm": null, "b_mm": null, "t_mm": null, "yaw_deg": 0.0,
+                    "_a": "mat front edge (robot side) to grid column line 0", "_b": "mat left edge (camera side) to grid row line 0",
+                    "_t": "board thickness above the mat top"},
+ "measured_by": "AMR", "date": null
+}

@@ -11,4 +11,14 @@ Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES, licensed under the Apache Li
   - docker/sim/entrypoint_offline.sh  the course's docker/sim/entrypoint.sh without the runtime pip install
                                       (see entrypoint_offline.diff)
   - assets/local/*.local.usda   wrapper layers that sublayer the course's unmodified USD files
-The derived files keep NVIDIA's copyright and license headers where the originals had them.
+  - explore/sweep_eval_long.py  derived from the same lerobot_eval.py, through sim/sweep_eval.py
+  - sim/trace_episode.py, sim/render_poses.py, sim/jaw_tips.py
+                                derived from the same lerobot_eval.py, through sim/sweep_eval.py
+  - stencils/*.pdf              vial outlines projected from the course's Vial_opaque.usda (tools/make_stencils.py)
+  - results/c1/, results/overlay_refs/
+                                renders of the course's simulated scene (front and wrist cameras at the nominal
+                                pose, front camera at the R0 pose), their instance masks, and the scene's pose
+                                dump (sim/dump_scene.py)
+The derived Python files (sim/sweep_eval.py, explore/sweep_eval_long.py, sim/trace_episode.py, sim/render_poses.py,
+sim/jaw_tips.py) keep NVIDIA's copyright and license header.
+The rest of the code imports the course's modules and Isaac-GR00T at run time; neither is included here.

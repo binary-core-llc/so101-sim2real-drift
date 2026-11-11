@@ -1,7 +1,7 @@
 {
  "schema": "gtc layouts v0",
  "source": "results/sim/v05_t07_a.jsonl",
- "frames": "/home/arturo/gtc2027/gtc/results/c1/frames_sim.json",
+ "frames": "results/c1/frames_sim.json",
  "poses": "after the course's 10 warm-up steps (lerobot_eval.py:183), every randomization at its centre, vial poses drawn per seed by the course reset (seed convention v0: RNGs seeded right before env.reset)",
  "mat_env": {
   "front_x": 0.0675999988079071,

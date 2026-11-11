@@ -1,0 +1,96 @@
+{
+ "utc": "2026-11-10T06:40:12+00:00",
+ "rule": "trials without a phone recording: the runner's front keyframe video (kf_front.mp4) copied unchanged as the judge clip; the wrist keyframe video is added by blind_rename as for every trial (entry 2: scored from robot frames)",
+ "clips": [
+  {
+   "key": "N04-001_a1",
+   "block": "N04-R0",
+   "source": "media/real/trials/N04-001_a1/kf_front.mp4",
+   "sha256": "d06358edc26667cf25f760665dfe7c5a629aedd13be255fa00284b29b5118bf9"
+  },
+  {
+   "key": "N04-001_a2",
+   "block": "N04-R0",
+   "source": "media/real/trials/N04-001_a2/kf_front.mp4",
+   "sha256": "0934f6b35395b3834cbac6b815fbf6448387984cb584535dcdab77c98e759e1d"
+  },
+  {
+   "key": "N04-002_a1",
+   "block": "N04-R0",
+   "source": "media/real/trials/N04-002_a1/kf_front.mp4",
+   "sha256": "a6fb35e5d58a1557a5c584faa0d5878582233d17e4571ed9b1ac5a0762315d30"
+  },
+  {
+   "key": "N04-003_a1",
+   "block": "N04-R0",
+   "source": "media/real/trials/N04-003_a1/kf_front.mp4",
+   "sha256": "1dfe7ee13fc5dc44e3d57088ae01c331e021ca296f33b5a886afbb427c84010d"
+  },
+  {
+   "key": "N04-004_a1",
+   "block": "N04-R0",
+   "source": "media/real/trials/N04-004_a1/kf_front.mp4",
+   "sha256": "264eb2e6a0432ce700e170369cc003c89011d3dc912086bf0f7d12a4f1734354"
+  },
+  {
+   "key": "N04-005_a1",
+   "block": "N04-R0",
+   "source": "media/real/trials/N04-005_a1/kf_front.mp4",
+   "sha256": "8b1866404b2124c4932a1110d8cf76da342bd104da95b9e57c19ff2fcdbf329e"
+  },
+  {
+   "key": "N04-006_a1",
+   "block": "N04-R0",
+   "source": "media/real/trials/N04-006_a1/kf_front.mp4",
+   "sha256": "6444bb74d9266c5ecc76a506c3c75342fd1ccea03c10f5e6d064fcd66ed9d560"
+  },
+  {
+   "key": "N04-007_a1",
+   "block": "N04-R0",
+   "source": "media/real/trials/N04-007_a1/kf_front.mp4",
+   "sha256": "b9f766c3e478d8f0d41d1f40260736c50e8d425e9d2d0395e3a3325a1d021f89"
+  },
+  {
+   "key": "N04-008_a1",
+   "block": "N04-R0",
+   "source": "media/real/trials/N04-008_a1/kf_front.mp4",
+   "sha256": "b5bf6f3c790f2e7f3cc4a3d105e66732aee0f38cc2dd70b0e4981fbedfc56201"
+  },
+  {
+   "key": "N04-009_a1",
+   "block": "N04-R0",
+   "source": "media/real/trials/N04-009_a1/kf_front.mp4",
+   "sha256": "c9931f731abd7d0b8b4b8b2577afa605420c86e2bd5fe51ced67a37506d2fb03"
+  },
+  {
+   "key": "N04-010_a1",
+   "block": "N04-R0",
+   "source": "media/real/trials/N04-010_a1/kf_front.mp4",
+   "sha256": "ab916acb288807f3c12637e954b9e3b9283205ec18ccd8ca8184633d56704a80"
+  },
+  {
+   "key": "N04B-001_a1",
+   "block": "N04B-R0",
+   "source": "media/real/trials/N04B-001_a1/kf_front.mp4",
+   "sha256": "bbc62c607a419ea46548b02f2cd379192d0fecddc79d8f7c7715cb976f0ed534"
+  },
+  {
+   "key": "N04B-002_a1",
+   "block": "N04B-R0",
+   "source": "media/real/trials/N04B-002_a1/kf_front.mp4",
+   "sha256": "f1c6aa56432d7992d0d5c61c9352875e0deb063a580108f81fd26e6f8a12f346"
+  },
+  {
+   "key": "N04B-003_a1",
+   "block": "N04B-R0",
+   "source": "media/real/trials/N04B-003_a1/kf_front.mp4",
+   "sha256": "ea02387ba9605d0c70dcba27f060fafbcb7a7796095fcee0cef623b9cb511075"
+  },
+  {
+   "key": "N06-004_a1",
+   "block": "N06-CAM1",
+   "source": "media/real/trials/N06-004_a1/kf_front.mp4",
+   "sha256": "d91833b73d5ec8e2df91c2c82b1f3d2d0e6b950a2d192a5dbc8cab45ec2cf236"
+  }
+ ]
+}

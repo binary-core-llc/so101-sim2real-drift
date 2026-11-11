@@ -20,6 +20,7 @@ NAME=${1:?usage: run_sim.sh <container-name> <command...>}; shift
 COURSE=$HOME/gtc2027/Sim-to-Real-SO-101-Workshop
 GTC=$HOME/gtc2027/gtc
 MIRROR=$HOME/sim2real/assets_mirror
+E3=$HOME/gtc2027/e3            # E3 code (its own local repo), mounted read-only at /workspace/e3
 C=$HOME/docker/isaac-sim
 mkdir -p $C/cache/{kit,ov,pip,glcache,computecache} $C/{logs,data,documents}
 
@@ -30,10 +31,19 @@ if [ "${ALLOW_S3:-0}" != 1 ] && [ "${NET:-host}" != none ]; then
               --add-host omniverse-content-production.s3.us-west-2.amazonaws.com:127.0.0.1)
 fi
 
+# Provenance stamped into every result row by sweep_eval.py (sim/provenance.py): our commit, a dirty flag for
+# sim/ config/ tools/ docker/, the sim image, the course commit, the server image and the served model revision.
+# A value already in the environment is kept (the queue sets GTC_GIT and GTC_IMAGE at cell start).
+while IFS='=' read -r k v; do
+    [ -n "${!k:-}" ] || export "$k=$v"
+done < <(python3 -I "$GTC/sim/provenance.py")
+
 # The container runs as root; hand anything it writes under /workspace/gtc back to the host user.
-exec docker run --name "$NAME" --rm --gpus all "${NETARGS[@]}" \
+# --init: a minimal init as PID 1 forwards signals and reaps child processes (clean docker stop/kill).
+exec docker run --name "$NAME" --rm --init --gpus all "${NETARGS[@]}" \
     -e ACCEPT_EULA=Y -e PRIVACY_CONSENT=Y -e OMNI_KIT_ACCEPT_EULA=YES \
     -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" -e PYTHONUNBUFFERED=1 -e GTC_GIT -e GTC_IMAGE \
+    -e GTC_DIRTY -e GTC_COURSE_GIT -e GTC_SERVER_IMAGE -e GTC_MODEL_REV \
     -v $C/cache/kit:/isaac-sim/kit/cache:rw \
     -v $C/cache/ov:/root/.cache/ov:rw \
     -v $C/cache/pip:/root/.cache/pip:rw \
@@ -46,6 +56,7 @@ exec docker run --name "$NAME" --rm --gpus all "${NETARGS[@]}" \
     -v "$COURSE/source":/workspace/Sim-to-Real-SO-101-Workshop/source:ro \
     -v "$GTC":/workspace/gtc \
     -v "$MIRROR":/workspace/assets_mirror:ro \
+    -v "$E3":/workspace/e3:ro \
     -v "$GTC/docker/sim/entrypoint_offline.sh":/gtc_entrypoint.sh:ro \
     --entrypoint /gtc_entrypoint.sh \
     teleop-docker:latest \

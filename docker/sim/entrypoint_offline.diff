@@ -1,13 +1,16 @@
-1a2,5
-> # GTC copy of the course docker/sim/entrypoint.sh without the runtime `pip install -e`, which
-> # downloads build dependencies from PyPI at every container start (an outage would fail every
-> # sweep cell). The course package is imported from the mounted source via PYTHONPATH instead.
-> # Everything else is the same as the course entrypoint.
-10c14
+1a2,8
+> # Modified by Binary Core LLC, 2026, from the course's docker/sim/entrypoint.sh (ce807d9).
+> # Binary Core patch: no runtime `pip install -e`, which downloads build dependencies from PyPI at
+> # every container start (an outage would fail every sweep cell); the course package is imported
+> # from the mounted source via PYTHONPATH instead.
+> # Binary Core patch: `|| true` added after `source /root/env`, so a missing or failing env file
+> # does not end the script silently under `set -e`.
+> # Everything else is the same as the course entrypoint (see entrypoint_offline.diff).
+10c17
 < source /root/env 2>/dev/null
 ---
 > source /root/env 2>/dev/null || true
-18c22
+18c25
 < python -m pip install -e /workspace/Sim-to-Real-SO-101-Workshop/source/sim_to_real_so101/
 ---
 > export PYTHONPATH=/workspace/Sim-to-Real-SO-101-Workshop/source${PYTHONPATH:+:$PYTHONPATH}

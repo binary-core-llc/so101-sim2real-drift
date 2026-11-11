@@ -15,7 +15,7 @@ Directions (config/sign_table.json, measured on Oct 24):
   ext_hfov_deg   -> camera_focal_mm = 2.4 / (2 tan(hfov/2)) with horizontalAperture 2.4 mm
   nominal        -> {} (everything at the centre)
   course_eval_as_shipped -> the Eval task unchanged (--as_shipped)
-Seeds: "a-b" -> seed_base a, n = b - a + 1; "a-b x k repeats" -> seed_base a, seed_mod (b - a + 1), n as given.
+Seeds: "a-b" -> seed_base a, n = b - a + 1; "a-b x k" or "a-b x k repeats" -> seed_base a, seed_mod (b - a + 1), n as given.
 """
 import csv
 import hashlib
@@ -58,7 +58,7 @@ def overrides_for(factor, level):
 
 
 def seeds_of(s, n):
-    m = re.fullmatch(r"\s*(\d+)-(\d+)(?:\s*x\s*(\d+)\s*repeats?)?\s*", s)
+    m = re.fullmatch(r"\s*(\d+)-(\d+)(?:\s*x\s*(\d+)(?:\s*repeats?)?)?\s*", s)
     if not m:
         raise ValueError(f"seed spec {s!r}")
     a, b, k = int(m.group(1)), int(m.group(2)), m.group(3)
@@ -72,7 +72,8 @@ def seeds_of(s, n):
 
 def main():
     args = sys.argv[1:]
-    src = Path(args[0]) if args and not args[0].startswith("--") else GTC.parent / "sweep_cells_v1.csv"
+    src = Path(args[0]) if args and not args[0].startswith("--") else next((p for p in (GTC / "sweep_cells_v1.csv", GTC.parent / "sweep_cells_v1.csv") if p.exists()),
+                                                                            GTC / "sweep_cells_v1.csv")
     pri = {int(x) for x in (args[args.index("--priorities") + 1] if "--priorities" in args else "1,2,3").split(",")}
     raw = src.read_bytes()
     rows = list(csv.DictReader(raw.decode().splitlines()))

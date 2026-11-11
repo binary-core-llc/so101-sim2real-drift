@@ -3,6 +3,7 @@ logs/
 results/*
 !results/analysis/
 !results/real/
+results/real/judge_clips_N*.json
 !results/h4/
 !results/sim/
 !results/explore_v1/
@@ -12,6 +13,10 @@ results/*
 !results/c1/
 !results/e1/
 !results/e3/
+!results/overlay_refs/
 media/
 .venv/
+.venv-e1/
+__pycache__/
 assets_mirror/
+release/

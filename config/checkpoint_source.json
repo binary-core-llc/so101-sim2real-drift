@@ -1,0 +1,108 @@
+{
+  "hf_repo": "aravindhs-NV/grootn16-finetune_sreetz-so101_teleop_vials_rack_left",
+  "hf_revision": "7efab50dfd58cd8f1831035fd86b65410b98c448",
+  "hf_last_modified": "2026-01-27T15:35:00.000Z",
+  "hf_gated": false,
+  "hf_private": false,
+  "queried_utc": "2026-10-23T22:13:29+00:00",
+  "excluded_from_download": [
+    "checkpoint-10000/optimizer.pt (12.96 GB training state; not needed for inference, no fine-tuning)"
+  ],
+  "remote_files": {
+    "checkpoint-10000/config.json": {
+      "bytes": 1839,
+      "lfs_sha256": null,
+      "git_oid": "4357a8edfcf080c80beaee90f6fc0ea0bad73a20"
+    },
+    "checkpoint-10000/embodiment_id.json": {
+      "bytes": 172,
+      "lfs_sha256": null,
+      "git_oid": "32b3a253eb50c40bde24c3a0c013073b10757bdc"
+    },
+    "checkpoint-10000/experiment_cfg/conf.yaml": {
+      "bytes": 4971,
+      "lfs_sha256": null,
+      "git_oid": "da480a55c2cdf2cb695def8bc8c3ebbedfe83ce1"
+    },
+    "checkpoint-10000/experiment_cfg/config.yaml": {
+      "bytes": 6422,
+      "lfs_sha256": null,
+      "git_oid": "9692044bb11e4d975f476fb469252f650e7ef954"
+    },
+    "checkpoint-10000/experiment_cfg/dataset_statistics.json": {
+      "bytes": 20830,
+      "lfs_sha256": null,
+      "git_oid": "5e64bba2e4ea8257a551de9fa26e74ec720fc123"
+    },
+    "checkpoint-10000/experiment_cfg/final_model_config.json": {
+      "bytes": 1442,
+      "lfs_sha256": null,
+      "git_oid": "546b4c37891d2641237c7ac1a1df7afa124be809"
+    },
+    "checkpoint-10000/experiment_cfg/final_processor_config.json": {
+      "bytes": 174151,
+      "lfs_sha256": null,
+      "git_oid": "a2a68ddbd50a285dbbe7298ee30f6c1affa338a0"
+    },
+    "checkpoint-10000/model-00001-of-00002.safetensors": {
+      "bytes": 4990120184,
+      "lfs_sha256": "7f7a543d3d83f156fa89197ea16916be68f5b6678a2c2bea01d0abc2be816310",
+      "git_oid": "27a0af2799ddfa47868287c134335ac0d6f00089"
+    },
+    "checkpoint-10000/model-00002-of-00002.safetensors": {
+      "bytes": 4823190320,
+      "lfs_sha256": "156681de9dc1fd840204efe547d1c2a56704c4b99c4679282c2a1765156ce51c",
+      "git_oid": "fee38c5017560c2c154b4a0e89ba50c9ffa55e99"
+    },
+    "checkpoint-10000/model.safetensors.index.json": {
+      "bytes": 121820,
+      "lfs_sha256": null,
+      "git_oid": "7dccb8488b1e92c3f3ffe8188bbbc56c4470a16e"
+    },
+    "checkpoint-10000/optimizer.pt": {
+      "bytes": 12960193762,
+      "lfs_sha256": "863b6902e0ee576a2a7eafe75034ba62826d5b5ceafeef8b95c16ec497483824",
+      "git_oid": "d4b6bf4ee428630538676f376b98e01f6ce5ca5b"
+    },
+    "checkpoint-10000/processor_config.json": {
+      "bytes": 11088,
+      "lfs_sha256": null,
+      "git_oid": "1442fd100a6ed5c1d60da16d4007570b746fb613"
+    },
+    "checkpoint-10000/rng_state.pth": {
+      "bytes": 14645,
+      "lfs_sha256": "f40f14c749486cb921a4172109eec747f70a02e7084acf7a22edd8d56f985a31",
+      "git_oid": "42625d94abf370c3deb4350626cfc490846454a8"
+    },
+    "checkpoint-10000/scheduler.pt": {
+      "bytes": 1465,
+      "lfs_sha256": "d02be6d8bda4ea9c67040ed89f878acdc986bd4df3fbc60440a9d3eacca02d63",
+      "git_oid": "1751bc5b6a1b91ae76a3aa8c6582824d7a63fed9"
+    },
+    "checkpoint-10000/statistics.json": {
+      "bytes": 283677,
+      "lfs_sha256": null,
+      "git_oid": "10f59c9dbba1ce5fa77f6d0c4e0c6797cb089867"
+    },
+    "checkpoint-10000/trainer_state.json": {
+      "bytes": 139804,
+      "lfs_sha256": null,
+      "git_oid": "c07e06772e8809340ea200610a1bf0f6775d0414"
+    },
+    "checkpoint-10000/training_args.bin": {
+      "bytes": 5777,
+      "lfs_sha256": "9f308e11bd3b437edb3ef8f1a5dd86093ac8e66fa8a69b741a2e9fffffe906e2",
+      "git_oid": "30038d5bfe2896dbfa300039af439f1039b8f4c3"
+    },
+    "checkpoint-10000/wandb_config.json": {
+      "bytes": 101,
+      "lfs_sha256": null,
+      "git_oid": "e4d6f44f0cfefe4f0d6a1b8e6036d804e7a4e411"
+    }
+  },
+  "optional_variant": {
+    "hf_repo": "aravindhs-NV/grootn16-finetune_sreetz-so101_teleop_vials_rack_left_sim_and_real",
+    "hf_revision": "ee03dc7b9a402bf47f1655cbd2231706e0a60870",
+    "downloaded": false
+  }
+}

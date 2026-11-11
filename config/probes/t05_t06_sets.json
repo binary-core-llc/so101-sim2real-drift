@@ -1,0 +1,184 @@
+[
+ {
+  "name": "nominal",
+  "overrides": {}
+ },
+ {
+  "name": "cam_roll_p10deg",
+  "overrides": {
+   "camera": {
+    "roll": 0.17453292519943295
+   }
+  }
+ },
+ {
+  "name": "cam_roll_m10deg",
+  "overrides": {
+   "camera": {
+    "roll": -0.17453292519943295
+   }
+  }
+ },
+ {
+  "name": "cam_pitch_p10deg",
+  "overrides": {
+   "camera": {
+    "pitch": 0.17453292519943295
+   }
+  }
+ },
+ {
+  "name": "cam_pitch_m10deg",
+  "overrides": {
+   "camera": {
+    "pitch": -0.17453292519943295
+   }
+  }
+ },
+ {
+  "name": "cam_yaw_p10deg",
+  "overrides": {
+   "camera": {
+    "yaw": 0.17453292519943295
+   }
+  }
+ },
+ {
+  "name": "cam_yaw_m10deg",
+  "overrides": {
+   "camera": {
+    "yaw": -0.17453292519943295
+   }
+  }
+ },
+ {
+  "name": "cam_x_p6cm",
+  "overrides": {
+   "camera": {
+    "x": 0.06
+   }
+  }
+ },
+ {
+  "name": "cam_x_m6cm",
+  "overrides": {
+   "camera": {
+    "x": -0.06
+   }
+  }
+ },
+ {
+  "name": "cam_y_p6cm",
+  "overrides": {
+   "camera": {
+    "y": 0.06
+   }
+  }
+ },
+ {
+  "name": "cam_y_m6cm",
+  "overrides": {
+   "camera": {
+    "y": -0.06
+   }
+  }
+ },
+ {
+  "name": "cam_z_p6cm",
+  "overrides": {
+   "camera": {
+    "z": 0.06
+   }
+  }
+ },
+ {
+  "name": "cam_z_m6cm",
+  "overrides": {
+   "camera": {
+    "z": -0.06
+   }
+  }
+ },
+ {
+  "name": "rack_x_p4cm",
+  "overrides": {
+   "rack": {
+    "x": 0.04
+   }
+  }
+ },
+ {
+  "name": "rack_x_m4cm",
+  "overrides": {
+   "rack": {
+    "x": -0.04
+   }
+  }
+ },
+ {
+  "name": "rack_y_p4cm",
+  "overrides": {
+   "rack": {
+    "y": 0.04
+   }
+  }
+ },
+ {
+  "name": "rack_y_m4cm",
+  "overrides": {
+   "rack": {
+    "y": -0.04
+   }
+  }
+ },
+ {
+  "name": "rack_yaw_p0.5rad",
+  "overrides": {
+   "rack": {
+    "yaw": 0.5
+   }
+  }
+ },
+ {
+  "name": "rack_yaw_m0.5rad",
+  "overrides": {
+   "rack": {
+    "yaw": -0.5
+   }
+  }
+ },
+ {
+  "name": "exposure_m4ev",
+  "overrides": {
+   "exposure_ev": -4.0
+  }
+ },
+ {
+  "name": "exposure_p2ev",
+  "overrides": {
+   "exposure_ev": 2.0
+  }
+ },
+ {
+  "name": "mat_yaw_p0.1rad",
+  "overrides": {
+   "mat_yaw_rad": 0.1
+  }
+ },
+ {
+  "name": "wrist_focal_12mm",
+  "overrides": {
+   "wrist_focal_mm": 12.0
+  }
+ },
+ {
+  "name": "ext_focal_1.697mm_hfov70.4",
+  "overrides": {
+   "camera_focal_mm": 1.697
+  }
+ },
+ {
+  "name": "nominal_again",
+  "overrides": {}
+ }
+]

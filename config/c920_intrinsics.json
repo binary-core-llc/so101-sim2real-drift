@@ -1,0 +1,423 @@
+{
+ "utc": "2026-11-07T16:29:15+00:00",
+ "status": "PASS with deviation from B 3.2",
+ "camera": {
+  "product": "HD Pro Webcam C920",
+  "vid": "046d",
+  "pid": "08e5",
+  "serial": "FD819E6F",
+  "manufacturer": "",
+  "usb_path": "1-12",
+  "node": "/dev/video2",
+  "by_id": "/dev/v4l/by-id/usb-046d_HD_Pro_Webcam_C920_FD819E6F-video-index0"
+ },
+ "settings": {
+  "fourcc": "MJPG",
+  "width": 640,
+  "height": 480,
+  "fps": 30.0
+ },
+ "lock_readback_ok": [
+  true,
+  true
+ ],
+ "image_size": [
+  640,
+  480
+ ],
+ "K": [
+  [
+   630.6166131310005,
+   0.0,
+   314.6316337271143
+  ],
+  [
+   0.0,
+   632.2182921739195,
+   241.9814775147534
+  ],
+  [
+   0.0,
+   0.0,
+   1.0
+  ]
+ ],
+ "dist": [
+  0.0290260544339283,
+  -0.10724650012695447,
+  2.7319298532577118e-05,
+  0.0007768624313145656,
+  0.0
+ ],
+ "dist_model": "k1 k2 p1 p2 k3",
+ "k3_fixed": true,
+ "k3_fixed_by_corner_rule": true,
+ "deviations_from_B": [
+  "set A: image corners reached only within 80 px (B 3.2 asks 40 px; 40 px counts [0, 0, 0, 0], 80 px counts [3, 4, 0, 3]); k3 fixed",
+  "set A: image corner bottom-left within 80 px in 0 kept views, not 3 (nearest dot 81.5 px); accepted as missing with the other three corners x3 within 80 px (--missing-corner, Arturo's OK of Nov 7; results/real/deviations.md); distortion toward it is extrapolated; k3 fixed",
+  "set B: image corners reached only within 80 px (B 3.2 asks 40 px; 40 px counts [0, 0, 0, 0], 80 px counts [5, 7, 0, 3]); k3 fixed",
+  "set B: image corner bottom-left within 80 px in 0 kept views, not 3 (nearest dot 116.0 px); accepted as missing with the other three corners x3 within 80 px (--missing-corner, Arturo's OK of Nov 7; results/real/deviations.md); distortion toward it is extrapolated; k3 fixed"
+ ],
+ "rms_px": 0.17158517409295523,
+ "sigmas": {
+  "sd_fx_pct": 0.04736154677978837,
+  "sd_fy_pct": 0.051403901391372554,
+  "sd_cx_px": 0.5197071109538962,
+  "sd_cy_px": 0.44949615339246096
+ },
+ "n_views_used": 121,
+ "rejected": [
+  "A/view_040.png",
+  "A/view_041.png",
+  "A/view_070.png",
+  "A/view_071.png",
+  "B/view_034.png"
+ ],
+ "per_view_rms": {
+  "A/view_000.png": 0.1903,
+  "A/view_001.png": 0.0935,
+  "A/view_002.png": 0.1561,
+  "A/view_003.png": 0.1125,
+  "A/view_004.png": 0.1673,
+  "A/view_005.png": 0.1742,
+  "A/view_006.png": 0.0996,
+  "A/view_007.png": 0.1481,
+  "A/view_008.png": 0.149,
+  "A/view_009.png": 0.1607,
+  "A/view_010.png": 0.1734,
+  "A/view_011.png": 0.1355,
+  "A/view_012.png": 0.1818,
+  "A/view_013.png": 0.1642,
+  "A/view_014.png": 0.1645,
+  "A/view_015.png": 0.1184,
+  "A/view_016.png": 0.19,
+  "A/view_017.png": 0.1724,
+  "A/view_018.png": 0.1525,
+  "A/view_019.png": 0.0927,
+  "A/view_020.png": 0.1885,
+  "A/view_021.png": 0.1472,
+  "A/view_022.png": 0.1459,
+  "A/view_023.png": 0.1237,
+  "A/view_024.png": 0.1904,
+  "A/view_025.png": 0.1903,
+  "A/view_026.png": 0.1834,
+  "A/view_027.png": 0.1612,
+  "A/view_028.png": 0.1651,
+  "A/view_029.png": 0.1921,
+  "A/view_030.png": 0.1398,
+  "A/view_031.png": 0.1352,
+  "A/view_032.png": 0.1173,
+  "A/view_033.png": 0.1383,
+  "A/view_034.png": 0.155,
+  "A/view_035.png": 0.1895,
+  "A/view_036.png": 0.214,
+  "A/view_037.png": 0.1783,
+  "A/view_038.png": 0.1149,
+  "A/view_039.png": 0.1168,
+  "A/view_042.png": 0.1376,
+  "A/view_043.png": 0.1399,
+  "A/view_044.png": 0.2308,
+  "A/view_045.png": 0.2046,
+  "A/view_046.png": 0.1039,
+  "A/view_047.png": 0.2905,
+  "A/view_048.png": 0.1374,
+  "A/view_049.png": 0.1677,
+  "A/view_050.png": 0.1666,
+  "A/view_051.png": 0.1545,
+  "A/view_052.png": 0.1732,
+  "A/view_053.png": 0.1616,
+  "A/view_054.png": 0.154,
+  "A/view_055.png": 0.1862,
+  "A/view_056.png": 0.1886,
+  "A/view_057.png": 0.1764,
+  "A/view_058.png": 0.1657,
+  "A/view_059.png": 0.1322,
+  "A/view_060.png": 0.1246,
+  "A/view_061.png": 0.1606,
+  "A/view_062.png": 0.1307,
+  "A/view_063.png": 0.2483,
+  "A/view_064.png": 0.1205,
+  "A/view_065.png": 0.1971,
+  "A/view_066.png": 0.1876,
+  "A/view_067.png": 0.0942,
+  "A/view_068.png": 0.122,
+  "A/view_069.png": 0.2195,
+  "A/view_072.png": 0.1779,
+  "A/view_073.png": 0.206,
+  "A/view_074.png": 0.1182,
+  "A/view_075.png": 0.1131,
+  "A/view_076.png": 0.1182,
+  "B/view_000.png": 0.1668,
+  "B/view_001.png": 0.1415,
+  "B/view_002.png": 0.1404,
+  "B/view_003.png": 0.1434,
+  "B/view_004.png": 0.1531,
+  "B/view_005.png": 0.1637,
+  "B/view_006.png": 0.1168,
+  "B/view_007.png": 0.1843,
+  "B/view_008.png": 0.1469,
+  "B/view_009.png": 0.1983,
+  "B/view_010.png": 0.1941,
+  "B/view_011.png": 0.1949,
+  "B/view_012.png": 0.1574,
+  "B/view_013.png": 0.1687,
+  "B/view_014.png": 0.1437,
+  "B/view_015.png": 0.1651,
+  "B/view_016.png": 0.1198,
+  "B/view_017.png": 0.1366,
+  "B/view_018.png": 0.1939,
+  "B/view_019.png": 0.1396,
+  "B/view_020.png": 0.1201,
+  "B/view_021.png": 0.208,
+  "B/view_022.png": 0.1317,
+  "B/view_023.png": 0.098,
+  "B/view_024.png": 0.197,
+  "B/view_025.png": 0.1251,
+  "B/view_026.png": 0.2005,
+  "B/view_027.png": 0.2291,
+  "B/view_028.png": 0.216,
+  "B/view_029.png": 0.2208,
+  "B/view_030.png": 0.2488,
+  "B/view_031.png": 0.1775,
+  "B/view_032.png": 0.1552,
+  "B/view_033.png": 0.1741,
+  "B/view_035.png": 0.1641,
+  "B/view_036.png": 0.1445,
+  "B/view_037.png": 0.1183,
+  "B/view_038.png": 0.2671,
+  "B/view_039.png": 0.2322,
+  "B/view_040.png": 0.1074,
+  "B/view_041.png": 0.1499,
+  "B/view_042.png": 0.1544,
+  "B/view_043.png": 0.2762,
+  "B/view_044.png": 0.1051,
+  "B/view_045.png": 0.2353,
+  "B/view_046.png": 0.1453,
+  "B/view_047.png": 0.2514,
+  "B/view_048.png": 0.3627
+ },
+ "holdout_rms_px": 0.17859879325082476,
+ "per_set": {
+  "A": {
+   "n_files": 77,
+   "n_detected": 77,
+   "n_kept": 73,
+   "rejected": [
+    "A/view_040.png",
+    "A/view_041.png",
+    "A/view_070.png",
+    "A/view_071.png"
+   ],
+   "fx": 630.9060600695101,
+   "fy": 632.7306548540761,
+   "cx": 315.3741179227083,
+   "cy": 242.07820337937167,
+   "sd_fx_pct": 0.06790776406156825,
+   "sd_fy_pct": 0.0724067541109492,
+   "sd_cx_px": 0.6441463495156966,
+   "sd_cy_px": 0.5905659324899111,
+   "rms_px": 0.16361827732374956,
+   "rms_full": 0.1635141105478399,
+   "rms_k3_fixed": 0.16361827732374956,
+   "coverage": {
+    "views": 73,
+    "cells": [
+     [
+      17,
+      29,
+      22
+     ],
+     [
+      36,
+      50,
+      28
+     ],
+     [
+      24,
+      36,
+      18
+     ]
+    ],
+    "cells_ok": true,
+    "corner_zones": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "corners_ok": false,
+    "corner_zones_80px": [
+     3,
+     4,
+     0,
+     3
+    ],
+    "corners_ok_80px": true,
+    "tilted": 61,
+    "tilted_x": 49,
+    "tilted_y": 12,
+    "tilted_ok": true,
+    "views_ok": true
+   },
+   "sha256": "42ca8a2aa39b402bcbc6c98bc063e28bf69d5f25f068b0b565722814a0e5f3e8"
+  },
+  "B": {
+   "n_files": 49,
+   "n_detected": 49,
+   "n_kept": 49,
+   "rejected": [],
+   "fx": 630.609137339146,
+   "fy": 631.5217317527142,
+   "cx": 313.9093953991573,
+   "cy": 242.79804321530472,
+   "sd_fx_pct": 0.0713450478109797,
+   "sd_fy_pct": 0.0771443978627223,
+   "sd_cx_px": 0.8752656580423488,
+   "sd_cy_px": 0.7709903341978972,
+   "rms_px": 0.18621043047362237,
+   "rms_full": 0.18619491235923272,
+   "rms_k3_fixed": 0.18621043047362237,
+   "coverage": {
+    "views": 49,
+    "cells": [
+     [
+      13,
+      30,
+      19
+     ],
+     [
+      15,
+      32,
+      21
+     ],
+     [
+      7,
+      16,
+      14
+     ]
+    ],
+    "cells_ok": true,
+    "corner_zones": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "corners_ok": false,
+    "corner_zones_80px": [
+     5,
+     7,
+     0,
+     3
+    ],
+    "corners_ok_80px": true,
+    "tilted": 46,
+    "tilted_x": 30,
+    "tilted_y": 16,
+    "tilted_ok": true,
+    "views_ok": true
+   },
+   "sha256": "bb2fe2c6ddb1ab77cc925edccd69b4537b11ab564ff736c3f73677a77b5aa08e"
+  }
+ },
+ "derived": {
+  "hfov_deg": 53.810105968396755,
+  "vfov_deg": 41.575097878558736,
+  "dfov_deg": 64.70817581177634,
+  "sim_focal_mm_at_hAp_2.4": 2.364812299241252,
+  "fx_vs_sim_514.67_pct": 22.529150547364154,
+  "undistort_Kp": [
+   [
+    630.6166131310005,
+    0,
+    320
+   ],
+   [
+    0,
+    630.6166131310005,
+    240
+   ],
+   [
+    0,
+    0,
+    1
+   ]
+  ]
+ },
+ "board": {
+  "cols": 8,
+  "rows": 6,
+  "square_m": 0.03,
+  "marker_m": 0.022,
+  "dictionary": "DICT_5X5_100",
+  "page": "US Letter landscape",
+  "print_scale": "100%",
+  "square_mm_measured": 29.97,
+  "marker_mm_scaled": 21.977999999999998,
+  "print_x_mm": [],
+  "print_y_mm": []
+ },
+ "opencv": "4.10.0",
+ "checks": [
+  {
+   "check": "set A: views kept >= 30",
+   "value": 73,
+   "result": "PASS"
+  },
+  {
+   "check": "set A: coverage (9 cells; 4 corners x3 within 40 px, WARN 80 px; bottom-left accepted missing)",
+   "value": "cells True, 40px [0, 0, 0, 0], 80px [3, 4, 0, 3]",
+   "result": "DEVIATION"
+  },
+  {
+   "check": "set B: views kept >= 30",
+   "value": 49,
+   "result": "PASS"
+  },
+  {
+   "check": "set B: coverage (9 cells; 4 corners x3 within 40 px, WARN 80 px; bottom-left accepted missing)",
+   "value": "cells True, 40px [0, 0, 0, 0], 80px [5, 7, 0, 3]",
+   "result": "DEVIATION"
+  },
+  {
+   "check": "two sets: fx within 0.5 %",
+   "value": 0.047,
+   "result": "PASS"
+  },
+  {
+   "check": "two sets: cx, cy within 3 px",
+   "value": 1.46,
+   "result": "PASS"
+  },
+  {
+   "check": "overall RMS <= 0.30 px",
+   "value": 0.172,
+   "result": "PASS"
+  },
+  {
+   "check": "per-view RMS <= 2.5 x median",
+   "value": 2.25,
+   "result": "PASS"
+  },
+  {
+   "check": "sigma(fx), sigma(fy) <= 0.2 %",
+   "value": 0.0514,
+   "result": "PASS"
+  },
+  {
+   "check": "sigma(cx), sigma(cy) <= 1.0 px",
+   "value": 0.52,
+   "result": "PASS"
+  },
+  {
+   "check": "hold-out PnP RMS <= 0.40 px (40 views)",
+   "value": 0.179,
+   "result": "PASS"
+  },
+  {
+   "check": "fy/fx within 1 %",
+   "value": 0.254,
+   "result": "PASS"
+  }
+ ]
+}

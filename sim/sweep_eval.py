@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# GTC 2027 (C3): derived from the course's source/sim_to_real_so101/scripts/lerobot_eval.py
+# Modified by Binary Core LLC, 2026. Derived from the course's source/sim_to_real_so101/scripts/lerobot_eval.py
 # @ ce807d9. Same env, same 10-step warm-up action, same GR00TRemotePolicy, same success rule
 # (terminated and not truncated). Changes, all documented:
 #   - every randomization fixed at its centre; only the cell's factor changes (sim/overrides.py);
@@ -421,7 +421,11 @@ def run_cell():
                "final_vial_rack_local": last["vial_rack_local"] if last else None,
                "lang_instruction": args_cli.lang_instruction, "rename_map": json.loads(args_cli.rename_map),
                "checkpoint": args_cli.checkpoint, "task": args_cli.task, "assets": "local" if assets != "online" else "online",
-               "gtc_git": os.environ.get("GTC_GIT", ""), "image": os.environ.get("GTC_IMAGE", "")}
+               "gtc_git": os.environ.get("GTC_GIT", ""), "image": os.environ.get("GTC_IMAGE", ""),
+               # host-side provenance from sim/provenance.py via sim/run_sim.sh (None/"" when not provided)
+               "gtc_dirty": {"1": True, "0": False}.get(os.environ.get("GTC_DIRTY", "")),
+               "course_git": os.environ.get("GTC_COURSE_GIT", ""),
+               "server_image": os.environ.get("GTC_SERVER_IMAGE", ""), "model_rev": os.environ.get("GTC_MODEL_REV", "")}
         out.write(row)
         print(f"[EP] {args_cli.cell_id} ep {ep} seed {seed} success={success} steps={step} wall={wall:.1f}s "
               f"status={status}", flush=True)

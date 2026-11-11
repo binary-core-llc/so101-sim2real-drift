@@ -1,0 +1,406 @@
+{
+ "instance_labels": {
+  "0": {
+   "rgba": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "label": null,
+   "pixels": 10207
+  },
+  "1": {
+   "rgba": [
+    4,
+    206,
+    86,
+    255
+   ],
+   "label": "/World/envs/env_0/Mat/Mat/Mat",
+   "pixels": 65894
+  },
+  "2": {
+   "rgba": [
+    15,
+    238,
+    97,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/wrist/visuals/sts3215_03a_no_horn_v1/mesh",
+   "pixels": 2434
+  },
+  "3": {
+   "rgba": [
+    16,
+    225,
+    6,
+    255
+   ],
+   "label": "/World/envs/env_0/Vial_3/Mesh_001",
+   "pixels": 314
+  },
+  "4": {
+   "rgba": [
+    19,
+    246,
+    19,
+    255
+   ],
+   "label": "/World/envs/env_0/Vial_2/Mesh_001",
+   "pixels": 414
+  },
+  "5": {
+   "rgba": [
+    27,
+    186,
+    239,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/base/visuals/sts3215_03a_v1/mesh",
+   "pixels": 284
+  },
+  "6": {
+   "rgba": [
+    33,
+    238,
+    219,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/lower_arm/visuals/motor_holder_so101_wrist_v1/mesh",
+   "pixels": 3051
+  },
+  "7": {
+   "rgba": [
+    33,
+    243,
+    3,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/shoulder/visuals/motor_holder_so101_base_v1/mesh",
+   "pixels": 1469
+  },
+  "8": {
+   "rgba": [
+    33,
+    243,
+    94,
+    255
+   ],
+   "label": "/World/envs/env_0/LightStudio/LightBox/Base",
+   "pixels": 76528
+  },
+  "9": {
+   "rgba": [
+    38,
+    228,
+    201,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/gripper/visuals/camera_mount/bolts/Cylinder_012",
+   "pixels": 144
+  },
+  "10": {
+   "rgba": [
+    40,
+    203,
+    247,
+    255
+   ],
+   "label": "/World/envs/env_0/Vial_1/Mesh_002",
+   "pixels": 2247
+  },
+  "11": {
+   "rgba": [
+    43,
+    205,
+    73,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/jaw/visuals/moving_jaw_so101_v1/mesh",
+   "pixels": 2361
+  },
+  "12": {
+   "rgba": [
+    48,
+    111,
+    218,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/gripper/visuals/camera_mount/mount/Cylinder_015",
+   "pixels": 3274
+  },
+  "13": {
+   "rgba": [
+    49,
+    150,
+    216,
+    255
+   ],
+   "label": "/World/envs/env_0/Vial_2/Mesh_002",
+   "pixels": 2627
+  },
+  "14": {
+   "rgba": [
+    62,
+    207,
+    74,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/gripper/visuals/camera_mount/socket/Cube_010",
+   "pixels": 260
+  },
+  "15": {
+   "rgba": [
+    66,
+    247,
+    90,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/shoulder/visuals/rotation_pitch_so101_v1/mesh",
+   "pixels": 1602
+  },
+  "16": {
+   "rgba": [
+    91,
+    54,
+    201,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/base/visuals/base_motor_holder_so101_v1/mesh",
+   "pixels": 1915
+  },
+  "17": {
+   "rgba": [
+    97,
+    5,
+    127,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/gripper/visuals/sts3215_03a_v1/mesh",
+   "pixels": 5
+  },
+  "18": {
+   "rgba": [
+    104,
+    5,
+    147,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/base/visuals/waveshare_mounting_plate_so101_v2/mesh",
+   "pixels": 456
+  },
+  "19": {
+   "rgba": [
+    133,
+    225,
+    4,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/gripper/visuals/camera_mount/camera_cover/Cylinder_019",
+   "pixels": 68
+  },
+  "20": {
+   "rgba": [
+    143,
+    61,
+    152,
+    255
+   ],
+   "label": "/World/envs/env_0/Rack_Left/Body1/Mesh/Mesh",
+   "pixels": 24534
+  },
+  "21": {
+   "rgba": [
+    146,
+    3,
+    78,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/gripper/visuals/wrist_roll_follower_so101_v1/mesh",
+   "pixels": 8415
+  },
+  "22": {
+   "rgba": [
+    148,
+    241,
+    2,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/base/visuals/base_so101_v2/mesh",
+   "pixels": 5282
+  },
+  "23": {
+   "rgba": [
+    188,
+    236,
+    2,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/wrist/visuals/wrist_roll_pitch_so101_v2/mesh",
+   "pixels": 7633
+  },
+  "24": {
+   "rgba": [
+    205,
+    40,
+    169,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/lower_arm/visuals/under_arm_so101_v1/mesh",
+   "pixels": 3702
+  },
+  "25": {
+   "rgba": [
+    215,
+    62,
+    21,
+    255
+   ],
+   "label": "/World/envs/env_0/LightStudio/LightBox/Right",
+   "pixels": 8274
+  },
+  "26": {
+   "rgba": [
+    220,
+    179,
+    62,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/lower_arm/visuals/sts3215_03a_v1/mesh",
+   "pixels": 111
+  },
+  "27": {
+   "rgba": [
+    220,
+    211,
+    65,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/upper_arm/visuals/upper_arm_so101_v1/mesh",
+   "pixels": 8730
+  },
+  "28": {
+   "rgba": [
+    223,
+    78,
+    62,
+    255
+   ],
+   "label": "/World/envs/env_0/Vial_3/Mesh_002",
+   "pixels": 1972
+  },
+  "29": {
+   "rgba": [
+    224,
+    52,
+    69,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/upper_arm/visuals/sts3215_03a_v1/mesh",
+   "pixels": 7
+  },
+  "30": {
+   "rgba": [
+    237,
+    50,
+    227,
+    255
+   ],
+   "label": "/World/envs/env_0/LightStudio/LightBox/Back",
+   "pixels": 60208
+  },
+  "31": {
+   "rgba": [
+    238,
+    6,
+    48,
+    255
+   ],
+   "label": "/World/envs/env_0/Vial_1/Mesh_001",
+   "pixels": 362
+  },
+  "32": {
+   "rgba": [
+    240,
+    4,
+    111,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/shoulder/visuals/sts3215_03a_v1/mesh",
+   "pixels": 1392
+  },
+  "33": {
+   "rgba": [
+    245,
+    83,
+    36,
+    255
+   ],
+   "label": "/World/envs/env_0/Robot/gripper/visuals/camera_mount/pcb/Cube_004",
+   "pixels": 1024
+  }
+ },
+ "idToLabels_raw": {
+  "(44, 77, 212, 255)": "INVALID",
+  "(33, 238, 219, 255)": "/World/envs/env_0/Robot/lower_arm/visuals/motor_holder_so101_wrist_v1/mesh",
+  "(97, 5, 127, 255)": "/World/envs/env_0/Robot/gripper/visuals/sts3215_03a_v1/mesh",
+  "(250, 17, 123, 255)": "/World/envs/env_0/Robot/gripper/visuals/camera_mount/transistors/Cube_009",
+  "(32, 127, 212, 255)": "/World/envs/env_0/LightStudio/LightBox/camera_mount/rsd455/RSD455/Visual/USB_C",
+  "(238, 6, 48, 255)": "/World/envs/env_0/Vial_1/Mesh_001",
+  "(225, 152, 12, 255)": "/World/envs/env_0/Vial_1/Mesh",
+  "(19, 246, 19, 255)": "/World/envs/env_0/Vial_2/Mesh_001",
+  "(97, 43, 150, 255)": "/World/envs/env_0/Vial_2/Mesh",
+  "(49, 150, 216, 255)": "/World/envs/env_0/Vial_2/Mesh_002",
+  "(16, 225, 6, 255)": "/World/envs/env_0/Vial_3/Mesh_001",
+  "(254, 39, 6, 255)": "/World/envs/env_0/Vial_3/Mesh",
+  "(223, 78, 62, 255)": "/World/envs/env_0/Vial_3/Mesh_002",
+  "(148, 241, 2, 255)": "/World/envs/env_0/Robot/base/visuals/base_so101_v2/mesh",
+  "(237, 50, 227, 255)": "/World/envs/env_0/LightStudio/LightBox/Back",
+  "(220, 179, 62, 255)": "/World/envs/env_0/Robot/lower_arm/visuals/sts3215_03a_v1/mesh",
+  "(27, 186, 239, 255)": "/World/envs/env_0/Robot/base/visuals/sts3215_03a_v1/mesh",
+  "(133, 225, 4, 255)": "/World/envs/env_0/Robot/gripper/visuals/camera_mount/camera_cover/Cylinder_019",
+  "(43, 205, 73, 255)": "/World/envs/env_0/Robot/jaw/visuals/moving_jaw_so101_v1/mesh",
+  "(242, 181, 4, 255)": "/World/envs/env_0/Robot/gripper/visuals/camera_mount/lens/Sphere",
+  "(229, 123, 18, 255)": "/World/envs/env_0/LightStudio/LightBox/camera_mount/rsd455/RSD455/Visual/Glass",
+  "(220, 211, 65, 255)": "/World/envs/env_0/Robot/upper_arm/visuals/upper_arm_so101_v1/mesh",
+  "(205, 40, 169, 255)": "/World/envs/env_0/Robot/lower_arm/visuals/under_arm_so101_v1/mesh",
+  "(33, 243, 3, 255)": "/World/envs/env_0/Robot/shoulder/visuals/motor_holder_so101_base_v1/mesh",
+  "(102, 29, 162, 255)": "/World/envs/env_0/Robot/gripper/visuals/camera_mount/focus/Cylinder_023",
+  "(215, 62, 21, 255)": "/World/envs/env_0/LightStudio/LightBox/Right",
+  "(13, 143, 235, 255)": "/World/envs/env_0/LightStudio/LightBox/camera_mount/rsd455/RSD455/Visual/Case_front",
+  "(224, 52, 69, 255)": "/World/envs/env_0/Robot/upper_arm/visuals/sts3215_03a_v1/mesh",
+  "(33, 243, 94, 255)": "/World/envs/env_0/LightStudio/LightBox/Base",
+  "(209, 254, 45, 255)": "/World/envs/env_0/LightStudio/LightBox/Top",
+  "(254, 28, 167, 255)": "/World/envs/env_0/LightStudio/LightBox/camera_mount/rsd455/RSD455/Visual/Case_back",
+  "(104, 5, 147, 255)": "/World/envs/env_0/Robot/base/visuals/waveshare_mounting_plate_so101_v2/mesh",
+  "(130, 216, 18, 255)": "/World/envs/env_0/Robot/gripper/visuals/camera_mount/rings/Cylinder_021",
+  "(61, 120, 253, 255)": "/World/envs/env_0/LightStudio/LightBox/camera_mount/rsd455/RSD455/Visual/Mount",
+  "(240, 4, 111, 255)": "/World/envs/env_0/Robot/shoulder/visuals/sts3215_03a_v1/mesh",
+  "(48, 111, 218, 255)": "/World/envs/env_0/Robot/gripper/visuals/camera_mount/mount/Cylinder_015",
+  "(38, 228, 201, 255)": "/World/envs/env_0/Robot/gripper/visuals/camera_mount/bolts/Cylinder_012",
+  "(91, 54, 201, 255)": "/World/envs/env_0/Robot/base/visuals/base_motor_holder_so101_v1/mesh",
+  "(220, 56, 134, 255)": "/World/envs/env_0/LightStudio/LightBox/camera_mount/rsd455/RSD455/Visual/camera_mask",
+  "(250, 47, 167, 255)": "/World/envs/env_0/Robot/gripper/visuals/camera_mount/Cone/Cone",
+  "(49, 207, 215, 255)": "/World/envs/env_0/LightStudio/LightBox/Left",
+  "(190, 204, 52, 255)": "/World/envs/env_0/LightStudio/LightBox/camera_mount/rsd455/RSD455/Visual/Camera_module",
+  "(188, 236, 2, 255)": "/World/envs/env_0/Robot/wrist/visuals/wrist_roll_pitch_so101_v2/mesh",
+  "(15, 238, 97, 255)": "/World/envs/env_0/Robot/wrist/visuals/sts3215_03a_no_horn_v1/mesh",
+  "(146, 3, 78, 255)": "/World/envs/env_0/Robot/gripper/visuals/wrist_roll_follower_so101_v1/mesh",
+  "(245, 83, 36, 255)": "/World/envs/env_0/Robot/gripper/visuals/camera_mount/pcb/Cube_004",
+  "(66, 247, 90, 255)": "/World/envs/env_0/Robot/shoulder/visuals/rotation_pitch_so101_v1/mesh",
+  "(40, 203, 247, 255)": "/World/envs/env_0/Vial_1/Mesh_002",
+  "(62, 207, 74, 255)": "/World/envs/env_0/Robot/gripper/visuals/camera_mount/socket/Cube_010",
+  "(82, 53, 223, 255)": "/World/envs/env_0/LightStudio/LightBox/camera_mount/rsd455/RSD455/Visual/Front_mask",
+  "(4, 206, 86, 255)": "/World/envs/env_0/Mat/Mat/Mat",
+  "(143, 61, 152, 255)": "/World/envs/env_0/Rack_Left/Body1/Mesh/Mesh"
+ },
+ "seg_dtype_shape": [
+  "uint8",
+  [
+   480,
+   640,
+   4
+  ]
+ ]
+}

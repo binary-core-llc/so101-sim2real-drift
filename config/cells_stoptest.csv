@@ -1,0 +1,2 @@
+cell_id,priority,lane,checkpoint,task,overrides_json,n_episodes,seed_base,notes
+stoptest,0,A,aravindhs-NV/grootn16-finetune_sreetz-so101_teleop_vials_rack_left/checkpoint-10000,Lerobot-So101-Teleop-Vials-To-Rack-Eval,{},3,3000,STOP test

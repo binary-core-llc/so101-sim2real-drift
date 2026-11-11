@@ -35,6 +35,7 @@ _ROOT = Path(os.environ.get("GTC_Q_ROOT", GTC))                # test root (T10a
 Q = _ROOT / "queue"
 LOGS = _ROOT / "logs" / "queue"
 RES = _ROOT / "results" / "sim"
+SUBDIR = None   # --results-subdir NAME: results/NAME and media/NAME instead of results/sim (e.g. explore batches)
 LOCK = Path(os.environ.get("GTC_Q_LOCK", "/run/lock/gtc-gpu.lock"))
 PY = str(GTC / ".venv" / "bin" / "python")
 STARTUP_S = float(os.environ.get("GTC_Q_STARTUP_S", 150))      # env overrides only for the mock tests (T10a)
@@ -193,7 +194,11 @@ def run_cell(c, attempt, state, runner):
             cmd += ["--seed_mod", str(int(c["seed_mod"]))]
         if str(c.get("as_shipped") or "").strip() in ("1", "true", "True"):
             cmd += ["--as_shipped"]
-    env = dict(os.environ, GTC_GIT=sh(f"git -C {GTC} rev-parse HEAD")[1],
+        if (c.get("lang_instruction") or "").strip():   # optional column; default: sweep_eval's instruction
+            cmd += ["--lang_instruction", c["lang_instruction"].strip()]
+        if SUBDIR:
+            cmd += ["--results", f"/workspace/gtc/results/{SUBDIR}", "--media", f"/workspace/gtc/media/{SUBDIR}"]
+    env = dict(os.environ, GTC_Q_SUBDIR=SUBDIR or "sim", GTC_GIT=sh(f"git -C {GTC} rev-parse HEAD")[1],
                GTC_IMAGE=sh("docker image inspect --format '{{.Id}}' teleop-docker")[1])
     log(f"cell {cell} attempt {attempt}: episodes {k}..{n - 1}, timeout {tmo}s, stale {stale:.0f}s -> {clog.name}")
     sh(f"docker rm -f {name}")
@@ -258,6 +263,9 @@ def run_cell(c, attempt, state, runner):
          "exit_lag_s": exit_lag, "watchdog": reason, "log": clog.name})
     if code == 10 or (Q / "STOP").exists():
         return "stopped"
+    if code == 2:   # sweep_eval: a requested level did not read back -> stop this cell, no retries
+        log(f"READBACK FAILED in cell {cell}: cell stopped, not retried")
+        return "readback_fail"
     return "done" if got >= n else "failed"
 
 
@@ -280,7 +288,7 @@ def cmd_run(cells_path, runner=None):
         cells = read_cells(cells_path)
         state["_cells"] = cells
         todo = [c for c in cells if next_episode(c["cell_id"]) < c["n_episodes"]
-                and state["cells"].get(c["cell_id"], {}).get("state") != "failed"]
+                and state["cells"].get(c["cell_id"], {}).get("state") not in ("failed", "readback_fail")]
         if not todo:
             write_status(cells, state, {"running": None})
             log("queue empty: all cells done or failed")
@@ -297,7 +305,7 @@ def cmd_run(cells_path, runner=None):
             for attempt in range(1, MAX_ATTEMPTS + 1):
                 cs["state"] = "running"
                 res = run_cell(c, attempt, state, runner)
-                if res in ("done", "stopped"):
+                if res in ("done", "stopped", "readback_fail"):
                     break
         finally:
             fcntl.flock(lockf, fcntl.LOCK_UN)
@@ -307,7 +315,7 @@ def cmd_run(cells_path, runner=None):
         if res == "stopped":
             log("cell left on STOP: queue exits")
             break
-        consec_fail = consec_fail + 1 if res == "failed" else 0
+        consec_fail = consec_fail + 1 if res in ("failed", "readback_fail") else 0
         if consec_fail >= MAX_CONSEC_FAIL:
             (Q / "PAUSE").write_text(f"{consec_fail} consecutive cell failures at {utc()}\n")
             log(f"{consec_fail} consecutive cell failures: queue PAUSED")
@@ -335,6 +343,10 @@ def main():
     else:
         cells = a[a.index("--cells") + 1] if "--cells" in a else str(GTC / "config" / "cells.csv")
         runner = a[a.index("--runner") + 1] if "--runner" in a else None
+        if "--results-subdir" in a:
+            global RES, SUBDIR
+            SUBDIR = a[a.index("--results-subdir") + 1]
+            RES = _ROOT / "results" / SUBDIR
         cmd_run(cells, runner)
     return 0
 

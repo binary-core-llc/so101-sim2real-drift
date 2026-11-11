@@ -1,0 +1,28 @@
+{
+ "method": "sled",
+ "d_x_mm": 102.3,
+ "_d_x": "tongue end face to grid column line 0 at the grid corner. Front C920's C3 views (tools/sled_from_views.py, final lens): 103.1 from 13 far-side views (top edge), 101.5 from 3 robot-side views (bottom edge); checks found neither a lifted tongue end nor a slanted end face, so the middle, 102.3 +-0.8 (Nov 7). Earlier: steel ruler 102 raw / 103 scaled; phone photos 106 (withdrawn)",
+ "d_y_mm": 90.36,
+ "_d_y": "key centre line to the grid corner along E y: key centre by 90.63 at bx -105.9 from the C920 views (opposite-side views combined), moved to the corner with yaw -0.145 deg. Earlier: phone 90.2 at the key",
+ "h_K_mm": 10.0,
+ "_h_K": "board top above the foam floor the robot stands on (D7): foam floor, EVA mat and board each about 5 mm by eye with the ruler, +-1. The stack from earlier readings gives 10.9 (mat 6.0 mm on Nov 3 + Fome-Cor 4.7 by label + print and backing sheet)",
+ "yaw_deg": -0.145,
+ "_yaw": "end face vs grid from the C920 views: -0.26 (far side, 13 views) and -0.03 (robot side, 3 views); the middle, +-0.12, by the same rule as d_x. Negative = the title side is farther (R_E_K = Rz(yaw) diag(1,-1,-1), calib/charuco.py)",
+ "h_floor_mm": 0.0,
+ "_h_floor": "the robot stands on the foam floor (D7)",
+ "h_mat_mm": 5.0,
+ "_h_mat": "mat top above the foam floor, by eye +-1; 6.0 by ruler on Nov 3",
+ "uncertainty": {
+  "d_x_mm": 0.8,
+  "d_y_mm": 0.4,
+  "h_K_mm": 1.0,
+  "yaw_deg": 0.12
+ },
+ "_uncertainty": "B 4.2 asks +-0.25 mm by ruler; B 9 budgets the sled at 0.5 mm / 0.3 deg. results/real/deviations.md (sled measured to +-1 mm)",
+ "paper_test": "end face seated, key in the gap: the 0.1 mm paper strip could not be slid into the joint at either lobe (both lobes touch)",
+ "measured_by": "AMR",
+ "date": "2026-11-07",
+ "written_utc": "2026-11-08T04:46:55+00:00",
+ "sources": "results/rig/measurements.jsonl (sled part 1, part 2, C920 views); results/rig/sled_from_views/",
+ "sled_checks": "tongue end lies flat on the table (no gap); end face straight, top edge does not stick out past the bottom (Nov 7)"
+}

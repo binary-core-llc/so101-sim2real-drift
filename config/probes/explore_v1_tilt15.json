@@ -1,0 +1,10 @@
+[
+ {
+  "name": "X_tilt_down_15",
+  "overrides": {
+   "camera": {
+    "pitch": 0.2617993877991494
+   }
+  }
+ }
+]

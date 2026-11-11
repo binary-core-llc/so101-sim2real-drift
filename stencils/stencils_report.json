@@ -1,0 +1,484 @@
+{
+ "layouts_sha256": "ff78d3ce0f10c6f7e0c0ba0e699f5ba76be1eb45a4e629b22eaead86d5fa204c",
+ "grow_mm": 3.0,
+ "pages": [
+  {
+   "variant": "letter",
+   "layout": "L00",
+   "u_mm": [
+    139.0,
+    282.5
+   ],
+   "v_mm": [
+    42.7,
+    253.0
+   ],
+   "v_room_mm": 274.9,
+   "clipped_left_mm": 0.0,
+   "top_margin_mm": 29.4,
+   "label_spot_mm": [
+    68,
+    177
+   ],
+   "info_spot_mm": [
+    138,
+    12
+   ]
+  },
+  {
+   "variant": "letter",
+   "layout": "L01",
+   "u_mm": [
+    114.8,
+    265.5
+   ],
+   "v_mm": [
+    40.1,
+    250.1
+   ],
+   "v_room_mm": 274.9,
+   "clipped_left_mm": 0.0,
+   "top_margin_mm": 46.4,
+   "label_spot_mm": [
+    10,
+    177
+   ],
+   "info_spot_mm": [
+    78,
+    164
+   ]
+  },
+  {
+   "variant": "letter",
+   "layout": "L02",
+   "u_mm": [
+    103.8,
+    300.5
+   ],
+   "v_mm": [
+    55.2,
+    247.4
+   ],
+   "v_room_mm": 274.9,
+   "clipped_left_mm": 0.0,
+   "top_margin_mm": 11.4,
+   "label_spot_mm": [
+    10,
+    177
+   ],
+   "info_spot_mm": [
+    74,
+    12
+   ]
+  },
+  {
+   "variant": "letter",
+   "layout": "L03",
+   "u_mm": [
+    146.4,
+    298.9
+   ],
+   "v_mm": [
+    54.1,
+    247.0
+   ],
+   "v_room_mm": 274.9,
+   "clipped_left_mm": 0.0,
+   "top_margin_mm": 13.0,
+   "label_spot_mm": [
+    144,
+    45
+   ],
+   "info_spot_mm": {
+    "check": [
+     10,
+     12
+    ],
+    "text": [
+     10,
+     29
+    ]
+   }
+  },
+  {
+   "variant": "letter",
+   "layout": "L04",
+   "u_mm": [
+    117.1,
+    272.3
+   ],
+   "v_mm": [
+    42.7,
+    279.3
+   ],
+   "v_room_mm": 274.9,
+   "clipped_left_mm": 4.4,
+   "top_margin_mm": 39.6,
+   "label_spot_mm": [
+    40,
+    177
+   ],
+   "info_spot_mm": [
+    138,
+    150
+   ]
+  },
+  {
+   "variant": "letter",
+   "layout": "L05",
+   "u_mm": [
+    142.6,
+    305.2
+   ],
+   "v_mm": [
+    58.5,
+    264.6
+   ],
+   "v_room_mm": 274.9,
+   "clipped_left_mm": 0.0,
+   "top_margin_mm": 6.7,
+   "label_spot_mm": [
+    62,
+    177
+   ],
+   "info_spot_mm": [
+    132,
+    12
+   ]
+  },
+  {
+   "variant": "letter",
+   "layout": "L06",
+   "u_mm": [
+    134.7,
+    283.4
+   ],
+   "v_mm": [
+    54.6,
+    249.2
+   ],
+   "v_room_mm": 274.9,
+   "clipped_left_mm": 0.0,
+   "top_margin_mm": 28.5,
+   "label_spot_mm": [
+    10,
+    177
+   ],
+   "info_spot_mm": [
+    140,
+    12
+   ]
+  },
+  {
+   "variant": "letter",
+   "layout": "L07",
+   "u_mm": [
+    123.7,
+    289.6
+   ],
+   "v_mm": [
+    20.4,
+    258.4
+   ],
+   "v_room_mm": 274.9,
+   "clipped_left_mm": 0.0,
+   "top_margin_mm": 22.3,
+   "label_spot_mm": [
+    62,
+    177
+   ],
+   "info_spot_mm": [
+    144,
+    158
+   ]
+  },
+  {
+   "variant": "letter",
+   "layout": "L08",
+   "u_mm": [
+    114.7,
+    284.0
+   ],
+   "v_mm": [
+    47.7,
+    273.5
+   ],
+   "v_room_mm": 274.9,
+   "clipped_left_mm": 0.0,
+   "top_margin_mm": 27.9,
+   "label_spot_mm": [
+    48,
+    177
+   ],
+   "info_spot_mm": {
+    "check": [
+     138,
+     12
+    ],
+    "text": [
+     10,
+     11
+    ]
+   }
+  },
+  {
+   "variant": "letter",
+   "layout": "L09",
+   "u_mm": [
+    115.5,
+    304.9
+   ],
+   "v_mm": [
+    58.0,
+    266.3
+   ],
+   "v_room_mm": 274.9,
+   "clipped_left_mm": 0.0,
+   "top_margin_mm": 7.0,
+   "label_spot_mm": [
+    58,
+    177
+   ],
+   "info_spot_mm": {
+    "check": [
+     140,
+     12
+    ],
+    "text": [
+     10,
+     11
+    ]
+   }
+  },
+  {
+   "variant": "tabloid",
+   "layout": "L00",
+   "u_mm": [
+    139.0,
+    282.5
+   ],
+   "v_mm": [
+    42.7,
+    253.0
+   ],
+   "v_room_mm": 274.9,
+   "clipped_left_mm": 0.0,
+   "top_margin_mm": 141.3,
+   "label_spot_mm": [
+    68,
+    276
+   ],
+   "info_spot_mm": [
+    10,
+    16
+   ]
+  },
+  {
+   "variant": "tabloid",
+   "layout": "L01",
+   "u_mm": [
+    114.8,
+    265.5
+   ],
+   "v_mm": [
+    40.1,
+    250.1
+   ],
+   "v_room_mm": 274.9,
+   "clipped_left_mm": 0.0,
+   "top_margin_mm": 158.3,
+   "label_spot_mm": [
+    10,
+    276
+   ],
+   "info_spot_mm": [
+    10,
+    16
+   ]
+  },
+  {
+   "variant": "tabloid",
+   "layout": "L02",
+   "u_mm": [
+    103.8,
+    300.5
+   ],
+   "v_mm": [
+    55.2,
+    247.4
+   ],
+   "v_room_mm": 274.9,
+   "clipped_left_mm": 0.0,
+   "top_margin_mm": 123.3,
+   "label_spot_mm": [
+    10,
+    276
+   ],
+   "info_spot_mm": [
+    10,
+    16
+   ]
+  },
+  {
+   "variant": "tabloid",
+   "layout": "L03",
+   "u_mm": [
+    146.4,
+    298.9
+   ],
+   "v_mm": [
+    54.1,
+    247.0
+   ],
+   "v_room_mm": 274.9,
+   "clipped_left_mm": 0.0,
+   "top_margin_mm": 124.9,
+   "label_spot_mm": [
+    144,
+    148
+   ],
+   "info_spot_mm": [
+    10,
+    16
+   ]
+  },
+  {
+   "variant": "tabloid",
+   "layout": "L04",
+   "u_mm": [
+    117.1,
+    272.3
+   ],
+   "v_mm": [
+    42.7,
+    279.3
+   ],
+   "v_room_mm": 274.9,
+   "clipped_left_mm": 4.4,
+   "top_margin_mm": 151.5,
+   "label_spot_mm": [
+    40,
+    276
+   ],
+   "info_spot_mm": [
+    10,
+    16
+   ]
+  },
+  {
+   "variant": "tabloid",
+   "layout": "L05",
+   "u_mm": [
+    142.6,
+    305.2
+   ],
+   "v_mm": [
+    58.5,
+    264.6
+   ],
+   "v_room_mm": 274.9,
+   "clipped_left_mm": 0.0,
+   "top_margin_mm": 118.6,
+   "label_spot_mm": [
+    10,
+    154
+   ],
+   "info_spot_mm": [
+    10,
+    16
+   ]
+  },
+  {
+   "variant": "tabloid",
+   "layout": "L06",
+   "u_mm": [
+    134.7,
+    283.4
+   ],
+   "v_mm": [
+    54.6,
+    249.2
+   ],
+   "v_room_mm": 274.9,
+   "clipped_left_mm": 0.0,
+   "top_margin_mm": 140.4,
+   "label_spot_mm": [
+    10,
+    276
+   ],
+   "info_spot_mm": [
+    10,
+    16
+   ]
+  },
+  {
+   "variant": "tabloid",
+   "layout": "L07",
+   "u_mm": [
+    123.7,
+    289.6
+   ],
+   "v_mm": [
+    20.4,
+    258.4
+   ],
+   "v_room_mm": 274.9,
+   "clipped_left_mm": 0.0,
+   "top_margin_mm": 134.2,
+   "label_spot_mm": [
+    64,
+    276
+   ],
+   "info_spot_mm": [
+    10,
+    16
+   ]
+  },
+  {
+   "variant": "tabloid",
+   "layout": "L08",
+   "u_mm": [
+    114.7,
+    284.0
+   ],
+   "v_mm": [
+    47.7,
+    273.5
+   ],
+   "v_room_mm": 274.9,
+   "clipped_left_mm": 0.0,
+   "top_margin_mm": 139.8,
+   "label_spot_mm": [
+    50,
+    276
+   ],
+   "info_spot_mm": [
+    10,
+    16
+   ]
+  },
+  {
+   "variant": "tabloid",
+   "layout": "L09",
+   "u_mm": [
+    115.5,
+    304.9
+   ],
+   "v_mm": [
+    58.0,
+    266.3
+   ],
+   "v_room_mm": 274.9,
+   "clipped_left_mm": 0.0,
+   "top_margin_mm": 118.9,
+   "label_spot_mm": [
+    58,
+    276
+   ],
+   "info_spot_mm": [
+    10,
+    16
+   ]
+  }
+ ]
+}

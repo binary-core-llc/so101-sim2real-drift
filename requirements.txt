@@ -1,0 +1,9 @@
+# The host environment (.venv) the study ran on: Python 3.12.13, created with uv.
+chardet==7.7.0
+msgpack==1.1.0
+numpy==2.2.6
+opencv-python-headless==4.10.0.84
+pillow==13.0.0
+pyzmq==26.2.0
+reportlab==4.2.5
+usd-core==25.8

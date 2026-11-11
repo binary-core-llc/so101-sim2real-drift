@@ -1,0 +1,77 @@
+[
+ {
+  "name": "nominal",
+  "overrides": {}
+ },
+ {
+  "name": "X_tilt_down_10",
+  "overrides": {
+   "camera": {
+    "pitch": 0.17453292519943295
+   }
+  }
+ },
+ {
+  "name": "X_tilt_down_12",
+  "overrides": {
+   "camera": {
+    "pitch": 0.20943951023931956
+   }
+  }
+ },
+ {
+  "name": "X_tilt_down_15",
+  "overrides": {
+   "camera": {
+    "pitch": 0.2617993877991494
+   }
+  }
+ },
+ {
+  "name": "X_roll_5",
+  "overrides": {
+   "camera": {
+    "roll": 0.08726646259971647
+   }
+  }
+ },
+ {
+  "name": "X_roll_10",
+  "overrides": {
+   "camera": {
+    "roll": 0.17453292519943295
+   }
+  }
+ },
+ {
+  "name": "X_bump_mild",
+  "overrides": {
+   "camera": {
+    "pitch": 0.10471975511965978,
+    "yaw": 0.07504915783575616,
+    "z": 0.015
+   }
+  }
+ },
+ {
+  "name": "X_bump_strong",
+  "overrides": {
+   "camera": {
+    "pitch": 0.15009831567151233,
+    "yaw": 0.15009831567151233,
+    "z": 0.03
+   }
+  }
+ },
+ {
+  "name": "X_rack_y3_tilt_down_6",
+  "overrides": {
+   "rack": {
+    "y": 0.03
+   },
+   "camera": {
+    "pitch": 0.10471975511965978
+   }
+  }
+ }
+]

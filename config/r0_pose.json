@@ -1,0 +1,39 @@
+{
+ "note": "explore-v2: added after sweep v1 and explore-v1, not part of prereg-v1",
+ "definition": "PREREGISTRATION_v1.md section 5 R0; E_premortem G8",
+ "assumptions": [
+  "lens y = sim lens y (same distance from the left wall)",
+  "level camera (no roll)",
+  "intrinsics: the sim D455 camera unchanged (focal 1.93 mm, horizontalAperture 2.4 mm)"
+ ],
+ "inputs": {
+  "floor_top_z": 0.02812499925494194,
+  "left_wall_y": 0.38143443463342075,
+  "plate_rear_x": -0.08812550008286746,
+  "mat_centre": [
+   0.2199999988079071,
+   0.0
+  ]
+ },
+ "target_lens_env": [
+  0.18187449991713256,
+  0.3297272007669876,
+  0.42812499925494196
+ ],
+ "target_axis_deg_below_horizontal": 45.0,
+ "target_heading_deg": -83.40432796433701,
+ "overrides": {
+  "camera": {
+   "x": -0.0007585341678539304,
+   "y": -0.044421655781217206,
+   "z": -0.061218658995000286,
+   "roll": 0.003370793657007356,
+   "pitch": -0.16198508874087839,
+   "yaw": -0.023090896023253656
+  }
+ },
+ "chain_check_worst": {
+  "mm": 3.106492571220224e-06,
+  "deg": 0.0007194481489416127
+ }
+}

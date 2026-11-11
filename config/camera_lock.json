@@ -1,0 +1,769 @@
+{
+ "front": {
+  "locked_utc": "2026-11-06T05:32:59+00:00",
+  "identity": {
+   "product": "HD Pro Webcam C920",
+   "vid": "046d",
+   "pid": "08e5",
+   "serial": "FD819E6F",
+   "manufacturer": ""
+  },
+  "node_at_lock": "/dev/video2",
+  "by_id_at_lock": "/dev/v4l/by-id/usb-046d_HD_Pro_Webcam_C920_FD819E6F-video-index0",
+  "order": [
+   "focus_automatic_continuous",
+   "auto_exposure",
+   "white_balance_automatic",
+   "exposure_dynamic_framerate",
+   "focus_absolute",
+   "exposure_time_absolute",
+   "gain",
+   "white_balance_temperature",
+   "power_line_frequency",
+   "backlight_compensation",
+   "zoom_absolute",
+   "pan_absolute",
+   "tilt_absolute",
+   "brightness",
+   "contrast",
+   "saturation",
+   "sharpness"
+  ],
+  "values": {
+   "focus_automatic_continuous": 0,
+   "auto_exposure": 1,
+   "white_balance_automatic": 0,
+   "exposure_dynamic_framerate": 0,
+   "focus_absolute": 40,
+   "exposure_time_absolute": 156,
+   "gain": 128,
+   "white_balance_temperature": 5700,
+   "power_line_frequency": 2,
+   "backlight_compensation": 0,
+   "zoom_absolute": 100,
+   "pan_absolute": 0,
+   "tilt_absolute": 0,
+   "brightness": 128,
+   "contrast": 128,
+   "saturation": 128,
+   "sharpness": 128
+  },
+  "missing_controls": [],
+  "readback": {
+   "focus_automatic_continuous": 0,
+   "auto_exposure": 1,
+   "white_balance_automatic": 0,
+   "exposure_dynamic_framerate": 0,
+   "focus_absolute": 40,
+   "exposure_time_absolute": 156,
+   "gain": 128,
+   "white_balance_temperature": 5700,
+   "power_line_frequency": 2,
+   "backlight_compensation": 0,
+   "zoom_absolute": 100,
+   "pan_absolute": 0,
+   "tilt_absolute": 0,
+   "brightness": 128,
+   "contrast": 128,
+   "saturation": 128,
+   "sharpness": 128
+  },
+  "readback_ok": true,
+  "controls_snapshot": [
+   {
+    "id": 9963776,
+    "type": 1,
+    "kernel_name": "Brightness",
+    "min": 0,
+    "max": 255,
+    "step": 1,
+    "default": 128,
+    "flags": 0,
+    "name": "brightness",
+    "value": 128
+   },
+   {
+    "id": 9963777,
+    "type": 1,
+    "kernel_name": "Contrast",
+    "min": 0,
+    "max": 255,
+    "step": 1,
+    "default": 128,
+    "flags": 0,
+    "name": "contrast",
+    "value": 128
+   },
+   {
+    "id": 9963778,
+    "type": 1,
+    "kernel_name": "Saturation",
+    "min": 0,
+    "max": 255,
+    "step": 1,
+    "default": 128,
+    "flags": 0,
+    "name": "saturation",
+    "value": 128
+   },
+   {
+    "id": 9963788,
+    "type": 2,
+    "kernel_name": "White Balance, Automatic",
+    "min": 0,
+    "max": 1,
+    "step": 1,
+    "default": 1,
+    "flags": 0,
+    "name": "white_balance_automatic",
+    "value": 0
+   },
+   {
+    "id": 9963795,
+    "type": 1,
+    "kernel_name": "Gain",
+    "min": 0,
+    "max": 255,
+    "step": 1,
+    "default": 0,
+    "flags": 0,
+    "name": "gain",
+    "value": 128
+   },
+   {
+    "id": 9963800,
+    "type": 3,
+    "kernel_name": "Power Line Frequency",
+    "min": 0,
+    "max": 2,
+    "step": 1,
+    "default": 2,
+    "flags": 0,
+    "name": "power_line_frequency",
+    "menu": {
+     "0": "Disabled",
+     "1": "50 Hz",
+     "2": "60 Hz"
+    },
+    "value": 2
+   },
+   {
+    "id": 9963802,
+    "type": 1,
+    "kernel_name": "White Balance Temperature",
+    "min": 2000,
+    "max": 6500,
+    "step": 1,
+    "default": 4000,
+    "flags": 0,
+    "name": "white_balance_temperature",
+    "value": 5700
+   },
+   {
+    "id": 9963803,
+    "type": 1,
+    "kernel_name": "Sharpness",
+    "min": 0,
+    "max": 255,
+    "step": 1,
+    "default": 128,
+    "flags": 0,
+    "name": "sharpness",
+    "value": 128
+   },
+   {
+    "id": 9963804,
+    "type": 1,
+    "kernel_name": "Backlight Compensation",
+    "min": 0,
+    "max": 1,
+    "step": 1,
+    "default": 0,
+    "flags": 0,
+    "name": "backlight_compensation",
+    "value": 0
+   },
+   {
+    "id": 10094849,
+    "type": 3,
+    "kernel_name": "Auto Exposure",
+    "min": 0,
+    "max": 3,
+    "step": 1,
+    "default": 3,
+    "flags": 0,
+    "name": "auto_exposure",
+    "menu": {
+     "1": "Manual Mode",
+     "3": "Aperture Priority Mode"
+    },
+    "value": 1
+   },
+   {
+    "id": 10094850,
+    "type": 1,
+    "kernel_name": "Exposure Time, Absolute",
+    "min": 3,
+    "max": 2047,
+    "step": 1,
+    "default": 250,
+    "flags": 0,
+    "name": "exposure_time_absolute",
+    "value": 156
+   },
+   {
+    "id": 10094851,
+    "type": 2,
+    "kernel_name": "Exposure, Dynamic Framerate",
+    "min": 0,
+    "max": 1,
+    "step": 1,
+    "default": 0,
+    "flags": 0,
+    "name": "exposure_dynamic_framerate",
+    "value": 0
+   },
+   {
+    "id": 10094856,
+    "type": 1,
+    "kernel_name": "Pan, Absolute",
+    "min": -36000,
+    "max": 36000,
+    "step": 3600,
+    "default": 0,
+    "flags": 0,
+    "name": "pan_absolute",
+    "value": 0
+   },
+   {
+    "id": 10094857,
+    "type": 1,
+    "kernel_name": "Tilt, Absolute",
+    "min": -36000,
+    "max": 36000,
+    "step": 3600,
+    "default": 0,
+    "flags": 0,
+    "name": "tilt_absolute",
+    "value": 0
+   },
+   {
+    "id": 10094858,
+    "type": 1,
+    "kernel_name": "Focus, Absolute",
+    "min": 0,
+    "max": 250,
+    "step": 5,
+    "default": 0,
+    "flags": 0,
+    "name": "focus_absolute",
+    "value": 40
+   },
+   {
+    "id": 10094860,
+    "type": 2,
+    "kernel_name": "Focus, Automatic Continuous",
+    "min": 0,
+    "max": 1,
+    "step": 1,
+    "default": 1,
+    "flags": 0,
+    "name": "focus_automatic_continuous",
+    "value": 0
+   },
+   {
+    "id": 10094861,
+    "type": 1,
+    "kernel_name": "Zoom, Absolute",
+    "min": 100,
+    "max": 500,
+    "step": 1,
+    "default": 100,
+    "flags": 0,
+    "name": "zoom_absolute",
+    "value": 100
+   }
+  ],
+  "focus_sweep": {
+   "utc": "2026-11-06T05:19:13+00:00",
+   "values": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    55,
+    60,
+    65,
+    70,
+    75,
+    80
+   ],
+   "scores": {
+    "0.35": [
+     [
+      0,
+      1393.3102676459253
+     ],
+     [
+      5,
+      1523.2445786918129
+     ],
+     [
+      10,
+      1487.2722454380362
+     ],
+     [
+      15,
+      1480.7786347365698
+     ],
+     [
+      20,
+      1545.471272716255
+     ],
+     [
+      25,
+      1489.3341749573851
+     ],
+     [
+      30,
+      1546.6588021635012
+     ],
+     [
+      35,
+      2364.6942503221558
+     ],
+     [
+      40,
+      3099.2972096894314
+     ],
+     [
+      45,
+      2529.9628556579964
+     ],
+     [
+      50,
+      653.8484181888404
+     ],
+     [
+      55,
+      562.0813900422265
+     ],
+     [
+      60,
+      420.0779564840841
+     ],
+     [
+      65,
+      331.72910172823623
+     ],
+     [
+      70,
+      242.51007492225705
+     ],
+     [
+      75,
+      192.15457171336809
+     ],
+     [
+      80,
+      136.10531773651832
+     ]
+    ],
+    "0.55": [
+     [
+      0,
+      2896.514381146421
+     ],
+     [
+      5,
+      2783.6276214223203
+     ],
+     [
+      10,
+      2955.282028887354
+     ],
+     [
+      15,
+      3047.5726748399647
+     ],
+     [
+      20,
+      3177.858106975051
+     ],
+     [
+      25,
+      3326.4693813586427
+     ],
+     [
+      30,
+      3520.932841791741
+     ],
+     [
+      35,
+      4652.032558455105
+     ],
+     [
+      40,
+      5232.7405997968535
+     ],
+     [
+      45,
+      3131.2320175429777
+     ],
+     [
+      50,
+      845.5916620962244
+     ],
+     [
+      55,
+      586.3004015108585
+     ],
+     [
+      60,
+      409.8871805792064
+     ],
+     [
+      65,
+      287.64853073470283
+     ],
+     [
+      70,
+      196.36458937398717
+     ],
+     [
+      75,
+      139.55706099217392
+     ],
+     [
+      80,
+      108.36354125225435
+     ]
+    ],
+    "0.75": [
+     [
+      0,
+      3938.0138873252713
+     ],
+     [
+      5,
+      3962.7681867992496
+     ],
+     [
+      10,
+      3998.6239001200433
+     ],
+     [
+      15,
+      4079.2514215084643
+     ],
+     [
+      20,
+      4162.23295653903
+     ],
+     [
+      25,
+      4311.165581714543
+     ],
+     [
+      30,
+      4452.1112473812345
+     ],
+     [
+      35,
+      5180.456493298759
+     ],
+     [
+      40,
+      5290.90319117895
+     ],
+     [
+      45,
+      2675.296324026184
+     ],
+     [
+      50,
+      982.2019885752095
+     ],
+     [
+      55,
+      714.8815259154082
+     ],
+     [
+      60,
+      467.4507583505648
+     ],
+     [
+      65,
+      308.1238938296616
+     ],
+     [
+      70,
+      228.16507689046324
+     ],
+     [
+      75,
+      177.9823524946224
+     ],
+     [
+      80,
+      146.13548113987594
+     ]
+    ]
+   },
+   "chosen": 40,
+   "identity": {
+    "product": "HD Pro Webcam C920",
+    "vid": "046d",
+    "pid": "08e5",
+    "serial": "FD819E6F",
+    "manufacturer": ""
+   },
+   "square_mm": 30.0
+  }
+ },
+ "wrist": {
+  "locked_utc": "2026-11-06T05:45:48+00:00",
+  "identity": {
+   "product": "USB2.0_CAM1",
+   "vid": "05a3",
+   "pid": "9230",
+   "serial": "USB2.0_CAM1",
+   "manufacturer": "Sonix Technology Co., Ltd."
+  },
+  "node_at_lock": "/dev/video0",
+  "by_id_at_lock": "/dev/v4l/by-id/usb-Sonix_Technology_Co.__Ltd._USB2.0_CAM1_USB2.0_CAM1-video-index0",
+  "order": [
+   "auto_exposure",
+   "white_balance_automatic",
+   "exposure_dynamic_framerate",
+   "exposure_time_absolute",
+   "gain",
+   "white_balance_temperature",
+   "power_line_frequency",
+   "backlight_compensation",
+   "brightness",
+   "contrast",
+   "saturation",
+   "sharpness"
+  ],
+  "values": {
+   "auto_exposure": 1,
+   "white_balance_automatic": 0,
+   "exposure_dynamic_framerate": 0,
+   "exposure_time_absolute": 157,
+   "gain": 41,
+   "white_balance_temperature": 5300,
+   "power_line_frequency": 2,
+   "backlight_compensation": 0,
+   "brightness": 0,
+   "contrast": 42,
+   "saturation": 64,
+   "sharpness": 3
+  },
+  "missing_controls": [
+   "focus_automatic_continuous"
+  ],
+  "readback": {
+   "auto_exposure": 1,
+   "white_balance_automatic": 0,
+   "exposure_dynamic_framerate": 0,
+   "exposure_time_absolute": 157,
+   "gain": 41,
+   "white_balance_temperature": 5300,
+   "power_line_frequency": 2,
+   "backlight_compensation": 0,
+   "brightness": 0,
+   "contrast": 42,
+   "saturation": 64,
+   "sharpness": 3
+  },
+  "readback_ok": true,
+  "controls_snapshot": [
+   {
+    "id": 9963776,
+    "type": 1,
+    "kernel_name": "Brightness",
+    "min": -64,
+    "max": 64,
+    "step": 1,
+    "default": 0,
+    "flags": 0,
+    "name": "brightness",
+    "value": 0
+   },
+   {
+    "id": 9963777,
+    "type": 1,
+    "kernel_name": "Contrast",
+    "min": 0,
+    "max": 64,
+    "step": 1,
+    "default": 42,
+    "flags": 0,
+    "name": "contrast",
+    "value": 42
+   },
+   {
+    "id": 9963778,
+    "type": 1,
+    "kernel_name": "Saturation",
+    "min": 0,
+    "max": 128,
+    "step": 1,
+    "default": 64,
+    "flags": 0,
+    "name": "saturation",
+    "value": 64
+   },
+   {
+    "id": 9963779,
+    "type": 1,
+    "kernel_name": "Hue",
+    "min": -40,
+    "max": 40,
+    "step": 1,
+    "default": 0,
+    "flags": 0,
+    "name": "hue",
+    "value": 0
+   },
+   {
+    "id": 9963788,
+    "type": 2,
+    "kernel_name": "White Balance, Automatic",
+    "min": 0,
+    "max": 1,
+    "step": 1,
+    "default": 1,
+    "flags": 0,
+    "name": "white_balance_automatic",
+    "value": 0
+   },
+   {
+    "id": 9963792,
+    "type": 1,
+    "kernel_name": "Gamma",
+    "min": 72,
+    "max": 500,
+    "step": 1,
+    "default": 100,
+    "flags": 0,
+    "name": "gamma",
+    "value": 100
+   },
+   {
+    "id": 9963795,
+    "type": 1,
+    "kernel_name": "Gain",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "default": 0,
+    "flags": 0,
+    "name": "gain",
+    "value": 41
+   },
+   {
+    "id": 9963800,
+    "type": 3,
+    "kernel_name": "Power Line Frequency",
+    "min": 0,
+    "max": 2,
+    "step": 1,
+    "default": 1,
+    "flags": 0,
+    "name": "power_line_frequency",
+    "menu": {
+     "0": "Disabled",
+     "1": "50 Hz",
+     "2": "60 Hz"
+    },
+    "value": 2
+   },
+   {
+    "id": 9963802,
+    "type": 1,
+    "kernel_name": "White Balance Temperature",
+    "min": 2800,
+    "max": 6500,
+    "step": 1,
+    "default": 4600,
+    "flags": 0,
+    "name": "white_balance_temperature",
+    "value": 5300
+   },
+   {
+    "id": 9963803,
+    "type": 1,
+    "kernel_name": "Sharpness",
+    "min": 0,
+    "max": 6,
+    "step": 1,
+    "default": 3,
+    "flags": 0,
+    "name": "sharpness",
+    "value": 3
+   },
+   {
+    "id": 9963804,
+    "type": 1,
+    "kernel_name": "Backlight Compensation",
+    "min": 0,
+    "max": 2,
+    "step": 1,
+    "default": 1,
+    "flags": 0,
+    "name": "backlight_compensation",
+    "value": 0
+   },
+   {
+    "id": 10094849,
+    "type": 3,
+    "kernel_name": "Auto Exposure",
+    "min": 0,
+    "max": 3,
+    "step": 1,
+    "default": 3,
+    "flags": 0,
+    "name": "auto_exposure",
+    "menu": {
+     "1": "Manual Mode",
+     "3": "Aperture Priority Mode"
+    },
+    "value": 1
+   },
+   {
+    "id": 10094850,
+    "type": 1,
+    "kernel_name": "Exposure Time, Absolute",
+    "min": 1,
+    "max": 5000,
+    "step": 1,
+    "default": 157,
+    "flags": 0,
+    "name": "exposure_time_absolute",
+    "value": 157
+   },
+   {
+    "id": 10094851,
+    "type": 2,
+    "kernel_name": "Exposure, Dynamic Framerate",
+    "min": 0,
+    "max": 1,
+    "step": 1,
+    "default": 0,
+    "flags": 0,
+    "name": "exposure_dynamic_framerate",
+    "value": 0
+   }
+  ],
+  "focus_sweep": null
+ }
+}

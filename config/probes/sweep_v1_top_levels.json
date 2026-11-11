@@ -1,0 +1,54 @@
+[
+ {
+  "name": "S0_nominal",
+  "overrides": {}
+ },
+ {
+  "name": "S1_tilt_down_8p6",
+  "overrides": {
+   "camera": {
+    "pitch": 0.15009831567151233
+   }
+  }
+ },
+ {
+  "name": "S2_rack_y_4p0",
+  "overrides": {
+   "rack": {
+    "y": 0.04
+   }
+  }
+ },
+ {
+  "name": "S3_rack_x_8p0",
+  "overrides": {
+   "rack": {
+    "x": 0.08
+   }
+  }
+ },
+ {
+  "name": "S7_cam_yaw_8p6",
+  "overrides": {
+   "camera": {
+    "yaw": 0.15009831567151233
+   }
+  }
+ },
+ {
+  "name": "S8_cam_up_3p0",
+  "overrides": {
+   "camera": {
+    "z": 0.03
+   }
+  }
+ },
+ {
+  "name": "S9_tilt_up_m5p73",
+  "overrides": {
+   "camera": {
+    "pitch": -0.10000736613927509
+   }
+  }
+ }
+]

@@ -1,0 +1,4382 @@
+{
+ "schema": "gtc frames_sim v0",
+ "created_utc": "2026-10-24T00:06:49+00:00",
+ "task": "Lerobot-So101-Teleop-Vials-To-Rack-Eval",
+ "conventions": {
+  "quat": "wxyz",
+  "units": "m, deg unless named _rad",
+  "matrix_row_major_usd": "USD row-vector convention: p_world = p_local * M; rows 0-2 = local axes in world, row 3 = translation",
+  "camera_frames": "USD camera looks along -Z with +Y up; quat_w_ros = OpenCV/ROS (+Z forward, -Y up)",
+  "poses_read": "after env.reset() and after the course's 10 warm-up steps (initial_action), unless labelled"
+ },
+ "dr_setting": {
+  "original_ranges": {
+   "exposure_range": [
+    -3.0,
+    1.0
+   ],
+   "mat_yaw_range": [
+    -0.1,
+    0.1
+   ],
+   "wrist_focal_range": [
+    12.0,
+    15.0
+   ],
+   "camera_pos_range": {
+    "x": [
+     -0.02,
+     0.02
+    ],
+    "y": [
+     -0.02,
+     0.02
+    ],
+    "z": [
+     -0.01,
+     0.01
+    ]
+   },
+   "camera_rot_range": {
+    "roll": [
+     -0.05,
+     0.05
+    ],
+    "pitch": [
+     -0.05,
+     0.05
+    ],
+    "yaw": [
+     -0.05,
+     0.05
+    ]
+   },
+   "rack_pose_range": {
+    "x": [
+     -0.04,
+     0.04
+    ],
+    "y": [
+     -0.01,
+     0.01
+    ],
+    "yaw": [
+     -0.5,
+     0.5
+    ]
+   },
+   "rack_placement_prob": "default 0.33 (resets.py:326)",
+   "vial_pose_range": {
+    "x": [
+     -0.04,
+     0.04
+    ],
+    "y": [
+     -0.01,
+     0.01
+    ],
+    "roll": [
+     -0.3,
+     0.3
+    ],
+    "yaw": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "applied": "all ranges degenerate at centre: exposure -1 EV, mat yaw 0, wrist focal 13.5 mm, camera offsets 0, rack offsets 0, rack_placement_prob 0, vial offsets 0 (nominal phase)"
+ },
+ "versions": {
+  "isaac_sim": "5.1.0-rc.19+release.26219.9c81211b.gl",
+  "isaac_lab": "2.3.2"
+ },
+ "sim": {
+  "dt": 0.008333333333333333,
+  "decimation": 2,
+  "episode_length_s": 7.5,
+  "max_episode_length_steps": 450,
+  "render_mode": "quality"
+ },
+ "env_origin": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "robot": {
+  "root": {
+   "pos": [
+    -0.05000000819563866,
+    -1.862645149230957e-08,
+    -5.21540641784668e-08
+   ],
+   "quat_wxyz": [
+    0.7071069478988647,
+    -4.316182078412112e-09,
+    -1.0854460663622945e-09,
+    0.7071070075035095
+   ],
+   "rpy_deg_xyz": [
+    -4.376857663354025e-07,
+    2.617816822357846e-07,
+    90.00003667621912
+   ]
+  },
+  "joint_names": [
+   "Rotation",
+   "Pitch",
+   "Elbow",
+   "Wrist_Pitch",
+   "Wrist_Roll",
+   "Jaw"
+  ],
+  "joint_pos_rad": [
+   -0.27359968423843384,
+   -0.6041755676269531,
+   -0.06105717644095421,
+   1.5210787057876587,
+   -1.6035493612289429,
+   -0.14636467397212982
+  ],
+  "bodies": {
+   "base": {
+    "pos": [
+     -0.05000000819563866,
+     -1.862645149230957e-08,
+     -5.21540641784668e-08
+    ],
+    "quat_wxyz": [
+     0.7071069478988647,
+     -4.316182078412112e-09,
+     -1.0854460663622945e-09,
+     0.7071070075035095
+    ]
+   },
+   "shoulder": {
+    "pos": [
+     -0.02692549303174019,
+     0.020790904760360718,
+     0.09488172829151154
+    ],
+    "quat_wxyz": [
+     -1.2734190590890648e-07,
+     -0.13637526333332062,
+     0.9906572103500366,
+     -1.2742461876769084e-06
+    ]
+   },
+   "upper_arm": {
+    "pos": [
+     0.007281661033630371,
+     0.011407049372792244,
+     0.1490817666053772
+    ],
+    "quat_wxyz": [
+     -0.5754522085189819,
+     0.6650808453559875,
+     -0.2401430755853653,
+     -0.41091787815093994
+    ]
+   },
+   "lower_arm": {
+    "pos": [
+     -0.03210316598415375,
+     0.0003542006015777588,
+     0.2576298117637634
+    ],
+    "quat_wxyz": [
+     -0.1375773847103119,
+     0.31987327337265015,
+     -0.6306206583976746,
+     -0.6935929656028748
+    ]
+   },
+   "wrist": {
+    "pos": [
+     0.066994309425354,
+     0.028165578842163086,
+     0.34498700499534607
+    ],
+    "quat_wxyz": [
+     0.15477639436721802,
+     -0.3354503810405731,
+     0.6224743723869324,
+     0.6899588108062744
+    ]
+   },
+   "gripper": {
+    "pos": [
+     0.10066976398229599,
+     0.056415580213069916,
+     0.29884886741638184
+    ],
+    "quat_wxyz": [
+     -0.7371869683265686,
+     -0.28228121995925903,
+     0.2067757248878479,
+     0.5780282616615295
+    ]
+   },
+   "jaw": {
+    "pos": [
+     0.13424140214920044,
+     0.044228728860616684,
+     0.2930637001991272
+    ],
+    "quat_wxyz": [
+     -0.3016105890274048,
+     -0.7595195174217224,
+     0.5007472038269043,
+     0.2853306829929352
+    ]
+   }
+  },
+  "usd_joints": {
+   "Rotation": {
+    "path": "/World/envs/env_0/Robot/joints/Rotation",
+    "type": "PhysicsRevoluteJoint",
+    "body0": [
+     "/World/envs/env_0/Robot/base"
+    ],
+    "body1": [
+     "/World/envs/env_0/Robot/shoulder"
+    ],
+    "localPos0": [
+     0.02079089917242527,
+     -0.023074500262737274,
+     0.09488169848918915
+    ],
+    "localRot0": [
+     -8.963205004874908e-07,
+     0.7071055173873901,
+     0.7071080803871155,
+     -8.96323683718947e-07
+    ],
+    "localPos1": [
+     3.469446951953614e-18,
+     3.469446951953614e-18,
+     0.0
+    ],
+    "localRot1": [
+     1.0,
+     -3.677072006797767e-14,
+     3.8411286488034964e-17,
+     4.588882984539466e-14
+    ]
+   },
+   "Pitch": {
+    "path": "/World/envs/env_0/Robot/joints/Pitch",
+    "type": "PhysicsRevoluteJoint",
+    "body0": [
+     "/World/envs/env_0/Robot/shoulder"
+    ],
+    "body1": [
+     "/World/envs/env_0/Robot/upper_arm"
+    ],
+    "localPos0": [
+     -0.030399199575185776,
+     -0.01827779784798622,
+     -0.054200008511543274
+    ],
+    "localRot0": [
+     -0.49999818205833435,
+     0.4999999701976776,
+     0.5,
+     0.5000017881393433
+    ],
+    "localPos1": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "localRot1": [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "Elbow": {
+    "path": "/World/envs/env_0/Robot/joints/Elbow",
+    "type": "PhysicsRevoluteJoint",
+    "body0": [
+     "/World/envs/env_0/Robot/upper_arm"
+    ],
+    "body1": [
+     "/World/envs/env_0/Robot/lower_arm"
+    ],
+    "localPos0": [
+     -0.11257001757621765,
+     -0.028000006452202797,
+     -3.6395834263069915e-11
+    ],
+    "localRot0": [
+     0.7071055769920349,
+     3.840602502691581e-08,
+     -3.0007449858260316e-09,
+     0.7071080207824707
+    ],
+    "localPos1": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "localRot1": [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "Wrist_Pitch": {
+    "path": "/World/envs/env_0/Robot/joints/Wrist_Pitch",
+    "type": "PhysicsRevoluteJoint",
+    "body0": [
+     "/World/envs/env_0/Robot/lower_arm"
+    ],
+    "body1": [
+     "/World/envs/env_0/Robot/wrist"
+    ],
+    "localPos0": [
+     -0.1349000334739685,
+     0.005199979990720749,
+     -2.264921228345429e-08
+    ],
+    "localRot0": [
+     -0.7071055173873901,
+     1.0536121664017628e-07,
+     4.915842310992957e-08,
+     0.7071080207824707
+    ],
+    "localPos1": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "localRot1": [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "Wrist_Roll": {
+    "path": "/World/envs/env_0/Robot/joints/Wrist_Roll",
+    "type": "PhysicsRevoluteJoint",
+    "body0": [
+     "/World/envs/env_0/Robot/wrist"
+    ],
+    "body1": [
+     "/World/envs/env_0/Robot/gripper"
+    ],
+    "localPos0": [
+     4.461247371523314e-09,
+     -0.061100032180547714,
+     0.018100006505846977
+    ],
+    "localRot0": [
+     6.152631044642476e-07,
+     1.029495592774765e-06,
+     0.7071080803871155,
+     0.7071054577827454
+    ],
+    "localPos1": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "localRot1": [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "Jaw": {
+    "path": "/World/envs/env_0/Robot/joints/Jaw",
+    "type": "PhysicsRevoluteJoint",
+    "body0": [
+     "/World/envs/env_0/Robot/gripper"
+    ],
+    "body1": [
+     "/World/envs/env_0/Robot/jaw"
+    ],
+    "localPos0": [
+     0.02020001783967018,
+     0.018800007179379463,
+     -0.02340001054108143
+    ],
+    "localRot0": [
+     0.7071055173873901,
+     0.7071080207824707,
+     6.31822985042163e-08,
+     1.6858581375345238e-07
+    ],
+    "localPos1": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "localRot1": [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "root_joint": {
+    "path": "/World/envs/env_0/Robot/root_joint",
+    "type": "PhysicsFixedJoint",
+    "body0": [],
+    "body1": [
+     "/World/envs/env_0/Robot/base"
+    ],
+    "localPos0": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "localRot0": [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "localPos1": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "localRot1": [
+     0.7071067690849304,
+     0.0,
+     0.0,
+     -0.7071067690849304
+    ]
+   },
+   "FixedJoint": {
+    "path": "/World/envs/env_0/Robot/base/FixedJoint",
+    "type": "PhysicsFixedJoint",
+    "body0": [],
+    "body1": [
+     "/World/envs/env_0/Robot/base"
+    ],
+    "localPos0": [
+     -0.05000000074505806,
+     0.0,
+     0.0
+    ],
+    "localRot0": [
+     0.7071067690849304,
+     0.0,
+     0.0,
+     0.7071067690849304
+    ],
+    "localPos1": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "localRot1": [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "mesh_materials": {
+   "/World/envs/env_0/Robot/base/visuals/base_motor_holder_so101_v1/mesh": "/World/envs/env_0/Robot/Looks/material_a_3d_printed",
+   "/World/envs/env_0/Robot/base/visuals/base_so101_v2/mesh": "/World/envs/env_0/Robot/Looks/material_a_3d_printed",
+   "/World/envs/env_0/Robot/base/visuals/sts3215_03a_v1/mesh": "/World/envs/env_0/Robot/Looks/material_sts3215",
+   "/World/envs/env_0/Robot/base/visuals/waveshare_mounting_plate_so101_v2/mesh": "/World/envs/env_0/Robot/Looks/material_a_3d_printed",
+   "/World/envs/env_0/Robot/base/collisions/base_motor_holder_so101_v1/mesh": "/World/envs/env_0/Robot/Looks/DefaultMaterial",
+   "/World/envs/env_0/Robot/base/collisions/base_so101_v2/mesh": "/World/envs/env_0/Robot/Looks/DefaultMaterial",
+   "/World/envs/env_0/Robot/base/collisions/sts3215_03a_v1/mesh": "/World/envs/env_0/Robot/Looks/DefaultMaterial",
+   "/World/envs/env_0/Robot/base/collisions/waveshare_mounting_plate_so101_v2/mesh": "/World/envs/env_0/Robot/Looks/DefaultMaterial",
+   "/World/envs/env_0/Robot/shoulder/visuals/sts3215_03a_v1/mesh": "/World/envs/env_0/Robot/Looks/material_sts3215",
+   "/World/envs/env_0/Robot/shoulder/visuals/motor_holder_so101_base_v1/mesh": "/World/envs/env_0/Robot/Looks/material_a_3d_printed",
+   "/World/envs/env_0/Robot/shoulder/visuals/rotation_pitch_so101_v1/mesh": "/World/envs/env_0/Robot/Looks/material_a_3d_printed",
+   "/World/envs/env_0/Robot/shoulder/collisions/sts3215_03a_v1/mesh": "/World/envs/env_0/Robot/Looks/DefaultMaterial",
+   "/World/envs/env_0/Robot/shoulder/collisions/motor_holder_so101_base_v1/mesh": "/World/envs/env_0/Robot/Looks/DefaultMaterial",
+   "/World/envs/env_0/Robot/shoulder/collisions/rotation_pitch_so101_v1/mesh": "/World/envs/env_0/Robot/Looks/DefaultMaterial",
+   "/World/envs/env_0/Robot/upper_arm/visuals/sts3215_03a_v1/mesh": "/World/envs/env_0/Robot/Looks/material_sts3215",
+   "/World/envs/env_0/Robot/upper_arm/visuals/upper_arm_so101_v1/mesh": "/World/envs/env_0/Robot/Looks/material_a_3d_printed",
+   "/World/envs/env_0/Robot/upper_arm/collisions/sts3215_03a_v1/mesh": "/World/envs/env_0/Robot/Looks/DefaultMaterial",
+   "/World/envs/env_0/Robot/upper_arm/collisions/upper_arm_so101_v1/mesh": "/World/envs/env_0/Robot/Looks/DefaultMaterial",
+   "/World/envs/env_0/Robot/lower_arm/visuals/under_arm_so101_v1/mesh": "/World/envs/env_0/Robot/Looks/material_a_3d_printed",
+   "/World/envs/env_0/Robot/lower_arm/visuals/motor_holder_so101_wrist_v1/mesh": "/World/envs/env_0/Robot/Looks/material_a_3d_printed",
+   "/World/envs/env_0/Robot/lower_arm/visuals/sts3215_03a_v1/mesh": "/World/envs/env_0/Robot/Looks/material_sts3215",
+   "/World/envs/env_0/Robot/lower_arm/collisions/under_arm_so101_v1/mesh": "/World/envs/env_0/Robot/Looks/DefaultMaterial",
+   "/World/envs/env_0/Robot/lower_arm/collisions/motor_holder_so101_wrist_v1/mesh": "/World/envs/env_0/Robot/Looks/DefaultMaterial",
+   "/World/envs/env_0/Robot/lower_arm/collisions/sts3215_03a_v1/mesh": "/World/envs/env_0/Robot/Looks/DefaultMaterial",
+   "/World/envs/env_0/Robot/wrist/visuals/sts3215_03a_no_horn_v1/mesh": "/World/envs/env_0/Robot/Looks/material_sts3215",
+   "/World/envs/env_0/Robot/wrist/visuals/wrist_roll_pitch_so101_v2/mesh": "/World/envs/env_0/Robot/Looks/material_a_3d_printed",
+   "/World/envs/env_0/Robot/wrist/collisions/sts3215_03a_no_horn_v1/mesh": "/World/envs/env_0/Robot/Looks/DefaultMaterial",
+   "/World/envs/env_0/Robot/wrist/collisions/wrist_roll_pitch_so101_v2/mesh": "/World/envs/env_0/Robot/Looks/DefaultMaterial",
+   "/World/envs/env_0/Robot/gripper/visuals/sts3215_03a_v1/mesh": "/World/envs/env_0/Robot/Looks/material_sts3215",
+   "/World/envs/env_0/Robot/gripper/visuals/wrist_roll_follower_so101_v1/mesh": "/World/envs/env_0/Robot/Looks/material_a_3d_printed",
+   "/World/envs/env_0/Robot/gripper/visuals/camera_mount/bolts/Cylinder_012": "/World/envs/env_0/Robot/Looks/Silver",
+   "/World/envs/env_0/Robot/gripper/visuals/camera_mount/pcb/Cube_004": "/World/envs/env_0/Robot/Looks/PCB",
+   "/World/envs/env_0/Robot/gripper/visuals/camera_mount/Cone/Cone": "/World/envs/env_0/Robot/Looks/Silver",
+   "/World/envs/env_0/Robot/gripper/visuals/camera_mount/rings/Cylinder_021": "/World/envs/env_0/Robot/Looks/Silver",
+   "/World/envs/env_0/Robot/gripper/visuals/camera_mount/transistors/Cube_009": "/World/envs/env_0/Robot/Looks/Silver",
+   "/World/envs/env_0/Robot/gripper/visuals/camera_mount/mount/Cylinder_015": "/World/envs/env_0/Robot/Looks/material_a_3d_printed",
+   "/World/envs/env_0/Robot/gripper/visuals/camera_mount/camera_cover/Cylinder_019": "/World/envs/env_0/Robot/Looks/material_sts3215",
+   "/World/envs/env_0/Robot/gripper/visuals/camera_mount/focus/Cylinder_023": "/World/envs/env_0/Robot/Looks/material_sts3215",
+   "/World/envs/env_0/Robot/gripper/visuals/camera_mount/lens/Sphere": "/World/envs/env_0/Robot/Looks/Lens",
+   "/World/envs/env_0/Robot/gripper/visuals/camera_mount/socket/Cube_010": "/World/envs/env_0/Robot/Looks/material_sts3215",
+   "/World/envs/env_0/Robot/gripper/collisions/sts3215_03a_v1/mesh": "/World/envs/env_0/Robot/Looks/DefaultMaterial",
+   "/World/envs/env_0/Robot/gripper/collisions/wrist_roll_follower_so101_v1/mesh": "/World/envs/env_0/Robot/Looks/DefaultMaterial",
+   "/World/envs/env_0/Robot/gripper/collisions/camera_mount/Cube": null,
+   "/World/envs/env_0/Robot/jaw/visuals/moving_jaw_so101_v1/mesh": "/World/envs/env_0/Robot/Looks/material_a_3d_printed",
+   "/World/envs/env_0/Robot/jaw/collisions/moving_jaw_so101_v1/mesh": "/World/envs/env_0/Robot/Looks/DefaultMaterial"
+  }
+ },
+ "objects_after_reset": {
+  "rack_left": {
+   "pos": [
+    0.18000000715255737,
+    0.07999999821186066,
+    0.05999999865889549
+   ],
+   "quat_wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rpy_deg_xyz": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "vial_1": {
+   "pos": [
+    0.23000000417232513,
+    -0.07999999821186066,
+    0.05000000074505806
+   ],
+   "quat_wxyz": [
+    0.7071067690849304,
+    0.0,
+    0.7071067690849304,
+    0.0
+   ],
+   "rpy_deg_xyz": [
+    0.0,
+    89.98500895767842,
+    0.0
+   ]
+  },
+  "vial_2": {
+   "pos": [
+    0.23000000417232513,
+    0.0,
+    0.05000000074505806
+   ],
+   "quat_wxyz": [
+    0.7071067690849304,
+    0.0,
+    0.7071067690849304,
+    0.0
+   ],
+   "rpy_deg_xyz": [
+    0.0,
+    89.98500895767842,
+    0.0
+   ]
+  },
+  "vial_3": {
+   "pos": [
+    0.23000000417232513,
+    -0.1599999964237213,
+    0.05000000074505806
+   ],
+   "quat_wxyz": [
+    0.7071067690849304,
+    0.0,
+    0.7071067690849304,
+    0.0
+   ],
+   "rpy_deg_xyz": [
+    0.0,
+    89.98500895767842,
+    0.0
+   ]
+  }
+ },
+ "objects_after_warmup10": {
+  "rack_left": {
+   "pos": [
+    0.1799999177455902,
+    0.08000006526708603,
+    0.04100041463971138
+   ],
+   "quat_wxyz": [
+    1.0,
+    -5.1151419029338285e-06,
+    -7.810390343365725e-06,
+    3.3397892451603184e-08
+   ],
+   "rpy_deg_xyz": [
+    -0.0005861521152702617,
+    -0.0008950047865093336,
+    3.83169464127162e-06
+   ]
+  },
+  "vial_1": {
+   "pos": [
+    0.22975006699562073,
+    -0.08023317158222198,
+    0.05047979578375816
+   ],
+   "quat_wxyz": [
+    0.7130016684532166,
+    0.005381274502724409,
+    0.7011218070983887,
+    0.005279141943901777
+   ],
+   "rpy_deg_xyz": [
+    41.907406574309896,
+    88.70660861322155,
+    41.89913040365107
+   ]
+  },
+  "vial_2": {
+   "pos": [
+    0.2297678291797638,
+    2.0863464669673704e-05,
+    0.05054111033678055
+   ],
+   "quat_wxyz": [
+    0.7129073739051819,
+    -0.000414088397519663,
+    0.7012580037117004,
+    -0.0004045929235871881
+   ],
+   "rpy_deg_xyz": [
+    -4.020355068517625,
+    89.05389257341679,
+    -4.019585636421257
+   ]
+  },
+  "vial_3": {
+   "pos": [
+    0.22975535690784454,
+    -0.1599208116531372,
+    0.05052918940782547
+   ],
+   "quat_wxyz": [
+    0.7128807306289673,
+    -0.0017909648595377803,
+    0.7012807130813599,
+    -0.0017935228534042835
+   ],
+   "rpy_deg_xyz": [
+    -17.171415344493628,
+    89.01620073378949,
+    -17.171622622445426
+   ]
+  }
+ },
+ "rack_slots": {
+  "top_01": {
+   "rack_local": [
+    0.02983170747756958,
+    0.029857538640499115,
+    0.09999999403953552
+   ],
+   "world_after_warmup10": [
+    0.20983006114953837,
+    0.10985862892930603,
+    0.14100056920525372
+   ]
+  },
+  "top_02": {
+   "rack_local": [
+    0.09017375111579895,
+    0.029857538640499115,
+    0.09999999403953552
+   ],
+   "world_after_warmup10": [
+    0.2701721047804056,
+    0.10985863296472168,
+    0.14100151179506298
+   ]
+  },
+  "top_03": {
+   "rack_local": [
+    0.09017375111579895,
+    0.09008945524692535,
+    0.09999999403953552
+   ],
+   "world_after_warmup10": [
+    0.2701721007619801,
+    0.1700905495679959,
+    0.1410008956054305
+   ]
+  },
+  "top_04": {
+   "rack_local": [
+    0.030822739005088806,
+    0.09008945524692535,
+    0.09999999403953552
+   ],
+   "world_after_warmup10": [
+    0.2108210886585112,
+    0.17009054559885617,
+    0.14099996849630708
+   ]
+  }
+ },
+ "rack_usd_bbox_local": [
+  [
+   0.0,
+   0.0,
+   -0.006000000052154064
+  ],
+  [
+   0.11999999731779099,
+   0.11999999731779099,
+   0.0729999989271164
+  ]
+ ],
+ "mat": {
+  "world_usd": {
+   "matrix_row_major_usd": [
+    [
+     -3.422854177870249e-08,
+     0.9999999999999993,
+     0.0,
+     0.0
+    ],
+    [
+     -0.9999999999999993,
+     -3.422854177870249e-08,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.2199999988079071,
+     0.0,
+     0.03200000151991844,
+     1.0
+    ]
+   ],
+   "pos": [
+    0.2199999988079071,
+    0.0,
+    0.03200000151991844
+   ],
+   "quat_wxyz": [
+    0.7071067690849305,
+    0.0,
+    0.0,
+    0.7071067932881644
+   ],
+   "rpy_deg_xyz": [
+    0.0,
+    0.0,
+    90.00000196115099
+   ],
+   "axis_x_world": [
+    -3.42285417787025e-08,
+    0.9999999999999996,
+    0.0
+   ],
+   "axis_y_world": [
+    -0.9999999999999996,
+    -3.42285417787025e-08,
+    0.0
+   ],
+   "axis_z_world": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  }
+ },
+ "rect_light": {
+  "world_usd": {
+   "matrix_row_major_usd": [
+    [
+     -1.0,
+     4.440892098500626e-16,
+     0.0,
+     0.0
+    ],
+    [
+     -4.440892098500626e-16,
+     -1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.15197520906989903,
+     0.0015896254767618122,
+     0.5291751687203463,
+     1.0
+    ]
+   ],
+   "pos": [
+    0.15197520906989903,
+    0.0015896254767618122,
+    0.5291751687203463
+   ],
+   "quat_wxyz": [
+    2.220446049250313e-16,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "rpy_deg_xyz": [
+    0.0,
+    0.0,
+    179.99999999999997
+   ],
+   "axis_x_world": [
+    -1.0,
+    4.440892098500626e-16,
+    0.0
+   ],
+   "axis_y_world": [
+    -4.440892098500626e-16,
+    -1.0,
+    0.0
+   ],
+   "axis_z_world": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "attributes": {
+   "collection:lightLink": {
+    "value": null,
+    "authored": false,
+    "type": "opaque"
+   },
+   "collection:lightLink:expansionRule": {
+    "value": "expandPrims",
+    "authored": false,
+    "type": "token"
+   },
+   "collection:lightLink:includeRoot": {
+    "value": true,
+    "authored": false,
+    "type": "bool"
+   },
+   "collection:lightLink:membershipExpression": {
+    "value": null,
+    "authored": false,
+    "type": "pathExpression"
+   },
+   "collection:shadowLink": {
+    "value": null,
+    "authored": false,
+    "type": "opaque"
+   },
+   "collection:shadowLink:expansionRule": {
+    "value": "expandPrims",
+    "authored": false,
+    "type": "token"
+   },
+   "collection:shadowLink:includeRoot": {
+    "value": true,
+    "authored": false,
+    "type": "bool"
+   },
+   "collection:shadowLink:membershipExpression": {
+    "value": null,
+    "authored": false,
+    "type": "pathExpression"
+   },
+   "extent": {
+    "value": [
+     [
+      -50.0,
+      -50.0,
+      -0.0
+     ],
+     [
+      50.0,
+      50.0,
+      0.0
+     ]
+    ],
+    "authored": true,
+    "type": "float3[]"
+   },
+   "inputs:color": {
+    "value": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "authored": false,
+    "type": "color3f"
+   },
+   "inputs:colorTemperature": {
+    "value": 6500.0,
+    "authored": false,
+    "type": "float"
+   },
+   "inputs:diffuse": {
+    "value": 1.0,
+    "authored": false,
+    "type": "float"
+   },
+   "inputs:enableColorTemperature": {
+    "value": false,
+    "authored": false,
+    "type": "bool"
+   },
+   "inputs:exposure": {
+    "value": -1.0,
+    "authored": true,
+    "type": "float"
+   },
+   "inputs:height": {
+    "value": 0.30000001192092896,
+    "authored": true,
+    "type": "float"
+   },
+   "inputs:intensity": {
+    "value": 500.0,
+    "authored": true,
+    "type": "float"
+   },
+   "inputs:normalize": {
+    "value": true,
+    "authored": true,
+    "type": "bool"
+   },
+   "inputs:shaping:cone:angle": {
+    "value": 180.0,
+    "authored": true,
+    "type": "float"
+   },
+   "inputs:shaping:cone:softness": {
+    "value": 0.0,
+    "authored": false,
+    "type": "float"
+   },
+   "inputs:shaping:focus": {
+    "value": 0.0,
+    "authored": false,
+    "type": "float"
+   },
+   "inputs:shaping:focusTint": {
+    "value": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "authored": false,
+    "type": "color3f"
+   },
+   "inputs:shaping:ies:angleScale": {
+    "value": 0.0,
+    "authored": false,
+    "type": "float"
+   },
+   "inputs:shaping:ies:file": {
+    "value": null,
+    "authored": false,
+    "type": "asset"
+   },
+   "inputs:shaping:ies:normalize": {
+    "value": false,
+    "authored": false,
+    "type": "bool"
+   },
+   "inputs:specular": {
+    "value": 1.0,
+    "authored": false,
+    "type": "float"
+   },
+   "inputs:texture:file": {
+    "value": null,
+    "authored": false,
+    "type": "asset"
+   },
+   "inputs:width": {
+    "value": 0.009999999776482582,
+    "authored": true,
+    "type": "float"
+   },
+   "light:materialSyncMode": {
+    "value": "noMaterialResponse",
+    "authored": false,
+    "type": "token"
+   },
+   "light:shaderId": {
+    "value": "RectLight",
+    "authored": false,
+    "type": "token"
+   },
+   "purpose": {
+    "value": "default",
+    "authored": false,
+    "type": "token"
+   },
+   "visibility": {
+    "value": "inherited",
+    "authored": true,
+    "type": "token"
+   },
+   "visibleInPrimaryRay": {
+    "value": true,
+    "authored": true,
+    "type": "bool"
+   },
+   "xformOp:orient": {
+    "value": [
+     0.7071067811865476,
+     0.0,
+     0.0,
+     0.7071067811865475
+    ],
+    "authored": true,
+    "type": "quatd"
+   },
+   "xformOp:scale": {
+    "value": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "authored": true,
+    "type": "double3"
+   },
+   "xformOp:translate": {
+    "value": [
+     0.0015896254767618122,
+     -2.824035039890817e-18,
+     0.50347516953693
+    ],
+    "authored": true,
+    "type": "double3"
+   },
+   "xformOpOrder": {
+    "value": [
+     "xformOp:translate",
+     "xformOp:orient",
+     "xformOp:scale"
+    ],
+    "authored": true,
+    "type": "token[]"
+   }
+  }
+ },
+ "camera_mount": {
+  "local_ops": {
+   "xformOp:translate": [
+    0.3359416810419865,
+    -0.03266326008470638,
+    0.4636436567031064
+   ],
+   "xformOp:orient": [
+    -0.06201888620853424,
+    -0.4556097984313965,
+    -0.022738412022590637,
+    0.8877254128456116
+   ],
+   "xformOp:scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "xformOpOrder": [
+    "xformOp:translate",
+    "xformOp:orient",
+    "xformOp:scale"
+   ]
+  },
+  "world_usd": {
+   "matrix_row_major_usd": [
+    [
+     0.08939179351721595,
+     -0.5771467697717727,
+     -0.811733154056051,
+     0.0
+    ],
+    [
+     0.9912732448217965,
+     0.13083116368418776,
+     0.016141892996445112,
+     0.0
+    ],
+    [
+     0.09688375174528929,
+     -0.8060923103162877,
+     0.5838053835797568,
+     0.0
+    ],
+    [
+     0.1846384691546055,
+     0.3359416810419865,
+     0.4893436558865228,
+     1.0
+    ]
+   ],
+   "pos": [
+    0.1846384691546055,
+    0.3359416810419865,
+    0.4893436558865228
+   ],
+   "quat_wxyz": [
+    0.671570610729274,
+    0.3060862812399762,
+    0.3382432507039922,
+    -0.5838626607298916
+   ],
+   "rpy_deg_xyz": [
+    1.5837928065203402,
+    54.26561253006234,
+    -81.1956612150964
+   ],
+   "axis_x_world": [
+    0.0893917935172159,
+    -0.5771467697717725,
+    -0.8117331540560506
+   ],
+   "axis_y_world": [
+    0.9912732448217962,
+    0.13083116368418773,
+    0.01614189299644511
+   ],
+   "axis_z_world": [
+    0.09688375174528929,
+    -0.8060923103162877,
+    0.5838053835797568
+   ]
+  }
+ },
+ "camera_external_D455": {
+  "prim_path": "/World/envs/env_0/LightStudio/LightBox/camera_mount/rsd455/RSD455/Camera_OmniVision_OV9782_Right",
+  "type": "Camera",
+  "applied_schemas": [],
+  "usd": {
+   "focalLength": 1.9299999475479126,
+   "horizontalAperture": 2.4000000953674316,
+   "verticalAperture": 2.453000068664551,
+   "horizontalApertureOffset": 0.0,
+   "verticalApertureOffset": 0.0,
+   "clippingRange": [
+    0.009999999776482582,
+    1000000.0
+   ],
+   "projection": "perspective",
+   "fStop": 0.0,
+   "focusDistance": 0.5
+  },
+  "gf_camera_fov_deg": {
+   "horizontal": 63.743534088134766,
+   "vertical": 64.87128448486328
+  },
+  "all_attributes": {
+   "cameraProjectionType": {
+    "value": "pinhole",
+    "authored": true,
+    "type": "token"
+   },
+   "clippingPlanes": {
+    "value": [],
+    "authored": false,
+    "type": "float4[]"
+   },
+   "clippingRange": {
+    "value": [
+     0.009999999776482582,
+     1000000.0
+    ],
+    "authored": true,
+    "type": "float2"
+   },
+   "exposure": {
+    "value": 0.0,
+    "authored": false,
+    "type": "float"
+   },
+   "focalLength": {
+    "value": 1.9299999475479126,
+    "authored": true,
+    "type": "float"
+   },
+   "focusDistance": {
+    "value": 0.5,
+    "authored": true,
+    "type": "float"
+   },
+   "fStop": {
+    "value": 0.0,
+    "authored": true,
+    "type": "float"
+   },
+   "fthetaMaxFov": {
+    "value": 98.0,
+    "authored": true,
+    "type": "float"
+   },
+   "horizontalAperture": {
+    "value": 2.4000000953674316,
+    "authored": true,
+    "type": "float"
+   },
+   "horizontalApertureOffset": {
+    "value": 0.0,
+    "authored": false,
+    "type": "float"
+   },
+   "notes": {
+    "value": "N=f/D where D is effective aperture, f is focal length and N is f-number (2 for this cam)... but this uses aperture as sensor size, not hole light passes through after lens",
+    "authored": true,
+    "type": "string"
+   },
+   "omni:kit:cameraLock": {
+    "value": true,
+    "authored": true,
+    "type": "bool"
+   },
+   "omni:kit:centerOfInterest": {
+    "value": [
+     0.0,
+     0.0,
+     -100.0
+    ],
+    "authored": true,
+    "type": "vector3d"
+   },
+   "projection": {
+    "value": "perspective",
+    "authored": false,
+    "type": "token"
+   },
+   "purpose": {
+    "value": "default",
+    "authored": false,
+    "type": "token"
+   },
+   "shutter:close": {
+    "value": 0.0,
+    "authored": false,
+    "type": "double"
+   },
+   "shutter:open": {
+    "value": 0.0,
+    "authored": false,
+    "type": "double"
+   },
+   "stereoRole": {
+    "value": "right",
+    "authored": true,
+    "type": "token"
+   },
+   "verticalAperture": {
+    "value": 2.453000068664551,
+    "authored": true,
+    "type": "float"
+   },
+   "verticalApertureOffset": {
+    "value": 0.0,
+    "authored": false,
+    "type": "float"
+   },
+   "visibility": {
+    "value": "invisible",
+    "authored": true,
+    "type": "token"
+   },
+   "xformOp:orient": {
+    "value": [
+     0.4999999999999997,
+     0.5000000000000001,
+     0.5000000000000001,
+     0.5
+    ],
+    "authored": true,
+    "type": "quatd"
+   },
+   "xformOp:scale": {
+    "value": [
+     1.0,
+     0.9999989867210388,
+     1.0
+    ],
+    "authored": true,
+    "type": "double3"
+   },
+   "xformOp:translate": {
+    "value": [
+     0.0,
+     0.0475,
+     0.0
+    ],
+    "authored": true,
+    "type": "double3"
+   },
+   "xformOpOrder": {
+    "value": [
+     "xformOp:translate",
+     "xformOp:orient",
+     "xformOp:scale"
+    ],
+    "authored": true,
+    "type": "token[]"
+   }
+  },
+  "world_usd": {
+   "matrix_row_major_usd": [
+    [
+     -0.9912732448217965,
+     -0.13083116368418804,
+     -0.01614189299644503,
+     0.0
+    ],
+    [
+     0.09688365357502216,
+     -0.8060914935199085,
+     0.5838047920220446,
+     0.0
+    ],
+    [
+     -0.08939179351721614,
+     0.577146769771773,
+     0.8117331540560507,
+     0.0
+    ],
+    [
+     0.13755299002557017,
+     0.3297272007669876,
+     0.48857691596919167,
+     1.0
+    ]
+   ],
+   "pos": [
+    0.13755299002557017,
+    0.3297272007669876,
+    0.48857691596919167
+   ],
+   "quat_wxyz": [
+    -0.05993245973169943,
+    -0.027775490267683334,
+    0.3055518697575988,
+    0.9498814017015669
+   ],
+   "rpy_deg_xyz": [
+    35.724009309893816,
+    0.9249025105561185,
+    -172.48139003458124
+   ],
+   "axis_x_world": [
+    -0.9912732448217962,
+    -0.130831163684188,
+    -0.016141892996445025
+   ],
+   "axis_y_world": [
+    0.09688375174528947,
+    -0.8060923103162874,
+    0.5838053835797572
+   ],
+   "axis_z_world": [
+    -0.0893917935172161,
+    0.5771467697717728,
+    0.8117331540560504
+   ]
+  },
+  "optical_axis_world": [
+   0.0893917935172161,
+   -0.5771467697717728,
+   -0.8117331540560504
+  ],
+  "optical_axis_deg_below_horizontal": 54.2656125300623,
+  "tiled_camera": {
+   "intrinsic_matrices": [
+    [
+     514.6666259765625,
+     0.0,
+     320.0
+    ],
+    [
+     0.0,
+     514.6666259765625,
+     240.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "image_shape": [
+    480,
+    640
+   ],
+   "pos_w": [
+    0.13755299150943756,
+    0.3297272026538849,
+    0.4885769188404083
+   ],
+   "quat_w_ros": [
+    0.027775496244430542,
+    -0.05993251875042915,
+    0.949881374835968,
+    -0.3055519163608551
+   ],
+   "quat_w_opengl": [
+    -0.059932511299848557,
+    -0.027775492519140244,
+    0.3055519163608551,
+    0.949881374835968
+   ],
+   "quat_w_world": [
+    0.6715706586837769,
+    0.3060861825942993,
+    0.3382432162761688,
+    -0.5838626027107239
+   ],
+   "cfg_update_latest_camera_pose": false,
+   "cfg_data_types": [
+    "rgb",
+    "depth",
+    "instance_id_segmentation_fast"
+   ]
+  },
+  "camera_in_mount": {
+   "matrix_row_major_usd": [
+    [
+     9.367506770274758e-17,
+     -0.9999999999999999,
+     2.8449465006019636e-16,
+     0.0
+    ],
+    [
+     -5.551115123125783e-16,
+     2.237793284010081e-16,
+     0.9999989867210388,
+     0.0
+    ],
+    [
+     -1.0,
+     -1.2663481374630692e-16,
+     -4.996003610813204e-16,
+     0.0
+    ],
+    [
+     1.1102230246251565e-16,
+     -0.04749999999999996,
+     -9.020562075079397e-17,
+     1.0
+    ]
+   ],
+   "pos": [
+    1.1102230246251565e-16,
+    -0.04749999999999996,
+    -9.020562075079397e-17
+   ],
+   "quat_wxyz": [
+    -0.5,
+    -0.5000000000000001,
+    0.5000000000000001,
+    0.49999999999999983
+   ]
+  }
+ },
+ "camera_ego": {
+  "prim_path": "/World/envs/env_0/Robot/gripper/gripper_cam",
+  "type": "Camera",
+  "applied_schemas": [],
+  "usd": {
+   "focalLength": 13.5,
+   "horizontalAperture": 20.954999923706055,
+   "verticalAperture": 15.7162504196167,
+   "horizontalApertureOffset": 0.0,
+   "verticalApertureOffset": 0.0,
+   "clippingRange": [
+    0.009999999776482582,
+    1000000.0
+   ],
+   "projection": "perspective",
+   "fStop": 100.0,
+   "focusDistance": 0.05000000074505806
+  },
+  "gf_camera_fov_deg": {
+   "horizontal": 75.63086700439453,
+   "vertical": 60.405948638916016
+  },
+  "all_attributes": {
+   "cameraProjectionType": {
+    "value": "pinhole",
+    "authored": true,
+    "type": "token"
+   },
+   "clippingPlanes": {
+    "value": [],
+    "authored": false,
+    "type": "float4[]"
+   },
+   "clippingRange": {
+    "value": [
+     0.009999999776482582,
+     1000000.0
+    ],
+    "authored": true,
+    "type": "float2"
+   },
+   "exposure": {
+    "value": 0.0,
+    "authored": false,
+    "type": "float"
+   },
+   "focalLength": {
+    "value": 13.5,
+    "authored": true,
+    "type": "float"
+   },
+   "focusDistance": {
+    "value": 0.05000000074505806,
+    "authored": true,
+    "type": "float"
+   },
+   "fStop": {
+    "value": 100.0,
+    "authored": true,
+    "type": "float"
+   },
+   "horizontalAperture": {
+    "value": 20.954999923706055,
+    "authored": true,
+    "type": "float"
+   },
+   "horizontalApertureOffset": {
+    "value": 0.0,
+    "authored": true,
+    "type": "float"
+   },
+   "omni:kit:cameraLock": {
+    "value": true,
+    "authored": true,
+    "type": "bool"
+   },
+   "projection": {
+    "value": "perspective",
+    "authored": false,
+    "type": "token"
+   },
+   "purpose": {
+    "value": "default",
+    "authored": false,
+    "type": "token"
+   },
+   "shutter:close": {
+    "value": 0.0,
+    "authored": false,
+    "type": "double"
+   },
+   "shutter:open": {
+    "value": 0.0,
+    "authored": false,
+    "type": "double"
+   },
+   "stereoRole": {
+    "value": "mono",
+    "authored": false,
+    "type": "token"
+   },
+   "verticalAperture": {
+    "value": 15.7162504196167,
+    "authored": true,
+    "type": "float"
+   },
+   "verticalApertureOffset": {
+    "value": 0.0,
+    "authored": true,
+    "type": "float"
+   },
+   "visibility": {
+    "value": "inherited",
+    "authored": false,
+    "type": "token"
+   },
+   "xformOp:orient": {
+    "value": [
+     0.9238795042037964,
+     -0.3826834261417389,
+     0.0,
+     0.0
+    ],
+    "authored": true,
+    "type": "quatd"
+   },
+   "xformOp:scale": {
+    "value": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "authored": true,
+    "type": "double3"
+   },
+   "xformOp:translate": {
+    "value": [
+     -0.004999999888241291,
+     0.05999999865889549,
+     -0.06199999898672104
+    ],
+    "authored": true,
+    "type": "double3"
+   },
+   "xformOpOrder": {
+    "value": [
+     "xformOp:translate",
+     "xformOp:orient",
+     "xformOp:scale"
+    ],
+    "authored": true,
+    "type": "token[]"
+   }
+  },
+  "world_usd": {
+   "matrix_row_major_usd": [
+    [
+     -6.079674190528906e-06,
+     2.980212658654223e-06,
+     0.9999999999770781,
+     0.0
+    ],
+    [
+     0.7070991307208261,
+     0.7071144315661008,
+     2.1915809550708627e-06,
+     0.0
+    ],
+    [
+     -0.7071144315433608,
+     0.7070991307179417,
+     -6.406331140001722e-06,
+     0.0
+    ],
+    [
+     0.28947267129514676,
+     0.08061591545988364,
+     0.2618522492525529,
+     1.0
+    ]
+   ],
+   "pos": [
+    0.28947267129514676,
+    0.08061591545988364,
+    0.2618522492525529
+   ],
+   "quat_wxyz": [
+    -0.6532805571805981,
+    0.270594666933242,
+    0.6532853353572677,
+    0.27059436513763097
+   ],
+   "rpy_deg_xyz": [
+    161.11438218077646,
+    -89.99961206156438,
+    153.88623772244839
+   ],
+   "axis_x_world": [
+    -6.079674190528906e-06,
+    2.980212658654223e-06,
+    0.9999999999770781
+   ],
+   "axis_y_world": [
+    0.707099130720826,
+    0.7071144315661007,
+    2.1915809550708623e-06
+   ],
+   "axis_z_world": [
+    -0.7071144315433607,
+    0.7070991307179416,
+    -6.40633114000172e-06
+   ]
+  },
+  "optical_axis_world": [
+   0.7071144315433607,
+   -0.7070991307179416,
+   6.40633114000172e-06
+  ],
+  "optical_axis_deg_below_horizontal": -0.0003670557364878426,
+  "tiled_camera": {
+   "intrinsic_matrices": [
+    [
+     412.3121032714844,
+     0.0,
+     320.0
+    ],
+    [
+     0.0,
+     412.3121032714844,
+     240.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "image_shape": [
+    480,
+    640
+   ],
+   "pos_w": [
+    0.18270227313041687,
+    0.08258739858865738,
+    0.2914525866508484
+   ],
+   "quat_w_ros": [
+    0.02131536416709423,
+    0.7890961766242981,
+    -0.613158106803894,
+    -0.03016601875424385
+   ],
+   "quat_w_opengl": [
+    0.7890961766242981,
+    -0.02131536416709423,
+    0.03016601875424385,
+    -0.613158106803894
+   ],
+   "quat_w_world": [
+    0.6753864288330078,
+    -0.08354370296001434,
+    0.7268678545951843,
+    0.0923943892121315
+   ],
+   "cfg_update_latest_camera_pose": false,
+   "cfg_data_types": [
+    "rgb",
+    "depth",
+    "instance_id_segmentation_fast"
+   ]
+  }
+ },
+ "lightbox_panels": {
+  "Base": {
+   "world_bbox_min": [
+    -0.10202479903633274,
+    -0.3810000121593476,
+    0.023274999111890793
+   ],
+   "world_bbox_max": [
+    0.40597521717613083,
+    0.3810000121593476,
+    0.02812499925494194
+   ],
+   "n_points": 8,
+   "world_points": [
+    [
+     0.4059752171761306,
+     -0.3810000121593476,
+     0.02812499925494194
+    ],
+    [
+     0.40597521717613083,
+     0.3810000121593475,
+     0.02812499925494194
+    ],
+    [
+     -0.10202479903633277,
+     -0.3810000121593475,
+     0.02812499925494194
+    ],
+    [
+     -0.10202479903633255,
+     0.3810000121593476,
+     0.02812499925494194
+    ],
+    [
+     0.4059752171761306,
+     -0.3810000121593476,
+     0.023274999111890793
+    ],
+    [
+     0.40597521717613083,
+     0.3810000121593475,
+     0.023274999111890793
+    ],
+    [
+     -0.10202479903633277,
+     -0.3810000121593475,
+     0.023274999111890793
+    ],
+    [
+     -0.10202479903633255,
+     0.3810000121593476,
+     0.023274999111890793
+    ]
+   ],
+   "visibility": "inherited"
+  },
+  "Back": {
+   "world_bbox_min": [
+    0.40213784879819064,
+    -0.3810000121593476,
+    0.02524797331589579
+   ],
+   "world_bbox_max": [
+    0.4069878489412421,
+    0.3810000121593475,
+    0.5332479895283592
+   ],
+   "n_points": 8,
+   "world_points": [
+    [
+     0.40213784879819076,
+     -0.3810000121593476,
+     0.5332479895283592
+    ],
+    [
+     0.402137848798191,
+     0.3810000121593475,
+     0.5332479895283592
+    ],
+    [
+     0.40213784879819064,
+     -0.3810000121593476,
+     0.02524797331589579
+    ],
+    [
+     0.40213784879819087,
+     0.3810000121593475,
+     0.02524797331589579
+    ],
+    [
+     0.4069878489412419,
+     -0.3810000121593476,
+     0.5332479895283592
+    ],
+    [
+     0.4069878489412421,
+     0.3810000121593475,
+     0.5332479895283592
+    ],
+    [
+     0.4069878489412418,
+     -0.3810000121593476,
+     0.02524797331589579
+    ],
+    [
+     0.406987848941242,
+     0.3810000121593475,
+     0.02524797331589579
+    ]
+   ],
+   "visibility": "inherited"
+  },
+  "Left": {
+   "world_bbox_min": [
+    -0.10202479903633258,
+    0.38143443463342075,
+    0.023688158470454357
+   ],
+   "world_bbox_max": [
+    0.40597521717613083,
+    0.3862844347764721,
+    0.5316881746829177
+   ],
+   "n_points": 8,
+   "world_points": [
+    [
+     0.40597521717613083,
+     0.3862844347764719,
+     0.5316881746829177
+    ],
+    [
+     0.40597521717613083,
+     0.386284434776472,
+     0.023688158470454357
+    ],
+    [
+     -0.10202479903633258,
+     0.386284434776472,
+     0.5316881746829177
+    ],
+    [
+     -0.10202479903633258,
+     0.3862844347764721,
+     0.023688158470454357
+    ],
+    [
+     0.40597521717613083,
+     0.38143443463342075,
+     0.5316881746829177
+    ],
+    [
+     0.40597521717613083,
+     0.38143443463342086,
+     0.023688158470454357
+    ],
+    [
+     -0.10202479903633258,
+     0.38143443463342086,
+     0.5316881746829177
+    ],
+    [
+     -0.10202479903633258,
+     0.38143443463342097,
+     0.023688158470454357
+    ]
+   ],
+   "visibility": "inherited"
+  },
+  "Right": {
+   "world_bbox_min": [
+    -0.10202479903633274,
+    -0.3833627747581164,
+    0.023688158470455023
+   ],
+   "world_bbox_max": [
+    0.4059752171761306,
+    -0.37851277461506505,
+    0.5316881746829184
+   ],
+   "n_points": 8,
+   "world_points": [
+    [
+     0.4059752171761306,
+     -0.3785127746150653,
+     0.5316881746829184
+    ],
+    [
+     0.4059752171761306,
+     -0.37851277461506516,
+     0.023688158470455023
+    ],
+    [
+     -0.10202479903633274,
+     -0.37851277461506516,
+     0.5316881746829184
+    ],
+    [
+     -0.10202479903633274,
+     -0.37851277461506505,
+     0.023688158470455023
+    ],
+    [
+     0.4059752171761306,
+     -0.3833627747581164,
+     0.5316881746829184
+    ],
+    [
+     0.4059752171761306,
+     -0.3833627747581163,
+     0.023688158470455023
+    ],
+    [
+     -0.10202479903633274,
+     -0.3833627747581163,
+     0.5316881746829184
+    ],
+    [
+     -0.10202479903633274,
+     -0.3833627747581162,
+     0.023688158470455023
+    ]
+   ],
+   "visibility": "inherited"
+  },
+  "Top": {
+   "world_bbox_min": [
+    -0.10202479903633274,
+    -0.3810000121593476,
+    0.5302860272272308
+   ],
+   "world_bbox_max": [
+    0.40597521717613083,
+    0.3810000121593476,
+    0.5307710272240737
+   ],
+   "n_points": 8,
+   "world_points": [
+    [
+     0.4059752171761306,
+     -0.3810000121593476,
+     0.5307710272240737
+    ],
+    [
+     0.40597521717613083,
+     0.3810000121593475,
+     0.5307710272240737
+    ],
+    [
+     -0.10202479903633277,
+     -0.3810000121593475,
+     0.5307710272240737
+    ],
+    [
+     -0.10202479903633255,
+     0.3810000121593476,
+     0.5307710272240737
+    ],
+    [
+     0.4059752171761306,
+     -0.3810000121593476,
+     0.5302860272272308
+    ],
+    [
+     0.40597521717613083,
+     0.3810000121593475,
+     0.5302860272272308
+    ],
+    [
+     -0.10202479903633277,
+     -0.3810000121593475,
+     0.5302860272272308
+    ],
+    [
+     -0.10202479903633255,
+     0.3810000121593476,
+     0.5302860272272308
+    ]
+   ],
+   "visibility": "inherited"
+  }
+ },
+ "used_layers": [
+  {
+   "identifier": "/workspace/Sim-to-Real-SO-101-Workshop/source/sim_to_real_so101/assets/usd/Vial_rack_simple.usda",
+   "realPath": "/workspace/Sim-to-Real-SO-101-Workshop/source/sim_to_real_so101/assets/usd/Vial_rack_simple.usda"
+  },
+  {
+   "identifier": "/workspace/Sim-to-Real-SO-101-Workshop/source/sim_to_real_so101/assets/usd/SO-ARM101-USD.usd",
+   "realPath": "/workspace/Sim-to-Real-SO-101-Workshop/source/sim_to_real_so101/assets/usd/SO-ARM101-USD.usd"
+  },
+  {
+   "identifier": "/workspace/Sim-to-Real-SO-101-Workshop/source/sim_to_real_so101/assets/usd/lightbox-simple.usd",
+   "realPath": "/workspace/Sim-to-Real-SO-101-Workshop/source/sim_to_real_so101/assets/usd/lightbox-simple.usd"
+  },
+  {
+   "identifier": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Sensors/Intel/RealSense/rsd455.usd",
+   "realPath": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Sensors/Intel/RealSense/rsd455.usd",
+   "sha256_of_exported_text": "7a97e141cac6070a950fc8c7566a95e0c0902424871ab9555222acc7780b8f02"
+  },
+  {
+   "identifier": "/workspace/Sim-to-Real-SO-101-Workshop/source/sim_to_real_so101/assets/usd/mat.usda",
+   "realPath": "/workspace/Sim-to-Real-SO-101-Workshop/source/sim_to_real_so101/assets/usd/mat.usda"
+  },
+  {
+   "identifier": "/workspace/Sim-to-Real-SO-101-Workshop/source/sim_to_real_so101/assets/usd/Vial_opaque.usda",
+   "realPath": "/workspace/Sim-to-Real-SO-101-Workshop/source/sim_to_real_so101/assets/usd/Vial_opaque.usda"
+  },
+  {
+   "identifier": "anon:0x76cc191ce550:World0.usd",
+   "realPath": ""
+  },
+  {
+   "identifier": "anon:0x76cc19164380:World0-session.usda",
+   "realPath": ""
+  }
+ ],
+ "images_nominal": {
+  "front": {
+   "rgb_shape": [
+    480,
+    640,
+    3
+   ],
+   "rgb_mean": [
+    109.59546875,
+    98.69920572916666,
+    86.43482421875
+   ],
+   "n_instances": 34
+  },
+  "wrist": {
+   "rgb_shape": [
+    480,
+    640,
+    3
+   ],
+   "rgb_mean": [
+    81.222216796875,
+    71.00841145833333,
+    50.08628580729167
+   ],
+   "n_instances": 9
+  },
+  "note": "rendered after the 10 warm-up steps, i.e. the first frame the policy sees"
+ },
+ "seeds": {
+  "convention": "v0: random/np/torch(+cuda) seeded with k immediately before env.reset(); vial pose_range = Eval ranges, every other DR at centre",
+  "vial_pose_range": {
+   "x": [
+    -0.04,
+    0.04
+   ],
+   "y": [
+    -0.01,
+    0.01
+   ],
+   "roll": [
+    -0.3,
+    0.3
+   ],
+   "yaw": [
+    0.0,
+    0.0
+   ]
+  },
+  "by_seed": {
+   "0": {
+    "after_reset": {
+     "rack_left": {
+      "pos": [
+       0.18000000715255737,
+       0.07999999821186066,
+       0.05999999865889549
+      ],
+      "quat_wxyz": [
+       1.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "rpy_deg_xyz": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.22602610290050507,
+       -0.07313039153814316,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7042428255081177,
+       -0.06357647478580475,
+       0.7042428255081177,
+       0.06357650458812714
+      ],
+      "rpy_deg_xyz": [
+       15.718670109178127,
+       89.96910712135097,
+       16.515394162532075
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.2470889836549759,
+       -0.008886164054274559,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7053213715553284,
+       -0.050216689705848694,
+       0.7053213715553284,
+       0.05021670088171959
+      ],
+      "rpy_deg_xyz": [
+       9.540193628106877,
+       89.97533189917306,
+       9.769644860853944
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.2427186518907547,
+       -0.16832876205444336,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.6995898485183716,
+       -0.10283026844263077,
+       0.6995898485183716,
+       0.10283024609088898
+      ],
+      "rpy_deg_xyz": [
+       -142.33554427859443,
+       90.0,
+       -135.0439706980629
+      ]
+     }
+    },
+    "after_warmup10": {
+     "rack_left": {
+      "pos": [
+       0.1799999177455902,
+       0.08000006526708603,
+       0.04100041463971138
+      ],
+      "quat_wxyz": [
+       1.0,
+       -5.1151419029338285e-06,
+       -7.810390343365725e-06,
+       3.3397892451603184e-08
+      ],
+      "rpy_deg_xyz": [
+       -0.0005861521152702617,
+       -0.0008950047865093336,
+       3.83169464127162e-06
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.226752370595932,
+       -0.07346469163894653,
+       0.05035064369440079
+      ],
+      "quat_wxyz": [
+       0.7123233079910278,
+       -0.09638461470603943,
+       0.6946828961372375,
+       0.026854107156395912
+      ],
+      "rpy_deg_xyz": [
+       -80.76970283407128,
+       84.18503644578962,
+       -70.75825675923096
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.2463260442018509,
+       -0.008972673676908016,
+       0.050518035888671875
+      ],
+      "quat_wxyz": [
+       0.7100353240966797,
+       -0.036996837705373764,
+       0.7004764676094055,
+       0.061756838113069534
+      ],
+      "rpy_deg_xyz": [
+       64.88566433541342,
+       87.84946742039367,
+       72.89546225507071
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.24169619381427765,
+       -0.1679058074951172,
+       0.05050868168473244
+      ],
+      "quat_wxyz": [
+       0.7051985859870911,
+       -0.08888290822505951,
+       0.6955931186676025,
+       0.10461794584989548
+      ],
+      "rpy_deg_xyz": [
+       50.732965583133776,
+       88.50600271377813,
+       66.46270237473159
+      ]
+     }
+    },
+    "after_warmup60": {
+     "rack_left": {
+      "pos": [
+       0.18000002205371857,
+       0.08000004291534424,
+       0.04100029915571213
+      ],
+      "quat_wxyz": [
+       0.9999999403953552,
+       1.1244034112678492e-06,
+       3.3237245133932447e-06,
+       -5.3334119343162456e-08
+      ],
+      "rpy_deg_xyz": [
+       0.00012884711188118072,
+       0.00038087075793629896,
+       -6.1112112682761495e-06
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.22644826769828796,
+       -0.07184476405382156,
+       0.050220787525177
+      ],
+      "quat_wxyz": [
+       0.7130733132362366,
+       -0.134501114487648,
+       0.6879778504371643,
+       -0.011060432530939579
+      ],
+      "rpy_deg_xyz": [
+       -85.25318574223982,
+       78.00948597113346,
+       -75.1830126250278
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.24639230966567993,
+       -0.009561687707901001,
+       0.050338249653577805
+      ],
+      "quat_wxyz": [
+       0.7090922594070435,
+       -0.023045724257826805,
+       0.7006974816322327,
+       0.07536674290895462
+      ],
+      "rpy_deg_xyz": [
+       76.89161758537395,
+       85.70531392386259,
+       84.87789692429652
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.2418222725391388,
+       -0.168391615152359,
+       0.05037599056959152
+      ],
+      "quat_wxyz": [
+       0.703659176826477,
+       -0.07730265706777573,
+       0.6967396140098572,
+       0.11593995243310928
+      ],
+      "rpy_deg_xyz": [
+       71.98992965614978,
+       86.81916405743755,
+       87.70331889487045
+      ]
+     }
+    }
+   },
+   "1": {
+    "after_reset": {
+     "rack_left": {
+      "pos": [
+       0.18000000715255737,
+       0.07999999821186066,
+       0.05999999865889549
+      ],
+      "quat_wxyz": [
+       1.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "rpy_deg_xyz": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.2028222680091858,
+       -0.08730520308017731,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7029261589050293,
+       0.076777882874012,
+       0.7029261589050293,
+       -0.07677781581878662
+      ],
+      "rpy_deg_xyz": [
+       120.86593780425852,
+       90.0,
+       110.76814994414366
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.22563113272190094,
+       0.003802998922765255,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.701343297958374,
+       0.09009737521409988,
+       0.701343297958374,
+       -0.09009740501642227
+      ],
+      "rpy_deg_xyz": [
+       -26.7943453654236,
+       89.97745622852702,
+       -30.12696268290322
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.22845539450645447,
+       -0.1698729246854782,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7060790657997131,
+       -0.03810926899313927,
+       0.7060790657997131,
+       0.03810925781726837
+      ],
+      "rpy_deg_xyz": [
+       -12.213416617384826,
+       89.97799301474406,
+       -11.942658765310199
+      ]
+     }
+    },
+    "after_warmup10": {
+     "rack_left": {
+      "pos": [
+       0.1799999177455902,
+       0.08000006526708603,
+       0.04100041463971138
+      ],
+      "quat_wxyz": [
+       1.0,
+       -5.1151419029338285e-06,
+       -7.810390343365725e-06,
+       3.3397892451603184e-08
+      ],
+      "rpy_deg_xyz": [
+       -0.0005861521152702617,
+       -0.0008950047865093336,
+       3.83169464127162e-06
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.20253050327301025,
+       -0.08754900097846985,
+       0.05054335668683052
+      ],
+      "quat_wxyz": [
+       0.70924311876297,
+       0.08290532976388931,
+       0.6964938640594482,
+       -0.07069119065999985
+      ],
+      "rpy_deg_xyz": [
+       50.007702119591166,
+       88.56943428428808,
+       37.53642161699782
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.22552983462810516,
+       0.0043821027502417564,
+       0.05049034208059311
+      ],
+      "quat_wxyz": [
+       0.7055761218070984,
+       0.07709658890962601,
+       0.6968752145767212,
+       -0.10287562757730484
+      ],
+      "rpy_deg_xyz": [
+       -64.0368867253988,
+       87.79526786997305,
+       -78.66213353876036
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.22817857563495636,
+       -0.16960309445858002,
+       0.05049647018313408
+      ],
+      "quat_wxyz": [
+       0.7123565077781677,
+       -0.044560711830854416,
+       0.6996831893920898,
+       0.03171767294406891
+      ],
+      "rpy_deg_xyz": [
+       -48.47325262177606,
+       88.53801018511064,
+       -42.28902274180138
+      ]
+     }
+    },
+    "after_warmup60": {
+     "rack_left": {
+      "pos": [
+       0.18000002205371857,
+       0.08000004291534424,
+       0.04100029915571213
+      ],
+      "quat_wxyz": [
+       0.9999999403953552,
+       1.1244034112678492e-06,
+       3.3237245133932447e-06,
+       -5.3334119343162456e-08
+      ],
+      "rpy_deg_xyz": [
+       0.00012884711188118072,
+       0.00038087075793629896,
+       -6.1112112682761495e-06
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.2020353376865387,
+       -0.08971279114484787,
+       0.050232142210006714
+      ],
+      "quat_wxyz": [
+       0.7127621173858643,
+       0.1338331252336502,
+       0.6882212162017822,
+       -0.02025853656232357
+      ],
+      "rpy_deg_xyz": [
+       84.08375898365169,
+       80.57421132437845,
+       71.53049598987408
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.22613130509853363,
+       0.00671554496511817,
+       0.05024106055498123
+      ],
+      "quat_wxyz": [
+       0.6956540942192078,
+       0.021373094990849495,
+       0.7007328867912292,
+       -0.15678636729717255
+      ],
+      "rpy_deg_xyz": [
+       -84.87705443695255,
+       79.003075181953,
+       -99.41877119961096
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.2277887463569641,
+       -0.16616776585578918,
+       0.05021405220031738
+      ],
+      "quat_wxyz": [
+       0.7117201685905457,
+       -0.12446427345275879,
+       0.6897237300872803,
+       -0.0473732091486454
+      ],
+      "rpy_deg_xyz": [
+       -85.85396726897062,
+       75.92731253130256,
+       -79.55682537498505
+      ]
+     }
+    }
+   },
+   "2": {
+    "after_reset": {
+     "rack_left": {
+      "pos": [
+       0.18000000715255737,
+       0.07999999821186066,
+       0.05999999865889549
+      ],
+      "quat_wxyz": [
+       1.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "rpy_deg_xyz": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.26592668890953064,
+       -0.08089528977870941,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7069829702377319,
+       -0.013229291886091232,
+       0.7069829702377319,
+       0.013229360803961754
+      ],
+      "rpy_deg_xyz": [
+       36.590209070408406,
+       89.97084814755371,
+       37.365964279003144
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.19068878889083862,
+       0.0006422828882932663,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7044467329978943,
+       0.061275847256183624,
+       0.7044467329978943,
+       -0.0612759068608284
+      ],
+      "rpy_deg_xyz": [
+       -30.630685132188766,
+       89.97028136752168,
+       -33.429637808551895
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.21482369303703308,
+       -0.1536947637796402,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7071067094802856,
+       0.00026491039898246527,
+       0.7071067094802856,
+       -0.0002648929366841912
+      ],
+      "rpy_deg_xyz": [
+       21.57255865715563,
+       89.97974772258536,
+       21.566756661895063
+      ]
+     }
+    },
+    "after_warmup10": {
+     "rack_left": {
+      "pos": [
+       0.1799999177455902,
+       0.08000006526708603,
+       0.04100041463971138
+      ],
+      "quat_wxyz": [
+       1.0,
+       -5.1151419029338285e-06,
+       -7.810390343365725e-06,
+       3.3397892451603184e-08
+      ],
+      "rpy_deg_xyz": [
+       -0.0005861521152702617,
+       -0.0008950047865093336,
+       3.83169464127162e-06
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.2656833529472351,
+       -0.08088119328022003,
+       0.05053190514445305
+      ],
+      "quat_wxyz": [
+       0.7127847075462341,
+       -0.01361796259880066,
+       0.7011334300041199,
+       0.012826611287891865
+      ],
+      "rpy_deg_xyz": [
+       -4.957054502260364,
+       89.05406504825719,
+       -2.814080783016849
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.19043102860450745,
+       0.0005922145210206509,
+       0.05045542120933533
+      ],
+      "quat_wxyz": [
+       0.7106239795684814,
+       0.06290417909622192,
+       0.6982084512710571,
+       -0.05967903882265091
+      ],
+      "rpy_deg_xyz": [
+       19.53450829956537,
+       88.96060276549001,
+       9.588884791632706
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.214581698179245,
+       -0.15350118279457092,
+       0.0505019836127758
+      ],
+      "quat_wxyz": [
+       0.7129502296447754,
+       -0.004204154945909977,
+       0.7011865973472595,
+       -0.004655696451663971
+      ],
+      "rpy_deg_xyz": [
+       -36.9672003024309,
+       88.80675250123373,
+       -37.003790037837376
+      ]
+     }
+    },
+    "after_warmup60": {
+     "rack_left": {
+      "pos": [
+       0.18000002205371857,
+       0.08000004291534424,
+       0.04100029915571213
+      ],
+      "quat_wxyz": [
+       0.9999999403953552,
+       1.1244034112678492e-06,
+       3.3237245133932447e-06,
+       -5.3334119343162456e-08
+      ],
+      "rpy_deg_xyz": [
+       0.00012884711188118072,
+       0.00038087075793629896,
+       -6.1112112682761495e-06
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.2656809985637665,
+       -0.08085165172815323,
+       0.05051431432366371
+      ],
+      "quat_wxyz": [
+       0.7128244042396545,
+       -0.01429865974932909,
+       0.701091468334198,
+       0.012157067656517029
+      ],
+      "rpy_deg_xyz": [
+       -11.41624042674468,
+       89.03400147292295,
+       -9.272356654300623
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.1899108737707138,
+       -0.002345927059650421,
+       0.050230398774147034
+      ],
+      "quat_wxyz": [
+       0.7130802273750305,
+       0.13108012080192566,
+       0.6886714696884155,
+       0.008136293850839138
+      ],
+      "rpy_deg_xyz": [
+       85.06786292226406,
+       78.5282841836912,
+       75.04300220926648
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.21457424759864807,
+       -0.1509746015071869,
+       0.050224535167217255
+      ],
+      "quat_wxyz": [
+       0.7103762626647949,
+       -0.0626484602689743,
+       0.6982590556144714,
+       -0.06225117668509483
+      ],
+      "rpy_deg_xyz": [
+       -84.47497779097279,
+       79.81872722785988,
+       -84.44265902970253
+      ]
+     }
+    }
+   },
+   "3": {
+    "after_reset": {
+     "rack_left": {
+      "pos": [
+       0.18000000715255737,
+       0.07999999821186066,
+       0.05999999865889549
+      ],
+      "quat_wxyz": [
+       1.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "rpy_deg_xyz": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.23339329659938812,
+       -0.0746067464351654,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7025094628334045,
+       -0.08050097525119781,
+       0.7025094628334045,
+       0.0805009976029396
+      ],
+      "rpy_deg_xyz": [
+       18.252013611814018,
+       89.97547264348269,
+       19.634036674997017
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.25791847705841064,
+       -0.004391645547002554,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7070214748382568,
+       -0.01098280493170023,
+       0.7070214748382568,
+       0.010982783511281013
+      ],
+      "rpy_deg_xyz": [
+       -51.3457026312467,
+       89.98726608564897,
+       -50.27646715138101
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.26402854919433594,
+       -0.1520642340183258,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7070358991622925,
+       0.010013901628553867,
+       0.7070358991622925,
+       -0.010013842023909092
+      ],
+      "rpy_deg_xyz": [
+       134.1637446917082,
+       90.0,
+       133.3166382053423
+      ]
+     }
+    },
+    "after_warmup10": {
+     "rack_left": {
+      "pos": [
+       0.1799999177455902,
+       0.08000006526708603,
+       0.04100041463971138
+      ],
+      "quat_wxyz": [
+       1.0,
+       -5.1151419029338285e-06,
+       -7.810390343365725e-06,
+       3.3397892451603184e-08
+      ],
+      "rpy_deg_xyz": [
+       -0.0005861521152702617,
+       -0.0008950047865093336,
+       3.83169464127162e-06
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.23409493267536163,
+       -0.07360861450433731,
+       0.05028289556503296
+      ],
+      "quat_wxyz": [
+       0.712074339389801,
+       -0.11840888112783432,
+       0.6908657550811768,
+       0.04042026400566101
+      ],
+      "rpy_deg_xyz": [
+       -81.24558521769201,
+       83.44753919257556,
+       -68.32749511441682
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.25767767429351807,
+       -0.004277705680578947,
+       0.05052707716822624
+      ],
+      "quat_wxyz": [
+       0.712761402130127,
+       -0.013593104667961597,
+       0.7012249827384949,
+       0.008358187042176723
+      ],
+      "rpy_deg_xyz": [
+       -25.2965805357867,
+       88.97322809362751,
+       -23.517764930872552
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.2637925148010254,
+       -0.15192320942878723,
+       0.050521913915872574
+      ],
+      "quat_wxyz": [
+       0.7127852439880371,
+       0.0068520717322826385,
+       0.701225996017456,
+       -0.013129212893545628
+      ],
+      "rpy_deg_xyz": [
+       -27.694210188051965,
+       88.93425215211991,
+       -29.313389163263615
+      ]
+     }
+    },
+    "after_warmup60": {
+     "rack_left": {
+      "pos": [
+       0.18000002205371857,
+       0.08000004291534424,
+       0.04100029915571213
+      ],
+      "quat_wxyz": [
+       0.9999999403953552,
+       1.1244034112678492e-06,
+       3.3237245133932447e-06,
+       -5.3334119343162456e-08
+      ],
+      "rpy_deg_xyz": [
+       0.00012884711188118072,
+       0.00038087075793629896,
+       -6.1112112682761495e-06
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.23382540047168732,
+       -0.07243713736534119,
+       0.05023137852549553
+      ],
+      "quat_wxyz": [
+       0.7130745649337769,
+       -0.1461365669965744,
+       0.6855700016021729,
+       0.012752062641084194
+      ],
+      "rpy_deg_xyz": [
+       -84.82977185007323,
+       78.94756367451035,
+       -71.8675264598947
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.257574200630188,
+       -0.0014634218532592058,
+       0.05022507905960083
+      ],
+      "quat_wxyz": [
+       0.7109047174453735,
+       -0.07859392464160919,
+       0.6966599822044373,
+       -0.055697664618492126
+      ],
+      "rpy_deg_xyz": [
+       -84.87698486769241,
+       79.04077918586772,
+       -83.01313691412534
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.26385846734046936,
+       -0.14912298321723938,
+       0.05023426562547684
+      ],
+      "quat_wxyz": [
+       0.7089207768440247,
+       -0.05839473381638527,
+       0.6986377239227295,
+       -0.07698574662208557
+      ],
+      "rpy_deg_xyz": [
+       -84.8996512009631,
+       78.98178444890218,
+       -86.41308694442
+      ]
+     }
+    }
+   },
+   "4": {
+    "after_reset": {
+     "rack_left": {
+      "pos": [
+       0.18000000715255737,
+       0.07999999821186066,
+       0.05999999865889549
+      ],
+      "quat_wxyz": [
+       1.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "rpy_deg_xyz": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.21056392788887024,
+       -0.0819491297006607,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7051851749420166,
+       -0.052094731479883194,
+       0.7051851749420166,
+       0.0520947203040123
+      ],
+      "rpy_deg_xyz": [
+       -44.592251589773284,
+       89.98938790574682,
+       -40.712776004565995
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.23545533418655396,
+       0.009280351921916008,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7027729153633118,
+       -0.07816792279481888,
+       0.7027729153633118,
+       0.07816793769598007
+      ],
+      "rpy_deg_xyz": [
+       63.253030693397925,
+       89.9926510244696,
+       74.27705735733247
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.20399680733680725,
+       -0.15250888466835022,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7054295539855957,
+       0.048673395067453384,
+       0.7054295539855957,
+       -0.04867340624332428
+      ],
+      "rpy_deg_xyz": [
+       -9.942237655020065,
+       89.97584527242697,
+       -10.18359541700538
+      ]
+     }
+    },
+    "after_warmup10": {
+     "rack_left": {
+      "pos": [
+       0.1799999177455902,
+       0.08000006526708603,
+       0.04100041463971138
+      ],
+      "quat_wxyz": [
+       1.0,
+       -5.1151419029338285e-06,
+       -7.810390343365725e-06,
+       3.3397892451603184e-08
+      ],
+      "rpy_deg_xyz": [
+       -0.0005861521152702617,
+       -0.0008950047865093336,
+       3.83169464127162e-06
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.21029120683670044,
+       -0.08174455165863037,
+       0.05051982402801514
+      ],
+      "quat_wxyz": [
+       0.7113639712333679,
+       -0.05712252855300903,
+       0.6989130973815918,
+       0.04710379242897034
+      ],
+      "rpy_deg_xyz": [
+       -43.048983300469395,
+       88.70495714925953,
+       -34.595488684609876
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.2352171391248703,
+       0.009244182147085667,
+       0.050508830696344376
+      ],
+      "quat_wxyz": [
+       0.7085984349250793,
+       -0.07786236703395844,
+       0.6969010829925537,
+       0.07845108956098557
+      ],
+      "rpy_deg_xyz": [
+       -3.464861295910996,
+       89.05091252315859,
+       9.227335428871479
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.2037789225578308,
+       -0.1523461639881134,
+       0.050535447895526886
+      ],
+      "quat_wxyz": [
+       0.7109322547912598,
+       0.04532723128795624,
+       0.6998692750930786,
+       -0.05199647322297096
+      ],
+      "rpy_deg_xyz": [
+       -27.13691393197797,
+       88.95285411161628,
+       -35.029422696332375
+      ]
+     }
+    },
+    "after_warmup60": {
+     "rack_left": {
+      "pos": [
+       0.18000002205371857,
+       0.08000004291534424,
+       0.04100029915571213
+      ],
+      "quat_wxyz": [
+       0.9999999403953552,
+       1.1244034112678492e-06,
+       3.3237245133932447e-06,
+       -5.3334119343162456e-08
+      ],
+      "rpy_deg_xyz": [
+       0.00012884711188118072,
+       0.00038087075793629896,
+       -6.1112112682761495e-06
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.20988377928733826,
+       -0.07907972484827042,
+       0.05022888630628586
+      ],
+      "quat_wxyz": [
+       0.7129456996917725,
+       -0.11915130168199539,
+       0.690875232219696,
+       -0.014244918711483479
+      ],
+      "rpy_deg_xyz": [
+       -84.87924576373027,
+       79.02743929474269,
+       -76.33179937451378
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.23521579802036285,
+       0.009265177883207798,
+       0.050532177090644836
+      ],
+      "quat_wxyz": [
+       0.7085756659507751,
+       -0.07834602147340775,
+       0.6969234347343445,
+       0.07797548174858093
+      ],
+      "rpy_deg_xyz": [
+       -8.167828068457133,
+       89.0554298502707,
+       4.5250510623739535
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.20416322350502014,
+       -0.1494448035955429,
+       0.05023498088121414
+      ],
+      "quat_wxyz": [
+       0.7032769322395325,
+       -0.022392623126506805,
+       0.7006844878196716,
+       -0.11807408928871155
+      ],
+      "rpy_deg_xyz": [
+       -85.04396623347388,
+       78.5974848423646,
+       -92.84144605970266
+      ]
+     }
+    }
+   },
+   "5": {
+    "after_reset": {
+     "rack_left": {
+      "pos": [
+       0.18000000715255737,
+       0.07999999821186066,
+       0.05999999865889549
+      ],
+      "quat_wxyz": [
+       1.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "rpy_deg_xyz": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.23127979040145874,
+       -0.07115356624126434,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7053727507591248,
+       0.04949052631855011,
+       0.7053727507591248,
+       -0.04949056729674339
+      ],
+      "rpy_deg_xyz": [
+       -135.78575635420847,
+       90.0,
+       -139.4343286695599
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.2695908844470978,
+       -0.007661079056560993,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7015603184700012,
+       -0.0883917510509491,
+       0.7015603184700012,
+       0.0883917286992073
+      ],
+      "rpy_deg_xyz": [
+       -41.22847698293302,
+       89.9838470089644,
+       -35.67105146355497
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.24098142981529236,
+       -0.1518772691488266,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7012727856636047,
+       -0.09064444899559021,
+       0.7012727856636047,
+       0.09064442664384842
+      ],
+      "rpy_deg_xyz": [
+       -13.771341341658168,
+       89.9705653659651,
+       -12.979395348203553
+      ]
+     }
+    },
+    "after_warmup10": {
+     "rack_left": {
+      "pos": [
+       0.1799999177455902,
+       0.08000006526708603,
+       0.04100041463971138
+      ],
+      "quat_wxyz": [
+       1.0,
+       -5.1151419029338285e-06,
+       -7.810390343365725e-06,
+       3.3397892451603184e-08
+      ],
+      "rpy_deg_xyz": [
+       -0.0005861521152702617,
+       -0.0008950047865093336,
+       3.83169464127162e-06
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.231007382273674,
+       -0.07139047980308533,
+       0.0504952147603035
+      ],
+      "quat_wxyz": [
+       0.7116108536720276,
+       0.055315617471933365,
+       0.699024498462677,
+       -0.04376080259680748
+      ],
+      "rpy_deg_xyz": [
+       46.57099850516458,
+       88.61571123332712,
+       38.535799247411454
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.2686554193496704,
+       -0.007266793865710497,
+       0.05044957995414734
+      ],
+      "quat_wxyz": [
+       0.7057654857635498,
+       -0.07714763283729553,
+       0.6970664262771606,
+       0.10020805895328522
+      ],
+      "rpy_deg_xyz": [
+       62.12648130227335,
+       88.00271392661324,
+       76.53747159186028
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.24070873856544495,
+       -0.15178948640823364,
+       0.05051033943891525
+      ],
+      "quat_wxyz": [
+       0.7075733542442322,
+       -0.09329283982515335,
+       0.6949036717414856,
+       0.08800796419382095
+      ],
+      "rpy_deg_xyz": [
+       -30.00842894211893,
+       88.88800030978487,
+       -15.27658104554053
+      ]
+     }
+    },
+    "after_warmup60": {
+     "rack_left": {
+      "pos": [
+       0.18000002205371857,
+       0.08000004291534424,
+       0.04100029915571213
+      ],
+      "quat_wxyz": [
+       0.9999999403953552,
+       1.1244034112678492e-06,
+       3.3237245133932447e-06,
+       -5.3334119343162456e-08
+      ],
+      "rpy_deg_xyz": [
+       0.00012884711188118072,
+       0.00038087075793629896,
+       -6.1112112682761495e-06
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.2306906282901764,
+       -0.07361096143722534,
+       0.05025966838002205
+      ],
+      "quat_wxyz": [
+       0.7129572629928589,
+       0.10648707300424576,
+       0.6930378079414368,
+       0.007137816399335861
+      ],
+      "rpy_deg_xyz": [
+       84.09841852235301,
+       80.64231231979248,
+       76.01468186441062
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.26863893866539,
+       -0.007206575479358435,
+       0.05045844614505768
+      ],
+      "quat_wxyz": [
+       0.7059838771820068,
+       -0.07857564091682434,
+       0.6968857645988464,
+       0.09880787879228592
+      ],
+      "rpy_deg_xyz": [
+       58.58109454000318,
+       88.20265148624479,
+       72.99397278912161
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.2400909960269928,
+       -0.1494562029838562,
+       0.05023590102791786
+      ],
+      "quat_wxyz": [
+       0.7122591733932495,
+       -0.14797984063625336,
+       0.6853228211402893,
+       0.033488139510154724
+      ],
+      "rpy_deg_xyz": [
+       -84.15897380836758,
+       80.45859483056854,
+       -69.36270163217499
+      ]
+     }
+    }
+   },
+   "6": {
+    "after_reset": {
+     "rack_left": {
+      "pos": [
+       0.18000000715255737,
+       0.07999999821186066,
+       0.05999999865889549
+      ],
+      "quat_wxyz": [
+       1.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "rpy_deg_xyz": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.23392605781555176,
+       -0.07528159022331238,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.6994652152061462,
+       0.10367441177368164,
+       0.6994652152061462,
+       -0.10367442667484283
+      ],
+      "rpy_deg_xyz": [
+       -19.7312012211971,
+       89.98099191232558,
+       -21.867449302464273
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.22145500779151917,
+       0.0023151645436882973,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7068386673927307,
+       0.01947045885026455,
+       0.7068386673927307,
+       -0.019470447674393654
+      ],
+      "rpy_deg_xyz": [
+       93.54490603360068,
+       90.0,
+       90.3929111567856
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.24803386628627777,
+       -0.15562915802001953,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7046576142311096,
+       -0.05880167707800865,
+       0.7046576142311096,
+       0.05880168080329895
+      ],
+      "rpy_deg_xyz": [
+       15.47930354008186,
+       89.98897305189044,
+       16.19094660176588
+      ]
+     }
+    },
+    "after_warmup10": {
+     "rack_left": {
+      "pos": [
+       0.1799999177455902,
+       0.08000006526708603,
+       0.04100041463971138
+      ],
+      "quat_wxyz": [
+       1.0,
+       -5.1151419029338285e-06,
+       -7.810390343365725e-06,
+       3.3397892451603184e-08
+      ],
+      "rpy_deg_xyz": [
+       -0.0005861521152702617,
+       -0.0008950047865093336,
+       3.83169464127162e-06
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.23379263281822205,
+       -0.07489010691642761,
+       0.05047176778316498
+      ],
+      "quat_wxyz": [
+       0.7041015625,
+       0.09505034238100052,
+       0.6947186589241028,
+       -0.11212629824876785
+      ],
+      "rpy_deg_xyz": [
+       -52.787175472338575,
+       88.42098098775011,
+       -69.63659627890732
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.22122277319431305,
+       0.0026599194388836622,
+       0.050446730107069016
+      ],
+      "quat_wxyz": [
+       0.7126798033714294,
+       0.011703378520905972,
+       0.7008673548698425,
+       -0.02711816318333149
+      ],
+      "rpy_deg_xyz": [
+       -50.963513599284695,
+       88.42617317353404,
+       -54.10984983792051
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.24775740504264832,
+       -0.15543818473815918,
+       0.05051876977086067
+      ],
+      "quat_wxyz": [
+       0.7109271287918091,
+       -0.06353805959224701,
+       0.698297917842865,
+       0.054087381809949875
+      ],
+      "rpy_deg_xyz": [
+       -41.57933880760651,
+       88.72157668434015,
+       -32.03674668456642
+      ]
+     }
+    },
+    "after_warmup60": {
+     "rack_left": {
+      "pos": [
+       0.18000002205371857,
+       0.08000004291534424,
+       0.04100029915571213
+      ],
+      "quat_wxyz": [
+       0.9999999403953552,
+       1.1244034112678492e-06,
+       3.3237245133932447e-06,
+       -5.3334119343162456e-08
+      ],
+      "rpy_deg_xyz": [
+       0.00012884711188118072,
+       0.00038087075793629896,
+       -6.1112112682761495e-06
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.2345779836177826,
+       -0.07225342094898224,
+       0.05021972954273224
+      ],
+      "quat_wxyz": [
+       0.691654622554779,
+       0.031101923435926437,
+       0.700313925743103,
+       -0.17380131781101227
+      ],
+      "rpy_deg_xyz": [
+       -85.09853051698045,
+       78.39617922481727,
+       -101.84657875821868
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.22137273848056793,
+       0.005247373133897781,
+       0.05023887753486633
+      ],
+      "quat_wxyz": [
+       0.707740306854248,
+       -0.04834715276956558,
+       0.6995547413825989,
+       -0.08596146106719971
+      ],
+      "rpy_deg_xyz": [
+       -84.98132564548503,
+       79.08046722476422,
+       -88.04341007717427
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.24736031889915466,
+       -0.15312659740447998,
+       0.050231583416461945
+      ],
+      "quat_wxyz": [
+       0.7131028175354004,
+       -0.11735793948173523,
+       0.6911664605140686,
+       0.000746720063034445
+      ],
+      "rpy_deg_xyz": [
+       -84.15383117945552,
+       80.3741745844932,
+       -74.53884929820309
+      ]
+     }
+    }
+   },
+   "7": {
+    "after_reset": {
+     "rack_left": {
+      "pos": [
+       0.18000000715255737,
+       0.07999999821186066,
+       0.05999999865889549
+      ],
+      "quat_wxyz": [
+       1.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "rpy_deg_xyz": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.21708904206752777,
+       -0.07905254513025284,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7039081454277039,
+       0.06718124449253082,
+       0.7039081454277039,
+       -0.06718124449253082
+      ],
+      "rpy_deg_xyz": [
+       0.0,
+       89.9935289087183,
+       0.0
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.25421643257141113,
+       0.00038446392863988876,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7061904668807983,
+       -0.03598684445023537,
+       0.7061904668807983,
+       0.03598686307668686
+      ],
+      "rpy_deg_xyz": [
+       155.21480192933842,
+       90.0,
+       156.20263293398466
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.2116517573595047,
+       -0.16355985403060913,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7010888457298279,
+       0.09205666929483414,
+       0.7010888457298279,
+       -0.09205669909715652
+      ],
+      "rpy_deg_xyz": [
+       -89.91345851288541,
+       90.0,
+       -104.63324414589829
+      ]
+     }
+    },
+    "after_warmup10": {
+     "rack_left": {
+      "pos": [
+       0.1799999177455902,
+       0.08000006526708603,
+       0.04100041463971138
+      ],
+      "quat_wxyz": [
+       1.0,
+       -5.1151419029338285e-06,
+       -7.810390343365725e-06,
+       3.3397892451603184e-08
+      ],
+      "rpy_deg_xyz": [
+       -0.0005861521152702617,
+       -0.0008950047865093336,
+       3.83169464127162e-06
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.21687090396881104,
+       -0.07895717769861221,
+       0.05049668997526169
+      ],
+      "quat_wxyz": [
+       0.7094229459762573,
+       0.06537273526191711,
+       0.6983487606048584,
+       -0.06895224004983902
+      ],
+      "rpy_deg_xyz": [
+       -12.461829574760886,
+       89.05665371348695,
+       -23.362725186159718
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.2539237439632416,
+       0.0007987907156348228,
+       0.050495415925979614
+      ],
+      "quat_wxyz": [
+       0.7126670479774475,
+       -0.0458349771797657,
+       0.6995097994804382,
+       0.026282062754034996
+      ],
+      "rpy_deg_xyz": [
+       -58.98645714262441,
+       88.09005002228334,
+       -53.1395876963329
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.21142134070396423,
+       -0.16349388659000397,
+       0.05053041875362396
+      ],
+      "quat_wxyz": [
+       0.7068393230438232,
+       0.09116566181182861,
+       0.6952934861183167,
+       -0.09291961789131165
+      ],
+      "rpy_deg_xyz": [
+       -1.158350974261087,
+       89.05403961506431,
+       -16.117542098099
+      ]
+     }
+    },
+    "after_warmup60": {
+     "rack_left": {
+      "pos": [
+       0.18000002205371857,
+       0.08000004291534424,
+       0.04100029915571213
+      ],
+      "quat_wxyz": [
+       0.9999999403953552,
+       1.1244034112678492e-06,
+       3.3237245133932447e-06,
+       -5.3334119343162456e-08
+      ],
+      "rpy_deg_xyz": [
+       0.00012884711188118072,
+       0.00038087075793629896,
+       -6.1112112682761495e-06
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.2169511914253235,
+       -0.0786057636141777,
+       0.05052684247493744
+      ],
+      "quat_wxyz": [
+       0.7083072066307068,
+       0.057127442210912704,
+       0.6993587017059326,
+       -0.0770377367734909
+      ],
+      "rpy_deg_xyz": [
+       -60.35453399157717,
+       88.23127037639104,
+       -71.24341451985141
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.2536494731903076,
+       0.003400297835469246,
+       0.0502186194062233
+      ],
+      "quat_wxyz": [
+       0.7124576568603516,
+       -0.10606314241886139,
+       0.69284987449646,
+       -0.03337552398443222
+      ],
+      "rpy_deg_xyz": [
+       -84.95654409270256,
+       78.5714524339108,
+       -79.03472818948967
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.21190877258777618,
+       -0.1616360992193222,
+       0.05036954954266548
+      ],
+      "quat_wxyz": [
+       0.7000107765197754,
+       0.04715239256620407,
+       0.6995115280151367,
+       -0.13581255078315735
+      ],
+      "rpy_deg_xyz": [
+       -82.22905015203109,
+       82.81111169492821,
+       -97.12556235494034
+      ]
+     }
+    }
+   },
+   "8": {
+    "after_reset": {
+     "rack_left": {
+      "pos": [
+       0.18000000715255737,
+       0.07999999821186066,
+       0.05999999865889549
+      ],
+      "quat_wxyz": [
+       1.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "rpy_deg_xyz": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.20140624046325684,
+       -0.07951262593269348,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7025724053382874,
+       0.07994990795850754,
+       0.7025724053382874,
+       -0.07994992285966873
+      ],
+      "rpy_deg_xyz": [
+       -20.85924851362112,
+       89.9814222896479,
+       -22.6474559554787
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.24699968099594116,
+       0.006134619936347008,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7037435173988342,
+       -0.0688839927315712,
+       0.7037435173988342,
+       0.06888392567634583
+      ],
+      "rpy_deg_xyz": [
+       -39.490759595179014,
+       89.97149375029564,
+       -35.35921559784676
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.23254483938217163,
+       -0.1629207581281662,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7057614922523499,
+       -0.04359721392393112,
+       0.7057614922523499,
+       0.043597154319286346
+      ],
+      "rpy_deg_xyz": [
+       -91.37291914433213,
+       89.99543010392125,
+       -84.31323605323682
+      ]
+     }
+    },
+    "after_warmup10": {
+     "rack_left": {
+      "pos": [
+       0.1799999177455902,
+       0.08000006526708603,
+       0.04100041463971138
+      ],
+      "quat_wxyz": [
+       1.0,
+       -5.1151419029338285e-06,
+       -7.810390343365725e-06,
+       3.3397892451603184e-08
+      ],
+      "rpy_deg_xyz": [
+       -0.0005861521152702617,
+       -0.0008950047865093336,
+       3.83169464127162e-06
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.20243221521377563,
+       -0.07942408323287964,
+       0.0504520907998085
+      ],
+      "quat_wxyz": [
+       0.7093867659568787,
+       0.0875648707151413,
+       0.6957635283470154,
+       -0.0708230510354042
+      ],
+      "rpy_deg_xyz": [
+       57.295069057253606,
+       88.25095761725078,
+       44.432655737320985
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.24676884710788727,
+       0.006073509342968464,
+       0.05053257197141647
+      ],
+      "quat_wxyz": [
+       0.7094244360923767,
+       -0.06794743984937668,
+       0.6980173587799072,
+       0.06979846209287643
+      ],
+      "rpy_deg_xyz": [
+       3.627294809216582,
+       89.0634037990406,
+       14.806694643857194
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.2323121428489685,
+       -0.16297078132629395,
+       0.05052321404218674
+      ],
+      "quat_wxyz": [
+       0.7114652991294861,
+       -0.042697496712207794,
+       0.7000119686126709,
+       0.04446510598063469
+      ],
+      "rpy_deg_xyz": [
+       5.239590972939202,
+       89.06043204084385,
+       12.306896488447503
+      ]
+     }
+    },
+    "after_warmup60": {
+     "rack_left": {
+      "pos": [
+       0.18000002205371857,
+       0.08000004291534424,
+       0.04100029915571213
+      ],
+      "quat_wxyz": [
+       0.9999999403953552,
+       1.1244034112678492e-06,
+       3.3237245133932447e-06,
+       -5.3334119343162456e-08
+      ],
+      "rpy_deg_xyz": [
+       0.00012884711188118072,
+       0.00038087075793629896,
+       -6.1112112682761495e-06
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.2024274617433548,
+       -0.07943926751613617,
+       0.05045848712325096
+      ],
+      "quat_wxyz": [
+       0.7094505429267883,
+       0.08792853355407715,
+       0.6956890225410461,
+       -0.07046402990818024
+      ],
+      "rpy_deg_xyz": [
+       58.194201946395,
+       88.19807984744916,
+       45.3313391464363
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.246816948056221,
+       0.005788302980363369,
+       0.0504869744181633
+      ],
+      "quat_wxyz": [
+       0.708936333656311,
+       -0.061333443969488144,
+       0.6984449028968811,
+       0.07630366086959839
+      ],
+      "rpy_deg_xyz": [
+       49.390960788418525,
+       88.51882142693562,
+       60.562113963946416
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.23231342434883118,
+       -0.16298100352287292,
+       0.05052970349788666
+      ],
+      "quat_wxyz": [
+       0.7114503979682922,
+       -0.04246218875050545,
+       0.7000268697738647,
+       0.044696830213069916
+      ],
+      "rpy_deg_xyz": [
+       7.5348065429233,
+       89.05727148679414,
+       14.601941407079329
+      ]
+     }
+    }
+   },
+   "9": {
+    "after_reset": {
+     "rack_left": {
+      "pos": [
+       0.18000000715255737,
+       0.07999999821186066,
+       0.05999999865889549
+      ],
+      "quat_wxyz": [
+       1.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "rpy_deg_xyz": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.20396465063095093,
+       -0.08023512363433838,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7057654857635498,
+       -0.04353250935673714,
+       0.7057654857635498,
+       0.04353255406022072
+      ],
+      "rpy_deg_xyz": [
+       90.48296625358377,
+       90.0,
+       97.50786493179591
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.2569345235824585,
+       -0.005522363353520632,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7018339037895203,
+       -0.08619245141744614,
+       0.7018339037895203,
+       0.08619245141744614
+      ],
+      "rpy_deg_xyz": [
+       0.0,
+       89.97924335492094,
+       0.0
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.26941025257110596,
+       -0.15214546024799347,
+       0.05000000074505806
+      ],
+      "quat_wxyz": [
+       0.7027537822723389,
+       -0.07833942025899887,
+       0.7027537822723389,
+       0.07833944261074066
+      ],
+      "rpy_deg_xyz": [
+       15.475287623475849,
+       89.9731297125473,
+       16.439950127524018
+      ]
+     }
+    },
+    "after_warmup10": {
+     "rack_left": {
+      "pos": [
+       0.1799999177455902,
+       0.08000006526708603,
+       0.04100041463971138
+      ],
+      "quat_wxyz": [
+       1.0,
+       -5.1151419029338285e-06,
+       -7.810390343365725e-06,
+       3.3397892451603184e-08
+      ],
+      "rpy_deg_xyz": [
+       -0.0005861521152702617,
+       -0.0008950047865093336,
+       3.83169464127162e-06
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.2032673954963684,
+       -0.07919315248727798,
+       0.050412461161613464
+      ],
+      "quat_wxyz": [
+       0.7128942608833313,
+       -0.05217623710632324,
+       0.6991369128227234,
+       0.016338100656867027
+      ],
+      "rpy_deg_xyz": [
+       -71.7773360990774,
+       86.88903920675315,
+       -66.2215033599281
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.2565276622772217,
+       -0.005850267130881548,
+       0.050373680889606476
+      ],
+      "quat_wxyz": [
+       0.7025728225708008,
+       -0.050334349274635315,
+       0.6996216177940369,
+       0.1199474036693573
+      ],
+      "rpy_deg_xyz": [
+       80.64831382552538,
+       84.35195262503538,
+       94.49644209194675
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.26887616515159607,
+       -0.15242457389831543,
+       0.05050027742981911
+      ],
+      "quat_wxyz": [
+       0.7073959708213806,
+       -0.06908947229385376,
+       0.6979554891586304,
+       0.08761110156774521
+      ],
+      "rpy_deg_xyz": [
+       56.629660907665546,
+       88.31542632746765,
+       69.35437241869224
+      ]
+     }
+    },
+    "after_warmup60": {
+     "rack_left": {
+      "pos": [
+       0.18000002205371857,
+       0.08000004291534424,
+       0.04100029915571213
+      ],
+      "quat_wxyz": [
+       0.9999999403953552,
+       1.1244034112678492e-06,
+       3.3237245133932447e-06,
+       -5.3334119343162456e-08
+      ],
+      "rpy_deg_xyz": [
+       0.00012884711188118072,
+       0.00038087075793629896,
+       -6.1112112682761495e-06
+      ]
+     },
+     "vial_1": {
+      "pos": [
+       0.20304390788078308,
+       -0.0769708976149559,
+       0.05022851377725601
+      ],
+      "quat_wxyz": [
+       0.7123175859451294,
+       -0.10383514314889908,
+       0.6932675242424011,
+       -0.03466876968741417
+      ],
+      "rpy_deg_xyz": [
+       -84.98569215338665,
+       78.65300936360369,
+       -79.35138821602143
+      ]
+     },
+     "vial_2": {
+      "pos": [
+       0.25674664974212646,
+       -0.006810117047280073,
+       0.050227366387844086
+      ],
+      "quat_wxyz": [
+       0.6988072395324707,
+       -0.0276197362691164,
+       0.7005203366279602,
+       0.14204511046409607
+      ],
+      "rpy_deg_xyz": [
+       83.94449567456911,
+       80.71708543842254,
+       97.77093537955511
+      ]
+     },
+     "vial_3": {
+      "pos": [
+       0.2691437304019928,
+       -0.1536531150341034,
+       0.05028513818979263
+      ],
+      "quat_wxyz": [
+       0.7035230994224548,
+       -0.04023190587759018,
+       0.7000123262405396,
+       0.11584171652793884
+      ],
+      "rpy_deg_xyz": [
+       80.9962220274636,
+       83.86387600397833,
+       93.68670562611166
+      ]
+     }
+    }
+   }
+  }
+ },
+ "finished_utc": "2026-10-24T00:07:13+00:00"
+}

@@ -1,0 +1,543 @@
+{
+ "dir": "results/c1",
+ "T04": {
+  "camera_mount_env": {
+   "got": [
+    0.1846384691546055,
+    0.3359416810419865,
+    0.4893436558865228
+   ],
+   "expected": [
+    0.1846,
+    0.3359,
+    0.4893
+   ],
+   "pass": true
+  },
+  "robot_root": {
+   "got_pos": [
+    -0.05000000819563866,
+    -1.862645149230957e-08,
+    -5.21540641784668e-08
+   ],
+   "got_rpy_deg": [
+    -4.376857663354025e-07,
+    2.617816822357846e-07,
+    90.00003667621912
+   ],
+   "expected_pos": [
+    -0.05,
+    0.0,
+    0.0
+   ],
+   "expected_yaw_deg": 90.0,
+   "pass": true
+  },
+  "rack_corner_after_reset": {
+   "got": [
+    0.18000000715255737,
+    0.07999999821186066,
+    0.05999999865889549
+   ],
+   "expected": [
+    0.18,
+    0.08,
+    0.06
+   ],
+   "pass": true
+  },
+  "rack_after_warmup10": {
+   "got": [
+    0.1799999177455902,
+    0.08000006526708603,
+    0.04100041463971138
+   ],
+   "z_drop_m": 0.019
+  },
+  "env_origin": {
+   "got": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "pass": true
+  }
+ },
+ "camera_external": {
+  "focalLength_mm": 1.9299999475479126,
+  "horizontalAperture_mm": 2.4000000953674316,
+  "verticalAperture_mm": 2.453000068664551,
+  "projection": "perspective",
+  "fx_fy_cx_cy": [
+   514.6666259765625,
+   514.6666259765625,
+   320.0,
+   240.0
+  ],
+  "fx_expected_if_1.93mm": 514.67,
+  "hfov_deg_from_K": 63.74,
+  "vfov_deg_from_K": 50.0,
+  "optical_axis_deg_below_horizontal": 54.27,
+  "camera_world_pos": [
+   0.13755299002557017,
+   0.3297272007669876,
+   0.48857691596919167
+  ],
+  "tiled_pos_w_minus_usd_m": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "lens_related_attributes": {
+   "cameraProjectionType": {
+    "value": "pinhole",
+    "authored": true,
+    "type": "token"
+   },
+   "fthetaMaxFov": {
+    "value": 98.0,
+    "authored": true,
+    "type": "float"
+   },
+   "projection": {
+    "value": "perspective",
+    "authored": false,
+    "type": "token"
+   }
+  }
+ },
+ "V04_patches": {
+  "floor_beside_mat": {
+   "pixels": 31151,
+   "pixels_eroded": 28539,
+   "mean_rgb": [
+    150.66,
+    150.31,
+    149.87
+   ],
+   "median_rgb": [
+    151.0,
+    151.0,
+    151.0
+   ],
+   "std_rgb": [
+    16.98,
+    16.95,
+    16.83
+   ],
+   "interior_patch": {
+    "center_xy": [
+     167,
+     479
+    ],
+    "size_px": 15,
+    "mean_rgb": [
+     135.27,
+     134.68,
+     134.51
+    ]
+   }
+  },
+  "floor_base": {
+   "pixels": 76528,
+   "pixels_eroded": 66037,
+   "mean_rgb": [
+    155.52,
+    155.13,
+    154.65
+   ],
+   "median_rgb": [
+    160.0,
+    160.0,
+    159.0
+   ],
+   "std_rgb": [
+    15.55,
+    15.57,
+    15.5
+   ],
+   "interior_patch": {
+    "center_xy": [
+     533,
+     479
+    ],
+    "size_px": 15,
+    "mean_rgb": [
+     161.35,
+     161.06,
+     160.71
+    ]
+   }
+  },
+  "mat": {
+   "pixels": 65894,
+   "pixels_eroded": 56336,
+   "mean_rgb": [
+    8.2,
+    8.18,
+    7.85
+   ],
+   "median_rgb": [
+    9.0,
+    9.0,
+    8.0
+   ],
+   "std_rgb": [
+    3.25,
+    3.24,
+    3.13
+   ],
+   "interior_patch": {
+    "center_xy": [
+     367,
+     395
+    ],
+    "size_px": 15,
+    "mean_rgb": [
+     10.5,
+     10.16,
+     9.89
+    ]
+   }
+  },
+  "rack": {
+   "pixels": 24534,
+   "pixels_eroded": 22455,
+   "mean_rgb": [
+    121.46,
+    97.46,
+    19.09
+   ],
+   "median_rgb": [
+    134.0,
+    100.0,
+    12.0
+   ],
+   "std_rgb": [
+    68.54,
+    62.01,
+    17.13
+   ],
+   "interior_patch": {
+    "center_xy": [
+     235,
+     331
+    ],
+    "size_px": 15,
+    "mean_rgb": [
+     189.66,
+     161.09,
+     37.99
+    ]
+   }
+  },
+  "blue_cap": {
+   "pixels": 1090,
+   "pixels_eroded": 369,
+   "mean_rgb": [
+    48.69,
+    90.48,
+    148.64
+   ],
+   "median_rgb": [
+    54.0,
+    99.0,
+    160.0
+   ],
+   "std_rgb": [
+    13.41,
+    20.29,
+    24.64
+   ],
+   "interior_patch": {
+    "center_xy": [
+     193,
+     213
+    ],
+    "size_px": 7,
+    "mean_rgb": [
+     52.67,
+     97.24,
+     157.94
+    ]
+   }
+  },
+  "robot_orange": {
+   "pixels": 47890,
+   "pixels_eroded": 37534,
+   "mean_rgb": [
+    142.84,
+    84.96,
+    47.38
+   ],
+   "median_rgb": [
+    130.0,
+    65.0,
+    31.0
+   ],
+   "std_rgb": [
+    50.6,
+    48.04,
+    35.71
+   ],
+   "interior_patch": {
+    "center_xy": [
+     410,
+     103
+    ],
+    "size_px": 15,
+    "mean_rgb": [
+     202.69,
+     138.98,
+     82.25
+    ]
+   }
+  }
+ },
+ "other_classes": {
+  "vial_body": {
+   "pixels": 6846,
+   "pixels_eroded": 4727,
+   "mean_rgb": [
+    120.54,
+    120.08,
+    119.45
+   ],
+   "median_rgb": [
+    132.0,
+    132.0,
+    131.0
+   ],
+   "std_rgb": [
+    29.72,
+    29.81,
+    30.0
+   ],
+   "interior_patch": {
+    "center_xy": [
+     245,
+     218
+    ],
+    "size_px": 15,
+    "mean_rgb": [
+     124.39,
+     123.28,
+     121.41
+    ]
+   }
+  },
+  "robot_all": {
+   "pixels": 53619,
+   "pixels_eroded": 46371,
+   "mean_rgb": [
+    130.19,
+    79.6,
+    45.73
+   ],
+   "median_rgb": [
+    126.0,
+    63.0,
+    30.0
+   ],
+   "std_rgb": [
+    60.24,
+    49.82,
+    35.8
+   ],
+   "interior_patch": {
+    "center_xy": [
+     414,
+     95
+    ],
+    "size_px": 15,
+    "mean_rgb": [
+     199.88,
+     134.87,
+     79.05
+    ]
+   }
+  },
+  "background_unlabelled": {
+   "pixels": 10207,
+   "pixels_eroded": 7631,
+   "mean_rgb": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "median_rgb": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "std_rgb": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "interior_patch": {
+    "center_xy": [
+     639,
+     309
+    ],
+    "size_px": 15,
+    "mean_rgb": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "wall_Back": {
+   "pixels": 60208,
+   "pixels_eroded": 58174,
+   "mean_rgb": [
+    159.18,
+    158.54,
+    158.11
+   ],
+   "median_rgb": [
+    162.0,
+    162.0,
+    161.0
+   ],
+   "std_rgb": [
+    22.5,
+    22.38,
+    22.32
+   ],
+   "interior_patch": {
+    "center_xy": [
+     0,
+     0
+    ],
+    "size_px": 15,
+    "mean_rgb": [
+     NaN,
+     NaN,
+     NaN
+    ]
+   }
+  },
+  "wall_Left": {
+   "pixels": 0,
+   "pixels_eroded": 0
+  },
+  "wall_Right": {
+   "pixels": 8274,
+   "pixels_eroded": 7151,
+   "mean_rgb": [
+    140.67,
+    140.76,
+    140.22
+   ],
+   "median_rgb": [
+    144.0,
+    144.0,
+    143.0
+   ],
+   "std_rgb": [
+    11.54,
+    11.56,
+    11.47
+   ],
+   "interior_patch": {
+    "center_xy": [
+     365,
+     0
+    ],
+    "size_px": 15,
+    "mean_rgb": [
+     NaN,
+     NaN,
+     NaN
+    ]
+   }
+  },
+  "wall_Top": {
+   "pixels": 0,
+   "pixels_eroded": 0
+  }
+ },
+ "V04_note": "means over each class mask eroded 3 px (floor_beside_mat: floor pixels 5-40 px from the mat, eroded 1 px); interior_patch = up to 15x15 px at the mask's most interior point; Eval nominal, exposure -1 EV",
+ "V03_background": {
+  "pixels": 10207,
+  "pixels_eroded": 7631,
+  "mean_rgb": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "median_rgb": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "std_rgb": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "interior_patch": {
+   "center_xy": [
+    639,
+    309
+   ],
+   "size_px": 15,
+   "mean_rgb": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "straight_edge_check": {
+  "edges": {
+   "Back": {
+    "boundary_pixels": 642,
+    "fit": {
+     "n": 642,
+     "span_px": 487.8,
+     "rms_px": 0.23,
+     "max_abs_px": 0.455,
+     "sagitta_px": 0.002,
+     "rms_after_quadratic_px": 0.23,
+     "pass": true
+    },
+    "vs_pinhole_projection_px": {
+     "mean": 0.655,
+     "p95": 1.049,
+     "max": 1.11
+    }
+   },
+   "Left": {
+    "boundary_pixels": 0
+   },
+   "Right": {
+    "boundary_pixels": 187,
+    "fit": {
+     "n": 187,
+     "span_px": 323.6,
+     "rms_px": 0.272,
+     "max_abs_px": 0.5,
+     "sagitta_px": 0.032,
+     "rms_after_quadratic_px": 0.272,
+     "pass": true
+    },
+    "vs_pinhole_projection_px": {
+     "mean": 0.472,
+     "p95": 0.906,
+     "max": 0.965
+    }
+   }
+  },
+  "verdict": "PASS: pinhole (edges straight)",
+  "limits": {
+   "rms_px": 0.7,
+   "sagitta_px": 1.5,
+   "min_span_px": 100,
+   "tag": "[P]"
+  },
+  "overlay": "green = fitted straight line, magenta = 3D floor-wall edge projected with the dumped K and pose"
+ }
+}

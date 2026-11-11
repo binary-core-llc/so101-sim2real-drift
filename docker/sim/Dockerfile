@@ -1,3 +1,5 @@
+# Modified by Binary Core LLC, 2026, from the course's docker/sim/Dockerfile (ce807d9):
+# two pinned dependencies, each marked "Binary Core patch" below (see Dockerfile.diff).
 FROM nvcr.io/nvidia/isaac-lab:2.3.2
 
 ENV PYTHON=/workspace/isaaclab/_isaac_sim/python.sh
@@ -24,7 +26,7 @@ RUN printf '%s\n' \
     "imageio==2.37.0" \
     "pyarrow==25.0.0" \
     > /tmp/constraints.txt
-# GTC patch: pyarrow (pulled in by datasets) is unpinned upstream; pyarrow 26.0.0 (2026-10-09)
+# Binary Core patch: pyarrow (pulled in by datasets) is unpinned upstream; pyarrow 26.0.0 (2026-10-09)
 # refuses NumPy < 2 and breaks `import lerobot` (ImportError: pyarrow requires NumPy 2.0 or newer).
 # 25.0.0 is the newest release before the course commit ce807d9 (2026-07-20) and works with numpy 1.26.0.
 
@@ -45,7 +47,7 @@ RUN $PYTHON -m pip install -c /tmp/constraints.txt \
     "deepdiff>=7.0.1,<9.0.0" \
     "feetech-servo-sdk>=1.0.0,<2.0.0"
 
-# GTC patch: the course URL (BtbN "latest" release, n7.1 asset) returns 404 since BtbN
+# Binary Core patch: the course URL (BtbN "latest" release, n7.1 asset) returns 404 since BtbN
 # dropped n7.1 from "latest". Pin the same FFmpeg 7.1 LGPL shared build from the last
 # dated monthly release before the course commit ce807d9 (2026-07-20), with sha256 check.
 RUN curl --proto "=https" --tlsv1.2 -sSf -L -o /tmp/ffmpeg.tar.xz \

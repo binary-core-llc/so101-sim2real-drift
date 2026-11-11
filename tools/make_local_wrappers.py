@@ -17,8 +17,7 @@ from pathlib import Path
 
 from pxr import Sdf
 
-HOME = Path.home()
-COURSE_HOST = HOME / "gtc2027/Sim-to-Real-SO-101-Workshop/source/sim_to_real_so101/assets/usd"
+COURSE_HOST = Path(__file__).resolve().parents[2] / "Sim-to-Real-SO-101-Workshop/source/sim_to_real_so101/assets/usd"
 COURSE_CTR = "/workspace/Sim-to-Real-SO-101-Workshop/source/sim_to_real_so101/assets/usd"
 MIRROR_CTR = "/workspace/assets_mirror"
 OUT = Path(__file__).resolve().parents[1] / "assets" / "local"
@@ -37,6 +36,8 @@ def main():
         src = Sdf.Layer.FindOrOpen(str(COURSE_HOST / name))
         w = Sdf.Layer.CreateAnonymous(".usda")
         w.subLayerPaths.append(f"{COURSE_CTR}/{name}")
+        w.documentation = (f"Modified by Binary Core LLC, 2026: wrapper layer over the unmodified course file {name} "
+                           "(Sim-to-Real-SO-101-Workshop ce807d9); remote asset paths point at the local mirror.")
         if src.defaultPrim:
             w.defaultPrim = src.defaultPrim
         for key in ("upAxis", "metersPerUnit"):

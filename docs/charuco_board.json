@@ -1,0 +1,9 @@
+{
+  "cols": 8,
+  "rows": 6,
+  "square_m": 0.03,
+  "marker_m": 0.022,
+  "dictionary": "DICT_5X5_100",
+  "page": "US Letter landscape",
+  "print_scale": "100%"
+}

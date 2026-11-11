@@ -1,0 +1,15 @@
+[
+ {
+  "name": "crn_b",
+  "overrides": {
+   "camera": {
+    "pitch": 0.10471975511965978
+   },
+   "rack": {
+    "x": 0.03
+   },
+   "exposure_ev": 0.0,
+   "camera_focal_mm": 1.8
+  }
+ }
+]

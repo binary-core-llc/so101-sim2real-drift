@@ -50,6 +50,12 @@ def seg_rect_dist(a0, a1, lo, hi, n=200):
     return float(np.min(np.linalg.norm(d, axis=1)))
 
 
+def rel(path):
+    """Path relative to the repo root when it lies inside it (no absolute paths in the output)."""
+    p = Path(path).resolve()
+    return str(p.relative_to(ROOT)) if p.is_relative_to(ROOT) else str(path)
+
+
 def main(jsonl, frames):
     f = json.loads(Path(frames).read_text())
     mat = f["mat"]["world_usd"]
@@ -99,7 +105,7 @@ def main(jsonl, frames):
             skipped.append({"seed": r["seed"], "reasons": [n for n, ok in (("clearance<3mm", clearance_ok), ("off_mat", on_mat),
                                                                             ("rack_overlap", rack_ok)) if not ok],
                             "min_gap_mm": rec["min_gap_mm"], "rack_clearance_mm": rack})
-    out = {"schema": "gtc layouts v0", "source": str(jsonl), "frames": str(frames),
+    out = {"schema": "gtc layouts v0", "source": rel(jsonl), "frames": rel(frames),
            "poses": "after the course's 10 warm-up steps (lerobot_eval.py:183), every randomization at its centre, "
                     "vial poses drawn per seed by the course reset (seed convention v0: RNGs seeded right before env.reset)",
            "mat_env": {"front_x": front, "back_x": back, "right_y": right, "left_y": left, "depth_m": depth, "width_m": width},

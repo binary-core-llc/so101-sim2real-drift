@@ -1,0 +1,81 @@
+uid,day,block,cond,method,cycle,layout,note
+N04-001,Nov04,N04-R0,R0,-,-,L01,"course camera instructions: camera at S0 by tape, HUD closed (E G8); rack, mat, vials, light, door as R1 (E row 9)"
+N04-002,Nov04,N04-R0,R0,-,-,L07,"course camera instructions: camera at S0 by tape, HUD closed (E G8); rack, mat, vials, light, door as R1 (E row 9)"
+N04-003,Nov04,N04-R0,R0,-,-,L04,"course camera instructions: camera at S0 by tape, HUD closed (E G8); rack, mat, vials, light, door as R1 (E row 9)"
+N04-004,Nov04,N04-R0,R0,-,-,L02,"course camera instructions: camera at S0 by tape, HUD closed (E G8); rack, mat, vials, light, door as R1 (E row 9)"
+N04-005,Nov04,N04-R0,R0,-,-,L05,"course camera instructions: camera at S0 by tape, HUD closed (E G8); rack, mat, vials, light, door as R1 (E row 9)"
+N04-006,Nov04,N04-R0,R0,-,-,L03,"course camera instructions: camera at S0 by tape, HUD closed (E G8); rack, mat, vials, light, door as R1 (E row 9)"
+N04-007,Nov04,N04-R0,R0,-,-,L08,"course camera instructions: camera at S0 by tape, HUD closed (E G8); rack, mat, vials, light, door as R1 (E row 9)"
+N04-008,Nov04,N04-R0,R0,-,-,L09,"course camera instructions: camera at S0 by tape, HUD closed (E G8); rack, mat, vials, light, door as R1 (E row 9)"
+N04-009,Nov04,N04-R0,R0,-,-,L06,"course camera instructions: camera at S0 by tape, HUD closed (E G8); rack, mat, vials, light, door as R1 (E row 9)"
+N04-010,Nov04,N04-R0,R0,-,-,L00,"course camera instructions: camera at S0 by tape, HUD closed (E G8); rack, mat, vials, light, door as R1 (E row 9)"
+N04B-001,Nov07,N04B-R0,R0,-,-,L01,"R0 again after the mat was re-placed from the robot's lobes (N04-R0 ran with the mat, rack and tubes about 18-19 mm toward the camera wall and about 9 mm farther from the robot); camera at R0 untouched (results/poses/r0.json); same layouts in the same order as N04-R0; not pooled with N04-R0 (Arturo, Nov 7)"
+N04B-002,Nov07,N04B-R0,R0,-,-,L07,"R0 again after the mat was re-placed from the robot's lobes (N04-R0 ran with the mat, rack and tubes about 18-19 mm toward the camera wall and about 9 mm farther from the robot); camera at R0 untouched (results/poses/r0.json); same layouts in the same order as N04-R0; not pooled with N04-R0 (Arturo, Nov 7)"
+N04B-003,Nov07,N04B-R0,R0,-,-,L04,"R0 again after the mat was re-placed from the robot's lobes (N04-R0 ran with the mat, rack and tubes about 18-19 mm toward the camera wall and about 9 mm farther from the robot); camera at R0 untouched (results/poses/r0.json); same layouts in the same order as N04-R0; not pooled with N04-R0 (Arturo, Nov 7)"
+N04B-004,Nov07,N04B-R0,R0,-,-,L02,"R0 again after the mat was re-placed from the robot's lobes (N04-R0 ran with the mat, rack and tubes about 18-19 mm toward the camera wall and about 9 mm farther from the robot); camera at R0 untouched (results/poses/r0.json); same layouts in the same order as N04-R0; not pooled with N04-R0 (Arturo, Nov 7)"
+N04B-005,Nov07,N04B-R0,R0,-,-,L05,"R0 again after the mat was re-placed from the robot's lobes (N04-R0 ran with the mat, rack and tubes about 18-19 mm toward the camera wall and about 9 mm farther from the robot); camera at R0 untouched (results/poses/r0.json); same layouts in the same order as N04-R0; not pooled with N04-R0 (Arturo, Nov 7)"
+N04B-006,Nov07,N04B-R0,R0,-,-,L03,"R0 again after the mat was re-placed from the robot's lobes (N04-R0 ran with the mat, rack and tubes about 18-19 mm toward the camera wall and about 9 mm farther from the robot); camera at R0 untouched (results/poses/r0.json); same layouts in the same order as N04-R0; not pooled with N04-R0 (Arturo, Nov 7)"
+N04B-007,Nov07,N04B-R0,R0,-,-,L08,"R0 again after the mat was re-placed from the robot's lobes (N04-R0 ran with the mat, rack and tubes about 18-19 mm toward the camera wall and about 9 mm farther from the robot); camera at R0 untouched (results/poses/r0.json); same layouts in the same order as N04-R0; not pooled with N04-R0 (Arturo, Nov 7)"
+N04B-008,Nov07,N04B-R0,R0,-,-,L09,"R0 again after the mat was re-placed from the robot's lobes (N04-R0 ran with the mat, rack and tubes about 18-19 mm toward the camera wall and about 9 mm farther from the robot); camera at R0 untouched (results/poses/r0.json); same layouts in the same order as N04-R0; not pooled with N04-R0 (Arturo, Nov 7)"
+N04B-009,Nov07,N04B-R0,R0,-,-,L06,"R0 again after the mat was re-placed from the robot's lobes (N04-R0 ran with the mat, rack and tubes about 18-19 mm toward the camera wall and about 9 mm farther from the robot); camera at R0 untouched (results/poses/r0.json); same layouts in the same order as N04-R0; not pooled with N04-R0 (Arturo, Nov 7)"
+N04B-010,Nov07,N04B-R0,R0,-,-,L00,"R0 again after the mat was re-placed from the robot's lobes (N04-R0 ran with the mat, rack and tubes about 18-19 mm toward the camera wall and about 9 mm farther from the robot); camera at R0 untouched (results/poses/r0.json); same layouts in the same order as N04-R0; not pooled with N04-R0 (Arturo, Nov 7)"
+N04-011,Nov05,N04-G1,R1,-,-,L04,gate block
+N04-012,Nov05,N04-G1,R1,-,-,L01,gate block
+N04-013,Nov05,N04-G1,R1,-,-,L00,gate block
+N04-014,Nov05,N04-G1,R1,-,-,L09,gate block
+N04-015,Nov05,N04-G1,R1,-,-,L05,gate block
+N04-016,Nov05,N04-G1,R1,-,-,L03,gate block
+N04-017,Nov05,N04-G1,R1,-,-,L06,gate block
+N04-018,Nov05,N04-G1,R1,-,-,L02,gate block
+N04-019,Nov05,N04-G1,R1,-,-,L08,gate block
+N04-020,Nov05,N04-G1,R1,-,-,L07,gate block
+N05-001,Nov05,N05-C,R1,-,-,L01,morning controls
+N05-002,Nov05,N05-C,R1,-,-,L08,morning controls
+N05-003,Nov05,N05-C,R1,-,-,L09,morning controls
+N05-004,Nov05,N05-RACK,R2,E0,-,L08,randomized trial by trial; rack set by jig every trial
+N05-007,Nov05,N05-RACK,R1,-,-,L03,randomized trial by trial; rack set by jig every trial
+N05-010,Nov05,N05-RACK,R2,E0,-,L07,randomized trial by trial; rack set by jig every trial
+N05-011,Nov05,N05-RACK,R1,-,-,L05,randomized trial by trial; rack set by jig every trial
+N05-012,Nov05,N05-RACK,R2,E0,-,L01,randomized trial by trial; rack set by jig every trial
+N05-013,Nov05,N05-RACK,R2,E0,-,L03,randomized trial by trial; rack set by jig every trial
+N05-015,Nov05,N05-RACK,R2,E0,-,L04,randomized trial by trial; rack set by jig every trial
+N05-016,Nov05,N05-RACK,R2,E0,-,L05,randomized trial by trial; rack set by jig every trial
+N05-018,Nov05,N05-RACK,R2,E0,-,L08,randomized trial by trial; rack set by jig every trial
+N05-022,Nov05,N05-RACK,R2,E0,-,L06,randomized trial by trial; rack set by jig every trial
+N05-023,Nov05,N05-RACK,R2,E0,-,L09,randomized trial by trial; rack set by jig every trial
+N05-024,Nov05,N05-RACK,R2,E0,-,L05,randomized trial by trial; rack set by jig every trial
+N06-001,Nov06,N06-C,R1,-,-,L02,morning controls (nominal camera)
+N06-002,Nov06,N06-C,R1,-,-,L07,morning controls (nominal camera)
+N06-003,Nov06,N06-C,R1,-,-,L04,morning controls (nominal camera)
+N06-016,Nov06,N06-C2,R1,-,-,L06,interspersed controls: camera back to nominal
+N06-017,Nov06,N06-C2,R1,-,-,L00,interspersed controls: camera back to nominal
+N06-004,Nov06,N06-CAM1,R4,E0,-,L09,"camera block 1 (tilt_down +6.0 deg (M2, E row 18))"
+N06-005,Nov06,N06-CAM1,R4,E0,-,L07,"camera block 1 (tilt_down +6.0 deg (M2, E row 18))"
+N06-006,Nov06,N06-CAM1,R4,E0,-,L00,"camera block 1 (tilt_down +6.0 deg (M2, E row 18))"
+N06-007,Nov06,N06-CAM1,R4,E0,-,L05,"camera block 1 (tilt_down +6.0 deg (M2, E row 18))"
+N06-018,Nov06,N06-CAM4,R4,E0,-,L03,"camera block 4 (tilt_down +6.0 deg (M2, E row 18))"
+N06-019,Nov06,N06-CAM4,R4,E0,-,L01,"camera block 4 (tilt_down +6.0 deg (M2, E row 18))"
+N06-020,Nov06,N06-CAM4,R4,E0,-,L02,"camera block 4 (tilt_down +6.0 deg (M2, E row 18))"
+N06-021,Nov06,N06-CAM4,R4,E0,-,L04,"camera block 4 (tilt_down +6.0 deg (M2, E row 18))"
+N06-022,Nov06,N06-CAM5,R4,E0,-,L08,"camera block 5 (tilt_down +6.0 deg (M2, E row 18))"
+N06-023,Nov06,N06-CAM5,R4,E0,-,L06,"camera block 5 (tilt_down +6.0 deg (M2, E row 18))"
+N06-034,Nov06,N06-M2C1-E3,R7,E3,M2-C1,L08,rig set to target = measured mis-setup pose + method delta
+N06-035,Nov06,N06-M2C1-E3,R7,E3,M2-C1,L04,rig set to target = measured mis-setup pose + method delta
+N06-036,Nov06,N06-M2C1-E3,R7,E3,M2-C1,L02,rig set to target = measured mis-setup pose + method delta
+N06-037,Nov06,N06-M2C1-E3,R7,E3,M2-C1,L05,rig set to target = measured mis-setup pose + method delta
+N07-005,Nov06,N06-M2C1-E3,R7,E3,M2-C1,L00,rig set to target = measured mis-setup pose + method delta; K6 (Nov 9): moved from N07-M2C3-E3 as N06-M2C1-E3's 5th trial
+N06-042,Nov06,N06-M2C2-E3,R7,E3,M2-C2,L03,rig set to target = measured mis-setup pose + method delta
+N06-043,Nov06,N06-M2C2-E3,R7,E3,M2-C2,L07,rig set to target = measured mis-setup pose + method delta
+N06-044,Nov06,N06-M2C2-E3,R7,E3,M2-C2,L01,rig set to target = measured mis-setup pose + method delta
+N06-045,Nov06,N06-M2C2-E3,R7,E3,M2-C2,L09,rig set to target = measured mis-setup pose + method delta
+N07-004,Nov06,N06-M2C2-E3,R7,E3,M2-C2,L08,rig set to target = measured mis-setup pose + method delta; K6 (Nov 9): moved from N07-M2C3-E3 as N06-M2C2-E3's 5th trial
+N05-030,Nov05,N05-M1C1-E3,R6,E3,M1-C1,L07,rig set to target = measured mis-setup pose + method delta
+N05-031,Nov05,N05-M1C1-E3,R6,E3,M1-C1,L02,rig set to target = measured mis-setup pose + method delta
+N05-032,Nov05,N05-M1C1-E3,R6,E3,M1-C1,L09,rig set to target = measured mis-setup pose + method delta
+N05-033,Nov05,N05-M1C1-E3,R6,E3,M1-C1,L06,rig set to target = measured mis-setup pose + method delta
+N07-018,Nov05,N05-M1C1-E3,R6,E3,M1-C1,L04,rig set to target = measured mis-setup pose + method delta; K6 (Nov 9): moved from N07-M1C3-E3 as N05-M1C1-E3's 5th trial
+N05-042,Nov05,N05-M1C2-E3,R6,E3,M1-C2,L05,rig set to target = measured mis-setup pose + method delta
+N05-043,Nov05,N05-M1C2-E3,R6,E3,M1-C2,L01,rig set to target = measured mis-setup pose + method delta
+N05-044,Nov05,N05-M1C2-E3,R6,E3,M1-C2,L08,rig set to target = measured mis-setup pose + method delta
+N05-045,Nov05,N05-M1C2-E3,R6,E3,M1-C2,L00,rig set to target = measured mis-setup pose + method delta
+N07-019,Nov05,N05-M1C2-E3,R6,E3,M1-C2,L02,rig set to target = measured mis-setup pose + method delta; K6 (Nov 9): moved from N07-M1C3-E3 as N05-M1C2-E3's 5th trial

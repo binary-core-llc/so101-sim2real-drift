@@ -16,7 +16,7 @@ MODELS_DIR=${MODELS_DIR:-$HOME/sim2real/models}
 HF_CACHE=${HF_CACHE:-$HOME/sim2real/hf_cache}
 PORT=${PORT:-5555}
 COURSE=$HOME/gtc2027/Sim-to-Real-SO-101-Workshop
-OFFLINE=${HF_HUB_OFFLINE:-0}
+OFFLINE=${HF_HUB_OFFLINE:-1}   # offline by default: the checkpoint and code are local; set HF_HUB_OFFLINE=0 to allow Hub access
 
 [ -d "$MODELS_DIR/$MODEL" ] || { echo "model not found: $MODELS_DIR/$MODEL" >&2; exit 1; }
 mkdir -p "$HF_CACHE"
