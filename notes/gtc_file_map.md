@@ -99,40 +99,49 @@ in `results/analysis/thresholds_v1.json` (`source_sha256`, published with prereg
 | `results/sim/v05_t07_a.jsonl` | pilot or test run (no analysis) | 46d5d86 | 108,964 | `4fe3e77743f130e12e8f14e806d026c1dbe047335bce5d391d4072ae61f9f7a0` | - |
 | `results/sim/v10_test.jsonl` | pilot or test run (no analysis) | 58477c6 | 7,874 | `31a0aedc35c7831efefd398a6590fb71eca2d81474d5c4d629905462f87df272` | - |
 
-## Exploratory simulation runs (`results/explore_v1/`, `results/explore_v2/`)
+## Exploratory simulation runs (`results/explore_v1/` to `results/explore_v3/`, `notes/explore_v*_summary.md`)
 
-25 files, 11,056,895 bytes; same path in gtc. These cells were added after sweep v1 finished and run on
-October 24-25, 2026 (Pacific time); they are not pre-registered, and numbers.json marks their numbers "final sim
-(exploratory, not pre-registered)". No earlier file records their hashes; each SHA-256 below was computed from the file
-here.
+33 files, 11,603,855 bytes; same paths in gtc. All are exploratory, not pre-registered. The cells were added
+after sweep v1 finished: explore-v1 and explore-v2 ran on October 24-25, 2026, and explore-v3 (1775-step episodes) on
+October 25 (Pacific time). Every simulation result numbers.json takes from them is marked "final sim (exploratory, not
+pre-registered)"; the protocol value `real.cap_chunks` also cites `notes/explore_v3_summary.md`. No earlier file records
+their hashes; each SHA-256 below was computed from the file here.
 
-| File | What | gtc commit | Bytes | SHA-256 |
-|---|---|---|---:|---|
-| `results/explore_v1/X_bump_mild.jsonl` | exploratory cell, 40 episodes | eb2ccaa | 168,204 | `7f25d150b387c19651669af9eaf30135422a1dc0da6ef8d13f74b679d57cd83f` |
-| `results/explore_v1/X_bump_strong.jsonl` | exploratory cell, 40 episodes | eb2ccaa | 168,263 | `790aed08c437233e69099761d14aa6a662f69a3d15ae0d9ac9f5e93f1cf1957b` |
-| `results/explore_v1/X_rack_y3_tilt_down_6.jsonl` | exploratory cell, 40 episodes | eb2ccaa | 166,967 | `26090a2221442e3c78ee412f17f9355af8a063befe49cb6f64e12a43726922ab` |
-| `results/explore_v1/X_roll_10.jsonl` | exploratory cell, 40 episodes | eb2ccaa | 166,427 | `75ea3bfeb89172936e6be05de2b09ef290f180ce8d27c7b8c10fa559e208b755` |
-| `results/explore_v1/X_roll_5.jsonl` | exploratory cell, 40 episodes | eb2ccaa | 166,692 | `c5d1ae67694ce5a7896b139d34fb3b507cde67d8fac2c3a94afb28e51cc97450` |
-| `results/explore_v1/X_tilt_down_10.jsonl` | exploratory cell, 40 episodes | eb2ccaa | 166,886 | `9288a290ac0a637bb01b77fdbf8b55dacf9dc7346b947fe3a23f9e9d7b12ba33` |
-| `results/explore_v1/X_tilt_down_12.jsonl` | exploratory cell, 40 episodes | eb2ccaa | 166,856 | `aa32c7431e68e72a500d1e62311ae8d408751e0d73b3f0c97d52e8024e156981` |
-| `results/explore_v1/X_tilt_down_15.jsonl` | exploratory cell, 40 episodes | eb2ccaa | 167,105 | `f9a3fb4fd19d8607656c9bd0fdeb5b9c29a07f3e67f39617ca3e550aaa97732e` |
-| `results/explore_v1/contact_sheet_explore_v1.png` | first front-camera frame of each cell (simulation render), labelled | 469435b | 2,987,770 | `8cb7e9a6a8afa16ca5e3b03fdf96e09b52496a001a336c309b1dc27ea8382a5a` |
-| `results/explore_v1/explore_v1_summary.json` | summary of the cells | eb2ccaa | 7,566 | `359940bcdf9c364950e5335a5245670cdc5e8ab7b3a479da3693b3d1c44a5cc9` |
-| `results/explore_v1/framing_explore_v1.json` | framing check per seed: which objects are fully in frame | 469435b | 292,598 | `5a2f5e946d1e9eed4cc1028a44071c13ef853b047939896f43892b7c5fa27333` |
-| `results/explore_v1/framing_sweep_v1_top.json` | framing check per seed: which objects are fully in frame | 469435b | 229,923 | `122f42af0a70e69f1c480708318096ddc184fb07997f8cfda86e56c05354d194` |
-| `results/explore_v1/probe_explore_v1.jsonl` | probe frames: camera and object poses after reset and 10 warm-up steps, no policy | 469435b | 33,421 | `3ffaa623a2d3b62943100d473ae666067971e463ce8f84c67da789c4812c2f7c` |
-| `results/explore_v1/probe_explore_v1_framing.jsonl` | probe frames: camera and object poses after reset and 10 warm-up steps, no policy | 469435b | 1,339,964 | `c4a25ab01b6d94130306f6b0991077d6243059fa7c93ef780d9797711bb5672f` |
-| `results/explore_v1/probe_explore_v1_tilt15.jsonl` | probe frames: camera and object poses after reset and 10 warm-up steps, no policy | 469435b | 148,372 | `62f86123623120738f2f4891ebe16665832d3b4c2f76fd8d792196c2658e5e50` |
-| `results/explore_v1/probe_sweep_v1_top_framing.jsonl` | probe frames: camera and object poses after reset and 10 warm-up steps, no policy | 469435b | 1,034,586 | `554f2f36282e1b8b06a720fc77a16699e0d04411f7f5f9790795b8e127de39b7` |
-| `results/explore_v2/Y_R0_course_text.jsonl` | exploratory cell, 80 episodes | 966e83f | 360,829 | `d7d7b5c83370a105e847c5bb803e5ca953a80a9359ee322fd6608985028e31ed` |
-| `results/explore_v2/Y_nominal_rack_sentence.jsonl` | exploratory cell, 200 episodes | 966e83f | 877,163 | `418ecee9e6b653db45dc334c465afadb4ea75eecc5a37b2211ccead19533a32c` |
-| `results/explore_v2/Y_tilt_down_13.jsonl` | exploratory cell, 40 episodes | 966e83f | 176,014 | `786048370fe534e16206dd2f36e315d9d36b51ad6662d15c86c19891c37b771c` |
-| `results/explore_v2/Y_tilt_down_14.jsonl` | exploratory cell, 40 episodes | 966e83f | 175,924 | `d31e62547916ad2a5965be0163d90b663dfb5d7a7bef73c9c2441e5c1a17a5e2` |
-| `results/explore_v2/contact_sheet_explore_v2.png` | first front-camera frame of each cell (simulation render), labelled | a0b0db3 | 1,317,414 | `b489a9ef8fa014f5ed5f114590da1b7431bc58348a3926c3bbf4df968d7f7b50` |
-| `results/explore_v2/explore_v2_summary.json` | summary of the cells | 966e83f | 5,411 | `783fea96c47617f66c15a74760da84475c4c0f5f2cf36e9ba72daa9295273389` |
-| `results/explore_v2/framing_explore_v2.json` | framing check per seed: which objects are fully in frame | a0b0db3 | 130,002 | `fd725230e62d0069585a6cd03effee542677af7d209a727a6611a9a3a8ddf7ee` |
-| `results/explore_v2/probe_explore_v2.jsonl` | probe frames: camera and object poses after reset and 10 warm-up steps, no policy | a0b0db3 | 599,919 | `a00f50216ae84651207fd858267e29a578c279d04b931719347be198699c3eff` |
-| `results/explore_v2/tilt_failure_modes.json` | failure modes in the 12-15 degree tilt runs, with S0 for reference | 28be591 | 2,619 | `5aab8454b713742011b0dbb0858d2c82c2c6aaeade799af8c1c8088770b4435a` |
+| File | What | Status | gtc commit | Bytes | SHA-256 |
+|---|---|---|---|---:|---|
+| `results/explore_v1/X_bump_mild.jsonl` | exploratory cell, 40 episodes | exploratory, not pre-registered | eb2ccaa | 168,204 | `7f25d150b387c19651669af9eaf30135422a1dc0da6ef8d13f74b679d57cd83f` |
+| `results/explore_v1/X_bump_strong.jsonl` | exploratory cell, 40 episodes | exploratory, not pre-registered | eb2ccaa | 168,263 | `790aed08c437233e69099761d14aa6a662f69a3d15ae0d9ac9f5e93f1cf1957b` |
+| `results/explore_v1/X_rack_y3_tilt_down_6.jsonl` | exploratory cell, 40 episodes | exploratory, not pre-registered | eb2ccaa | 166,967 | `26090a2221442e3c78ee412f17f9355af8a063befe49cb6f64e12a43726922ab` |
+| `results/explore_v1/X_roll_10.jsonl` | exploratory cell, 40 episodes | exploratory, not pre-registered | eb2ccaa | 166,427 | `75ea3bfeb89172936e6be05de2b09ef290f180ce8d27c7b8c10fa559e208b755` |
+| `results/explore_v1/X_roll_5.jsonl` | exploratory cell, 40 episodes | exploratory, not pre-registered | eb2ccaa | 166,692 | `c5d1ae67694ce5a7896b139d34fb3b507cde67d8fac2c3a94afb28e51cc97450` |
+| `results/explore_v1/X_tilt_down_10.jsonl` | exploratory cell, 40 episodes | exploratory, not pre-registered | eb2ccaa | 166,886 | `9288a290ac0a637bb01b77fdbf8b55dacf9dc7346b947fe3a23f9e9d7b12ba33` |
+| `results/explore_v1/X_tilt_down_12.jsonl` | exploratory cell, 40 episodes | exploratory, not pre-registered | eb2ccaa | 166,856 | `aa32c7431e68e72a500d1e62311ae8d408751e0d73b3f0c97d52e8024e156981` |
+| `results/explore_v1/X_tilt_down_15.jsonl` | exploratory cell, 40 episodes | exploratory, not pre-registered | eb2ccaa | 167,105 | `f9a3fb4fd19d8607656c9bd0fdeb5b9c29a07f3e67f39617ca3e550aaa97732e` |
+| `results/explore_v1/contact_sheet_explore_v1.png` | first front-camera frame of each cell (simulation render), labelled | exploratory, not pre-registered | 469435b | 2,987,770 | `8cb7e9a6a8afa16ca5e3b03fdf96e09b52496a001a336c309b1dc27ea8382a5a` |
+| `results/explore_v1/explore_v1_summary.json` | summary of the cells | exploratory, not pre-registered | eb2ccaa | 7,566 | `359940bcdf9c364950e5335a5245670cdc5e8ab7b3a479da3693b3d1c44a5cc9` |
+| `results/explore_v1/framing_explore_v1.json` | framing check per seed: which objects are fully in frame | exploratory, not pre-registered | 469435b | 292,598 | `5a2f5e946d1e9eed4cc1028a44071c13ef853b047939896f43892b7c5fa27333` |
+| `results/explore_v1/framing_sweep_v1_top.json` | framing check per seed: which objects are fully in frame | exploratory, not pre-registered | 469435b | 229,923 | `122f42af0a70e69f1c480708318096ddc184fb07997f8cfda86e56c05354d194` |
+| `results/explore_v1/probe_explore_v1.jsonl` | probe frames: camera and object poses after reset and 10 warm-up steps, no policy | exploratory, not pre-registered | 469435b | 33,421 | `3ffaa623a2d3b62943100d473ae666067971e463ce8f84c67da789c4812c2f7c` |
+| `results/explore_v1/probe_explore_v1_framing.jsonl` | probe frames: camera and object poses after reset and 10 warm-up steps, no policy | exploratory, not pre-registered | 469435b | 1,339,964 | `c4a25ab01b6d94130306f6b0991077d6243059fa7c93ef780d9797711bb5672f` |
+| `results/explore_v1/probe_explore_v1_tilt15.jsonl` | probe frames: camera and object poses after reset and 10 warm-up steps, no policy | exploratory, not pre-registered | 469435b | 148,372 | `62f86123623120738f2f4891ebe16665832d3b4c2f76fd8d792196c2658e5e50` |
+| `results/explore_v1/probe_sweep_v1_top_framing.jsonl` | probe frames: camera and object poses after reset and 10 warm-up steps, no policy | exploratory, not pre-registered | 469435b | 1,034,586 | `554f2f36282e1b8b06a720fc77a16699e0d04411f7f5f9790795b8e127de39b7` |
+| `results/explore_v2/Y_R0_course_text.jsonl` | exploratory cell, 80 episodes | exploratory, not pre-registered | 966e83f | 360,829 | `d7d7b5c83370a105e847c5bb803e5ca953a80a9359ee322fd6608985028e31ed` |
+| `results/explore_v2/Y_nominal_rack_sentence.jsonl` | exploratory cell, 200 episodes | exploratory, not pre-registered | 966e83f | 877,163 | `418ecee9e6b653db45dc334c465afadb4ea75eecc5a37b2211ccead19533a32c` |
+| `results/explore_v2/Y_tilt_down_13.jsonl` | exploratory cell, 40 episodes | exploratory, not pre-registered | 966e83f | 176,014 | `786048370fe534e16206dd2f36e315d9d36b51ad6662d15c86c19891c37b771c` |
+| `results/explore_v2/Y_tilt_down_14.jsonl` | exploratory cell, 40 episodes | exploratory, not pre-registered | 966e83f | 175,924 | `d31e62547916ad2a5965be0163d90b663dfb5d7a7bef73c9c2441e5c1a17a5e2` |
+| `results/explore_v2/contact_sheet_explore_v2.png` | first front-camera frame of each cell (simulation render), labelled | exploratory, not pre-registered | a0b0db3 | 1,317,414 | `b489a9ef8fa014f5ed5f114590da1b7431bc58348a3926c3bbf4df968d7f7b50` |
+| `results/explore_v2/explore_v2_summary.json` | summary of the cells | exploratory, not pre-registered | 966e83f | 5,411 | `783fea96c47617f66c15a74760da84475c4c0f5f2cf36e9ba72daa9295273389` |
+| `results/explore_v2/framing_explore_v2.json` | framing check per seed: which objects are fully in frame | exploratory, not pre-registered | a0b0db3 | 130,002 | `fd725230e62d0069585a6cd03effee542677af7d209a727a6611a9a3a8ddf7ee` |
+| `results/explore_v2/probe_explore_v2.jsonl` | probe frames: camera and object poses after reset and 10 warm-up steps, no policy | exploratory, not pre-registered | a0b0db3 | 599,919 | `a00f50216ae84651207fd858267e29a578c279d04b931719347be198699c3eff` |
+| `results/explore_v2/tilt_failure_modes.json` | failure modes in the 12-15 degree tilt runs, with S0 for reference | exploratory, not pre-registered | 28be591 | 2,619 | `5aab8454b713742011b0dbb0858d2c82c2c6aaeade799af8c1c8088770b4435a` |
+| `results/explore_v3/Z_nominal_long.jsonl` | exploratory cell, 40 episodes of 1775 steps | exploratory, not pre-registered | 42722dd | 175,327 | `e99847f636b8f5d87f44cad26b7fdbc8b1280e8a02229ff74f89754bd0b5a478` |
+| `results/explore_v3/Z_tilt_down_13_long.jsonl` | exploratory cell, 40 episodes of 1775 steps | exploratory, not pre-registered | 42722dd | 176,243 | `e7fbd34b2324ca08dc24159d41eea174496990201966895d34d3d8679d579884` |
+| `results/explore_v3/Z_tilt_down_15_long.jsonl` | exploratory cell, 40 episodes of 1775 steps | exploratory, not pre-registered | 42722dd | 176,287 | `51a6071fb8db3310cee84d4b6eb8f18e590551110a3a34542369cc5d9357f644` |
+| `results/explore_v3/explore_v3_successes.json` | release chunk of every success | exploratory, not pre-registered | 42722dd | 11,787 | `02e0eb8849bd6e5907576707befa11a93909babaebae72d168381a2737076cc4` |
+| `results/explore_v3/explore_v3_summary.json` | summary of the cells, the latency cutoff and the rule | exploratory, not pre-registered | 42722dd | 3,245 | `3251000415c212b05c0dc68d9a6e2d5e272eb7e4c442aa5dd6b6bbdfd6e92be4` |
+| `notes/explore_v1_summary.md` | summary table of the cells (k/n, intervals, tests) | exploratory, not pre-registered | eb2ccaa | 1,486 | `ee5188479f4fc77f3b8af312e0c0cdd2a260e2622ff9a6e7b7a6d323313a1b1a` |
+| `notes/explore_v2_summary.md` | summary table of the cells (k/n, intervals, tests) | exploratory, not pre-registered | 966e83f | 989 | `6460e1beb892c0849e06734ff2d47062251c5199ef1e4de8b7a2972ad2c09670` |
+| `notes/explore_v3_summary.md` | summary table of the cells (k/n, intervals, tests) | exploratory, not pre-registered | 42722dd | 1,596 | `46a6ae365ec4f197566c4070505f2133eb550287a2a5360fd056a5bfb8df4a0f` |
 
 ## Notes
 
@@ -153,4 +162,4 @@ here.
   deviations are in deviations.md.
 - **Not copied:** the phone recordings, judge clips and trial frames; the clip-cutting logs (their video metadata
   includes the phone's location); the per-step logs (`results/real/steps/`); the audit copies of trials.jsonl made
-  before each edit; the E3 code.
+  before each edit; the explore-v3 plan (`notes/explore_v3_plan.md`); the E3 code.

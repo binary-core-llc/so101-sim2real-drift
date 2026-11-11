@@ -1,0 +1,256 @@
+{
+ "note": "explore-v3: added after explore-v2, not part of prereg-v1",
+ "latency_s": 0.11280357142857142,
+ "latency_source": "explore-v1 median policy latency over 320 episodes",
+ "cutoff_c_chunks": 89.76425827491225,
+ "cells": {
+  "Z_nominal_long": {
+   "n": 40,
+   "max_steps": [
+    1775
+   ],
+   "a_450_steps": {
+    "k": 23,
+    "n": 40,
+    "rate": 0.575,
+    "wilson95": [
+     0.422,
+     0.715
+    ]
+   },
+   "b_28_chunks": {
+    "k": 24,
+    "n": 40,
+    "rate": 0.6,
+    "wilson95": [
+     0.446,
+     0.737
+    ]
+   },
+   "c_58s_real_pace": {
+    "k": 27,
+    "n": 40,
+    "rate": 0.675,
+    "wilson95": [
+     0.52,
+     0.799
+    ]
+   },
+   "full_1775_steps": {
+    "k": 27,
+    "n": 40,
+    "rate": 0.675,
+    "wilson95": [
+     0.52,
+     0.799
+    ]
+   },
+   "earlier_at_450": {
+    "label": "S0 nominal, seeds 0-39 x 5",
+    "k": 124,
+    "n": 200,
+    "fisher_p_vs_a": 0.5985
+   },
+   "release_chunks": [
+    14,
+    15,
+    15,
+    15,
+    16,
+    16,
+    17,
+    17,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    20,
+    20,
+    20,
+    22,
+    23,
+    23,
+    24,
+    24,
+    26,
+    27,
+    38,
+    43,
+    49
+   ]
+  },
+  "Z_tilt_down_13_long": {
+   "n": 40,
+   "max_steps": [
+    1775
+   ],
+   "a_450_steps": {
+    "k": 8,
+    "n": 40,
+    "rate": 0.2,
+    "wilson95": [
+     0.105,
+     0.348
+    ]
+   },
+   "b_28_chunks": {
+    "k": 13,
+    "n": 40,
+    "rate": 0.325,
+    "wilson95": [
+     0.201,
+     0.48
+    ]
+   },
+   "c_58s_real_pace": {
+    "k": 28,
+    "n": 40,
+    "rate": 0.7,
+    "wilson95": [
+     0.546,
+     0.819
+    ]
+   },
+   "full_1775_steps": {
+    "k": 30,
+    "n": 40,
+    "rate": 0.75,
+    "wilson95": [
+     0.598,
+     0.858
+    ]
+   },
+   "earlier_at_450": {
+    "label": "explore-v2 tilt 13",
+    "k": 6,
+    "n": 40,
+    "fisher_p_vs_a": 0.7695
+   },
+   "release_chunks": [
+    18,
+    20,
+    21,
+    21,
+    23,
+    24,
+    25,
+    26,
+    27,
+    27,
+    27,
+    28,
+    28,
+    29,
+    29,
+    29,
+    29,
+    31,
+    33,
+    34,
+    37,
+    37,
+    41,
+    44,
+    57,
+    58,
+    61,
+    65,
+    90,
+    101
+   ]
+  },
+  "Z_tilt_down_15_long": {
+   "n": 40,
+   "max_steps": [
+    1775
+   ],
+   "a_450_steps": {
+    "k": 7,
+    "n": 40,
+    "rate": 0.175,
+    "wilson95": [
+     0.087,
+     0.319
+    ]
+   },
+   "b_28_chunks": {
+    "k": 14,
+    "n": 40,
+    "rate": 0.35,
+    "wilson95": [
+     0.221,
+     0.505
+    ]
+   },
+   "c_58s_real_pace": {
+    "k": 29,
+    "n": 40,
+    "rate": 0.725,
+    "wilson95": [
+     0.572,
+     0.839
+    ]
+   },
+   "full_1775_steps": {
+    "k": 29,
+    "n": 40,
+    "rate": 0.725,
+    "wilson95": [
+     0.572,
+     0.839
+    ]
+   },
+   "earlier_at_450": {
+    "label": "explore-v1 tilt 15",
+    "k": 5,
+    "n": 40,
+    "fisher_p_vs_a": 0.7555
+   },
+   "release_chunks": [
+    19,
+    20,
+    20,
+    21,
+    21,
+    26,
+    26,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    28,
+    29,
+    30,
+    30,
+    31,
+    31,
+    31,
+    31,
+    32,
+    32,
+    32,
+    33,
+    33,
+    33,
+    39,
+    54
+   ]
+  }
+ },
+ "rule": {
+  "Z_tilt_down_13_long": {
+   "tilt_rate_c": 0.7,
+   "nominal_rate_c": 0.675,
+   "qualifies": false
+  },
+  "Z_tilt_down_15_long": {
+   "tilt_rate_c": 0.725,
+   "nominal_rate_c": 0.675,
+   "qualifies": false
+  }
+ }
+}
