@@ -10,6 +10,8 @@ results/*
 !results/explore_v3/
 !results/poses/
 !results/c1/
+!results/e1/
+!results/e3/
 media/
 .venv/
 assets_mirror/

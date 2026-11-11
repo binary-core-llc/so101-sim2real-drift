@@ -1,0 +1,239 @@
+{
+ "focal_mm": 2.364825,
+ "fx_px": 630.62,
+ "seed": 0,
+ "truth": {
+  "nominal": {
+   "camera_delta": null,
+   "rack_delta": null
+  },
+  "tilt_down_6": {
+   "camera_delta": {
+    "tilt_down_deg": 6.0,
+    "pan_deg": 0.0,
+    "roll_deg": 0.0,
+    "lateral_m": 0.0,
+    "depth_m": 0.0,
+    "height_m": 0.0
+   },
+   "rack_delta": null
+  },
+  "tilt_up_6": {
+   "camera_delta": {
+    "tilt_down_deg": -6.0,
+    "pan_deg": 0.0,
+    "roll_deg": -0.0,
+    "lateral_m": 0.0,
+    "depth_m": 0.0,
+    "height_m": 0.0
+   },
+   "rack_delta": null
+  },
+  "tilt_down_3": {
+   "camera_delta": {
+    "tilt_down_deg": 3.0,
+    "pan_deg": 0.0,
+    "roll_deg": 0.0,
+    "lateral_m": 0.0,
+    "depth_m": 0.0,
+    "height_m": 0.0
+   },
+   "rack_delta": null
+  },
+  "tilt_up_2": {
+   "camera_delta": {
+    "tilt_down_deg": -2.0,
+    "pan_deg": 0.0,
+    "roll_deg": -0.0,
+    "lateral_m": 0.0,
+    "depth_m": 0.0,
+    "height_m": 0.0
+   },
+   "rack_delta": null
+  },
+  "pan_back_4": {
+   "camera_delta": {
+    "tilt_down_deg": 0.0,
+    "pan_deg": 4.0,
+    "roll_deg": 0.0,
+    "lateral_m": 0.0,
+    "depth_m": 0.0,
+    "height_m": 0.0
+   },
+   "rack_delta": null
+  },
+  "pan_front_4": {
+   "camera_delta": {
+    "tilt_down_deg": 0.0,
+    "pan_deg": -4.0,
+    "roll_deg": 0.0,
+    "lateral_m": 0.0,
+    "depth_m": 0.0,
+    "height_m": 0.0
+   },
+   "rack_delta": null
+  },
+  "height_up_15": {
+   "camera_delta": {
+    "tilt_down_deg": 0.0,
+    "pan_deg": 0.0,
+    "roll_deg": 0.0,
+    "lateral_m": 0.0,
+    "depth_m": 0.0,
+    "height_m": 0.015
+   },
+   "rack_delta": null
+  },
+  "height_down_20": {
+   "camera_delta": {
+    "tilt_down_deg": 0.0,
+    "pan_deg": 0.0,
+    "roll_deg": 0.0,
+    "lateral_m": 0.0,
+    "depth_m": 0.0,
+    "height_m": -0.02
+   },
+   "rack_delta": null
+  },
+  "lateral_away_20": {
+   "camera_delta": {
+    "tilt_down_deg": 0.0,
+    "pan_deg": 0.0,
+    "roll_deg": 0.0,
+    "lateral_m": -0.02,
+    "depth_m": 0.0,
+    "height_m": 0.0
+   },
+   "rack_delta": null
+  },
+  "depth_back_20": {
+   "camera_delta": {
+    "tilt_down_deg": 0.0,
+    "pan_deg": 0.0,
+    "roll_deg": 0.0,
+    "lateral_m": 0.0,
+    "depth_m": 0.02,
+    "height_m": 0.0
+   },
+   "rack_delta": null
+  },
+  "roll_3": {
+   "camera_delta": {
+    "tilt_down_deg": 0.0,
+    "pan_deg": 0.0,
+    "roll_deg": 3.0,
+    "lateral_m": 0.0,
+    "depth_m": 0.0,
+    "height_m": 0.0
+   },
+   "rack_delta": null
+  },
+  "combo_t4_p-2_h-10": {
+   "camera_delta": {
+    "tilt_down_deg": 4.0,
+    "pan_deg": -2.0,
+    "roll_deg": 0.0,
+    "lateral_m": 0.0,
+    "depth_m": 0.0,
+    "height_m": -0.01
+   },
+   "rack_delta": null
+  },
+  "rack_x+30": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": 0.03,
+    "y_m": 0.0,
+    "yaw_deg": 0.0
+   }
+  },
+  "rack_x-30": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": -0.03,
+    "y_m": 0.0,
+    "yaw_deg": 0.0
+   }
+  },
+  "rack_y+30": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": 0.0,
+    "y_m": 0.03,
+    "yaw_deg": 0.0
+   }
+  },
+  "rack_y-20": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": 0.0,
+    "y_m": -0.02,
+    "yaw_deg": 0.0
+   }
+  },
+  "rack_yaw+15": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": 0.0,
+    "y_m": 0.0,
+    "yaw_deg": 15.0
+   }
+  },
+  "rack_yaw-10": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": 0.0,
+    "y_m": 0.0,
+    "yaw_deg": -10.0
+   }
+  },
+  "rack_x+20_y+20": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": 0.02,
+    "y_m": 0.02,
+    "yaw_deg": 0.0
+   }
+  },
+  "rack_x-15_y+25_yaw+8": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": -0.015,
+    "y_m": 0.025,
+    "yaw_deg": 8.0
+   }
+  },
+  "rack_y+10": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": 0.0,
+    "y_m": 0.01,
+    "yaw_deg": 0.0
+   }
+  },
+  "rack_x+10": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": 0.01,
+    "y_m": 0.0,
+    "yaw_deg": 0.0
+   }
+  },
+  "rack_yaw+5": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": 0.0,
+    "y_m": 0.0,
+    "yaw_deg": 5.0
+   }
+  },
+  "rack_x+25_y-15_yaw-12": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": 0.025,
+    "y_m": -0.015,
+    "yaw_deg": -12.0
+   }
+  }
+ }
+}

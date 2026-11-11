@@ -1,0 +1,687 @@
+{
+ "rule": "lowest median scaled error over the selection set; tie -> the earlier of v1, v2, v1b, v2b",
+ "variants": {
+  "v1": {
+   "median": 1.0,
+   "mean": 5.131,
+   "failures": 7,
+   "median_camera_scenes": 0.6667,
+   "median_rack_scenes": 1.0
+  },
+  "v2": {
+   "median": 0.6667,
+   "mean": 0.7519,
+   "failures": 0,
+   "median_camera_scenes": 0.6667,
+   "median_rack_scenes": 0.9714
+  },
+  "v1b": {
+   "median": 2.8974,
+   "mean": 8.5155,
+   "failures": 1,
+   "median_camera_scenes": 1.069,
+   "median_rack_scenes": 3.23
+  },
+  "v2b": {
+   "median": 0.6667,
+   "mean": 1.0124,
+   "failures": 19,
+   "median_camera_scenes": 0.6667,
+   "median_rack_scenes": 1.0
+  }
+ },
+ "per_scene": {
+  "nominal": {
+   "v1": {
+    "error": 0.0,
+    "status": "parse_fail",
+    "moved": null,
+    "seconds": 59.38
+   },
+   "v2": {
+    "error": 0.0,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 2.09
+   },
+   "v1b": {
+    "error": 3.6547,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 10.04
+   },
+   "v2b": {
+    "error": 0.0,
+    "status": "ok",
+    "moved": null,
+    "seconds": 3.59
+   }
+  },
+  "tilt_down_6": {
+   "v1": {
+    "error": 1.0,
+    "status": "parse_fail",
+    "moved": null,
+    "seconds": 58.14
+   },
+   "v2": {
+    "error": 1.0,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.59
+   },
+   "v1b": {
+    "error": 5.3698,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 4.49
+   },
+   "v2b": {
+    "error": 3.5339,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 8.88
+   }
+  },
+  "tilt_up_6": {
+   "v1": {
+    "error": 33.5431,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 6.62
+   },
+   "v2": {
+    "error": 1.0,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.59
+   },
+   "v1b": {
+    "error": 1.0,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 8.91
+   },
+   "v2b": {
+    "error": 1.0,
+    "status": "no_estimate",
+    "moved": "camera",
+    "seconds": 5.58
+   }
+  },
+  "tilt_down_3": {
+   "v1": {
+    "error": 0.5,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 7.3
+   },
+   "v2": {
+    "error": 0.5,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.59
+   },
+   "v1b": {
+    "error": 52.6735,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 8.23
+   },
+   "v2b": {
+    "error": 0.5,
+    "status": "no_estimate",
+    "moved": "none",
+    "seconds": 6.14
+   }
+  },
+  "tilt_up_2": {
+   "v1": {
+    "error": 0.3333,
+    "status": "ok",
+    "moved": "robot_arm",
+    "seconds": 10.91
+   },
+   "v2": {
+    "error": 0.3333,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.59
+   },
+   "v1b": {
+    "error": 0.3333,
+    "status": "ok",
+    "moved": "rack",
+    "seconds": 4.64
+   },
+   "v2b": {
+    "error": 0.3333,
+    "status": "no_estimate",
+    "moved": "camera",
+    "seconds": 4.07
+   }
+  },
+  "pan_back_4": {
+   "v1": {
+    "error": 1.116,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 5.03
+   },
+   "v2": {
+    "error": 0.6667,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.58
+   },
+   "v1b": {
+    "error": 0.6667,
+    "status": "ok",
+    "moved": "rack",
+    "seconds": 4.64
+   },
+   "v2b": {
+    "error": 0.2244,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 8.16
+   }
+  },
+  "pan_front_4": {
+   "v1": {
+    "error": 0.6667,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 6.65
+   },
+   "v2": {
+    "error": 0.6667,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.59
+   },
+   "v1b": {
+    "error": 1.1381,
+    "status": "ok",
+    "moved": "rack",
+    "seconds": 4.96
+   },
+   "v2b": {
+    "error": 0.6667,
+    "status": "no_estimate",
+    "moved": "camera",
+    "seconds": 6.05
+   }
+  },
+  "height_up_15": {
+   "v1": {
+    "error": 0.5,
+    "status": "parse_fail",
+    "moved": null,
+    "seconds": 61.21
+   },
+   "v2": {
+    "error": 0.5,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.59
+   },
+   "v1b": {
+    "error": 0.8333,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 9.63
+   },
+   "v2b": {
+    "error": 0.5,
+    "status": "no_estimate",
+    "moved": "none",
+    "seconds": 5.87
+   }
+  },
+  "height_down_20": {
+   "v1": {
+    "error": 0.6667,
+    "status": "parse_fail",
+    "moved": null,
+    "seconds": 63.56
+   },
+   "v2": {
+    "error": 0.6667,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.59
+   },
+   "v1b": {
+    "error": 1.7186,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 11.49
+   },
+   "v2b": {
+    "error": 0.6667,
+    "status": "parse_fail",
+    "moved": null,
+    "seconds": 6.11
+   }
+  },
+  "lateral_away_20": {
+   "v1": {
+    "error": 0.6667,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 10.36
+   },
+   "v2": {
+    "error": 0.6667,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.6
+   },
+   "v1b": {
+    "error": 0.6667,
+    "status": "parse_fail",
+    "moved": null,
+    "seconds": 58.04
+   },
+   "v2b": {
+    "error": 0.6667,
+    "status": "no_estimate",
+    "moved": "camera",
+    "seconds": 7.08
+   }
+  },
+  "depth_back_20": {
+   "v1": {
+    "error": 0.6667,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 5.51
+   },
+   "v2": {
+    "error": 0.6667,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.59
+   },
+   "v1b": {
+    "error": 0.3333,
+    "status": "ok",
+    "moved": "rack",
+    "seconds": 4.11
+   },
+   "v2b": {
+    "error": 0.6667,
+    "status": "parse_fail",
+    "moved": null,
+    "seconds": 6.62
+   }
+  },
+  "roll_3": {
+   "v1": {
+    "error": 2.3,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 14.19
+   },
+   "v2": {
+    "error": 0.5,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.6
+   },
+   "v1b": {
+    "error": 34.7037,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 5.91
+   },
+   "v2b": {
+    "error": 1.7333,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 6.89
+   }
+  },
+  "combo_t4_p-2_h-10": {
+   "v1": {
+    "error": 1.0787,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 7.77
+   },
+   "v2": {
+    "error": 1.0787,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.58
+   },
+   "v1b": {
+    "error": 4.0601,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 4.12
+   },
+   "v2b": {
+    "error": 1.0787,
+    "status": "no_estimate",
+    "moved": "camera",
+    "seconds": 5.16
+   }
+  },
+  "rack_x+30": {
+   "v1": {
+    "error": 1.0,
+    "status": "parse_fail",
+    "moved": null,
+    "seconds": 65.3
+   },
+   "v2": {
+    "error": 1.0,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.59
+   },
+   "v1b": {
+    "error": 35.9583,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 6.38
+   },
+   "v2b": {
+    "error": 1.0,
+    "status": "no_estimate",
+    "moved": "camera",
+    "seconds": 6.78
+   }
+  },
+  "rack_x-30": {
+   "v1": {
+    "error": 1.0,
+    "status": "parse_fail",
+    "moved": null,
+    "seconds": 65.18
+   },
+   "v2": {
+    "error": 1.0,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.64
+   },
+   "v1b": {
+    "error": 16.1957,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 7.47
+   },
+   "v2b": {
+    "error": 1.0,
+    "status": "parse_fail",
+    "moved": null,
+    "seconds": 6.89
+   }
+  },
+  "rack_y+30": {
+   "v1": {
+    "error": 34.3333,
+    "status": "ok",
+    "moved": "rack",
+    "seconds": 21.72
+   },
+   "v2": {
+    "error": 1.0,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.59
+   },
+   "v1b": {
+    "error": 1.9524,
+    "status": "ok",
+    "moved": "rack",
+    "seconds": 6.09
+   },
+   "v2b": {
+    "error": 3.0207,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 7.08
+   }
+  },
+  "rack_y-20": {
+   "v1": {
+    "error": 0.6667,
+    "status": "parse_fail",
+    "moved": null,
+    "seconds": 65.05
+   },
+   "v2": {
+    "error": 0.6667,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.59
+   },
+   "v1b": {
+    "error": 4.7279,
+    "status": "ok",
+    "moved": "rack",
+    "seconds": 7.39
+   },
+   "v2b": {
+    "error": 0.6667,
+    "status": "no_estimate",
+    "moved": "rack",
+    "seconds": 7.05
+   }
+  },
+  "rack_yaw+15": {
+   "v1": {
+    "error": 1.0,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 6.45
+   },
+   "v2": {
+    "error": 1.0,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.59
+   },
+   "v1b": {
+    "error": 26.6632,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 6.62
+   },
+   "v2b": {
+    "error": 1.0,
+    "status": "no_estimate",
+    "moved": "camera",
+    "seconds": 15.69
+   }
+  },
+  "rack_yaw-10": {
+   "v1": {
+    "error": 40.9345,
+    "status": "ok",
+    "moved": "rack",
+    "seconds": 22.11
+   },
+   "v2": {
+    "error": 0.6667,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.66
+   },
+   "v1b": {
+    "error": 2.8974,
+    "status": "ok",
+    "moved": "rack",
+    "seconds": 8.6
+   },
+   "v2b": {
+    "error": 1.8333,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 8.9
+   }
+  },
+  "rack_x+20_y+20": {
+   "v1": {
+    "error": 1.7761,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 6.52
+   },
+   "v2": {
+    "error": 0.9428,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.58
+   },
+   "v1b": {
+    "error": 3.1942,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 7.78
+   },
+   "v2b": {
+    "error": 0.9428,
+    "status": "no_estimate",
+    "moved": "none",
+    "seconds": 6.33
+   }
+  },
+  "rack_x-15_y+25_yaw+8": {
+   "v1": {
+    "error": 1.5052,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 6.08
+   },
+   "v2": {
+    "error": 1.5052,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.59
+   },
+   "v1b": {
+    "error": 5.044,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 8.37
+   },
+   "v2b": {
+    "error": 1.5052,
+    "status": "no_estimate",
+    "moved": "rack",
+    "seconds": 4.23
+   }
+  },
+  "rack_y+10": {
+   "v1": {
+    "error": 0.3333,
+    "status": "ok",
+    "moved": "rack",
+    "seconds": 6.99
+   },
+   "v2": {
+    "error": 0.3333,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.64
+   },
+   "v1b": {
+    "error": 2.8214,
+    "status": "ok",
+    "moved": "rack",
+    "seconds": 7.78
+   },
+   "v2b": {
+    "error": 0.3333,
+    "status": "no_estimate",
+    "moved": "camera",
+    "seconds": 6.4
+   }
+  },
+  "rack_x+10": {
+   "v1": {
+    "error": 0.3333,
+    "status": "ok",
+    "moved": "moved",
+    "seconds": 13.94
+   },
+   "v2": {
+    "error": 0.3333,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.59
+   },
+   "v1b": {
+    "error": 1.244,
+    "status": "ok",
+    "moved": "rack",
+    "seconds": 6.91
+   },
+   "v2b": {
+    "error": 0.3333,
+    "status": "no_estimate",
+    "moved": "none",
+    "seconds": 6.99
+   }
+  },
+  "rack_yaw+5": {
+   "v1": {
+    "error": 0.3333,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 6.56
+   },
+   "v2": {
+    "error": 0.3333,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.59
+   },
+   "v1b": {
+    "error": 3.2657,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 6.18
+   },
+   "v2b": {
+    "error": 0.3333,
+    "status": "no_estimate",
+    "moved": "none",
+    "seconds": 8.82
+   }
+  },
+  "rack_x+25_y-15_yaw-12": {
+   "v1": {
+    "error": 2.0218,
+    "status": "ok",
+    "moved": "camera",
+    "seconds": 6.79
+   },
+   "v2": {
+    "error": 1.7718,
+    "status": "ok",
+    "moved": "none",
+    "seconds": 1.59
+   },
+   "v1b": {
+    "error": 1.7718,
+    "status": "ok",
+    "moved": "rack",
+    "seconds": 4.45
+   },
+   "v2b": {
+    "error": 1.7718,
+    "status": "parse_fail",
+    "moved": null,
+    "seconds": 65.51
+   }
+  }
+ },
+ "no_correction_median": 0.6667,
+ "chosen": "v2"
+}

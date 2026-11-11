@@ -1,0 +1,279 @@
+{
+ "backend": "torch",
+ "version_hash": "d826f4e78acf2f70bf323ba7df8b64fbf3ea0bb07db0bf4b7d8f6d92c66de79c",
+ "nominal_reference_vs_sim_pose": {
+  "tilt_down_deg": -0.14362418144915523,
+  "pan_deg": 0.07138891323040752,
+  "roll_deg": 0.3067177325578716,
+  "lateral_m": 0.0007054234406015381,
+  "depth_m": -0.0005291931438252129,
+  "height_m": -0.0017761557469542222
+ },
+ "estimates": {
+  "nominal": {
+   "camera_delta": {
+    "tilt_down_deg": 0.0,
+    "pan_deg": 0.0,
+    "roll_deg": 0.0,
+    "lateral_m": 0.0,
+    "depth_m": 0.0,
+    "height_m": 0.0
+   },
+   "rack_delta": null,
+   "seconds": 55.5
+  },
+  "tilt_down_6": {
+   "camera_delta": {
+    "tilt_down_deg": 5.909290067103974,
+    "pan_deg": -0.12301878134587696,
+    "roll_deg": -0.32939111841075985,
+    "lateral_m": 0.0003821894186042396,
+    "depth_m": 0.000743370360873935,
+    "height_m": -4.896753451311131e-05
+   },
+   "rack_delta": null,
+   "seconds": 7.0
+  },
+  "tilt_up_6": {
+   "camera_delta": {
+    "tilt_down_deg": -5.947755088969487,
+    "pan_deg": 0.07061984446244196,
+    "roll_deg": -0.05484760133445943,
+    "lateral_m": -9.137535267395025e-05,
+    "depth_m": -0.0004831147353373255,
+    "height_m": 0.0008985620792776872
+   },
+   "rack_delta": null,
+   "seconds": 7.0
+  },
+  "tilt_down_3": {
+   "camera_delta": {
+    "tilt_down_deg": 2.9393041090907204,
+    "pan_deg": -0.21652664064117744,
+    "roll_deg": -0.39010990573573157,
+    "lateral_m": 0.00024436148781042943,
+    "depth_m": 0.0011997265258927303,
+    "height_m": 3.500274790069202e-06
+   },
+   "rack_delta": null,
+   "seconds": 7.1
+  },
+  "tilt_up_2": {
+   "camera_delta": {
+    "tilt_down_deg": -2.01190899788962,
+    "pan_deg": 0.07677087252960746,
+    "roll_deg": 0.011048645734364593,
+    "lateral_m": -4.139760573956819e-05,
+    "depth_m": -0.00031334562924706377,
+    "height_m": -0.00011444437204993774
+   },
+   "rack_delta": null,
+   "seconds": 7.0
+  },
+  "pan_back_4": {
+   "camera_delta": {
+    "tilt_down_deg": 0.001283953867790899,
+    "pan_deg": 4.020325281312296,
+    "roll_deg": 0.016541562839973434,
+    "lateral_m": -4.203085817972019e-05,
+    "depth_m": -0.0003440832541048433,
+    "height_m": 0.00033855122179698993
+   },
+   "rack_delta": null,
+   "seconds": 7.2
+  },
+  "pan_front_4": {
+   "camera_delta": {
+    "tilt_down_deg": 0.061523117412704664,
+    "pan_deg": -3.8880465805222,
+    "roll_deg": -0.05513579944417346,
+    "lateral_m": -0.0003762368880004252,
+    "depth_m": -0.0003273228722414645,
+    "height_m": 0.0007980134655219961
+   },
+   "rack_delta": null,
+   "seconds": 7.0
+  },
+  "height_up_15": {
+   "camera_delta": {
+    "tilt_down_deg": -0.017624080223960448,
+    "pan_deg": -0.2861723428831624,
+    "roll_deg": -0.47863187144954766,
+    "lateral_m": 0.00034805262690545957,
+    "depth_m": 0.0017095301194652301,
+    "height_m": 0.015372475642667527
+   },
+   "rack_delta": null,
+   "seconds": 6.9
+  },
+  "height_down_20": {
+   "camera_delta": {
+    "tilt_down_deg": 0.0019863071636976315,
+    "pan_deg": 0.02277356896178162,
+    "roll_deg": -0.07218750091921011,
+    "lateral_m": -0.00029517716439259045,
+    "depth_m": 8.067492338836857e-06,
+    "height_m": -0.01975109388840718
+   },
+   "rack_delta": null,
+   "seconds": 7.0
+  },
+  "lateral_away_20": {
+   "camera_delta": {
+    "tilt_down_deg": 0.057256096482035446,
+    "pan_deg": 0.19898645538191317,
+    "roll_deg": 0.08513205268413726,
+    "lateral_m": -0.020317287642425685,
+    "depth_m": -0.0009700231207093457,
+    "height_m": 0.0007667922078821721
+   },
+   "rack_delta": null,
+   "seconds": 7.6
+  },
+  "depth_back_20": {
+   "camera_delta": {
+    "tilt_down_deg": 0.0814836129366796,
+    "pan_deg": 0.018749511859169843,
+    "roll_deg": -0.17727269405632895,
+    "lateral_m": -0.0005406485896640723,
+    "depth_m": 0.02013481451366092,
+    "height_m": 0.0009332329870440081
+   },
+   "rack_delta": null,
+   "seconds": 7.1
+  },
+  "roll_3": {
+   "camera_delta": {
+    "tilt_down_deg": 0.08590639122026289,
+    "pan_deg": 0.03684230063004179,
+    "roll_deg": 2.8180214107583272,
+    "lateral_m": -0.0004381924714223495,
+    "depth_m": 4.225779935260188e-05,
+    "height_m": 0.0011914757634241546
+   },
+   "rack_delta": null,
+   "seconds": 7.5
+  },
+  "combo_t4_p-2_h-10": {
+   "camera_delta": {
+    "tilt_down_deg": 4.003361771243753,
+    "pan_deg": -2.1835842136908923,
+    "roll_deg": -0.3935619304407032,
+    "lateral_m": -0.0004400720003184255,
+    "depth_m": 0.001232938094036462,
+    "height_m": -0.009927475325254842
+   },
+   "rack_delta": null,
+   "seconds": 7.0
+  },
+  "rack_x+30": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": 0.02988116732673453,
+    "y_m": -0.00012209644108509754,
+    "yaw_deg": -0.00355112115277062
+   },
+   "seconds": 2.4
+  },
+  "rack_x-30": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": -0.030168618950004746,
+    "y_m": -7.226252332119626e-06,
+    "yaw_deg": -0.07058834934119397
+   },
+   "seconds": 2.7
+  },
+  "rack_y+30": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": -0.0001700628935041774,
+    "y_m": 0.02952903122750171,
+    "yaw_deg": -0.06328989553949597
+   },
+   "seconds": 2.6
+  },
+  "rack_y-20": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": 8.474568259774263e-05,
+    "y_m": -0.020242335262188292,
+    "yaw_deg": 0.07963995826120171
+   },
+   "seconds": 2.4
+  },
+  "rack_yaw+15": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": 0.0002605352883940485,
+    "y_m": -1.9267125871000025e-05,
+    "yaw_deg": 15.035635198789837
+   },
+   "seconds": 2.4
+  },
+  "rack_yaw-10": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": -0.0002526148585060199,
+    "y_m": -6.560736181550751e-05,
+    "yaw_deg": -10.12311606111872
+   },
+   "seconds": 2.4
+  },
+  "rack_x+20_y+20": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": 0.02008497763492532,
+    "y_m": 0.015627319453135165,
+    "yaw_deg": 0.10656146525368536
+   },
+   "seconds": 2.4
+  },
+  "rack_x-15_y+25_yaw+8": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": -0.014949388310106514,
+    "y_m": 0.024688276492227185,
+    "yaw_deg": 8.00507436267246
+   },
+   "seconds": 2.7
+  },
+  "rack_y+10": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": -0.00017555657312299735,
+    "y_m": 0.00992848913717171,
+    "yaw_deg": -0.0672468037086156
+   },
+   "seconds": 2.4
+  },
+  "rack_x+10": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": 0.009823227570093141,
+    "y_m": -5.872078894713892e-05,
+    "yaw_deg": -0.027401572523091
+   },
+   "seconds": 2.4
+  },
+  "rack_yaw+5": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": -0.0001895794288110334,
+    "y_m": 1.6561352847418665e-05,
+    "yaw_deg": 4.921279759419429
+   },
+   "seconds": 2.4
+  },
+  "rack_x+25_y-15_yaw-12": {
+   "camera_delta": null,
+   "rack_delta": {
+    "x_m": 0.024748355423534,
+    "y_m": -0.01506652196031743,
+    "yaw_deg": -12.140974253613537
+   },
+   "seconds": 2.5
+  }
+ },
+ "total_s": 290.8
+}

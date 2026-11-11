@@ -147,6 +147,22 @@ their hashes; each SHA-256 below was computed from the file here.
 | `notes/explore_v3_summary.md` | summary table of the cells (k/n, intervals, tests) | exploratory, not pre-registered | 42722dd | 1,596 | `46a6ae365ec4f197566c4070505f2133eb550287a2a5360fd056a5bfb8df4a0f` |
 | `notes/explore_v3_plan.md` | explore-v3 plan: episode length, cutoffs and rule, committed before the first episode | exploratory, not pre-registered | 6e7dea5 | 2,823 | `eeea08365a727bffd6fe3d1335c6afc411f76693df25d33586c94d3d936bc4db` |
 
+## E1 and E3 results on simulated scenes (`results/e1/`, `results/e3/`, `e1/`, `e3/`)
+
+5 files, 32,016 bytes: result files only, and the E1 selection script. The E3 code is not published here
+yet. `e3/validation_synthetic_cem.json` comes from the private E3 repository at the frozen commit `399025f` (archive
+SHA-256 `17fed03e9c82f4c9b05a70da541e23c3e0c4d536c1773de0857fa08395312291`, addendum entry 3); its source column gives
+the e3 commit that last changed it. numbers.json marks the E3 numbers on the simulated selection scenes "final sim (E3
+development set, not held out)".
+
+| This repository | Source | Commit | Bytes | SHA-256 | What |
+|---|---|---|---:|---|---|
+| `results/e1/selection_eval.json` | gtc `results/e1/selection_eval.json` | gtc fe210f2 | 11,490 | `896ce5240474c2fcefce26fa5deefbd35b3f6f121b71842d5536f6541b3be179` | E1 variant selection on the simulated selection set (v2 item 2b) |
+| `results/e1/selection_truth.json` | gtc `results/e1/selection_truth.json` | gtc a294ec3 | 4,104 | `b25084948d239ef173532f16b5eb9fabe41c91cd6ea271dd3116f293778efcd5` | true camera and rack offsets of the simulated selection scenes |
+| `e1/eval_selection.py` | gtc `e1/eval_selection.py` | gtc ca77e84 | 4,112 | `a8651dce5f3fadc8ea4a7d7a71d54fdb038a23a943adc1c077816c790fbd3071` | the E1 selection script: error metric and selection rule |
+| `results/e3/simset_e3.json` | gtc `results/e3/simset_e3.json` | gtc fe210f2 | 6,867 | `57af5e1c28a257155bb477081a1f47853524ba09d0a411b3eae70e36fc919b9f` | E3 estimates on the same simulated scenes (development set, not held out) |
+| `e3/validation_synthetic_cem.json` | e3 `validation_synthetic_cem.json` | e3 6eea643 | 5,443 | `743ec4cd1269813cca4973777cb878bf84861665a44a7f6478e261a738933365` | E3 validation on synthetic scenes (CEM search): largest camera and rack errors |
+
 ## Notes
 
 - **Blind keys.** Written November 9, 2026, 22:40 PST, with the clips and the blank sheets
@@ -160,10 +176,10 @@ their hashes; each SHA-256 below was computed from the file here.
   214 entries are unchanged. Each entry's `status` field gives its status (26 entries are "blind-scored (final)"). Its
   `source` paths are relative to the working folder: `prereg_repo/...` is this repository, and `gtc/...` is the private
   repository. A `gtc/` source copied here is at the same path without the `gtc/` prefix, except numbers.json and the
-  two keys (table above).
+  two keys (table above). An `e3/` source is the private E3 repository; `e3/validation_synthetic_cem.json` is copied here at that path.
 - **Edits to trial records.** Changes made after a record was written are logged in the record itself (`relabel`,
   `flag_edits`, `note_edits`, `record_recovery`), with the time, the reason and any earlier value. The trial-level
   deviations are in deviations.md.
 - **Not copied:** the phone recordings, judge clips and trial frames; the clip-cutting logs (their video metadata
   includes the phone's location); the per-step logs (`results/real/steps/`); the audit copies of trials.jsonl made
-  before each edit; the E3 code.
+  before each edit; the E3 code and its README (`e3/README.md`).
