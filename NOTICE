@@ -14,6 +14,8 @@ Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES, licensed under the Apache Li
   - explore/sweep_eval_long.py  derived from the same lerobot_eval.py, through sim/sweep_eval.py
   - sim/trace_episode.py, sim/render_poses.py, sim/jaw_tips.py
                                 derived from the same lerobot_eval.py, through sim/sweep_eval.py
+  - e3/cache/scene.npz          triangles from the course's USD files mat.usda and Vial_rack_simple.usda, and box
+                                panels from the bounding boxes of lightbox-simple.usd (written by e3/render.py)
   - stencils/*.pdf              vial outlines projected from the course's Vial_opaque.usda (tools/make_stencils.py)
   - results/c1/, results/overlay_refs/
                                 renders of the course's simulated scene (front and wrist cameras at the nominal

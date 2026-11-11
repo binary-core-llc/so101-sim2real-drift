@@ -1,0 +1,26 @@
+{
+ "n": 64,
+ "device": "NVIDIA RTX A4500",
+ "levels": {
+  "160x120": {
+   "camera_cpu_renders_per_s": 77.9,
+   "rack_cpu_renders_per_s": 168.9,
+   "camera_gpu_renders_per_s": 323.0,
+   "rack_gpu_renders_per_s": 669.1,
+   "camera_pixel_agreement": 1.0,
+   "camera_speedup": 4.1,
+   "rack_pixel_agreement": 1.0,
+   "rack_speedup": 4.0
+  },
+  "320x240": {
+   "camera_cpu_renders_per_s": 18.5,
+   "rack_cpu_renders_per_s": 50.2,
+   "camera_gpu_renders_per_s": 295.9,
+   "rack_gpu_renders_per_s": 630.8,
+   "camera_pixel_agreement": 1.0,
+   "camera_speedup": 16.0,
+   "rack_pixel_agreement": 1.0,
+   "rack_speedup": 12.6
+  }
+ }
+}
