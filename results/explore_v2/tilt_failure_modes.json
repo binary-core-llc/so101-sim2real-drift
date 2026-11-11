@@ -1,0 +1,100 @@
+{
+ "S0 nominal (reference)": {
+  "failures": 76,
+  "episodes": 200,
+  "grasped_flag": 54,
+  "timeouts": 76,
+  "vial_moved_most": {
+   "none": 9,
+   "vial_3": 50,
+   "vial_1": 16,
+   "vial_2": 1
+  },
+  "end_state": {
+   "held upright at a rack slot at the time limit": 10,
+   "in the air outside the rack (likely still held)": 14,
+   "above the rack": 8,
+   "lying in/across the rack, not upright": 5,
+   "on the mat > 5 cm from its start (released or dropped)": 19,
+   "on the mat < 5 cm from its start (dropped near the pick)": 11,
+   "no vial moved": 9
+  }
+ },
+ "tilt 12": {
+  "failures": 24,
+  "episodes": 40,
+  "grasped_flag": 22,
+  "timeouts": 24,
+  "vial_moved_most": {
+   "vial_3": 22,
+   "none": 2
+  },
+  "end_state": {
+   "held upright at a rack slot at the time limit": 10,
+   "in the air outside the rack (likely still held)": 10,
+   "above the rack": 0,
+   "lying in/across the rack, not upright": 0,
+   "on the mat > 5 cm from its start (released or dropped)": 2,
+   "on the mat < 5 cm from its start (dropped near the pick)": 0,
+   "no vial moved": 2
+  }
+ },
+ "tilt 13": {
+  "failures": 34,
+  "episodes": 40,
+  "grasped_flag": 32,
+  "timeouts": 34,
+  "vial_moved_most": {
+   "vial_3": 30,
+   "vial_1": 3,
+   "none": 1
+  },
+  "end_state": {
+   "held upright at a rack slot at the time limit": 10,
+   "in the air outside the rack (likely still held)": 13,
+   "above the rack": 4,
+   "lying in/across the rack, not upright": 0,
+   "on the mat > 5 cm from its start (released or dropped)": 5,
+   "on the mat < 5 cm from its start (dropped near the pick)": 1,
+   "no vial moved": 1
+  }
+ },
+ "tilt 14": {
+  "failures": 34,
+  "episodes": 40,
+  "grasped_flag": 32,
+  "timeouts": 34,
+  "vial_moved_most": {
+   "vial_3": 34
+  },
+  "end_state": {
+   "held upright at a rack slot at the time limit": 15,
+   "in the air outside the rack (likely still held)": 8,
+   "above the rack": 2,
+   "lying in/across the rack, not upright": 1,
+   "on the mat > 5 cm from its start (released or dropped)": 6,
+   "on the mat < 5 cm from its start (dropped near the pick)": 2,
+   "no vial moved": 0
+  }
+ },
+ "tilt 15": {
+  "failures": 35,
+  "episodes": 40,
+  "grasped_flag": 34,
+  "timeouts": 35,
+  "vial_moved_most": {
+   "vial_3": 32,
+   "none": 1,
+   "vial_1": 2
+  },
+  "end_state": {
+   "held upright at a rack slot at the time limit": 14,
+   "in the air outside the rack (likely still held)": 9,
+   "above the rack": 7,
+   "lying in/across the rack, not upright": 2,
+   "on the mat > 5 cm from its start (released or dropped)": 2,
+   "on the mat < 5 cm from its start (dropped near the pick)": 0,
+   "no vial moved": 1
+  }
+ }
+}
