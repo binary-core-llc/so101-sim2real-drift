@@ -163,6 +163,77 @@ development set, not held out)".
 | `results/e3/simset_e3.json` | gtc `results/e3/simset_e3.json` | gtc fe210f2 | 6,867 | `57af5e1c28a257155bb477081a1f47853524ba09d0a411b3eae70e36fc919b9f` | E3 estimates on the same simulated scenes (development set, not held out) |
 | `e3/validation_synthetic_cem.json` | e3 `validation_synthetic_cem.json` | e3 6eea643 | 5,443 | `743ec4cd1269813cca4973777cb878bf84861665a44a7f6478e261a738933365` | E3 validation on synthetic scenes (CEM search): largest camera and rack errors |
 
+## Per-step logs of the real trials (`results/real/steps/`)
+
+61 files, 13,156,084 bytes; same path in gtc. One file per trial record (named in its `steps_jsonl` field) and
+one JSON line per policy chunk: query, reply and send times in seconds from the first policy query, the latency, the
+joint readings and the actions sent. They were last written on November 9, 2026, 20:24 PST, and committed to gtc
+unchanged on November 10 for this copy.
+
+| File | gtc commit | Bytes | SHA-256 |
+|---|---|---:|---|
+| `results/real/steps/N04-001_a1.jsonl` | 6f835c0 | 225,315 | `1577bde33f0dd1181a0857896de36efeb483f5fb9a2196cb67e051394322e308` |
+| `results/real/steps/N04-001_a2.jsonl` | 6f835c0 | 208,528 | `ec9df3057e6044a0a1933794842a12d01b59d9159d0e9b4ed2e765d406970f87` |
+| `results/real/steps/N04-002_a1.jsonl` | 6f835c0 | 220,485 | `53ceda64826fbdb36ace1d3885dab245f6186b08d0010846c0edcde123bcc38e` |
+| `results/real/steps/N04-003_a1.jsonl` | 6f835c0 | 170,669 | `01244bf9653e8a54ccce54802408209558c2dfe255cf89cdac5cd78bdff2623a` |
+| `results/real/steps/N04-004_a1.jsonl` | 6f835c0 | 153,873 | `60d5c1e95aa6e05a058357f3415e20781bc564559557314685cda93a12dd6c2f` |
+| `results/real/steps/N04-005_a1.jsonl` | 6f835c0 | 141,513 | `4fbb65388bce24e70911ec280442713503fe4d90cf508123fc593c40c053e37c` |
+| `results/real/steps/N04-006_a1.jsonl` | 6f835c0 | 141,629 | `54ca88b91ffc4fb6d072f97506410f273038f463b4be63b0dec6e260dd9a1b26` |
+| `results/real/steps/N04-007_a1.jsonl` | 6f835c0 | 267,681 | `f4769db1d64ae5f5f01ed0c460e6807530cf364c053ad111b0003464e30757f3` |
+| `results/real/steps/N04-008_a1.jsonl` | 6f835c0 | 208,567 | `0a2d938eef7a2e597b19267625c441f844e302e3ef515c0859dd5d7350f9472c` |
+| `results/real/steps/N04-009_a1.jsonl` | 6f835c0 | 158,545 | `69dd96b9af44146fa0ac654cbdc13745e2d47ace55ecf2fc75b5edbf8003a248` |
+| `results/real/steps/N04-010_a1.jsonl` | 6f835c0 | 116,507 | `1bb93ac394283c61f614f97a6c2745fb437b1eb1aec839b332d17a69c5fa5e0d` |
+| `results/real/steps/N04-011_a1.jsonl` | 6f835c0 | 145,824 | `95e4c759f9bc5c0d15808216a1cc10c695bdc97b43775f999482ac80736f9a97` |
+| `results/real/steps/N04-012_a1.jsonl` | 6f835c0 | 384,149 | `6208eacdc94893cbf6dbc84f79fba8b0f48949100803da0146cae5d460f00f51` |
+| `results/real/steps/N04-013_a1.jsonl` | 6f835c0 | 166,957 | `44ad6a312fc1bc9acfe053bf146339cbb4bb6fb712cb1882a2c87e569c6bfcae` |
+| `results/real/steps/N04-014_a1.jsonl` | 6f835c0 | 242,123 | `a72e2a0b77e2c6199a2c0384470f33757a4f65f370585b68927292112854dda8` |
+| `results/real/steps/N04-015_a1.jsonl` | 6f835c0 | 158,223 | `a5092b6cedae53634c00da187240e1cbea9ad3d0269851eb0f7711d216eb6045` |
+| `results/real/steps/N04-016_a1.jsonl` | 6f835c0 | 120,754 | `15b635fd4df62e778c81ab54c65401ad61a4ac05c59e1b028a465308e9c68391` |
+| `results/real/steps/N04-017_a1.jsonl` | 6f835c0 | 384,510 | `8613a6bd98fbe818cc1ae12114684ebeb9b780708d2df7fe05a3906c4237d826` |
+| `results/real/steps/N04-018_a1.jsonl` | 6f835c0 | 384,204 | `220f82dd9c7d990ae29f6f93486870e8840d547b953691b52c5ee0a98240c1c6` |
+| `results/real/steps/N04-019_a1.jsonl` | 6f835c0 | 384,219 | `8d980ac0eb02fb516a366ae2d06379e0d4ffbdfe0d4a96739c2baa7388142f72` |
+| `results/real/steps/N04-020_a1.jsonl` | 6f835c0 | 128,928 | `ae1415ee86908a9be6b4011b5962e2ebbd36174342f654a72c7d9cca3fd946ce` |
+| `results/real/steps/N04B-001_a1.jsonl` | 6f835c0 | 279,667 | `a2ab2265d50758173698e123a72beb2e21652c426b060216c22994329bb264c1` |
+| `results/real/steps/N04B-002_a1.jsonl` | 6f835c0 | 120,715 | `cd6bdb9cea82e9cfe3a4b7f7d1c444b6be31d4c5cb1c13bc6b9e0fa20f1ef7e1` |
+| `results/real/steps/N04B-003_a1.jsonl` | 6f835c0 | 385,119 | `eb761da0a08c53ac2cc15b782a516bba2ad1b1c231f8cf7104aa7d8c273a7c5c` |
+| `results/real/steps/N04B-004_a1.jsonl` | 6f835c0 | 154,082 | `ed7b9033e966a5bef0722a22d8970a84b83d854385ccadcb42a80efb9fd4240e` |
+| `results/real/steps/N04B-005_a1.jsonl` | 6f835c0 | 112,368 | `115e36c89499612035500ee2bbb7efaa0855edc1ca353911e9b1800f751378f0` |
+| `results/real/steps/N04B-006_a1.jsonl` | 6f835c0 | 124,959 | `5469746009db1fb5d4523f281751b711650ae48d4de449c008c379f8822fcc27` |
+| `results/real/steps/N04B-007_a1.jsonl` | 6f835c0 | 104,099 | `53d28870bc21669a5f826d44074071964793310876111c900266d32a26aa4a6d` |
+| `results/real/steps/N04B-008_a1.jsonl` | 6f835c0 | 158,486 | `e8ef49989d08a3c331dedd21daba9d488290716e7a82928565e862432c60e5a3` |
+| `results/real/steps/N04B-009_a1.jsonl` | 6f835c0 | 133,355 | `76579c2c505b8a5a408ba7b9934e6d7066bbe564c9fd6ac2055c6d5a2d36d285` |
+| `results/real/steps/N04B-010_a1.jsonl` | 6f835c0 | 166,875 | `bc5bb413cfebe79246cddda6810468c0ba738e968d47a1a53fe9defc3bf5618e` |
+| `results/real/steps/N05-001_a1.jsonl` | 6f835c0 | 388,269 | `d1772f2b969b88bf9881e4c276a19c9053e9ccc33a4b96672520b6f891373bb0` |
+| `results/real/steps/N05-002_a1.jsonl` | 6f835c0 | 388,983 | `ec1b5a8c91fd8ac3801ae6f0093c6a2d3d3faab0cccc5b91e0b09f35a4cfc4e6` |
+| `results/real/steps/N05-003_a1.jsonl` | 6f835c0 | 388,200 | `383617395852d0dbd3a5cdc7d8cff51b70f2ff42f291eff798f4f68055b0c2e2` |
+| `results/real/steps/N05-004_a1.jsonl` | 6f835c0 | 386,626 | `6af0ccd89ab294b706a0b5560a01363cb4677209b05cffdc4f8053fbfa3167f6` |
+| `results/real/steps/N05-007_a1.jsonl` | 6f835c0 | 120,709 | `48a070d73f16ae04fa5074120ccc756c278ea484cfde85fb5a64784bb21d9408` |
+| `results/real/steps/N05-010_a1.jsonl` | 6f835c0 | 133,227 | `1aea70f8746f676a37216a24d2db17fd7f8b257d6659d731740722955505dc1d` |
+| `results/real/steps/N05-011_a1.jsonl` | 6f835c0 | 175,353 | `807688f83943a8779222924128d65e91fd8c03af95d1e76f582c9f82a56d4a8e` |
+| `results/real/steps/N05-012_a1.jsonl` | 6f835c0 | 296,571 | `9c5ddfe9f8221c102a219f29e2493301f5e87e36562ee6728df3184520073a88` |
+| `results/real/steps/N05-013_a1.jsonl` | 6f835c0 | 112,406 | `f48fd37fa3a9e2ad6c91949b194d10392e1bc1290607c95309e82b2b2364ac8d` |
+| `results/real/steps/N05-015_a1.jsonl` | 6f835c0 | 359,268 | `8e3096feddf6f83d36609572137c21fc93a5ecf5d3f5ed4c9761608a4e937dce` |
+| `results/real/steps/N05-016_a1.jsonl` | 6f835c0 | 195,861 | `280583051fefef8e2b60c49a625d0f03f27327d40ff6bc36a5cc72029d9b601d` |
+| `results/real/steps/N05-018_a1.jsonl` | 6f835c0 | 296,395 | `08312d3671cde6c4ab09a33f3362616a428f75721ecc55f64e1e27c46cc70339` |
+| `results/real/steps/N05-022_a1.jsonl` | 6f835c0 | 383,759 | `a7f67a084ae7609bf8af7975dd9cee9c392dd65e492d3850f9c4c17e7bbdf5b4` |
+| `results/real/steps/N05-023_a1.jsonl` | 6f835c0 | 258,481 | `143e0023f73a12a8abbea3633145e2a420c29a6f0d248962afee020f73df709d` |
+| `results/real/steps/N05-024_a1.jsonl` | 6f835c0 | 125,086 | `572ef2c4b6dea6bbb7f9ed9fdbe8a7e82e2eb907c3aa44ad7446a68fbf723922` |
+| `results/real/steps/N06-001_a1.jsonl` | 6f835c0 | 241,883 | `6c2ea2e07280a3288c37bae8724e397553df2a065b2a42c257120c4227a9301d` |
+| `results/real/steps/N06-002_a1.jsonl` | 6f835c0 | 199,518 | `6c65d21f4994c41acd16a7da0d53ee6e0f20c51f875753e0fb05b327f7dcddfa` |
+| `results/real/steps/N06-003_a1.jsonl` | 6f835c0 | 116,608 | `60025751195425f2becdd3554ec43c0b323fb66c78bd2164f977587f26d3593b` |
+| `results/real/steps/N06-004_a1.jsonl` | 6f835c0 | 387,750 | `750fe50100209d59449197355de38534b8a1ee107271a229091de8935e87d772` |
+| `results/real/steps/N06-005_a1.jsonl` | 6f835c0 | 141,540 | `320d5dc76fac4cf2b37f65e313719f3f3d6862e0de627a27ae92a95197316220` |
+| `results/real/steps/N06-006_a1.jsonl` | 6f835c0 | 116,582 | `56da302d52b6f1e73860a55d7f5a17980cf562ad26bd8daec30fb1f2d8e24161` |
+| `results/real/steps/N06-007_a1.jsonl` | 6f835c0 | 146,096 | `33f261acf5b300f42612b2b94a14b878f0831b716193553d417a19c048bd9092` |
+| `results/real/steps/N06-016_a1.jsonl` | 6f835c0 | 187,678 | `211752298ca49de695162950f149f2ad3ab97c2dde347b67bf7f2dca8de7f91b` |
+| `results/real/steps/N06-017_a1.jsonl` | 6f835c0 | 171,047 | `c3e6ba068e6c0ea3ee8f5888fcc0adccfac89cb4454fa195d3af2d691fdd299f` |
+| `results/real/steps/N06-018_a1.jsonl` | 6f835c0 | 129,368 | `38a7880f256ee91d7de9b770075eedb3967bc04e7d8156bd47556bb8abd6d2dc` |
+| `results/real/steps/N06-019_a1.jsonl` | 6f835c0 | 200,075 | `27a09eb4ea3f35e43b1ab7a3cd96c8ab1e2b56a4796592d3f5513100097ee9c5` |
+| `results/real/steps/N06-020_a1.jsonl` | 6f835c0 | 150,049 | `49032cabdec288abe6c2ffb70e4106de3b28177661d474a65ee6f407fbb0003f` |
+| `results/real/steps/N06-021_a1.jsonl` | 6f835c0 | 120,937 | `0dc5486d1f785247bab26df92036ad0449c7c6a0da3fb14d7686a16e84a23597` |
+| `results/real/steps/N06-022_a1.jsonl` | 6f835c0 | 195,703 | `7d672d224fb069e2fbcb249fc06c790a775251dbc82cc34d9d45360a5e6d7adf` |
+| `results/real/steps/N06-023_a1.jsonl` | 6f835c0 | 389,128 | `d4e9858c15a21cdb52c09888dad340be84a40dea30c416a042f5639f585ae3ed` |
+
 ## Notes
 
 - **Blind keys.** Written November 9, 2026, 22:40 PST, with the clips and the blank sheets
@@ -180,6 +251,6 @@ development set, not held out)".
 - **Edits to trial records.** Changes made after a record was written are logged in the record itself (`relabel`,
   `flag_edits`, `note_edits`, `record_recovery`), with the time, the reason and any earlier value. The trial-level
   deviations are in deviations.md.
-- **Not copied:** the phone recordings, judge clips and trial frames; the clip-cutting logs (their video metadata
-  includes the phone's location); the per-step logs (`results/real/steps/`); the audit copies of trials.jsonl made
+- **Not copied:** the phone recordings, judge clips and trial frames (the trial frames include the photos of the real room); the clip-cutting logs (their video metadata
+  includes the phone's location); the audit copies of trials.jsonl made
   before each edit; the E3 code and its README (`e3/README.md`).
