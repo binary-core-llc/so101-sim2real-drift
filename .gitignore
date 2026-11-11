@@ -4,6 +4,7 @@ results/*
 !results/analysis/
 !results/real/
 !results/h4/
+!results/sim/
 media/
 .venv/
 assets_mirror/
