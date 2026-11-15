@@ -19,7 +19,7 @@ Made by `python3 -I docs/figures/make_figures.py` from files in this repository 
 |---|---|---|
 | `docs/figures/pose_offset.png` | `docs/figures/h4_c920_measured_ep0000_step0_front.png` (fa3278546bcb8672…)<br>`docs/figures/s1_measured_c920_ep0000_step0_front.png` (c74a98285a491961…)<br>`poster/numbers.json` (2d1d779c63c90288…)<br>`results/h4/s1_result.json` (21cb929e336ed382…)<br>`results/sim/H4_c920_measured.jsonl` (00b1d493a073163c…)<br>`results/sim/S1_measured_c920.jsonl` (e71ffb203b8c8839…) | `7bff7f5ee5cac20773474dcf7bda5e55f34908e9aa835c6ba5eacb2d2c53e8ff` |
 | `docs/figures/results_chain.svg` | `poster/numbers.json` (2d1d779c63c90288…)<br>`results/h4/h4_result.json` (e3f769902e3574e8…)<br>`results/h4/s1_result.json` (21cb929e336ed382…)<br>`README.md` (the result sentence and step 2) | `901a133ff1418f77ccbed2ab65eaeef6b053650a2b78d39ed0511e6287cf9358` |
-| `docs/figures/sled.svg` | `README.md` (the result sentence and step 2)<br>`docs/charuco_board.json` (07a887cc4401fc2d…)<br>`docs/ChArUco_GTC_SO101_letter.pdf` (d25d5604da35890b…) | `da46ad17ae6757c9568c61bc943d5254b1f494dde2cc9457df5c9da216627cd9` |
+| `docs/figures/sled.svg` | `README.md` (the result sentence and step 2)<br>`docs/charuco_board.json` (07a887cc4401fc2d…)<br>`docs/ChArUco_GTC_SO101_letter.pdf` (d25d5604da35890b…) | `4bc4628b17c1c07fbad4f78d2381805ae76beaee4e4c71e7b86ea9fe361e46e6` |
 
 The `README.md` inputs are text the script parses (condition wording, sled dimensions); the figures do not change when other README text changes.
 

@@ -75,9 +75,11 @@ def pose_offset():
     assert len(seeds) == 1                                             # same seed in both cells
     mm, deg = NUM["s1.offset_total_mm"]["value"], NUM["s1.offset_total_deg"]["value"]
     assert h4["n"] == s1["n"]
-    return (f"Simulation, episode {ep} (seed {seeds.pop()}), first frame, both with the C920's measured focal length; only the camera pose "
-            f"differs, by {mm} mm and {deg}°. Over {s1['n']} episodes each: H4_c920_measured {h4['k']}/{h4['n']} "
-            f"({pct(h4['k'] / h4['n'])}), S1_measured_c920 {s1['k']}/{s1['n']} ({pct(s1['k'] / s1['n'])}).")
+    return (f"Same simulated scene and lens, two camera positions {mm} mm and {deg}° apart: the simulated camera pose "
+            f"(left) and the real camera's measured pose (right). Over {s1['n']} episodes each, the policy succeeded "
+            f"{h4['k']}/{h4['n']} ({pct(h4['k'] / h4['n'])}) from the left pose and {s1['k']}/{s1['n']} "
+            f"({pct(s1['k'] / s1['n'])}) from the right (cells H4_c920_measured and S1_measured_c920; simulation, "
+            f"seed {seeds.pop()}, first frame).")
 
 
 # ---------------------------------------------------------------- 2. results chain: rates with Wilson 95 % intervals
@@ -154,11 +156,8 @@ def sled():
     title_edge = f(r"title edge (\d+(?:\.\d+)?) mm from the centre line", "print title edge")
     dx_d = f(r"grid column line 0 at (\d+(?:\.\d+)?) mm", "grid column line 0")
     dy_d = f(r"row line 0 at (\d+(?:\.\d+)?) mm", "grid row line 0")
-    table = {}
-    for field in ("d_x_mm", "d_y_mm", "h_K_mm", "yaw_deg"):
-        what, design, meas = [c.strip() for c in one(rf"\| `{field}` \|([^|]*)\|([^|]*)\|([^|]*)\|", step2, field)]
-        table[field] = (what, design or "-", meas)
-    assert float(table["d_x_mm"][1]) == dx_d and float(table["d_y_mm"][1]) == dy_d
+    for field, v in (("d_x_mm", dx_d), ("d_y_mm", dy_d)):              # the README table's design column agrees
+        assert float(one(rf"\| `{field}` \|[^|]*\|([^|]*)\|", step2, field)) == v
     board = load("docs/charuco_board.json")
     sq = board["square_m"] * 1000
     gx, gy = board["cols"] * sq, board["rows"] * sq                     # long side along the box depth (x)
@@ -250,17 +249,7 @@ def sled():
     text(ax, Y(cw) - 8, "camera wall", 12, "middle", GREY)
     text(X(-key_l) - 120, 30, "ChArUco sled, top view (mm; design values from the camera check kit, step 2)", 18, bold=True)
 
-    # design vs measured
-    ty = base + 160
-    cols = (X(-key_l) - 120, X(-key_l) - 20, X(-key_l) + 420, X(-key_l) + 510)
-    for x, s in zip(cols, ("Field", "What", "Design", "Measured")):
-        text(x, ty, s, 13, bold=True)
-    line(cols[0], ty + 6, cols[3] + 130, ty + 6, LIGHT)
-    for i, (field, (what, design, meas)) in enumerate(table.items(), 1):
-        yy = ty + 6 + 20 * i
-        for x, s in zip(cols, (field, what, design, meas)):
-            text(x, yy, s, 12.5, col=SIM_C if x == cols[2] else INK)
-    W, H = int(ax + 60), int(ty + 6 + 20 * len(table) + 24)
+    W, H = int(ax + 60), int(base + 112 + 30)                          # below the lowest dimension line
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="{FONT}">'
            f'<rect width="{W}" height="{H}" fill="white"/>' + "".join(o) + "</svg>\n")
     (OUT / "sled.svg").write_text(svg)
