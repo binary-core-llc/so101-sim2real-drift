@@ -253,7 +253,7 @@ def sled():
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="{FONT}">'
            f'<rect width="{W}" height="{H}" fill="white"/>' + "".join(o) + "</svg>\n")
     (OUT / "sled.svg").write_text(svg)
-    return "Top view of the ChArUco sled with the design dimensions of step 2 (mm); the table gives this study's measured offsets."
+    return "Top view of the ChArUco sled with the design dimensions of step 2 (mm); the table above gives this study's measured offsets."
 
 
 if __name__ == "__main__":
