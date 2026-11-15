@@ -1,5 +1,8 @@
 # How far can a real SO-101 setup drift before a sim-trained GR00T policy fails?
 
+![The same simulated scene from the simulated camera pose and from the real camera's measured pose](docs/figures/pose_offset.png)\
+*Simulation, episode 0 (seed 0), first frame, both with the C920's measured focal length; only the camera pose differs, by 24.2 mm and 1.01°. Over 200 episodes each: H4_c920_measured 148/200 (74 %), S1_measured_c920 99/200 (49.5 %).*
+
 Arturo Morales Rangel, Binary Core LLC
 
 Code, pre-registration and records of a study submitted to NVIDIA GTC 2027 as a poster.
@@ -9,6 +12,22 @@ Code, pre-registration and records of a study submitted to NVIDIA GTC 2027 as a 
 NVIDIA's course "Train an SO-101 Robot From Sim-to-Real With NVIDIA Isaac" publishes a GR00T N1.6 checkpoint, trained in Isaac Lab, that places a vial in a rack. This study asked how far a real SO-101 setup can differ from the course's simulation before that policy fails, whether the training randomization range predicts the tolerance, and whether one photo is enough to correct the setup. The checkpoint was used as published, without fine-tuning, and the study was pre-registered.
 
 In simulation (50 single-factor cells, 2,220 episodes), the nominal scene succeeded in 124 of 200 episodes (62 %), and no registered cell brought success below half of that (the lowest was 15/40), so all five registered thresholds were censored; exploratory camera tilts of 12° and 15° gave 16/40 and 5/40. With the real camera's measured focal length, success was 148/200 at the simulated camera pose and 99/200 at the real camera's measured pose, 24.2 mm and 1.0° away (Fisher p = 6.7 × 10⁻⁷). On the real robot, blind-scored (61 trial records, 56 valid): 6 of 20 at the measured nominal pose (30 %, 95 % CI 15-52 %), 2 of 10 with the rack moved 3 cm, 0 of 6 with the camera tilted 6° further down, and 1 of 10 with the camera placed by the course's written measurements; live and blind scores agreed (Cohen's κ = 1.00). The one-photo correction was not tested on the robot. `poster/numbers.json` lists every number on the poster with its sources and method.
+
+For context: in simulation, the camera at the course's written placement succeeded in 55 of 80 episodes (69 %; exploratory run explore-v2, not pre-registered), no lower than the nominal camera. On the real robot, the R0 and R1 intervals overlap (2-40 % and 15-52 %), so 10 trials at R0 do not show that the written placement itself lowers success; what both conditions show is a gap between simulation and the real robot.
+
+![Success rates with Wilson 95 % intervals, simulation and real robot](docs/figures/results_chain.svg)\
+*Success rate with Wilson 95 % intervals: the simulation cells (blue, 200 episodes each) and the blind-scored real-robot conditions (orange). With 6 to 20 trials per real condition, the real-robot intervals are wide and overlap.*
+
+[![R1 success, trial N04-012_a1](docs/videos/r1_success_N04-012_a1.gif)](docs/videos/r1_success_N04-012_a1.mp4)\
+*R1, trial N04-012_a1, blind-scored success. The first vial missed the slot, the second and third were placed upright in the rack and stayed, and the trial ended at the 60 s time limit without touching the wall. Keyframe recording from the robot's front (left) and wrist (right) cameras, one frame per policy step; real trial length 60.0 s (first policy query to the time cap), played back at about 3.3x real time.*
+
+[![R0 failure, trial N04B-007_a1](docs/videos/r0_failure_N04B-007_a1.gif)](docs/videos/r0_failure_N04B-007_a1.mp4)\
+*R0, trial N04B-007_a1, blind-scored failure: the arm turns right past the vials until it touches the wall and the operator stops it with the safety key. Keyframe recording from the robot's front (left) and wrist (right) cameras, one frame per policy step; real trial length 16.2 s (first policy query to the safety key), played back at about 3.3x real time.*
+
+[![R4 failure, trial N06-018_a1](docs/videos/r4_failure_N06-018_a1.gif)](docs/videos/r4_failure_N06-018_a1.mp4)\
+*R4 (camera tilted further down), trial N06-018_a1, blind-scored failure: the arm turns right without touching a vial until it reaches the wall and the operator stops it with the safety key. Keyframe recording from the robot's front (left) and wrist (right) cameras, one frame per policy step; real trial length 19.9 s (first policy query to the safety key), played back at about 3.3x real time.*
+
+These results describe one published checkpoint, used as released without fine-tuning, on one real rig. They are not a measure of GR00T N1.6 in general. The course itself notes that large camera deviations degrade performance; this study measures how much a given deviation costs for this checkpoint. Thanks to the authors of NVIDIA's course for publishing the code, checkpoint and simulation assets openly; this study would not have been possible without them.
 
 ## What's inside
 
@@ -20,7 +39,7 @@ In simulation (50 single-factor cells, 2,220 episodes), the nominal scene succee
 | `calib/` | the camera check kit: USB identity, camera lock, lens calibration, ChArUco pose, the HUD and the live viewers |
 | `config/` | this study's rig, camera, layout, sweep-cell and schedule files (measured values) |
 | `docker/sim/` | the course's simulation Dockerfile with two pinned dependencies, and an offline entrypoint (diffs included) |
-| `docs/` | the ChArUco board: printable PDF and its definition |
+| `docs/` | the ChArUco board (printable PDF and its definition), the README figures with `make_figures.py` and `PROVENANCE.md` (`docs/figures/`), and the three trial clips (`docs/videos/`) |
 | `e1/` | E1: Cosmos Reason estimates (local model) and their selection |
 | `e3/` | E3: render-and-compare on the GPU, as frozen at e3 commit `399025f` (usage in `e3/README.md`) |
 | `explore/` | exploratory simulation runs (not pre-registered) |
@@ -131,6 +150,9 @@ Measure the real offsets and put them in `config/board_in_E.json` (start from `c
 | `h_K_mm` | board top above the surface the robot stands on | | 10.0 ± 1.0 |
 | `yaw_deg` | turn of the end face against the grid | 0 | -0.145 ± 0.12 |
 
+![ChArUco sled, top view with dimensions](docs/figures/sled.svg)\
+*Top view of the ChArUco sled with the design dimensions of step 2 (mm); the table gives this study's measured offsets.*
+
 Seat it before every reading: end face on both lobes, key in the gap; a 0.1 mm paper strip must not slide into the joint at either lobe. After step 3, `$P tools/sled_from_views.py --views media/calib/intrinsics/A/*.png --out results/rig/sled_from_views --square-mm SQ --t-mm T` (T = carrier thickness) reads `d_x`, `d_y` and the yaw from the calibration photos as a check. Without a sled, the template's `mat` method places the board flat on the mat instead.
 
 **3. Calibrate the lens.**
@@ -230,7 +252,7 @@ To rerun simulation cells, start the policy server and run `python3 -I sim/run_q
 
 The tags hold the registered files; `git show prereg-v1:sim/run_sim.sh`, for example. The sweep ran from a working copy whose code and configuration files are byte-identical to `prereg-v1`. On `main`, 16 of those files now hold their later versions (license notices, provenance in each result row, `docker run --init`, offline by default, the read-only E3 mount, repo-relative paths, a second seed format in `map_sweep_cells.py`, input files found inside the repository, the exploratory queue setup). The trial records, scores, analysis outputs and code were added after the poster was submitted, from the study's private working repositories; `notes/gtc_file_map.md` lists each file with its source commit and SHA-256, and the few lines edited for this copy.
 
-What stays private: the photos of the real room (the trial frames and the phone and judge videos that show it), for privacy, and the clip-cutting logs, whose video metadata holds the phone's location. Of the sources `poster/numbers.json` cites, only room photos are private.
+Public trial clips: the three short clips in `docs/videos/` (trials N04-012_a1, N04B-007_a1 and N06-018_a1), made from the robot's front and wrist camera recordings, video only (no audio) and with all metadata removed. What stays private: the raw phone videos, the other trial frames and room footage, for privacy, and the clip-cutting logs, whose video metadata holds the phone's location. Of the sources `poster/numbers.json` cites, only room photos are private.
 
 ## License and citation
 
