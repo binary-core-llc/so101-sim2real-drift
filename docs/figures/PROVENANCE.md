@@ -11,6 +11,19 @@ Byte-identical copies (`cp`) of two simulation frames: the first front-camera fr
 | `docs/figures/h4_c920_measured_ep0000_step0_front.png` | `gtc/media/sim/H4_c920_measured/ep0000_step0_front.png` | `fa3278546bcb867226e260ef5e29c918f6d1ca23604ee51cb452129c4d332c30` | `fa3278546bcb867226e260ef5e29c918f6d1ca23604ee51cb452129c4d332c30` |
 | `docs/figures/s1_measured_c920_ep0000_step0_front.png` | `gtc/media/sim/S1_measured_c920/ep0000_step0_front.png` | `c74a98285a491961188d33d8adfaa3630b1b1674e2b8b5e3cafda4046125e943` | `c74a98285a491961188d33d8adfaa3630b1b1674e2b8b5e3cafda4046125e943` |
 
+## Figure copied unchanged from the private working repository
+
+E3 in camera mode on the N04B-R0 reference photo (the per-pixel median of the reference frames, front camera), with the mat and rack outlines rendered by E3 from the course's scene geometry (`e3/cache/scene.npz`) at E3's estimated camera pose. The record beside it holds the estimate and the fit scores quoted in the README caption; its `version_hash` is E3's code at e3 commit `578f043`, which differs from the frozen `399025f` only in `validate_real.py`.
+
+| File here | Source | Source SHA-256 | SHA-256 here |
+|---|---|---|---|
+| `docs/figures/e3_one_photo_camera.png` | `gtc/results/e3/gpu_cam_abs_N04B-R0_R0_seg2.png` | `f81a1d3cd3310b050d750a4c885473c77032199017c9cdca35cafb5fc41deacf` | `f81a1d3cd3310b050d750a4c885473c77032199017c9cdca35cafb5fc41deacf` |
+| (record) | `gtc/results/e3/gpu_cam_abs_N04B-R0_R0_seg2.json` | `0a0e16f55149c935223ca829d4b181c479a93e7c334d6276c52b343902136ec6` | not copied |
+
+```bash
+cp gtc/results/e3/gpu_cam_abs_N04B-R0_R0_seg2.png docs/figures/e3_one_photo_camera.png
+```
+
 ## Figures
 
 Made by `python3 -I docs/figures/make_figures.py` from files in this repository (byte-identical on every run).

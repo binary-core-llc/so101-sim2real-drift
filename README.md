@@ -32,6 +32,11 @@ For context: in simulation, the camera at the course's written placement succeed
 <a href="docs/videos/r4_failure_N06-018_a1.mp4"><img src="docs/videos/r4_failure_N06-018_a1.gif" width="100%" alt="R4 failure, trial N06-018_a1"></a>\
 *R4 (camera tilted further down), trial N06-018_a1, blind-scored failure: the arm turns right without touching a vial until it reaches the wall and the operator stops it with the safety key. Keyframe recording from the robot's front (left) and wrist (right) cameras, one frame per policy step; real trial length 19.9 s (first policy query to the safety key), played back at about 3.3x real time.*
 
+Question 3, whether one photo is enough to correct the setup, was tested in simulation and on still photos only. E1 (Cosmos-Reason2-2B, given one photo and a simulated reference image) did no better than making no correction: median scaled error 0.67 for both, over 25 simulated scenes. E3 (render-and-compare) estimated the camera within 0.48° and 1.7 mm in 12 simulated scenes and placed the rack within 0.5 mm in 11 of 12 (development set, not held out). The correction cycles on the robot were not run (0 of 20 scheduled trials).
+
+![E3 fitting the simulated scene to one real photo](docs/figures/e3_one_photo_camera.png)\
+*E3 in camera mode on one real reference photo (block N04B-R0). Magenta: the mat and rack where E3's estimated camera pose puts them; overlap with the photo 0.986 (mat) and 0.985 (rack). Its absolute pose differs from the ChArUco board measurement by up to 1.19° and 7.1 mm (e3/README.md), which is why the planned camera correction cycles used E3's differential mode.*
+
 These results describe one published checkpoint, used as released without fine-tuning, on one real rig. They are not a measure of GR00T N1.6 in general. The course itself notes that large camera deviations degrade performance; this study measures how much a given deviation costs for this checkpoint. Thanks to the authors of NVIDIA's course for publishing the code, checkpoint and simulation assets openly; this study would not have been possible without them.
 
 ## What's inside

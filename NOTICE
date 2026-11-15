@@ -22,11 +22,12 @@ Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES, licensed under the Apache Li
                                 pose, front camera at the R0 pose), their instance masks, and the scene's pose
                                 dump (sim/dump_scene.py)
   - docs/figures/pose_offset.png, docs/figures/h4_c920_measured_ep0000_step0_front.png,
-    docs/figures/s1_measured_c920_ep0000_step0_front.png
+    docs/figures/s1_measured_c920_ep0000_step0_front.png, docs/figures/e3_one_photo_camera.png
                                 renders of the course's simulated scene: the two ep0000 frames are first front-camera
                                 frames of the simulation cells H4_c920_measured and S1_measured_c920, and
-                                pose_offset.png combines them (docs/figures/make_figures.py; sources in
-                                docs/figures/PROVENANCE.md)
+                                pose_offset.png combines them (docs/figures/make_figures.py); e3_one_photo_camera.png
+                                is a real photo with mat and rack outlines rendered by E3 from the course's scene
+                                geometry (e3/cache/scene.npz); sources in docs/figures/PROVENANCE.md
 The derived Python files (sim/sweep_eval.py, explore/sweep_eval_long.py, sim/trace_episode.py, sim/render_poses.py,
 sim/jaw_tips.py) keep NVIDIA's copyright and license header.
 The rest of the code imports the course's modules and Isaac-GR00T at run time; neither is included here.
