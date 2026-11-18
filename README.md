@@ -7,6 +7,8 @@ Arturo Morales Rangel, Binary Core LLC
 
 Code, pre-registration and records of a study submitted to NVIDIA GTC 2027 as a poster.
 
+Video walkthrough (3 min): https://youtu.be/xTRK6_C8h3s
+
 ## What this is
 
 **In short**
